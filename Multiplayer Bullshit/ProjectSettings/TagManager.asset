@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Elevator
+  - Floor1Button
+  - Floor2Button
+  - Floor3Button
   layers:
   - Default
   - TransparentFX

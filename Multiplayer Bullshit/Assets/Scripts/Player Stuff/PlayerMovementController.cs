@@ -6,7 +6,10 @@ using Photon.Pun;
 public class PlayerMovementController : MonoBehaviour
 {
     [SerializeField] GameObject playerCamera;
-    
+    public GameObject floor1Button, floor2Button, floor3Button;
+    public GameObject Elevator;
+    private float distToElevator;
+
     //public CharacterController controller;
 
     public float moveSpeed;
@@ -34,6 +37,11 @@ public class PlayerMovementController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Elevator = GameObject.FindGameObjectWithTag("Elevator");
+        floor1Button = GameObject.FindGameObjectWithTag("Floor1Button");
+        floor2Button = GameObject.FindGameObjectWithTag("Floor2Button");
+        floor3Button = GameObject.FindGameObjectWithTag("Floor3Button");
+        ElevatorButtonsOff();
         rotationSpeed = new Vector3(0, 40, 0);
 
         if (!pv.IsMine)
@@ -45,6 +53,7 @@ public class PlayerMovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (!pv.IsMine) return;
 
         float horizontal = Input.GetAxisRaw("Horizontal");
@@ -85,5 +94,17 @@ public class PlayerMovementController : MonoBehaviour
 
         Quaternion deltaRotation = Quaternion.Euler(moveAmount.x * rotationSpeed * Time.fixedDeltaTime);
         rb.MoveRotation(rb.rotation * deltaRotation);
+    }
+    void ElevatorButtonsOn()
+    {
+        floor1Button.SetActive(true);
+        floor2Button.SetActive(true);
+        floor3Button.SetActive(true);
+    }
+    void ElevatorButtonsOff()
+    {
+        floor1Button.SetActive(false);
+        floor2Button.SetActive(false);
+        floor3Button.SetActive(false);
     }
 }

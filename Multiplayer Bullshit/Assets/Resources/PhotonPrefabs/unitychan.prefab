@@ -6929,6 +6929,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 1976684064029000036}
+  floor1Button: {fileID: 0}
+  floor2Button: {fileID: 0}
+  floor3Button: {fileID: 0}
+  Elevator: {fileID: 0}
   moveSpeed: 6
   smoothTime: 0.1
   turnSmoothTime: 10
