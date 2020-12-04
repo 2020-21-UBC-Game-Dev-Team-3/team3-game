@@ -37,6 +37,7 @@ public class PlayerMovementController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Attatches all the necessary components to player
         Elevator = GameObject.FindGameObjectWithTag("Elevator");
         floor1Button = GameObject.FindGameObjectWithTag("Floor1Button");
         floor2Button = GameObject.FindGameObjectWithTag("Floor2Button");
@@ -53,6 +54,16 @@ public class PlayerMovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //This is for elevator buttons
+        distToElevator = Vector3.Distance(transform.position, Elevator.transform.position);
+        if (distToElevator <= 1)
+        {
+            ElevatorButtonsOn();
+        }
+        else
+        {
+            ElevatorButtonsOff();
+        }
 
         if (!pv.IsMine) return;
 

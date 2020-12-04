@@ -8,6 +8,7 @@ public class PlayerManager : MonoBehaviour
 {
     PhotonView pv;
 
+
     void Awake()
     {
         pv = GetComponent<PhotonView>();
