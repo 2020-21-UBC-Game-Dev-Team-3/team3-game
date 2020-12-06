@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{19DB90F3-4E9A-D95D-96E5-AC5AB35CDDE8}</ProjectGuid>
+    <ProjectGuid>{DD90EFA2-1282-EF2D-4E47-35E0DC4425D5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -57,7 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\UI Stuff\MenuManager.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\Interactable.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\AutoBlink.cs" />
+    <Compile Include="Assets\Scripts\Player Stuff\ElevatorScript.cs" />
     <Compile Include="Assets\Scripts\UI Stuff\PlayerListItem.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\CameraController.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs" />
@@ -65,12 +67,13 @@
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\SplashScreen\Scripts\SplashScreen.cs" />
     <Compile Include="Assets\Scripts\PhotonLauncher.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\SpringCollider.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\EmergencyButton.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\ThirdPersonCamera.cs" />
     <Compile Include="Assets\Scripts\UI Stuff\Menu.cs" />
     <Compile Include="Assets\Scripts\UI Stuff\RoomManager.cs" />
     <Compile Include="Assets\Scripts\UI Stuff\RoomListItem.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
-    <Compile Include="Assets\Scripts\Player Stuff\PlayerMovementController.cs" />
+    <Compile Include="Assets\Scripts\Player Stuff\PlayerController.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\IKCtrlRightHand.cs" />
     <Compile Include="Assets\Scripts\Player Stuff\PlayerManager.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\FaceUpdate.cs" />
@@ -700,35 +703,35 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj">
-      <Project>{39D7CDD1-340D-7130-88D2-C03511A7371D}</Project>
+      <Project>{058AC4C5-F563-F0DD-22FF-280395B2392E}</Project>
       <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
-      <Project>{075C27F3-9C30-73CE-7C36-3998FE589435}</Project>
+      <Project>{4AB8492E-58DA-A30F-6CBE-4817A84FD0DC}</Project>
       <Name>PhotonUnityNetworking.Utilities</Name>
     </ProjectReference>
     <ProjectReference Include="ParrelSync.csproj">
-      <Project>{75819081-31EE-FE84-3837-4360B1D44294}</Project>
+      <Project>{404427C8-156D-A826-97CE-13CC5279257A}</Project>
       <Name>ParrelSync</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonRealtime.csproj">
-      <Project>{E72970EB-1458-648A-2760-555806AA96FF}</Project>
+      <Project>{EF86C2E0-A337-1F76-8855-CAFA18256D22}</Project>
       <Name>PhotonRealtime</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.csproj">
-      <Project>{87E9A2D8-2AB8-43FB-11D9-D50FDC310B67}</Project>
+      <Project>{D3BB748D-69F5-978F-E1DD-748CC00C4B33}</Project>
       <Name>PhotonUnityNetworking</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonChat.csproj">
-      <Project>{038CBCEE-1043-9425-F050-1A14F0280A47}</Project>
+      <Project>{A8BBC2C6-15B7-35DC-FCB2-D001038E3B0E}</Project>
       <Name>PhotonChat</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.Culling.Editor.csproj">
-      <Project>{89528A87-7AD7-8169-2123-8699021E26A1}</Project>
+      <Project>{D3718EF9-7627-753F-652B-F284E8E94789}</Project>
       <Name>PhotonUnityNetworking.Utilities.Culling.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
-      <Project>{D80AF8BC-B004-B734-9054-57262BA747B9}</Project>
+      <Project>{18F00B3F-69F9-4A3E-803D-E098EE25867D}</Project>
       <Name>PhotonUnityNetworking.Editor</Name>
     </ProjectReference>
   </ItemGroup>

@@ -7,6 +7,7 @@ using System.IO;
 public class PlayerManager : MonoBehaviour
 {
     PhotonView pv;
+   // [HideInInspector] public GameObject instantiatedPlayer;
 
     void Awake()
     {
@@ -25,6 +26,7 @@ public class PlayerManager : MonoBehaviour
     void CreateController()
     {
         Vector3 position = new Vector3(0f, 10f, 0f);
+        /*instantiatedPlayer =*/ 
         PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "unitychan"), position, Quaternion.identity);
     }
 
