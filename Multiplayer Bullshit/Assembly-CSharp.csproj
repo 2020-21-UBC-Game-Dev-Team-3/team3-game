@@ -56,22 +56,22 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\UI Stuff\MenuManager.cs" />
+    <Compile Include="Assets\Scripts\Lobby Stuff\MenuManager.cs" />
     <Compile Include="Assets\Scripts\Game Stuff\Interactable.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\AutoBlink.cs" />
-    <Compile Include="Assets\Scripts\Player Stuff\ElevatorScript.cs" />
-    <Compile Include="Assets\Scripts\UI Stuff\PlayerListItem.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\ElevatorScript.cs" />
+    <Compile Include="Assets\Scripts\Lobby Stuff\PlayerListItem.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\CameraController.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\SpringManager.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\SplashScreen\Scripts\SplashScreen.cs" />
-    <Compile Include="Assets\Scripts\PhotonLauncher.cs" />
+    <Compile Include="Assets\Scripts\Lobby Stuff\PhotonLauncher.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\SpringCollider.cs" />
     <Compile Include="Assets\Scripts\Game Stuff\EmergencyButton.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\ThirdPersonCamera.cs" />
-    <Compile Include="Assets\Scripts\UI Stuff\Menu.cs" />
-    <Compile Include="Assets\Scripts\UI Stuff\RoomManager.cs" />
-    <Compile Include="Assets\Scripts\UI Stuff\RoomListItem.cs" />
+    <Compile Include="Assets\Scripts\Lobby Stuff\Menu.cs" />
+    <Compile Include="Assets\Scripts\Lobby Stuff\RoomManager.cs" />
+    <Compile Include="Assets\Scripts\Lobby Stuff\RoomListItem.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
     <Compile Include="Assets\Scripts\Player Stuff\PlayerController.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\IKCtrlRightHand.cs" />
@@ -82,6 +82,8 @@
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs" />
     <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\MapPopUp.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\MapManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />

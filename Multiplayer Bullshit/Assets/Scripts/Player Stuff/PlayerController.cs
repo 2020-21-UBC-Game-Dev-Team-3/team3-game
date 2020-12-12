@@ -6,6 +6,9 @@ using Photon.Pun;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] GameObject playerCamera;
+    [SerializeField] GameObject minimapCamera;
+
+    [SerializeField] GameObject playerIndicator;
 
     [SerializeField] GameObject emergencyMeetingEvent;
 
@@ -42,6 +45,8 @@ public class PlayerController : MonoBehaviour
         if (!playerPV.IsMine)
         {
             Destroy(playerCamera);
+            Destroy(minimapCamera);
+            Destroy(playerIndicator);
         }
     }
 

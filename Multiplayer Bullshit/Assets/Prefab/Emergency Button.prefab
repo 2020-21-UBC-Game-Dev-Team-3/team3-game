@@ -231,9 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6592f790733db0419748b377fbdf5f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionEvent: {fileID: 0}
+  interactableName: 
   interactableTransform: {fileID: 8404388821629234630}
   indicator: {fileID: 1387800346445087531}
-  indicatorPV: {fileID: 0}
   radius: 3
-  isTriggered: 0
