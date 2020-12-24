@@ -5,6 +5,7 @@ using Photon.Pun;
 
 public class PlayerMovementController : MonoBehaviour
 {
+    
     [SerializeField] GameObject playerCamera;
     
     //public CharacterController controller;
@@ -81,6 +82,9 @@ public class PlayerMovementController : MonoBehaviour
 
     void FixedUpdate()
     {
+
+        if (!pv.IsMine) return;
+
         rb.MovePosition(rb.position + transform.TransformDirection(moveAmount) * Time.fixedDeltaTime);
 
         Quaternion deltaRotation = Quaternion.Euler(moveAmount.x * rotationSpeed * Time.fixedDeltaTime);

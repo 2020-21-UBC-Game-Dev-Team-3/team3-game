@@ -6852,6 +6852,8 @@ GameObject:
   - component: {fileID: 3834186253576296158}
   - component: {fileID: -481073646839833853}
   - component: {fileID: 4547622216708105833}
+  - component: {fileID: 7520089055065660049}
+  - component: {fileID: 11519773628337757}
   m_Layer: 0
   m_Name: unitychan
   m_TagString: Player
@@ -7033,6 +7035,49 @@ MonoBehaviour:
   m_SynchronizeLayers:
   - SynchronizeType: 1
     LayerIndex: 0
+--- !u!114 &7520089055065660049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2268599413859011575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1213bea7c3555a144862c9e8b72cdf2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isImpostor: 0
+  KILL:
+    m_Name: KILL
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 2a6c590e-e7f5-4f3f-8ab8-9c4ffaae21d1
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: cfd377fd-ee50-493e-a00c-680bc15a68f1
+      m_Path: <Keyboard>/q
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: KILL
+      m_Flags: 0
+  myCollider: {fileID: -481073646839833853}
+--- !u!135 &11519773628337757
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2268599413859011575}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &2268599413859011577
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,20 +1,20 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Users/kevin/OneDrive/Documents/Unity/Multiplayer Bullshit/Packages/manifest.json
+    m_FilePath: C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637421172065807243
-    m_Hash: 911156607
+      ticks: 637442794055198911
+    m_Hash: 3265437896
   m_LockFileStatus:
-    m_FilePath: C:/Users/kevin/OneDrive/Documents/Unity/Multiplayer Bullshit/Packages/packages-lock.json
+    m_FilePath: C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637421172065907275
-    m_Hash: 2825293192
+      ticks: 637442794055538018
+    m_Hash: 4021474362
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -25,7 +25,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.6.3
       source: 1
-      resolvedPath: C:\Users\kevin\OneDrive\Documents\Unity\Multiplayer Bullshit\Library\PackageCache\com.unity.cinemachine@2.6.3
+      resolvedPath: C:\Users\Nafis20\Desktop\Gaming\team3-game\Multiplayer Bullshit\Library\PackageCache\com.unity.cinemachine@2.6.3
       assetPath: Packages/com.unity.cinemachine
       name: com.unity.cinemachine
       displayName: Cinemachine
@@ -142,7 +142,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.3.9
       source: 1
-      resolvedPath: C:\Users\kevin\OneDrive\Documents\Unity\Multiplayer Bullshit\Library\PackageCache\com.unity.collab-proxy@1.3.9
+      resolvedPath: C:\Users\Nafis20\Desktop\Gaming\team3-game\Multiplayer Bullshit\Library\PackageCache\com.unity.collab-proxy@1.3.9
       assetPath: Packages/com.unity.collab-proxy
       name: com.unity.collab-proxy
       displayName: Unity Collaborate
@@ -237,7 +237,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.2.1
       source: 1
-      resolvedPath: C:\Users\kevin\OneDrive\Documents\Unity\Multiplayer Bullshit\Library\PackageCache\com.unity.ide.rider@1.2.1
+      resolvedPath: C:\Users\Nafis20\Desktop\Gaming\team3-game\Multiplayer Bullshit\Library\PackageCache\com.unity.ide.rider@1.2.1
       assetPath: Packages/com.unity.ide.rider
       name: com.unity.ide.rider
       displayName: JetBrains Rider Editor
@@ -336,7 +336,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.3
       source: 1
-      resolvedPath: C:\Users\kevin\OneDrive\Documents\Unity\Multiplayer Bullshit\Library\PackageCache\com.unity.ide.visualstudio@2.0.3
+      resolvedPath: C:\Users\Nafis20\Desktop\Gaming\team3-game\Multiplayer Bullshit\Library\PackageCache\com.unity.ide.visualstudio@2.0.3
       assetPath: Packages/com.unity.ide.visualstudio
       name: com.unity.ide.visualstudio
       displayName: Visual Studio Editor
@@ -400,12 +400,12 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.visualstudio.git
         revision: 869804bff6e99d0d0e9c1867aebaa070fad875e5
         path: 
-    - packageId: com.unity.ide.vscode@1.2.2
+    - packageId: com.unity.ide.vscode@1.1.2
       testable: 0
       isDirectDependency: 1
-      version: 1.2.2
+      version: 1.1.2
       source: 1
-      resolvedPath: C:\Users\kevin\OneDrive\Documents\Unity\Multiplayer Bullshit\Library\PackageCache\com.unity.ide.vscode@1.2.2
+      resolvedPath: C:\Users\Nafis20\Desktop\Gaming\team3-game\Multiplayer Bullshit\Library\PackageCache\com.unity.ide.vscode@1.1.2
       assetPath: Packages/com.unity.ide.vscode
       name: com.unity.ide.vscode
       displayName: Visual Studio Code Editor
@@ -461,20 +461,124 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637356850590000000
+      datePublishedTicks: 637032133170000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.vscode.git
-        revision: d4564dab663617ea31f5782b365961d5304bed3c
+        url: git@github.cds.internal.unity3d.com:unity/com.unity.ide.vscode.git
+        revision: 42d4cf5f589958e6c73c4ee03866482b63280f57
+        path: 
+    - packageId: com.unity.inputsystem@1.0.1
+      testable: 0
+      isDirectDependency: 1
+      version: 1.0.1
+      source: 1
+      resolvedPath: C:\Users\Nafis20\Desktop\Gaming\team3-game\Multiplayer Bullshit\Library\PackageCache\com.unity.inputsystem@1.0.1
+      assetPath: Packages/com.unity.inputsystem
+      name: com.unity.inputsystem
+      displayName: Input System
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: A new input system which can be used as a more extensible and
+        customizable alternative to Unity's classic input system in UnityEngine.Input.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.1.2-preview
+        - 0.2.0-preview
+        - 0.2.1-preview
+        - 0.2.6-preview
+        - 0.2.8-preview
+        - 0.2.10-preview
+        - 0.9.0-preview
+        - 0.9.1-preview
+        - 0.9.2-preview
+        - 0.9.3-preview
+        - 0.9.4-preview
+        - 0.9.5-preview
+        - 0.9.6-preview
+        - 1.0.0-preview
+        - 1.0.0-preview.1
+        - 1.0.0-preview.2
+        - 1.0.0-preview.3
+        - 1.0.0-preview.4
+        - 1.0.0-preview.5
+        - 1.0.0-preview.6
+        - 1.0.0-preview.7
+        - 1.0.0
+        - 1.0.1
+        - 1.1.0-preview.1
+        - 1.1.0-preview.2
+        compatible:
+        - 0.1.2-preview
+        - 0.2.0-preview
+        - 0.2.1-preview
+        - 0.2.6-preview
+        - 0.2.8-preview
+        - 0.2.10-preview
+        - 0.9.0-preview
+        - 0.9.1-preview
+        - 0.9.2-preview
+        - 0.9.3-preview
+        - 0.9.4-preview
+        - 0.9.5-preview
+        - 0.9.6-preview
+        - 1.0.0-preview
+        - 1.0.0-preview.1
+        - 1.0.0-preview.2
+        - 1.0.0-preview.3
+        - 1.0.0-preview.4
+        - 1.0.0-preview.5
+        - 1.0.0-preview.6
+        - 1.0.0-preview.7
+        - 1.0.0
+        - 1.0.1
+        - 1.1.0-preview.1
+        - 1.1.0-preview.2
+        verified: 1.0.1
+      dependencies: []
+      resolvedDependencies: []
+      keywords:
+      - input
+      - events
+      - keyboard
+      - mouse
+      - gamepad
+      - touch
+      - vr
+      - xr
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637418303510000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: git+https://github.com/Unity-Technologies/InputSystem.git
+        revision: f757ff8ed7383896d71a608a755c1c39373cf4c8
         path: 
     - packageId: com.unity.test-framework@1.1.18
       testable: 0
       isDirectDependency: 1
       version: 1.1.18
       source: 1
-      resolvedPath: C:\Users\kevin\OneDrive\Documents\Unity\Multiplayer Bullshit\Library\PackageCache\com.unity.test-framework@1.1.18
+      resolvedPath: C:\Users\Nafis20\Desktop\Gaming\team3-game\Multiplayer Bullshit\Library\PackageCache\com.unity.test-framework@1.1.18
       assetPath: Packages/com.unity.test-framework
       name: com.unity.test-framework
       displayName: Test Framework
@@ -514,10 +618,12 @@ m_PackageAssets:
         - 1.1.16
         - 1.1.18
         - 1.1.19
+        - 1.1.20
         compatible:
         - 1.1.18
         - 1.1.19
-        verified: 1.1.19
+        - 1.1.20
+        verified: 1.1.20
       dependencies:
       - name: com.unity.ext.nunit
         version: 1.0.0
@@ -560,7 +666,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 3.0.1
       source: 1
-      resolvedPath: C:\Users\kevin\OneDrive\Documents\Unity\Multiplayer Bullshit\Library\PackageCache\com.unity.textmeshpro@3.0.1
+      resolvedPath: C:\Users\Nafis20\Desktop\Gaming\team3-game\Multiplayer Bullshit\Library\PackageCache\com.unity.textmeshpro@3.0.1
       assetPath: Packages/com.unity.textmeshpro
       name: com.unity.textmeshpro
       displayName: TextMeshPro
@@ -707,7 +813,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.3.6
       source: 1
-      resolvedPath: C:\Users\kevin\OneDrive\Documents\Unity\Multiplayer Bullshit\Library\PackageCache\com.unity.timeline@1.3.6
+      resolvedPath: C:\Users\Nafis20\Desktop\Gaming\team3-game\Multiplayer Bullshit\Library\PackageCache\com.unity.timeline@1.3.6
       assetPath: Packages/com.unity.timeline
       name: com.unity.timeline
       displayName: Timeline
@@ -2657,7 +2763,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.0
       source: 1
-      resolvedPath: C:\Users\kevin\OneDrive\Documents\Unity\Multiplayer Bullshit\Library\PackageCache\com.unity.ext.nunit@1.0.0
+      resolvedPath: C:\Users\Nafis20\Desktop\Gaming\team3-game\Multiplayer Bullshit\Library\PackageCache\com.unity.ext.nunit@1.0.0
       assetPath: Packages/com.unity.ext.nunit
       name: com.unity.ext.nunit
       displayName: Custom NUnit
@@ -2678,13 +2784,15 @@ m_PackageAssets:
         - 0.1.9-preview
         - 1.0.0
         - 1.0.5
+        - 1.0.6
         compatible:
         - 0.1.5-preview
         - 0.1.6-preview
         - 0.1.9-preview
         - 1.0.0
         - 1.0.5
-        verified: 1.0.5
+        - 1.0.6
+        verified: 1.0.6
       dependencies: []
       resolvedDependencies: []
       keywords:
@@ -2713,5 +2821,5 @@ m_PackageAssets:
         path: 
   m_LocalPackages:
     m_LocalFileStatus: []
-m_ProjectPath: C:/Users/kevin/OneDrive/Documents/Unity/Multiplayer Bullshit/Packages
+m_ProjectPath: C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Packages
 m_EditorVersion: 2020.1.12f1 (55b56f0a86e3)
