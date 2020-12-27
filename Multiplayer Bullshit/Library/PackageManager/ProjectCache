@@ -1,20 +1,20 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Users/kevin/OneDrive/Documents/Unity/Multiplayer Bullshit (kevin)/Packages/manifest.json
+    m_FilePath: C:/Users/cdben/Documents/GitHub/team3-game/Multiplayer Bullshit/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637421172065807243
-    m_Hash: 911156607
+      ticks: 637446398118864278
+    m_Hash: 1654507903
   m_LockFileStatus:
-    m_FilePath: C:/Users/kevin/OneDrive/Documents/Unity/Multiplayer Bullshit (kevin)/Packages/packages-lock.json
+    m_FilePath: C:/Users/cdben/Documents/GitHub/team3-game/Multiplayer Bullshit/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637421172065907275
-    m_Hash: 2825293192
+      ticks: 637446398119084273
+    m_Hash: 1861064863
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -25,8 +25,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.6.3
       source: 1
-      resolvedPath: C:\Users\kevin\OneDrive\Documents\Unity\Multiplayer Bullshit
-        (kevin)\Library\PackageCache\com.unity.cinemachine@2.6.3
+      resolvedPath: C:\Users\cdben\Documents\GitHub\team3-game\Multiplayer Bullshit\Library\PackageCache\com.unity.cinemachine@2.6.3
       assetPath: Packages/com.unity.cinemachine
       name: com.unity.cinemachine
       displayName: Cinemachine
@@ -143,8 +142,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.3.9
       source: 1
-      resolvedPath: C:\Users\kevin\OneDrive\Documents\Unity\Multiplayer Bullshit
-        (kevin)\Library\PackageCache\com.unity.collab-proxy@1.3.9
+      resolvedPath: C:\Users\cdben\Documents\GitHub\team3-game\Multiplayer Bullshit\Library\PackageCache\com.unity.collab-proxy@1.3.9
       assetPath: Packages/com.unity.collab-proxy
       name: com.unity.collab-proxy
       displayName: Unity Collaborate
@@ -239,8 +237,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.2.1
       source: 1
-      resolvedPath: C:\Users\kevin\OneDrive\Documents\Unity\Multiplayer Bullshit
-        (kevin)\Library\PackageCache\com.unity.ide.rider@1.2.1
+      resolvedPath: C:\Users\cdben\Documents\GitHub\team3-game\Multiplayer Bullshit\Library\PackageCache\com.unity.ide.rider@1.2.1
       assetPath: Packages/com.unity.ide.rider
       name: com.unity.ide.rider
       displayName: JetBrains Rider Editor
@@ -339,8 +336,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.3
       source: 1
-      resolvedPath: C:\Users\kevin\OneDrive\Documents\Unity\Multiplayer Bullshit
-        (kevin)\Library\PackageCache\com.unity.ide.visualstudio@2.0.3
+      resolvedPath: C:\Users\cdben\Documents\GitHub\team3-game\Multiplayer Bullshit\Library\PackageCache\com.unity.ide.visualstudio@2.0.3
       assetPath: Packages/com.unity.ide.visualstudio
       name: com.unity.ide.visualstudio
       displayName: Visual Studio Editor
@@ -409,8 +405,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.2.2
       source: 1
-      resolvedPath: C:\Users\kevin\OneDrive\Documents\Unity\Multiplayer Bullshit
-        (kevin)\Library\PackageCache\com.unity.ide.vscode@1.2.2
+      resolvedPath: C:\Users\cdben\Documents\GitHub\team3-game\Multiplayer Bullshit\Library\PackageCache\com.unity.ide.vscode@1.2.2
       assetPath: Packages/com.unity.ide.vscode
       name: com.unity.ide.vscode
       displayName: Visual Studio Code Editor
@@ -474,13 +469,177 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.vscode.git
         revision: d4564dab663617ea31f5782b365961d5304bed3c
         path: 
+    - packageId: com.unity.render-pipelines.high-definition@8.2.0
+      testable: 0
+      isDirectDependency: 1
+      version: 8.2.0
+      source: 1
+      resolvedPath: C:\Users\cdben\Documents\GitHub\team3-game\Multiplayer Bullshit\Library\PackageCache\com.unity.render-pipelines.high-definition@8.2.0
+      assetPath: Packages/com.unity.render-pipelines.high-definition
+      name: com.unity.render-pipelines.high-definition
+      displayName: High Definition RP
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: The High Definition Render Pipeline (HDRP) is a high-fidelity
+        Scriptable Render Pipeline built by Unity to target modern (Compute Shader
+        compatible) platforms. HDRP utilizes Physically-Based Lighting techniques,
+        linear lighting, HDR lighting, and a configurable hybrid Tile/Cluster deferred/Forward
+        lighting architecture and gives you the tools you need to create games, technical
+        demos, animations, and more to a high graphical standard.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.1.21
+        - 0.1.27
+        - 0.1.28
+        - 1.0.0-beta
+        - 1.0.1-beta
+        - 1.1.1-preview
+        - 1.1.2-preview
+        - 1.1.4-preview
+        - 1.1.5-preview
+        - 1.1.8-preview
+        - 1.1.10-preview
+        - 1.1.11-preview
+        - 2.0.1-preview
+        - 2.0.3-preview
+        - 2.0.4-preview
+        - 2.0.4-preview.1
+        - 2.0.5-preview
+        - 2.0.6-preview
+        - 2.0.7-preview
+        - 2.0.8-preview
+        - 3.0.0-preview
+        - 3.1.0-preview
+        - 3.3.0-preview
+        - 4.0.0-preview
+        - 4.0.1-preview
+        - 4.1.0-preview
+        - 4.2.0-preview
+        - 4.3.0-preview
+        - 4.6.0-preview
+        - 4.8.0-preview
+        - 4.9.0-preview
+        - 4.10.0-preview
+        - 5.0.0-preview
+        - 5.1.0-preview
+        - 5.2.0-preview
+        - 5.2.1-preview
+        - 5.2.2-preview
+        - 5.2.3-preview
+        - 5.3.1-preview
+        - 5.6.1-preview
+        - 5.7.2-preview
+        - 5.8.2-preview
+        - 5.9.0-preview
+        - 5.10.0-preview
+        - 5.13.0-preview
+        - 5.16.1-preview
+        - 6.5.2-preview
+        - 6.5.3-preview
+        - 6.7.1-preview
+        - 6.9.0-preview
+        - 6.9.1-preview
+        - 6.9.2-preview
+        - 7.0.0
+        - 7.0.1
+        - 7.1.1
+        - 7.1.2
+        - 7.1.5
+        - 7.1.6
+        - 7.1.7
+        - 7.1.8
+        - 7.2.0
+        - 7.2.1
+        - 7.3.1
+        - 7.4.1
+        - 7.4.2
+        - 7.4.3
+        - 7.5.1
+        - 7.5.2
+        - 8.0.1
+        - 8.1.0
+        - 8.2.0
+        - 8.3.1
+        - 9.0.0-preview.13
+        - 9.0.0-preview.33
+        - 9.0.0-preview.54
+        - 9.0.0-preview.71
+        - 10.0.0-preview.27
+        - 10.1.0
+        - 10.2.0
+        - 10.2.1
+        - 10.2.2
+        compatible:
+        - 8.2.0
+        - 9.0.0-preview.13
+        - 9.0.0-preview.33
+        - 9.0.0-preview.54
+        - 9.0.0-preview.71
+        verified: 8.2.0
+      dependencies:
+      - name: com.unity.render-pipelines.core
+        version: 8.2.0
+      - name: com.unity.shadergraph
+        version: 8.2.0
+      - name: com.unity.visualeffectgraph
+        version: 8.2.0
+      - name: com.unity.render-pipelines.high-definition-config
+        version: 8.2.0
+      resolvedDependencies:
+      - name: com.unity.render-pipelines.core
+        version: 8.2.0
+      - name: com.unity.ugui
+        version: 1.0.0
+      - name: com.unity.modules.ui
+        version: 1.0.0
+      - name: com.unity.modules.imgui
+        version: 1.0.0
+      - name: com.unity.shadergraph
+        version: 8.2.0
+      - name: com.unity.searcher
+        version: 4.0.9
+      - name: com.unity.visualeffectgraph
+        version: 8.2.0
+      - name: com.unity.render-pipelines.high-definition-config
+        version: 8.2.0
+      keywords:
+      - graphics
+      - performance
+      - rendering
+      - render
+      - pipeline
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637302630630000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: git+https://github.com/Unity-Technologies/Graphics.git
+        revision: 4ad03e7975af24c8e60c974edb24c696e74e39b3
+        path: 
     - packageId: com.unity.test-framework@1.1.18
       testable: 0
       isDirectDependency: 1
       version: 1.1.18
       source: 1
-      resolvedPath: C:\Users\kevin\OneDrive\Documents\Unity\Multiplayer Bullshit
-        (kevin)\Library\PackageCache\com.unity.test-framework@1.1.18
+      resolvedPath: C:\Users\cdben\Documents\GitHub\team3-game\Multiplayer Bullshit\Library\PackageCache\com.unity.test-framework@1.1.18
       assetPath: Packages/com.unity.test-framework
       name: com.unity.test-framework
       displayName: Test Framework
@@ -520,10 +679,12 @@ m_PackageAssets:
         - 1.1.16
         - 1.1.18
         - 1.1.19
+        - 1.1.20
         compatible:
         - 1.1.18
         - 1.1.19
-        verified: 1.1.19
+        - 1.1.20
+        verified: 1.1.20
       dependencies:
       - name: com.unity.ext.nunit
         version: 1.0.0
@@ -566,8 +727,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 3.0.1
       source: 1
-      resolvedPath: C:\Users\kevin\OneDrive\Documents\Unity\Multiplayer Bullshit
-        (kevin)\Library\PackageCache\com.unity.textmeshpro@3.0.1
+      resolvedPath: C:\Users\cdben\Documents\GitHub\team3-game\Multiplayer Bullshit\Library\PackageCache\com.unity.textmeshpro@3.0.1
       assetPath: Packages/com.unity.textmeshpro
       name: com.unity.textmeshpro
       displayName: TextMeshPro
@@ -714,8 +874,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.3.6
       source: 1
-      resolvedPath: C:\Users\kevin\OneDrive\Documents\Unity\Multiplayer Bullshit
-        (kevin)\Library\PackageCache\com.unity.timeline@1.3.6
+      resolvedPath: C:\Users\cdben\Documents\GitHub\team3-game\Multiplayer Bullshit\Library\PackageCache\com.unity.timeline@1.3.6
       assetPath: Packages/com.unity.timeline
       name: com.unity.timeline
       displayName: Timeline
@@ -2665,8 +2824,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.0
       source: 1
-      resolvedPath: C:\Users\kevin\OneDrive\Documents\Unity\Multiplayer Bullshit
-        (kevin)\Library\PackageCache\com.unity.ext.nunit@1.0.0
+      resolvedPath: C:\Users\cdben\Documents\GitHub\team3-game\Multiplayer Bullshit\Library\PackageCache\com.unity.ext.nunit@1.0.0
       assetPath: Packages/com.unity.ext.nunit
       name: com.unity.ext.nunit
       displayName: Custom NUnit
@@ -2687,13 +2845,15 @@ m_PackageAssets:
         - 0.1.9-preview
         - 1.0.0
         - 1.0.5
+        - 1.0.6
         compatible:
         - 0.1.5-preview
         - 0.1.6-preview
         - 0.1.9-preview
         - 1.0.0
         - 1.0.5
-        verified: 1.0.5
+        - 1.0.6
+        verified: 1.0.6
       dependencies: []
       resolvedDependencies: []
       keywords:
@@ -2720,7 +2880,584 @@ m_PackageAssets:
         url: git@gitlab.cds.internal.unity3d.com/upm-packages/core/com.unity.ext.nunit.git
         revision: c8f5044ffe6adb909f9836160b0bdaa30f2d1ec9
         path: 
+    - packageId: com.unity.render-pipelines.core@8.2.0
+      testable: 0
+      isDirectDependency: 0
+      version: 8.2.0
+      source: 1
+      resolvedPath: C:\Users\cdben\Documents\GitHub\team3-game\Multiplayer Bullshit\Library\PackageCache\com.unity.render-pipelines.core@8.2.0
+      assetPath: Packages/com.unity.render-pipelines.core
+      name: com.unity.render-pipelines.core
+      displayName: Core RP Library
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: SRP Core makes it easier to create or customize a Scriptable Render
+        Pipeline (SRP). SRP Core contains reusable code, including boilerplate code
+        for working with platform-specific graphics APIs, utility functions for common
+        rendering operations, and  shader libraries. The code in SRP Core is use
+        by the High Definition Render Pipeline (HDRP) and Universal Render Pipeline
+        (URP). If you are creating a custom SRP from scratch or customizing a prebuilt
+        SRP, using SRP Core will save you time.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.1.21
+        - 0.1.27
+        - 0.1.28
+        - 1.0.0-beta
+        - 1.0.1-beta
+        - 1.1.1-preview
+        - 1.1.2-preview
+        - 1.1.4-preview
+        - 1.1.5-preview
+        - 1.1.8-preview
+        - 1.1.10-preview
+        - 1.1.11-preview
+        - 2.0.1-preview
+        - 2.0.3-preview
+        - 2.0.4-preview
+        - 2.0.4-preview.1
+        - 2.0.5-preview
+        - 2.0.6-preview
+        - 2.0.7-preview
+        - 2.0.8-preview
+        - 3.0.0-preview
+        - 3.1.0-preview
+        - 3.3.0-preview
+        - 4.0.0-preview
+        - 4.0.1-preview
+        - 4.1.0-preview
+        - 4.2.0-preview
+        - 4.3.0-preview
+        - 4.6.0-preview
+        - 4.8.0-preview
+        - 4.9.0-preview
+        - 4.10.0-preview
+        - 5.0.0-preview
+        - 5.1.0
+        - 5.2.0
+        - 5.2.1
+        - 5.2.2
+        - 5.2.3
+        - 5.3.1
+        - 5.6.1
+        - 5.7.2
+        - 5.8.2
+        - 5.9.0
+        - 5.10.0
+        - 5.13.0
+        - 5.16.1
+        - 6.5.2
+        - 6.5.3
+        - 6.7.1
+        - 6.9.0
+        - 6.9.1
+        - 6.9.2
+        - 7.0.0
+        - 7.0.1
+        - 7.1.1
+        - 7.1.2
+        - 7.1.5
+        - 7.1.6
+        - 7.1.7
+        - 7.1.8
+        - 7.2.0
+        - 7.2.1
+        - 7.3.1
+        - 7.4.1
+        - 7.4.2
+        - 7.4.3
+        - 7.5.1
+        - 8.0.1
+        - 8.1.0
+        - 8.2.0
+        - 8.3.1
+        - 9.0.0-preview.13
+        - 9.0.0-preview.35
+        - 9.0.0-preview.38
+        - 9.0.0-preview.60
+        - 9.0.0-preview.77
+        - 10.0.0-preview.30
+        - 10.1.0
+        - 10.2.0
+        compatible:
+        - 8.2.0
+        - 9.0.0-preview.13
+        - 9.0.0-preview.35
+        - 9.0.0-preview.38
+        - 9.0.0-preview.60
+        - 9.0.0-preview.77
+        verified: 8.2.0
+      dependencies:
+      - name: com.unity.ugui
+        version: 1.0.0
+      resolvedDependencies:
+      - name: com.unity.ugui
+        version: 1.0.0
+      - name: com.unity.modules.ui
+        version: 1.0.0
+      - name: com.unity.modules.imgui
+        version: 1.0.0
+      keywords: []
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637302622600000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: git+https://github.com/Unity-Technologies/Graphics.git
+        revision: 4ad03e7975af24c8e60c974edb24c696e74e39b3
+        path: 
+    - packageId: com.unity.shadergraph@8.2.0
+      testable: 0
+      isDirectDependency: 0
+      version: 8.2.0
+      source: 1
+      resolvedPath: C:\Users\cdben\Documents\GitHub\team3-game\Multiplayer Bullshit\Library\PackageCache\com.unity.shadergraph@8.2.0
+      assetPath: Packages/com.unity.shadergraph
+      name: com.unity.shadergraph
+      displayName: Shader Graph
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: The Shader Graph package adds a visual Shader editing tool to
+        Unity. You can use this tool to create Shaders in a visual way instead of
+        writing code. Specific render pipelines can implement specific graph features.
+        Currently, both the High Definition Rendering Pipeline and the Universal
+        Rendering Pipeline support Shader Graph.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.1.8
+        - 0.1.9
+        - 0.1.17
+        - 1.0.0-beta
+        - 1.1.1-preview
+        - 1.1.2-preview
+        - 1.1.3-preview
+        - 1.1.4-preview
+        - 1.1.5-preview
+        - 1.1.6-preview
+        - 1.1.8-preview
+        - 1.1.9-preview
+        - 2.0.1-preview
+        - 2.0.3-preview
+        - 2.0.4-preview
+        - 2.0.4-preview.1
+        - 2.0.5-preview
+        - 2.0.6-preview
+        - 2.0.7-preview
+        - 2.0.8-preview
+        - 3.0.0-preview
+        - 3.1.0-preview
+        - 3.3.0-preview
+        - 4.0.0-preview
+        - 4.0.1-preview
+        - 4.1.0-preview
+        - 4.2.0-preview
+        - 4.3.0-preview
+        - 4.6.0-preview
+        - 4.8.0-preview
+        - 4.9.0-preview
+        - 4.10.0-preview
+        - 5.0.0-preview
+        - 5.1.0
+        - 5.2.0
+        - 5.2.1
+        - 5.2.2
+        - 5.2.3
+        - 5.3.1
+        - 5.6.1
+        - 5.7.2
+        - 5.8.2
+        - 5.9.0
+        - 5.10.0
+        - 5.13.0
+        - 5.16.1
+        - 6.5.2
+        - 6.5.3
+        - 6.7.1
+        - 6.9.0
+        - 6.9.1
+        - 6.9.2
+        - 7.0.0
+        - 7.0.1
+        - 7.1.1
+        - 7.1.2
+        - 7.1.5
+        - 7.1.6
+        - 7.1.7
+        - 7.1.8
+        - 7.2.0
+        - 7.2.1
+        - 7.3.1
+        - 7.4.1
+        - 7.4.2
+        - 7.4.3
+        - 7.5.1
+        - 7.5.2
+        - 8.0.1
+        - 8.1.0
+        - 8.2.0
+        - 8.3.1
+        - 9.0.0-preview.14
+        - 9.0.0-preview.34
+        - 9.0.0-preview.55
+        - 9.0.0-preview.72
+        - 10.0.0-preview.27
+        - 10.1.0
+        - 10.2.0
+        - 10.2.1
+        - 10.2.2
+        compatible:
+        - 8.2.0
+        - 9.0.0-preview.14
+        - 9.0.0-preview.34
+        - 9.0.0-preview.55
+        - 9.0.0-preview.72
+        verified: 8.2.0
+      dependencies:
+      - name: com.unity.render-pipelines.core
+        version: 8.2.0
+      - name: com.unity.searcher
+        version: 4.0.9
+      resolvedDependencies:
+      - name: com.unity.render-pipelines.core
+        version: 8.2.0
+      - name: com.unity.ugui
+        version: 1.0.0
+      - name: com.unity.modules.ui
+        version: 1.0.0
+      - name: com.unity.modules.imgui
+        version: 1.0.0
+      - name: com.unity.searcher
+        version: 4.0.9
+      keywords: []
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637302623400000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: git+https://github.com/Unity-Technologies/Graphics.git
+        revision: 4ad03e7975af24c8e60c974edb24c696e74e39b3
+        path: 
+    - packageId: com.unity.visualeffectgraph@8.2.0
+      testable: 0
+      isDirectDependency: 0
+      version: 8.2.0
+      source: 1
+      resolvedPath: C:\Users\cdben\Documents\GitHub\team3-game\Multiplayer Bullshit\Library\PackageCache\com.unity.visualeffectgraph@8.2.0
+      assetPath: Packages/com.unity.visualeffectgraph
+      name: com.unity.visualeffectgraph
+      displayName: Visual Effect Graph
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: The Visual Effect Graph is a node based visual effect editor.
+        It allows you to author next generation visual effects that Unity simulates
+        directly on the GPU. The Visual Effect Graph is production-ready for the
+        High Definition Render Pipeline and runs on all platforms supported by it.
+        Full support for the Universal Render Pipeline and compatible mobile devices
+        is still in development.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 4.3.0-preview
+        - 4.6.0-preview
+        - 4.8.0-preview
+        - 4.9.0-preview
+        - 4.10.0-preview
+        - 5.2.0-preview
+        - 5.2.1-preview
+        - 5.2.3-preview
+        - 5.3.1-preview
+        - 5.6.1-preview
+        - 5.7.2-preview
+        - 5.8.2-preview
+        - 5.10.0-preview
+        - 5.13.0-preview
+        - 5.16.1-preview
+        - 6.5.2-preview
+        - 6.5.3-preview
+        - 6.7.1-preview
+        - 6.9.0-preview
+        - 6.9.1-preview
+        - 6.9.2-preview
+        - 7.0.0
+        - 7.0.1
+        - 7.1.1
+        - 7.1.2
+        - 7.1.5
+        - 7.1.6
+        - 7.1.7
+        - 7.1.8
+        - 7.2.0
+        - 7.2.1
+        - 7.3.1
+        - 7.4.1
+        - 7.4.2
+        - 7.4.3
+        - 7.5.1
+        - 7.5.2
+        - 8.0.1
+        - 8.1.0
+        - 8.2.0
+        - 8.3.1
+        - 9.0.0-preview.13
+        - 9.0.0-preview.33
+        - 9.0.0-preview.54
+        - 9.0.0-preview.71
+        - 10.0.0-preview.27
+        - 10.1.0
+        - 10.2.0
+        - 10.2.1
+        - 10.2.2
+        compatible:
+        - 8.2.0
+        - 9.0.0-preview.13
+        - 9.0.0-preview.33
+        - 9.0.0-preview.54
+        - 9.0.0-preview.71
+        verified: 8.2.0
+      dependencies:
+      - name: com.unity.shadergraph
+        version: 8.2.0
+      resolvedDependencies:
+      - name: com.unity.shadergraph
+        version: 8.2.0
+      - name: com.unity.render-pipelines.core
+        version: 8.2.0
+      - name: com.unity.ugui
+        version: 1.0.0
+      - name: com.unity.modules.ui
+        version: 1.0.0
+      - name: com.unity.modules.imgui
+        version: 1.0.0
+      - name: com.unity.searcher
+        version: 4.0.9
+      keywords:
+      - vfx
+      - visualeffect
+      - graph
+      - effect
+      - particles
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637302624360000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: git+https://github.com/Unity-Technologies/Graphics.git
+        revision: 4ad03e7975af24c8e60c974edb24c696e74e39b3
+        path: 
+    - packageId: com.unity.render-pipelines.high-definition-config@8.2.0
+      testable: 0
+      isDirectDependency: 0
+      version: 8.2.0
+      source: 1
+      resolvedPath: C:\Users\cdben\Documents\GitHub\team3-game\Multiplayer Bullshit\Library\PackageCache\com.unity.render-pipelines.high-definition-config@8.2.0
+      assetPath: Packages/com.unity.render-pipelines.high-definition-config
+      name: com.unity.render-pipelines.high-definition-config
+      displayName: High Definition RP Config
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: Configuration files for the High Definition Render Pipeline.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 7.0.0
+        - 7.0.1
+        - 7.1.1
+        - 7.1.2
+        - 7.1.5
+        - 7.1.6
+        - 7.1.7
+        - 7.1.8
+        - 7.2.0
+        - 7.2.1
+        - 7.3.1
+        - 7.4.1
+        - 7.4.2
+        - 7.4.3
+        - 7.5.1
+        - 8.0.1
+        - 8.1.0
+        - 8.2.0
+        - 8.3.1
+        - 9.0.0-preview.15
+        - 9.0.0-preview.35
+        - 9.0.0-preview.57
+        - 9.0.0-preview.74
+        - 10.0.0-preview.27
+        - 10.1.0
+        - 10.2.0
+        compatible:
+        - 8.2.0
+        - 9.0.0-preview.15
+        - 9.0.0-preview.35
+        - 9.0.0-preview.57
+        - 9.0.0-preview.74
+        verified: 8.2.0
+      dependencies:
+      - name: com.unity.render-pipelines.core
+        version: 8.2.0
+      resolvedDependencies:
+      - name: com.unity.render-pipelines.core
+        version: 8.2.0
+      - name: com.unity.ugui
+        version: 1.0.0
+      - name: com.unity.modules.ui
+        version: 1.0.0
+      - name: com.unity.modules.imgui
+        version: 1.0.0
+      keywords: []
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637302627360000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: git+https://github.com/Unity-Technologies/Graphics.git
+        revision: 4ad03e7975af24c8e60c974edb24c696e74e39b3
+        path: 
+    - packageId: com.unity.searcher@4.0.9
+      testable: 0
+      isDirectDependency: 0
+      version: 4.0.9
+      source: 1
+      resolvedPath: C:\Users\cdben\Documents\GitHub\team3-game\Multiplayer Bullshit\Library\PackageCache\com.unity.searcher@4.0.9
+      assetPath: Packages/com.unity.searcher
+      name: com.unity.searcher
+      displayName: Searcher
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: General search window for use in the Editor. First target use
+        is for GraphView node search.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 4.0.0-preview
+        - 4.0.0
+        - 4.0.7-preview
+        - 4.0.7
+        - 4.0.8-preview
+        - 4.0.9
+        - 4.1.0-preview
+        - 4.1.0
+        - 4.2.0
+        - 4.3.0
+        - 4.3.1
+        - 4.6.0-preview
+        - 4.7.0-preview
+        compatible:
+        - 4.0.0-preview
+        - 4.0.0
+        - 4.0.7-preview
+        - 4.0.7
+        - 4.0.8-preview
+        - 4.0.9
+        - 4.1.0-preview
+        - 4.1.0
+        - 4.2.0
+        - 4.3.0
+        - 4.3.1
+        - 4.6.0-preview
+        - 4.7.0-preview
+        verified: 4.0.9
+      dependencies: []
+      resolvedDependencies: []
+      keywords:
+      - search
+      - searcher
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637090887100000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: git@github.cds.internal.unity3d.com:unity/com.unity.searcher.git
+        revision: ec1fb56f8d8f95b1503ea22a73b83e2cfb02f083
+        path: 
   m_LocalPackages:
     m_LocalFileStatus: []
-m_ProjectPath: C:/Users/kevin/OneDrive/Documents/Unity/Multiplayer Bullshit (kevin)/Packages
+m_ProjectPath: C:/Users/cdben/Documents/GitHub/team3-game/Multiplayer Bullshit/Packages
 m_EditorVersion: 2020.1.12f1 (55b56f0a86e3)
