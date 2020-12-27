@@ -8,6 +8,8 @@ TagManager:
   - Floor1Button
   - Floor2Button
   - Floor3Button
+  - name
+  - nameText
   layers:
   - Default
   - TransparentFX

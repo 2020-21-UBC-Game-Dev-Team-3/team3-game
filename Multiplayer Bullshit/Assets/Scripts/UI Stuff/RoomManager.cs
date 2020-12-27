@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class RoomManager : MonoBehaviourPunCallbacks
 {
-    public static RoomManager Instance;
 
+    public static RoomManager Instance;
     void Awake()
     {
         if(Instance)
@@ -18,6 +18,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
         }
         DontDestroyOnLoad(gameObject);
         Instance = this;
+
     }
 
     public override void OnEnable()

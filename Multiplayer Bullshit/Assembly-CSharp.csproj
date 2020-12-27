@@ -58,10 +58,13 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\UI Stuff\MenuManager.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\AutoBlink.cs" />
+    <Compile Include="Assets\Scripts\Player Stuff\ElevatorScript.cs" />
+    <Compile Include="Assets\Scripts\nameObj.cs" />
     <Compile Include="Assets\Scripts\UI Stuff\PlayerListItem.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\CameraController.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\SpringManager.cs" />
+    <Compile Include="Assets\Scripts\DataSave.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\SplashScreen\Scripts\SplashScreen.cs" />
     <Compile Include="Assets\Scripts\PhotonLauncher.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\SpringCollider.cs" />
@@ -77,9 +80,12 @@
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\SpringBone.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\RandomWind.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs" />
+    <Compile Include="Assets\Scripts\CharacterData.cs" />
     <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
-    <Compile Include="Assets\Scripts\Player Stuff\ElevatorScript.cs" />
+    <Compile Include="Assets\NameTextScript.cs" />
+    <Compile Include="Assets\Scripts\TextAlign.cs" />
+    <Compile Include="Assets\Button1Script.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />

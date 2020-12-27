@@ -11,6 +11,7 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
     public static PhotonLauncher Instance;
     
     [SerializeField] TMP_InputField roomNameInputField;
+    [SerializeField] TMP_InputField playerNameInputField;
     [SerializeField] TMP_Text errorText;
     [SerializeField] TMP_Text roomNameText;
 
@@ -20,6 +21,8 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
     [SerializeField] GameObject playerListPrefab;
 
     [SerializeField] GameObject startGameButton;
+
+    [SerializeField] GameObject nameObject;
 
     void Awake()
     {
@@ -44,7 +47,7 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
     {
         MenuManager.Instance.OpenMenu("title");
         Debug.Log("Joined lobby.");
-        PhotonNetwork.NickName = "Player " + Random.Range(0, 1000).ToString("0000");
+        if (PhotonNetwork.NickName == "") { PhotonNetwork.NickName = "Player " + Random.Range(0, 1000).ToString("0000"); };
     }
 
     public void CreateRoom()
@@ -52,6 +55,12 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
         if (string.IsNullOrEmpty(roomNameInputField.text)) return;
         PhotonNetwork.CreateRoom(roomNameInputField.text);
         MenuManager.Instance.OpenMenu("loading");
+    }
+    public void InputName()
+    {
+        if (string.IsNullOrEmpty(playerNameInputField.text)) return;
+        PhotonNetwork.NickName = playerNameInputField.text;
+        MenuManager.Instance.OpenMenu("title");
     }
 
     public override void OnJoinedRoom()
@@ -124,5 +133,10 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
     public void StartGame()
     {
         PhotonNetwork.LoadLevel(1);
+    }
+
+    public void Update()
+    {
+        nameObject.name = PhotonNetwork.NickName;
     }
 }

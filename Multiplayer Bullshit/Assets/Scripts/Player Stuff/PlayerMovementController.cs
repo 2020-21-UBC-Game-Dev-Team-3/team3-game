@@ -42,7 +42,7 @@ public class PlayerMovementController : MonoBehaviour
         floor1Button = GameObject.FindGameObjectWithTag("Floor1Button");
         floor2Button = GameObject.FindGameObjectWithTag("Floor2Button");
         floor3Button = GameObject.FindGameObjectWithTag("Floor3Button");
-        ElevatorButtonsOff();
+      //  ElevatorButtonsOff();
         rotationSpeed = new Vector3(0, 40, 0);
 
         if (!pv.IsMine)
@@ -58,11 +58,11 @@ public class PlayerMovementController : MonoBehaviour
         distToElevator = Vector3.Distance(transform.position, Elevator.transform.position);
         if (distToElevator <= 1)
         {
-            ElevatorButtonsOn();
+          //  ElevatorButtonsOn();
         }
         else
         {
-            ElevatorButtonsOff();
+           // ElevatorButtonsOff();
         }
 
         if (!pv.IsMine) return;

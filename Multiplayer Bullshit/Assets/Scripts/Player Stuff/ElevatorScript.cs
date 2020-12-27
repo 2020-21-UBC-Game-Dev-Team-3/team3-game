@@ -1,24 +1,45 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon;
+using Photon.Pun;
+using Photon.Chat;
+using Photon.Realtime;
+using UnityEngine.UI;
 
 public class ElevatorScript : MonoBehaviour
 {
+    PhotonView pv;
     public GameObject door;
+    public Button button1, button2, button3;
     public Transform floor1, floor2, floor3;
     public Transform doorOpened, doorClosed;
     private bool buttonPressed;
-    private bool openingDoor, closingDoor, isDoorClosed, overridder, moving;
+    private bool openingDoor, closingDoor, isDoorClosed, overridder, moving, cooldown;
     private int currentFloor;
     private int destination;
+    [PunRPC]
     void Start()
     {
         buttonPressed = false;
         currentFloor = 1;
-
+        floor1 = GameObject.Find("Floor1pos").transform;
+        floor2 = GameObject.Find("Floor2pos").transform;
+        floor3 = GameObject.Find("Floor3pos").transform;
+        button1 = GameObject.Find("Floor1Button").GetComponent<Button>();
+        button2 = GameObject.Find("Floor2Button").GetComponent<Button>();
+        button3 = GameObject.Find("Floor3Button").GetComponent<Button>();
+        button1.onClick.AddListener(delegate { Button1(); });
+        button2.onClick.AddListener(delegate { Button2(); });
+        button3.onClick.AddListener(delegate { Button3(); });
+    }
+    private void Awake()
+    {
+        cooldown = false;
+        pv = GetComponent<PhotonView>();
     }
 
-
+    [PunRPC]
     void Update()
     {
         //case switch doesn't work with transform positions apparently :/
@@ -37,19 +58,17 @@ public class ElevatorScript : MonoBehaviour
         // stops elevator at destination
         if (destination == currentFloor && !overridder)
         {
-            openingDoor = true;
-            moving = false;
-            buttonPressed = false;
-            destination = 0;
+            pv.RPC("MovingFalse", RpcTarget.All);
+            pv.RPC("OpeningDoor", RpcTarget.All);
         }
         //door Logic
         if (door.transform.position == doorClosed.transform.position)
         {
-            isDoorClosed = true;
+            pv.RPC("DoorClosedTrue", RpcTarget.All);
         }
         else if (door.transform.position == doorOpened.transform.position)
         {
-            isDoorClosed = false;
+            pv.RPC("DoorClosedFalse", RpcTarget.All);
         }
         //this moves the elevator
         switch (destination)
@@ -77,44 +96,164 @@ public class ElevatorScript : MonoBehaviour
             door.transform.position = Vector3.MoveTowards(door.transform.position, doorOpened.transform.position, 5f * Time.deltaTime);
         }
     }
-
     public void Button1()
     {
-        if (!buttonPressed && currentFloor != 1)
+        if (!buttonPressed && currentFloor != 1 && !cooldown)
         {
-            buttonPressed = true;
-            StartCoroutine(MoveElevator(1));
+            pv.RPC("PressButton", RpcTarget.All);
+            pv.RPC("StartMove", RpcTarget.All,1);
+            
         }
     }
-
     public void Button2()
     {
-        if (!buttonPressed && currentFloor != 2)
-        {
-            buttonPressed = true;
-            StartCoroutine(MoveElevator(2));
+        if (!buttonPressed && currentFloor != 2 && !cooldown)
+        {            
+            pv.RPC("PressButton", RpcTarget.All);
+            pv.RPC("StartMove", RpcTarget.All, 2);
+
         }
     }
-
     public void Button3()
     {
-        if (!buttonPressed && currentFloor != 3)
-        {
-            buttonPressed = true;
-            StartCoroutine(MoveElevator(3));
+        if (!buttonPressed && currentFloor != 3 && !cooldown)
+        {            
+            pv.RPC("PressButton", RpcTarget.All);
+            pv.RPC("StartMove", RpcTarget.All,3);
+
         }
     }
-
+    [PunRPC]
+    public void StartMove(int i)
+    {
+        StartCoroutine(MoveElevator(i));
+    }
     IEnumerator MoveElevator(int floorNum)
     {
-        overridder = true;
-        moving = true;
-        closingDoor = true;
+        pv.RPC("CooldownTrue", RpcTarget.All);
+        pv.RPC("OverrideTrue", RpcTarget.All);
+        pv.RPC("MovingTrue", RpcTarget.All);
+        pv.RPC("ClosingTrue", RpcTarget.All);
         yield return new WaitForSeconds(4);
-        closingDoor = false;
-        destination = floorNum;
+        pv.RPC("ClosingFalse", RpcTarget.All);
+        if(floorNum == 1)
+        {
+            pv.RPC("Destination1", RpcTarget.All);
+        }
+        else if(floorNum == 2)
+        {
+            pv.RPC("Destination2", RpcTarget.All);
+        }
+        else if (floorNum == 3)
+        {
+            pv.RPC("Destination3", RpcTarget.All);
+        }
         yield return new WaitForSeconds(1);
+        pv.RPC("OverrideFalse", RpcTarget.All);
+    }
+    [PunRPC]
+    public void ClosingTrue()
+    {
+        closingDoor = true;
+    }
+    [PunRPC]
+    public void ClosingFalse()
+    {
+        closingDoor = false;
+    }
+    [PunRPC]
+    public void OpeningTrue()
+    {
+        openingDoor = true;
+    }
+    [PunRPC]
+    public void OpeningFalse()
+    {
+        openingDoor = false;
+    }
+    [PunRPC]
+    public void MovingTrue()
+    {
+        moving = true;
+    }
+    [PunRPC]
+    public void MovingFalse()
+    {
+        moving = false;
+    }
+    [PunRPC]
+    public void PressButton()
+    {
+        buttonPressed = true;
+    }
+    [PunRPC]
+    void UnPressButton()
+    {
+        buttonPressed = false;
+    }
+    [PunRPC]
+    void Destination0()
+    {
+        destination = 0;
+    }
+    [PunRPC]
+    void Destination1()
+    {
+        destination = 1;
+    }
+    [PunRPC]
+    void Destination2()
+    {
+        destination = 2;
+    }
+    [PunRPC]
+    void Destination3()
+    {
+        destination = 3;
+    }
+    [PunRPC]
+    void CooldownTrue()
+    {
+        cooldown = true;
+    }
+    [PunRPC]
+    void CooldownFalse()
+    {
+        cooldown = false;
+    }
+    [PunRPC]
+    void OverrideTrue()
+    {
+        overridder = true;
+    }
+    [PunRPC]
+    void OverrideFalse()
+    {
         overridder = false;
+    }
+    [PunRPC]
+    void OpeningDoor()
+    {
+        StartCoroutine(OpenDoor());
+    }
+    [PunRPC]
+    void DoorClosedTrue()
+    {
+        isDoorClosed = true;
+    }
+    [PunRPC]
+    void DoorClosedFalse()
+    {
+        isDoorClosed = false;
+    }
+    IEnumerator OpenDoor()
+    { 
+        pv.RPC("Destination0", RpcTarget.All);
+        pv.RPC("OpeningTrue", RpcTarget.All);
+        yield return new WaitForSeconds(6);
+        pv.RPC("UnPressButton", RpcTarget.All);
+        pv.RPC("CooldownFalse", RpcTarget.All);
+
     }
 
 }
