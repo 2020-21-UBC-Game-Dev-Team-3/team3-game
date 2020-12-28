@@ -5,6 +5,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PhotonLauncher : MonoBehaviourPunCallbacks
 {
@@ -20,17 +21,22 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
     [SerializeField] GameObject playerListPrefab;
 
     [SerializeField] GameObject startGameButton;
+    [SerializeField] RoomManager roomManager;
+
+    private GameManager gameManager;
 
     void Awake()
     {
         Instance = this; 
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        Debug.Log("Connecting to master.");
-        PhotonNetwork.ConnectUsingSettings();
+        if (!PhotonNetwork.IsConnected)
+        {
+            Debug.Log("Connecting to master.");
+            PhotonNetwork.ConnectUsingSettings();
+        }
     }
 
     public override void OnConnectedToMaster()
@@ -123,6 +129,8 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
 
     public void StartGame()
     {
+        roomManager.maxNumberOfPlayers = PhotonNetwork.PlayerList.Length;
+        Debug.Log(roomManager.maxNumberOfPlayers);
         PhotonNetwork.LoadLevel(1);
     }
 }
