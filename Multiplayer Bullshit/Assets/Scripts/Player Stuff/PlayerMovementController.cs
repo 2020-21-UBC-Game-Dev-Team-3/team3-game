@@ -42,7 +42,7 @@ public class PlayerMovementController : MonoBehaviour
         floor1Button = GameObject.FindGameObjectWithTag("Floor1Button");
         floor2Button = GameObject.FindGameObjectWithTag("Floor2Button");
         floor3Button = GameObject.FindGameObjectWithTag("Floor3Button");
-      //  ElevatorButtonsOff();
+        ElevatorButtonsOff();
         rotationSpeed = new Vector3(0, 40, 0);
 
         if (!pv.IsMine)
@@ -58,11 +58,11 @@ public class PlayerMovementController : MonoBehaviour
         distToElevator = Vector3.Distance(transform.position, Elevator.transform.position);
         if (distToElevator <= 1)
         {
-          //  ElevatorButtonsOn();
+          ElevatorButtonsOn();
         }
         else
         {
-           // ElevatorButtonsOff();
+           ElevatorButtonsOff();
         }
 
         if (!pv.IsMine) return;
@@ -108,14 +108,14 @@ public class PlayerMovementController : MonoBehaviour
     }
     void ElevatorButtonsOn()
     {
-        floor1Button.SetActive(true);
-        floor2Button.SetActive(true);
-        floor3Button.SetActive(true);
+        floor1Button.transform.localPosition = new Vector3(254, -186, 0);
+        floor2Button.transform.localPosition = new Vector3(254, -136, 0);
+        floor3Button.transform.localPosition = new Vector3(254, -86, 0);
     }
     void ElevatorButtonsOff()
     {
-        floor1Button.SetActive(false);
-        floor2Button.SetActive(false);
-        floor3Button.SetActive(false);
+        floor1Button.transform.position = new Vector3(1000, 0, 0);
+        floor2Button.transform.position = new Vector3(1000, 0, 0);
+        floor3Button.transform.position = new Vector3(1000, 0, 0);
     }
 }
