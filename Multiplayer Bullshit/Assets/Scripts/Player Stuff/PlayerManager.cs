@@ -7,7 +7,6 @@ using System.IO;
 public class PlayerManager : MonoBehaviour
 {
     PhotonView pv;
-
     void Awake()
     {
         pv = GetComponent<PhotonView>();
@@ -25,7 +24,14 @@ public class PlayerManager : MonoBehaviour
     void CreateController()
     {
         Vector3 position = new Vector3(0f, 10f, 0f);
-        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "unitychan"), position, Quaternion.identity);
+        GameObject player = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "unitychan"), position, Quaternion.identity);
+        pv.RPC("IncrementPlayerNumber", RpcTarget.MasterClient);
+    }
+
+    [PunRPC]
+    void IncrementPlayerNumber()
+    {
+        GameObject.FindObjectOfType<RoleRandomizer>().numberOfPlayersAddedSoFar++;
     }
 
 }
