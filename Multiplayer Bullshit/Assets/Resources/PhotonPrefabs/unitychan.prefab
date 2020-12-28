@@ -6935,6 +6935,8 @@ MonoBehaviour:
   Elevator: {fileID: 0}
   taskLocations: []
   taskButton: {fileID: 0}
+  minigameCanvas: {fileID: 0}
+  inMinigame: 0
   moveSpeed: 6
   smoothTime: 0.1
   turnSmoothTime: 10

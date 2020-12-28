@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637446376319361129
+      ticks: 637447279988353961
     m_Hash: 839048015
   m_LockFileStatus:
     m_FilePath: C:/Users/Adrienne/Desktop/Amoongus/team3-game/Multiplayer Bullshit/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637446376319371102
+      ticks: 637447279988363937
     m_Hash: 1709750926
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -353,10 +353,30 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 1.0.2
+        - 1.0.3
+        - 1.0.4
+        - 1.0.9
+        - 1.0.10
+        - 1.0.11
+        - 2.0.0
+        - 2.0.1
+        - 2.0.2
         - 2.0.3
+        - 2.0.5
         compatible:
+        - 1.0.2
+        - 1.0.3
+        - 1.0.4
+        - 1.0.9
+        - 1.0.10
+        - 1.0.11
+        - 2.0.0
+        - 2.0.1
+        - 2.0.2
         - 2.0.3
-        verified: 2.0.3
+        - 2.0.5
+        verified: 2.0.5
       dependencies: []
       resolvedDependencies: []
       keywords: []
@@ -372,7 +392,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637359495930000000
       documentationUrl: 
       hasRepository: 1
       repository:

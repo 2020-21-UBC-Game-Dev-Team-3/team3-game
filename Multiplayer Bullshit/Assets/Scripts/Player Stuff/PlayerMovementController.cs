@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 using Photon.Pun;
 
 public class PlayerMovementController : MonoBehaviour
@@ -12,6 +13,7 @@ public class PlayerMovementController : MonoBehaviour
 
     public GameObject[] taskLocations;
     public GameObject taskButton;
+    public GameObject minigameCanvas;
     private float distToTask;
     private float minTaskDist = 3;
     private bool taskFlag;
@@ -46,7 +48,10 @@ public class PlayerMovementController : MonoBehaviour
     {
         //For minigames
         taskLocations = GameObject.FindGameObjectsWithTag("TaskLocation");
+        
         taskButton = GameObject.FindGameObjectWithTag("TaskButton");
+
+        minigameCanvas = getMinigameCanvas();
         taskButton.SetActive(false);
         inMinigame = false;
 
@@ -67,8 +72,8 @@ public class PlayerMovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(inMinigame);
-        if (!inMinigame)
+        Debug.Log(minigameCanvas.activeSelf);
+        if (!minigameCanvas.activeSelf)
         {
             taskButtonCheck();
 
@@ -120,7 +125,7 @@ public class PlayerMovementController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!inMinigame) { 
+        if (!minigameCanvas.activeSelf) { 
         rb.MovePosition(rb.position + transform.TransformDirection(moveAmount) * Time.fixedDeltaTime);
 
         Quaternion deltaRotation = Quaternion.Euler(moveAmount.x * rotationSpeed * Time.fixedDeltaTime);
@@ -163,15 +168,44 @@ public class PlayerMovementController : MonoBehaviour
         }
     }
 
+    GameObject getMinigameCanvas()
+    {
+        List<GameObject> allObjects = new List<GameObject>();
+
+        foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
+        {
+            if (!EditorUtility.IsPersistent(go.transform.root.gameObject) && !(go.hideFlags == HideFlags.NotEditable || go.hideFlags == HideFlags.HideAndDontSave))
+                allObjects.Add(go);
+        }
+
+        foreach (GameObject gameObject in allObjects)
+        {
+            if (gameObject.tag == "MinigameCanvas")
+            {
+                return gameObject;
+            }
+        }
+        //should never get here
+        return null;
+      
+    }
+
     //Set in/out of minigame to stop player movement while in minigame
-    public void setInMinigame()
+    /*public void setInMinigame()
+    {
+        StartCoroutine(setInMinigameCoroutine());
+        Debug.Log("got here");
+    }
+    public void setOutMinigame()
+    {
+        inMinigame = false;
+    }
+
+    IEnumerator setInMinigameCoroutine()
     {
         inMinigame = true;
         Debug.Log("Set in minigame");
         Debug.Log(inMinigame);
-    }
-    /*public void setOutMinigame()
-    {
-        inMinigame = false;
+        yield return new WaitForSeconds(2);
     }*/
 }
