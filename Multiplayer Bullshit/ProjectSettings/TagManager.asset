@@ -8,6 +8,12 @@ TagManager:
   - Floor1Button
   - Floor2Button
   - Floor3Button
+  - TaskLocation
+  - TaskButton
+  - Minigame Test Button
+  - MinigameCanvas
+  - MinigameCloseButton
+  - TaskCanvas
   layers:
   - Default
   - TransparentFX

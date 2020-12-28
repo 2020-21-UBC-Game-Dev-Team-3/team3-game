@@ -10,6 +10,13 @@ public class PlayerMovementController : MonoBehaviour
     public GameObject Elevator;
     private float distToElevator;
 
+    public GameObject[] taskLocations;
+    public GameObject taskButton;
+    private float distToTask;
+    private float minTaskDist = 3;
+    private bool taskFlag;
+    public bool inMinigame;
+
     //public CharacterController controller;
 
     public float moveSpeed;
@@ -37,6 +44,12 @@ public class PlayerMovementController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //For minigames
+        taskLocations = GameObject.FindGameObjectsWithTag("TaskLocation");
+        taskButton = GameObject.FindGameObjectWithTag("TaskButton");
+        taskButton.SetActive(false);
+        inMinigame = false;
+
         //Attatches all the necessary components to player
         Elevator = GameObject.FindGameObjectWithTag("Elevator");
         floor1Button = GameObject.FindGameObjectWithTag("Floor1Button");
@@ -54,38 +67,44 @@ public class PlayerMovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //This is for elevator buttons
-        distToElevator = Vector3.Distance(transform.position, Elevator.transform.position);
-        if (distToElevator <= 1)
+        Debug.Log(inMinigame);
+        if (!inMinigame)
         {
-            ElevatorButtonsOn();
-        }
-        else
-        {
-            ElevatorButtonsOff();
-        }
+            taskButtonCheck();
 
-        if (!pv.IsMine) return;
+            //This is for elevator buttons
+            distToElevator = Vector3.Distance(transform.position, Elevator.transform.position);
+            if (distToElevator <= 1)
+            {
+                ElevatorButtonsOn();
+            }
+            else
+            {
+                ElevatorButtonsOff();
+            }
 
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+            if (!pv.IsMine) return;
 
-        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
-        moveAmount = Vector3.SmoothDamp(moveAmount, direction * moveSpeed, ref smoothMoveVelocity, smoothTime);
+            float horizontal = Input.GetAxisRaw("Horizontal");
+            float vertical = Input.GetAxisRaw("Vertical");
 
-        //controller.Move(direction.normalized * moveSpeed * Time.deltaTime);
+            Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+            moveAmount = Vector3.SmoothDamp(moveAmount, direction * moveSpeed, ref smoothMoveVelocity, smoothTime);
+
+            //controller.Move(direction.normalized * moveSpeed * Time.deltaTime);
 
 
-        if (direction.magnitude >= 0.1f)
-        {
-            animator.SetBool("IsWalking", true);
+            if (direction.magnitude >= 0.1f)
+            {
+                animator.SetBool("IsWalking", true);
 
-            //RotatePlayer(direction);
-        }
+                //RotatePlayer(direction);
+            }
 
-        else
-        {
-            animator.SetBool("IsWalking", false);
+            else
+            {
+                animator.SetBool("IsWalking", false);
+            }
         }
     }
 
@@ -101,10 +120,12 @@ public class PlayerMovementController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!inMinigame) { 
         rb.MovePosition(rb.position + transform.TransformDirection(moveAmount) * Time.fixedDeltaTime);
 
         Quaternion deltaRotation = Quaternion.Euler(moveAmount.x * rotationSpeed * Time.fixedDeltaTime);
         rb.MoveRotation(rb.rotation * deltaRotation);
+            }
     }
     void ElevatorButtonsOn()
     {
@@ -118,4 +139,39 @@ public class PlayerMovementController : MonoBehaviour
         floor2Button.SetActive(false);
         floor3Button.SetActive(false);
     }
+
+    //To show/hide the task button
+    void taskButtonCheck()
+    {
+        taskFlag = false;
+
+        foreach (GameObject location in taskLocations)
+        {
+            distToTask = Vector3.Distance(transform.position, location.transform.position);
+
+            if (distToTask <= minTaskDist)
+            {
+                taskButton.SetActive(true);
+                taskFlag = true;
+                break;
+            }
+        }
+
+        if (!taskFlag)
+        {
+            taskButton.SetActive(false);
+        }
+    }
+
+    //Set in/out of minigame to stop player movement while in minigame
+    public void setInMinigame()
+    {
+        inMinigame = true;
+        Debug.Log("Set in minigame");
+        Debug.Log(inMinigame);
+    }
+    /*public void setOutMinigame()
+    {
+        inMinigame = false;
+    }*/
 }
