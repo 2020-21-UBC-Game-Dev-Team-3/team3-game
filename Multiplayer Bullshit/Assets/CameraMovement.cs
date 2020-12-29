@@ -5,9 +5,9 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     private int currChance;
-    private float minX = -6.7f;
-    private float maxX = 15f;
-    private int[] speeds = { 3, 3, 15, 15, 30 };
+    private float minX = 1f;
+    private float maxX = 8f;
+    private int[] speeds = { 1, 1, 10, 10, 20 };
     private bool movingLeft;
 
 
