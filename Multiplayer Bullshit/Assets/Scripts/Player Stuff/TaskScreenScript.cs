@@ -5,16 +5,15 @@ using UnityEngine;
 public class TaskScreenScript : MonoBehaviour
 {
     public GameObject minigameCanvas;
-    public GameObject taskCanvas;
+    //public GameObject taskCanvas;
 
     // Start is called before the first frame update
     void Start()
     {
         minigameCanvas = GameObject.FindGameObjectWithTag("MinigameCanvas");
         minigameCanvas.SetActive(false);
-        taskCanvas = GameObject.FindGameObjectWithTag("TaskCanvas");
-        taskCanvas.SetActive(true);
-        minigameCanvas.SetActive(false);
+        //taskCanvas = GameObject.FindGameObjectWithTag("TaskCanvas");
+        //taskCanvas.SetActive(true);
 
     }
 
@@ -24,21 +23,21 @@ public class TaskScreenScript : MonoBehaviour
         
     }
 
-    public void ActivateMinigameScreen()
+    /*public void ActivateMinigameScreen()
     {
         minigameCanvas.SetActive(true);
-    }
+    }*/
 
     public void CloseMinigameScreen()
     {
         minigameCanvas.SetActive(false);
     }
 
-    public void ActivateTaskCanvas() {
+    /*public void ActivateTaskCanvas() {
         taskCanvas.SetActive(true);
     }
     public void CloseTaskCanvas()
     {
         taskCanvas.SetActive(false);
-    }
+    }*/
 }

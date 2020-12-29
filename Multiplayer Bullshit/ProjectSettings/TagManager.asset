@@ -14,6 +14,8 @@ TagManager:
   - MinigameCanvas
   - MinigameCloseButton
   - TaskCanvas
+  - Task1Indicator
+  - Task2Indicator
   layers:
   - Default
   - TransparentFX

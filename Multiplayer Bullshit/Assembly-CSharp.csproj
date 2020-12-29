@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\UI Stuff\MenuManager.cs" />
+     <Compile Include="Assets\Scripts\Game Stuff\Minigame1.cs" />
      <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\AutoBlink.cs" />
      <Compile Include="Assets\Scripts\Player Stuff\ElevatorScript.cs" />
      <Compile Include="Assets\Scripts\UI Stuff\PlayerListItem.cs" />
@@ -63,6 +64,7 @@
      <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\CameraController.cs" />
      <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs" />
      <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\SpringManager.cs" />
+     <Compile Include="Assets\Scripts\Game Stuff\Interactable.cs" />
      <Compile Include="Assets\unity-chan!\Unity-chan! Model\SplashScreen\Scripts\SplashScreen.cs" />
      <Compile Include="Assets\Scripts\PhotonLauncher.cs" />
      <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\SpringCollider.cs" />
@@ -72,6 +74,7 @@
      <Compile Include="Assets\Scripts\UI Stuff\RoomListItem.cs" />
      <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
      <Compile Include="Assets\Scripts\Player Stuff\PlayerMovementController.cs" />
+     <Compile Include="Assets\Scripts\Game Stuff\Minigame2.cs" />
      <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\IKCtrlRightHand.cs" />
      <Compile Include="Assets\Scripts\Player Stuff\PlayerManager.cs" />
      <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\FaceUpdate.cs" />

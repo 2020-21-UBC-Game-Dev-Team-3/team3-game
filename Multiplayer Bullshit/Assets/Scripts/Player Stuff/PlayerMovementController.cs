@@ -11,13 +11,16 @@ public class PlayerMovementController : MonoBehaviour
     public GameObject Elevator;
     private float distToElevator;
 
-    public GameObject[] taskLocations;
-    public GameObject taskButton;
+    //public GameObject[] taskLocations;
+    //public GameObject taskButton;
     public GameObject minigameCanvas;
-    private float distToTask;
-    private float minTaskDist = 3;
-    private bool taskFlag;
+    //private float distToTask;
+    private float distToIndicator;
+    private float minTaskDist = 5;
+    private int numTasks = 2;
+    //private bool taskFlag;
     public bool inMinigame;
+    public GameObject[] taskIndicators;
 
     //public CharacterController controller;
 
@@ -32,27 +35,36 @@ public class PlayerMovementController : MonoBehaviour
 
     Animator animator;
 
-    PhotonView pv;
+    PhotonView playerPV;
 
     Rigidbody rb;
+
+    Camera cam;
 
     void Awake()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
-        pv = GetComponent<PhotonView>();
+        playerPV = GetComponent<PhotonView>();
+        cam = Camera.main;
     }
 
     // Start is called before the first frame update
     void Start()
     {
         //For minigames
-        taskLocations = GameObject.FindGameObjectsWithTag("TaskLocation");
-        
-        taskButton = GameObject.FindGameObjectWithTag("TaskButton");
-
         minigameCanvas = getMinigameCanvas();
-        taskButton.SetActive(false);
+        //taskLocations = GameObject.FindGameObjectsWithTag("TaskLocation");
+        
+        //taskButton = GameObject.FindGameObjectWithTag("TaskButton");
+        taskIndicators = new GameObject[numTasks];
+        taskIndicators[0] = GameObject.FindGameObjectWithTag("Task1Indicator");
+        taskIndicators[1] = GameObject.FindGameObjectWithTag("Task2Indicator");
+        foreach (GameObject indicator in taskIndicators)
+        {
+            indicator.SetActive(false);
+        }
+        //taskButton.SetActive(false);
         inMinigame = false;
 
         //Attatches all the necessary components to player
@@ -63,7 +75,7 @@ public class PlayerMovementController : MonoBehaviour
         ElevatorButtonsOff();
         rotationSpeed = new Vector3(0, 40, 0);
 
-        if (!pv.IsMine)
+        if (!playerPV.IsMine)
         {
             Destroy(playerCamera);
         }
@@ -75,7 +87,9 @@ public class PlayerMovementController : MonoBehaviour
         Debug.Log(minigameCanvas.activeSelf);
         if (!minigameCanvas.activeSelf)
         {
-            taskButtonCheck();
+            Interact();
+            //taskButtonCheck();
+            taskIndicatorCheck();
 
             //This is for elevator buttons
             distToElevator = Vector3.Distance(transform.position, Elevator.transform.position);
@@ -88,7 +102,7 @@ public class PlayerMovementController : MonoBehaviour
                 ElevatorButtonsOff();
             }
 
-            if (!pv.IsMine) return;
+            if (!playerPV.IsMine) return;
 
             float horizontal = Input.GetAxisRaw("Horizontal");
             float vertical = Input.GetAxisRaw("Vertical");
@@ -146,7 +160,7 @@ public class PlayerMovementController : MonoBehaviour
     }
 
     //To show/hide the task button
-    void taskButtonCheck()
+    /*void taskButtonCheck()
     {
         taskFlag = false;
 
@@ -166,6 +180,23 @@ public class PlayerMovementController : MonoBehaviour
         {
             taskButton.SetActive(false);
         }
+    }*/
+
+    void taskIndicatorCheck()
+    {
+        foreach (GameObject indicator in taskIndicators)
+        {
+            distToIndicator = Vector3.Distance(transform.position, indicator.transform.position);
+
+            if (distToIndicator <= minTaskDist)
+            {
+                indicator.SetActive(true);
+            } else
+            {
+                indicator.SetActive(false);
+            }
+        }
+
     }
 
     GameObject getMinigameCanvas()
@@ -208,4 +239,38 @@ public class PlayerMovementController : MonoBehaviour
         Debug.Log(inMinigame);
         yield return new WaitForSeconds(2);
     }*/
+
+    void Interact()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out RaycastHit hit))
+            {
+                if (hit.transform.CompareTag("TaskLocation") /*|| hit.transform.CompareTag("Interactable")*/)
+                {
+                    if (!hit.transform.gameObject.activeInHierarchy) return;
+                    Interactable interactable = hit.collider.GetComponent<Interactable>();
+                    ChooseInteractionEvent(interactable);
+                }
+            }
+        }
+    }
+    void ChooseInteractionEvent(Interactable interactable)
+    {
+        if (interactable.GetInteractableName() == "Minigame1" && taskIndicators[0].activeSelf)
+        {
+            Debug.Log("minigame 1");
+            minigameCanvas.SetActive(true);
+
+        }
+        if (interactable.GetInteractableName() == "Minigame2" && taskIndicators[1].activeSelf)
+        {
+            Debug.Log("minigame 2");
+            minigameCanvas.SetActive(true);
+        }
+    }
 }
+
+
