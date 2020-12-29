@@ -7,12 +7,15 @@ public class LifeBoatGameManager : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public GameObject LifeBoat;
-    public GameObject Passenger1;
+    //public GameObject LifeBoat;
+    //public GameObject Passenger1;
     
 
-    private int score;
+    private int score = 0;
     public Text ScoreText;
+    [SerializeField] int Passengers;
+
+    public Text TaskComplete;
 
     [SerializeField] int threshold;
 
@@ -24,7 +27,12 @@ public class LifeBoatGameManager : MonoBehaviour
 
 
 
-    void OnTrigger ( ){
+   // void OnTriggerEnter2D (Collider2D other){ }
+
+    void OnCollisionEnter2D (Collision2D other){
+        Destroy(other.gameObject);
+        score++;
+       
 
     }
 
@@ -37,6 +45,14 @@ public class LifeBoatGameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ScoreText.text = "Passengers Saved:"+score+"/"+Passengers;
+
+
+        if (score == Passengers){
+            TaskComplete.gameObject.SetActive(true); 
+        }
+
+
         
     }
 }
