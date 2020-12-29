@@ -123,6 +123,51 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &685331459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 685331461}
+  - component: {fileID: 685331460}
+  m_Layer: 0
+  m_Name: ClickManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &685331460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685331459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8572385be5d35cb409a6a18e7b06405c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedTag: 
+  switchList: []
+--- !u!4 &685331461
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685331459}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1318508585
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,9 +410,9 @@ GameObject:
   - component: {fileID: 5435899929210457197}
   - component: {fileID: 6153050055632559249}
   - component: {fileID: 3893390021615613194}
-  - component: {fileID: 868035235550788934}
   - component: {fileID: 868035235550788935}
   - component: {fileID: 868035235550788936}
+  - component: {fileID: 868035235550788934}
   m_Layer: 0
   m_Name: Switch.002
   m_TagString: Switch
@@ -384,10 +429,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 868035235550788933}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8572385be5d35cb409a6a18e7b06405c, type: 3}
+  m_Script: {fileID: 11500000, guid: a3279211a2bcfb24b9ea4f84ee22dee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedTag: 
+  isOn: 0
 --- !u!65 &868035235550788935
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -666,9 +711,9 @@ GameObject:
   - component: {fileID: 410361831363575318}
   - component: {fileID: 8392367218511867804}
   - component: {fileID: 5125725512544278480}
-  - component: {fileID: 5544580524341396830}
   - component: {fileID: 5544580524341396831}
   - component: {fileID: 5544580524341396832}
+  - component: {fileID: 5544580524341396830}
   m_Layer: 0
   m_Name: Switch.001
   m_TagString: Switch
@@ -685,10 +730,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5544580524341396829}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8572385be5d35cb409a6a18e7b06405c, type: 3}
+  m_Script: {fileID: 11500000, guid: a3279211a2bcfb24b9ea4f84ee22dee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedTag: 
+  isOn: 0
 --- !u!65 &5544580524341396831
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1045,9 +1090,9 @@ GameObject:
   - component: {fileID: 8456050280571783076}
   - component: {fileID: 5632317414571296010}
   - component: {fileID: 8308976049895268976}
-  - component: {fileID: 8853499317666859966}
   - component: {fileID: 8853499317666859967}
   - component: {fileID: 8853499317666859968}
+  - component: {fileID: 8853499317666859966}
   m_Layer: 0
   m_Name: Switch
   m_TagString: Switch
@@ -1064,10 +1109,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8853499317666859965}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8572385be5d35cb409a6a18e7b06405c, type: 3}
+  m_Script: {fileID: 11500000, guid: a3279211a2bcfb24b9ea4f84ee22dee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedTag: Switch
+  isOn: 0
 --- !u!65 &8853499317666859967
 BoxCollider:
   m_ObjectHideFlags: 0

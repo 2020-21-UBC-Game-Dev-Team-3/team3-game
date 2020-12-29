@@ -4,28 +4,19 @@ using UnityEngine;
 
 public class Switch : MonoBehaviour {
 
-  [SerializeField] private string selectedTag;
+  public bool isOn;
 
   // Start is called before the first frame update
   void Start() {
+    isOn = false;
+  }
 
+  public void TurnOn() {
+    isOn = true;
   }
 
   // Update is called once per frame
   void Update() {
-    CheckRay();
-  }
 
-  private void CheckRay() {
-    if (Input.GetMouseButtonDown(0)) {
-      var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-      RaycastHit hit;
-      if (Physics.Raycast(ray, out hit)) {
-        if (hit.collider.tag == selectedTag) {
-          Debug.Log("Switch!");
-        }
-      }
-    }
   }
-
 }
