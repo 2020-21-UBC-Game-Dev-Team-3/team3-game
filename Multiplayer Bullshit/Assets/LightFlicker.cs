@@ -12,7 +12,7 @@ public class LightFlicker : MonoBehaviour
     private int[] timerInitialOff = { 80, 80, 100 };
     private int onIndex;
     private int offIndex;
-    private float onChance = 0.3f;
+    private float onChance = 0.45f;
     private float rand;
 
 
@@ -67,12 +67,10 @@ public class LightFlicker : MonoBehaviour
         }
 
         timer--;
-        Debug.Log(timer);
     }
 
     void lightOn()
     {
-        Debug.Log("On");
         light.SetActive(true);
         background.SetActive(true);
         lightIsOn = true;
@@ -80,7 +78,6 @@ public class LightFlicker : MonoBehaviour
 
     void lightOff()
     {
-        Debug.Log("Off");
         light.SetActive(false);
         background.SetActive(false);
         lightIsOn = false;

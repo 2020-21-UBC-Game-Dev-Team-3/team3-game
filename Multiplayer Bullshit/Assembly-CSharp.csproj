@@ -62,6 +62,7 @@
      <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\CameraController.cs" />
      <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs" />
      <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\SpringManager.cs" />
+     <Compile Include="Assets\LightFlicker.cs" />
      <Compile Include="Assets\unity-chan!\Unity-chan! Model\SplashScreen\Scripts\SplashScreen.cs" />
      <Compile Include="Assets\Scripts\PhotonLauncher.cs" />
      <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\SpringCollider.cs" />
@@ -80,7 +81,7 @@
      <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs" />
      <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
      <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
-     <Compile Include="Assets\LightFlicker.cs" />
+     <Compile Include="Assets\CameraMovement.cs" />
      <None Include="Assets\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
