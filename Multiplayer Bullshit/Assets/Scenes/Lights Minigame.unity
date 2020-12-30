@@ -388,6 +388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCount: 0
+  textMeshPro: {fileID: 0}
 --- !u!1 &685331459
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,6 +595,7 @@ GameObject:
   - component: {fileID: 1318508587}
   - component: {fileID: 1318508586}
   - component: {fileID: 1318508589}
+  - component: {fileID: 1318508590}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -678,6 +680,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91f26eefaec42324aa05a730cfba638f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1318508590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318508585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c6c247818191a847b286f35974e2ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  black: {fileID: 0}
 --- !u!1 &1674988954
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,10 +850,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1750753343}
   - component: {fileID: 1750753342}
-  - component: {fileID: 1750753344}
   m_Layer: 0
   m_Name: Black
-  m_TagString: Untagged
+  m_TagString: Black
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -902,26 +916,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750753341}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.4, y: 14.3, z: -19.43}
+  m_LocalPosition: {x: 4.4, y: 14.3, z: -11.21}
   m_LocalScale: {x: 500, y: 500, z: 500}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1750753344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1750753341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c6c247818191a847b286f35974e2ba9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  background: {fileID: 0}
-  light: {fileID: 0}
 --- !u!1 &2055730410
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,7 +951,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.4
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
