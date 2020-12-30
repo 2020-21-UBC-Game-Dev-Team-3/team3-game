@@ -8,11 +8,13 @@ public class LightFlicker : MonoBehaviour
     public GameObject light;
     private bool lightIsOn;
     private int timer;
-    private int[] timerInitialOn = { 55, 55, 55, 70};
-    private int[] timerInitialOff = { 80, 80, 100 };
+    //private int[] timerInitialOn = { 55, 55, 55, 70};
+    //private int[] timerInitialOff = { 80, 80, 100 };
+    private int[] timerInitialOn = { 110, 110, 110, 140};
+    private int[] timerInitialOff = { 160, 160, 200 };
     private int onIndex;
     private int offIndex;
-    private float onChance = 0.45f;
+    private float onChance = 0.7f;
     private float rand;
 
 
