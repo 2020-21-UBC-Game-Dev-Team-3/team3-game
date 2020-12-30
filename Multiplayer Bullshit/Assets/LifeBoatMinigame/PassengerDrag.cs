@@ -10,11 +10,11 @@ public class PassengerDrag : MonoBehaviour
 
 {
 
-    private Vector3 mOffset;
+    [SerializeField]private Vector3 mOffset;
+    [SerializeField] private float myYpos;
 
 
-
-    private float mZCoord;
+    [SerializeField]private float mZCoord;
 
 
 
@@ -22,16 +22,18 @@ public class PassengerDrag : MonoBehaviour
 
     {
 
-        mZCoord = Camera.main.WorldToScreenPoint(
+        if (myYpos > 33)
+        {
+            mZCoord = Camera.main.WorldToScreenPoint(
 
-            gameObject.transform.position).z;
+                gameObject.transform.position).z;
 
 
 
-        // Store offset = gameobject world pos - mouse world pos
+            // Store offset = gameobject world pos - mouse world pos
 
-        mOffset = gameObject.transform.position - GetMouseAsWorldPoint();
-
+            mOffset = gameObject.transform.position - GetMouseAsWorldPoint();
+        }
     }
 
 
@@ -39,6 +41,7 @@ public class PassengerDrag : MonoBehaviour
     private Vector3 GetMouseAsWorldPoint()
 
     {
+
 
         // Pixel coordinates of mouse (x,y)
 
@@ -63,9 +66,15 @@ public class PassengerDrag : MonoBehaviour
     void OnMouseDrag()
 
     {
+        if (myYpos>33) {
+            transform.position = GetMouseAsWorldPoint() + mOffset;
+            }
 
-        transform.position = GetMouseAsWorldPoint() + mOffset;
+    }
 
+    private void Update()
+    {
+        myYpos = transform.position.y;
     }
 
 }
