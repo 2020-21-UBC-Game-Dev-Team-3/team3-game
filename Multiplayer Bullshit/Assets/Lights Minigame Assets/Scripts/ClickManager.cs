@@ -6,11 +6,13 @@ public class ClickManager : MonoBehaviour {
 
   [SerializeField] private string selectedTag;
   [SerializeField] Switch[] switchList;
+  [SerializeField] TextManager textManager;
 
   // Start is called before the first frame update
   void Start() {
     selectedTag = "Switch";
     switchList = FindObjectsOfType<Switch>();
+    textManager = FindObjectOfType<TextManager>();
   }
 
   // Update is called once per frame
@@ -25,8 +27,11 @@ public class ClickManager : MonoBehaviour {
       RaycastHit hit;
       if (Physics.Raycast(ray, out hit)) {
         if (hit.collider.CompareTag(selectedTag)) {
-          Debug.Log("Switch!");
-          hit.collider.gameObject.GetComponent<Switch>().TurnOn();
+          if (!hit.collider.GetComponent<Switch>().isOn) {
+            Debug.Log("Switch!");
+            textManager.IncrementCount();
+            hit.collider.gameObject.GetComponent<Switch>().TurnOn();
+          }
         }
       }
     }
@@ -35,6 +40,7 @@ public class ClickManager : MonoBehaviour {
   private void CheckWin() {
     if (AllOn()) {
       Debug.Log("You win!");
+      textManager.Win();
     }
   }
 

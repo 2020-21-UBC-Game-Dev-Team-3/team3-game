@@ -83,6 +83,9 @@
     <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Lights Minigame Assets\Scripts\SwitchCount.cs" />
+    <Compile Include="Assets\Lights Minigame Assets\Scripts\WinText.cs" />
+    <Compile Include="Assets\Lights Minigame Assets\Scripts\TextManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
