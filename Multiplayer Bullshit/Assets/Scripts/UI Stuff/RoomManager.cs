@@ -8,9 +8,6 @@ using UnityEngine.SceneManagement;
 public class RoomManager : MonoBehaviourPunCallbacks
 {
     public static RoomManager Instance;
-    [HideInInspector] public int maxNumberOfPlayers;
-    [HideInInspector] public float currPercentForImposter;
-    public float baseImposterPercentage;
 
     void Awake()
     {
@@ -21,7 +18,6 @@ public class RoomManager : MonoBehaviourPunCallbacks
         }
         DontDestroyOnLoad(gameObject);
         Instance = this;
-        currPercentForImposter = baseImposterPercentage;
     }
 
     public override void OnEnable()
