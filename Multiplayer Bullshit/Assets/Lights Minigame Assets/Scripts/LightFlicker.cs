@@ -6,38 +6,72 @@ public class LightFlicker : MonoBehaviour {
 
   //public GameObject background;
   //public GameObject light;
-  public GameObject black;
-  private bool lightIsOn;
+  public Light light;
+  //public GameObject black;
+  //private bool lightIsOn;
   private bool flickerOn;
-  private int timer;
-  private int[] timerInitialOn = { 60, 60, 70 };
-  private int[] timerInitialOff = { 50, 50, 60 };
-  private int onIndex;
-  private int offIndex;
-  private float onChance = 0.7f;
-  private float rand;
+  //private int timer;
+  private float timer;
+  //private int[] timerInitialOn = { 60, 60, 70 };
+  //private int[] timerInitialOff = { 50, 50, 60 };
+  //private int onIndex;
+  //private int offIndex;
+  //private float onChance = 0.7f;
+  //private float rand;
+  private bool increasing;
 
 
   // Start is called before the first frame update
   void Start() {
     //background = GameObject.FindGameObjectWithTag("Background");
     //light = GameObject.FindGameObjectWithTag("DirLight");
-    black = GameObject.FindGameObjectWithTag("Black");
-    lightIsOn = true;
-    onIndex = 0;
-    offIndex = 0;
-    timer = 30;
+    //black = GameObject.FindGameObjectWithTag("Black");
+    light = GetComponent<Light>();
+    //lightIsOn = true;
+    //onIndex = 0;
+    //offIndex = 0;
+    timer = 40;
     flickerOn = true;
+    increasing = true;
   }
 
   // Update is called once per frame
   void Update() {
     if (flickerOn) {
-      Flicker();
+            //Flicker();
+            gradualFlicker();
+
+            //light.intensity = Mathf.PingPong(Time.time * 2, 0.7f);
+            
     }
   }
 
-  void Flicker() {
+void gradualFlicker()
+    {
+        if (timer <= 0)
+        {
+            increasing = true;
+        }
+        if (timer >= 115)
+        {
+            increasing = false;
+        }
+
+        if (timer >= 0 && timer <= 80)
+        {
+            light.intensity = timer / 200;
+        }
+
+        if (increasing)
+        {
+            timer += 2;
+        } else
+        {
+            timer -= 2;
+        }
+    }
+
+  /*void Flicker() {
     if (timer == 0) {
       if (lightIsOn) {
         timer = timerInitialOn[onIndex];
@@ -66,21 +100,22 @@ public class LightFlicker : MonoBehaviour {
     }
 
     timer--;
-  }
+  }*/
 
   void lightOn() {
     //light.SetActive(true);
     //background.SetActive(true);
-    black.SetActive(false);
-    lightIsOn = true;
+    //black.SetActive(false);
+    light.intensity = 0.8f;
+    //lightIsOn = true;
   }
 
-  void lightOff() {
+  /*void lightOff() {
     //light.SetActive(false);
     //background.SetActive(false);
-    black.SetActive(true);
+    //black.SetActive(true);
     lightIsOn = false;
-  }
+  }*/
 
   public void FreezeTime() {
     flickerOn = false;
