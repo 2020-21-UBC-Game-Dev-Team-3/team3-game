@@ -370,11 +370,15 @@ MonoBehaviour:
   button1: {fileID: 0}
   button2: {fileID: 0}
   button3: {fileID: 0}
+  callButton1: {fileID: 0}
+  callButton2: {fileID: 0}
+  callButton3: {fileID: 0}
   floor1: {fileID: 0}
   floor2: {fileID: 0}
   floor3: {fileID: 0}
   doorOpened: {fileID: 3342777292150642597}
   doorClosed: {fileID: 3342777294071634247}
+  elevatorText: {fileID: 0}
 --- !u!114 &1218164191385692743
 MonoBehaviour:
   m_ObjectHideFlags: 0

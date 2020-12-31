@@ -11,27 +11,37 @@ public class ElevatorScript : MonoBehaviour
 {
     PhotonView pv;
     public GameObject door;
-    public Button button1, button2, button3;
+    public Button button1, button2, button3, callButton1, callButton2, callButton3;
     public Transform floor1, floor2, floor3;
     public Transform doorOpened, doorClosed;
+    public Text elevatorText;
     private bool buttonPressed;
     private bool openingDoor, closingDoor, isDoorClosed, overridder, moving, cooldown;
     private int currentFloor;
     private int destination;
-    [PunRPC]
     void Start()
     {
+
         buttonPressed = false;
         currentFloor = 1;
         floor1 = GameObject.Find("Floor1pos").transform;
+        Debug.Log(GameObject.Find("Floor1pos").name);
         floor2 = GameObject.Find("Floor2pos").transform;
         floor3 = GameObject.Find("Floor3pos").transform;
         button1 = GameObject.Find("Floor1Button").GetComponent<Button>();
         button2 = GameObject.Find("Floor2Button").GetComponent<Button>();
         button3 = GameObject.Find("Floor3Button").GetComponent<Button>();
+        callButton1 = GameObject.Find("CallFloor1Button").GetComponent<Button>();
+        callButton2 = GameObject.Find("CallFloor2Button").GetComponent<Button>();
+        callButton3 = GameObject.Find("CallFloor3Button").GetComponent<Button>();
+        elevatorText = GameObject.Find("ElevatorText").GetComponent<Text>();
+        elevatorText.text = "";
         button1.onClick.AddListener(delegate { Button1(); });
         button2.onClick.AddListener(delegate { Button2(); });
         button3.onClick.AddListener(delegate { Button3(); });
+        callButton1.onClick.AddListener(delegate { Button1(); });
+        callButton2.onClick.AddListener(delegate { Button2(); });
+        callButton3.onClick.AddListener(delegate { Button3(); });
     }
     private void Awake()
     {
@@ -42,7 +52,6 @@ public class ElevatorScript : MonoBehaviour
     [PunRPC]
     void Update()
     {
-        //case switch doesn't work with transform positions apparently :/
         if (floor1.transform.position == transform.position)
         {
             currentFloor = 1;
@@ -74,13 +83,13 @@ public class ElevatorScript : MonoBehaviour
         switch (destination)
         {
             case 1:
-                transform.position = Vector3.MoveTowards(transform.position, floor1.transform.position, 1f * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, floor1.transform.position, 0.5f * Time.deltaTime);
                 break;
             case 2:
-                transform.position = Vector3.MoveTowards(transform.position, floor2.transform.position, 1f * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, floor2.transform.position, 0.5f * Time.deltaTime);
                 break;
             case 3:
-                transform.position = Vector3.MoveTowards(transform.position, floor3.transform.position, 1f * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, floor3.transform.position, 0.5f * Time.deltaTime);
                 break;
             default:
                 break;
@@ -102,8 +111,19 @@ public class ElevatorScript : MonoBehaviour
         {
             pv.RPC("PressButton", RpcTarget.All);
             pv.RPC("StartMove", RpcTarget.All,1);
-            
+            if (pv.IsMine) { StartCoroutine(ElevatorTexting("Moving to floor 1")); }
+
         }
+        else if(currentFloor != 1 && pv.IsMine)
+        {
+            StartCoroutine(ElevatorTexting("Elevator is busy"));
+        }
+    }
+    IEnumerator ElevatorTexting(string text)
+    {
+        elevatorText.text = text;
+        yield return new WaitForSeconds(2);
+        elevatorText.text = "";
     }
     public void Button2()
     {
@@ -111,7 +131,12 @@ public class ElevatorScript : MonoBehaviour
         {            
             pv.RPC("PressButton", RpcTarget.All);
             pv.RPC("StartMove", RpcTarget.All, 2);
+            if (pv.IsMine) { StartCoroutine(ElevatorTexting("Moving to floor 2")); }
 
+        }
+        else if (currentFloor != 2 && pv.IsMine)
+        {
+            StartCoroutine(ElevatorTexting("Elevator is busy"));
         }
     }
     public void Button3()
@@ -120,7 +145,11 @@ public class ElevatorScript : MonoBehaviour
         {            
             pv.RPC("PressButton", RpcTarget.All);
             pv.RPC("StartMove", RpcTarget.All,3);
-
+            if (pv.IsMine) { StartCoroutine(ElevatorTexting("Moving to floor 3")); }
+        }
+        else if (currentFloor != 3 && pv.IsMine)
+        {
+            StartCoroutine(ElevatorTexting("Elevator is busy"));
         }
     }
     [PunRPC]

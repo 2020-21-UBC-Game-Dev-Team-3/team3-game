@@ -6934,7 +6934,11 @@ MonoBehaviour:
   floor1Button: {fileID: 0}
   floor2Button: {fileID: 0}
   floor3Button: {fileID: 0}
+  callElevatorButton1: {fileID: 0}
+  callElevatorButton2: {fileID: 0}
+  callElevatorButton3: {fileID: 0}
   Elevator: {fileID: 0}
+  ElevatorStation: {fileID: 0}
   moveSpeed: 6
   smoothTime: 0.1
   turnSmoothTime: 10

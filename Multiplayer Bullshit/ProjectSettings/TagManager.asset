@@ -10,6 +10,9 @@ TagManager:
   - Floor3Button
   - name
   - nameText
+  - CallFloor1
+  - CallFloor2
+  - CallFloor3
   layers:
   - Default
   - TransparentFX

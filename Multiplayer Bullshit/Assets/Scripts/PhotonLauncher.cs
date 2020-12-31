@@ -5,10 +5,13 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using TMPro;
+using UnityEngine.UI;
+using Hashtable = ExitGames.Client.Photon.Hashtable;
 
 public class PhotonLauncher : MonoBehaviourPunCallbacks
 {
     public static PhotonLauncher Instance;
+    [SerializeField] Button red, blue;
     
     [SerializeField] TMP_InputField roomNameInputField;
     [SerializeField] TMP_InputField playerNameInputField;
@@ -23,6 +26,7 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
     [SerializeField] GameObject startGameButton;
 
     [SerializeField] GameObject nameObject;
+
 
     void Awake()
     {
@@ -66,6 +70,7 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         MenuManager.Instance.OpenMenu("room");
+        TurnOnColorButtons();
         roomNameText.text = PhotonNetwork.CurrentRoom.Name;
 
         Player[] players = PhotonNetwork.PlayerList;
@@ -102,8 +107,10 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
 
     public void LeaveRoom()
     {
+
         PhotonNetwork.LeaveRoom();
         MenuManager.Instance.OpenMenu("loading");
+        TurnOffColorButtons();
     }
 
     public override void OnLeftRoom()
@@ -138,5 +145,15 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
     public void Update()
     {
         nameObject.name = PhotonNetwork.NickName;
+    }
+    public void TurnOnColorButtons()
+    {
+        red.gameObject.SetActive(true);
+        blue.gameObject.SetActive(true);
+    }
+    public void TurnOffColorButtons()
+    {
+        red.gameObject.SetActive(false);
+        blue.gameObject.SetActive(false);
     }
 }

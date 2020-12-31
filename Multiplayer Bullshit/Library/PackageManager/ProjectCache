@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637422158366999967
+      ticks: 637449961877292927
     m_Hash: 839048015
   m_LockFileStatus:
     m_FilePath: C:/Users/Admin/Documents/GitHub/amongusButBetter/Multiplayer Bullshit/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637422158367009930
+      ticks: 637449961877302904
     m_Hash: 1709750926
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -520,10 +520,12 @@ m_PackageAssets:
         - 1.1.16
         - 1.1.18
         - 1.1.19
+        - 1.1.20
         compatible:
         - 1.1.18
         - 1.1.19
-        verified: 1.1.19
+        - 1.1.20
+        verified: 1.1.20
       dependencies:
       - name: com.unity.ext.nunit
         version: 1.0.0
@@ -2687,13 +2689,15 @@ m_PackageAssets:
         - 0.1.9-preview
         - 1.0.0
         - 1.0.5
+        - 1.0.6
         compatible:
         - 0.1.5-preview
         - 0.1.6-preview
         - 0.1.9-preview
         - 1.0.0
         - 1.0.5
-        verified: 1.0.5
+        - 1.0.6
+        verified: 1.0.6
       dependencies: []
       resolvedDependencies: []
       keywords:

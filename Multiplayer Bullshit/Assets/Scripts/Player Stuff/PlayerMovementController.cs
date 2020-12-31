@@ -7,8 +7,12 @@ public class PlayerMovementController : MonoBehaviour
 {
     [SerializeField] GameObject playerCamera;
     public GameObject floor1Button, floor2Button, floor3Button;
+    public GameObject callElevatorButton1, callElevatorButton2, callElevatorButton3;
     public GameObject Elevator;
+    public GameObject ElevatorStation;
     private float distToElevator;
+    private string ElevatorCallName;
+    private float distToElevatorCall;
 
     //public CharacterController controller;
 
@@ -42,6 +46,11 @@ public class PlayerMovementController : MonoBehaviour
         floor1Button = GameObject.FindGameObjectWithTag("Floor1Button");
         floor2Button = GameObject.FindGameObjectWithTag("Floor2Button");
         floor3Button = GameObject.FindGameObjectWithTag("Floor3Button");
+        callElevatorButton1 = GameObject.Find("CallFloor1Button");
+        callElevatorButton2 = GameObject.Find("CallFloor2Button");
+        callElevatorButton3 = GameObject.Find("CallFloor3Button");
+        ElevatorStation = FindClosestStation();
+        ElevatorCallName = FindClosestStation().name;
         ElevatorButtonsOff();
         rotationSpeed = new Vector3(0, 40, 0);
 
@@ -56,11 +65,11 @@ public class PlayerMovementController : MonoBehaviour
     {
         //This is for elevator buttons
         distToElevator = Vector3.Distance(transform.position, Elevator.transform.position);
-        if (distToElevator <= 1)
+        if (distToElevator <= 1 && pv.IsMine)
         {
           ElevatorButtonsOn();
         }
-        else
+        else if(distToElevator > 1 && pv.IsMine)
         {
            ElevatorButtonsOff();
         }
@@ -74,6 +83,34 @@ public class PlayerMovementController : MonoBehaviour
         moveAmount = Vector3.SmoothDamp(moveAmount, direction * moveSpeed, ref smoothMoveVelocity, smoothTime);
 
         //controller.Move(direction.normalized * moveSpeed * Time.deltaTime);
+        ElevatorStation = FindClosestStation();
+        ElevatorCallName = ElevatorStation.name;
+
+        distToElevatorCall = Vector3.Distance(transform.position, ElevatorStation.transform.position);
+        if (distToElevatorCall <= 2 && pv.IsMine)
+        {
+            switch (ElevatorCallName)
+            {
+                case "CallFloor1":
+                    CallElevatorButtonOn1();
+                    break;
+                case "CallFloor2":
+                    CallElevatorButtonOn2();
+                    break;
+                case "CallFloor3":
+                    CallElevatorButtonOn3();
+                    break;
+                default:
+                    Debug.Log("What?");
+                    break;
+            }
+        }
+        else if (distToElevatorCall > 2 && pv.IsMine)
+        {
+            CallElevatorButtonOff1();
+            CallElevatorButtonOff2();
+            CallElevatorButtonOff3();
+        }
 
 
         if (direction.magnitude >= 0.1f)
@@ -87,6 +124,7 @@ public class PlayerMovementController : MonoBehaviour
         {
             animator.SetBool("IsWalking", false);
         }
+
     }
 
     //void RotatePlayer(Vector3 movement)
@@ -108,14 +146,59 @@ public class PlayerMovementController : MonoBehaviour
     }
     void ElevatorButtonsOn()
     {
-        floor1Button.transform.localPosition = new Vector3(254, -186, 0);
-        floor2Button.transform.localPosition = new Vector3(254, -136, 0);
-        floor3Button.transform.localPosition = new Vector3(254, -86, 0);
+        floor1Button.transform.localPosition = new Vector3(254, -128, 0);
+        floor2Button.transform.localPosition = new Vector3(254, -78, 0);
+        floor3Button.transform.localPosition = new Vector3(254, -28, 0);
     }
     void ElevatorButtonsOff()
     {
-        floor1Button.transform.position = new Vector3(1000, 0, 0);
-        floor2Button.transform.position = new Vector3(1000, 0, 0);
-        floor3Button.transform.position = new Vector3(1000, 0, 0);
+        floor1Button.transform.position = new Vector3(4000, 0, 0);
+        floor2Button.transform.position = new Vector3(4000, 0, 0);
+        floor3Button.transform.position = new Vector3(4000, 0, 0);
+    }
+    void CallElevatorButtonOn1()
+    {
+        callElevatorButton1.transform.localPosition = new Vector3(254, -78, 0);
+    }
+    void CallElevatorButtonOff1()
+    {
+        callElevatorButton1.transform.localPosition = new Vector3(4000, -136, 0);
+    }
+    void CallElevatorButtonOn2()
+    {
+        callElevatorButton2.transform.localPosition = new Vector3(254, -78, 0);
+    }
+    void CallElevatorButtonOff2()
+    {
+        callElevatorButton2.transform.position = new Vector3(4000, -136, 0);
+    }
+
+    void CallElevatorButtonOn3()
+    {
+        callElevatorButton3.transform.localPosition = new Vector3(254, -78, 0);
+    }
+    void CallElevatorButtonOff3()
+    {
+        callElevatorButton3.transform.position = new Vector3(4000, -136, 0);
+    }
+
+    public GameObject FindClosestStation()
+    {
+        GameObject[] gos;
+        gos = GameObject.FindGameObjectsWithTag("CallFloor1");
+        GameObject closest = null;
+        float distance = Mathf.Infinity;
+        Vector3 position = transform.position;
+        foreach (GameObject go in gos)
+        {
+            Vector3 diff = go.transform.position - position;
+            float curDistance = diff.sqrMagnitude;
+            if (curDistance < distance)
+            {
+                closest = go;
+                distance = curDistance;
+            }
+        }
+        return closest;
     }
 }
