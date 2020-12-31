@@ -3,7 +3,57 @@ guid: 0efbf3bb813b825498094c0342f760b6
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door_material
+    second: {fileID: 2100000, guid: 8c04ee18578aa3a4db8a27722c50ce8e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fence_glass
+    second: {fileID: 2100000, guid: 648836c7e92a44b46a0b83e86304cccc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fence_metal
+    second: {fileID: 2100000, guid: 0a93364df2534034592e42951a32bc5d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fence_wood
+    second: {fileID: 2100000, guid: fa1c51e93cbed9947b851f787a3094f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Handle_material
+    second: {fileID: 2100000, guid: 780ad8fc066bce34b828f6f96ac30893, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: cf1a96d863fd35e43bfffdfc2ae48a39, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stair_glass
+    second: {fileID: 2100000, guid: 078d273f0b3a8764ebbe7a55f78eccc2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stair_metal
+    second: {fileID: 2100000, guid: 6e5e6fdf1073fc248930fec175bf7941, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stair_white
+    second: {fileID: 2100000, guid: 96c8564d7e41ba448a3f6b853f606155, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stair_wood
+    second: {fileID: 2100000, guid: bb36558306a5c144aa1709114257d387, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

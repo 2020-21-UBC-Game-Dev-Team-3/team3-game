@@ -269,6 +269,7 @@ MonoBehaviour:
   roomListPrefab: {fileID: 1082044982988531461, guid: 9d15f0e648c9179419faac23e7a7eb20, type: 3}
   playerListPrefab: {fileID: 9165218043066380607, guid: c0ca7738330c17e4c8b60457aada17f1, type: 3}
   startGameButton: {fileID: 1413426436}
+  roomManager: {fileID: 1764365208}
 --- !u!114 &152756772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3669,7 +3670,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1764365206}
   - component: {fileID: 1764365208}
-  - component: {fileID: 1764365207}
   m_Layer: 0
   m_Name: RoomManager
   m_TagString: Untagged
@@ -3691,28 +3691,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1764365207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1764365205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  observableSearch: 2
-  Synchronization: 3
-  OwnershipTransfer: 0
-  ObservedComponents: []
-  viewIdField: 999
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
 --- !u!114 &1764365208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3725,6 +3703,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41c9761a68a324b4ab859dcabb5e9723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxNumberOfPlayers: 0
+  currClientImposterPercentage: 0
+  baseImposterPercentage: 50
 --- !u!1 &1771466590
 GameObject:
   m_ObjectHideFlags: 0

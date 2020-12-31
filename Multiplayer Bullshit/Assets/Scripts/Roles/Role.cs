@@ -10,7 +10,7 @@ public class Role : MonoBehaviour, IPunInstantiateMagicCallback
         Imposter, Crewmate
     }
 
-    [HideInInspector] public Roles currRole;
+    [HideInInspector] public Roles currRole;    
 
     public void OnPhotonInstantiate(PhotonMessageInfo info)
     {
