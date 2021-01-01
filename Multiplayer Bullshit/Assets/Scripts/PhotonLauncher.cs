@@ -6,6 +6,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using TMPro;
 using UnityEngine.UI;
+using System.IO;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
 
 public class PhotonLauncher : MonoBehaviourPunCallbacks
@@ -17,7 +18,7 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
     [SerializeField] TMP_InputField playerNameInputField;
     [SerializeField] TMP_Text errorText;
     [SerializeField] TMP_Text roomNameText;
-
+    public PhotonView photonView2;
     [SerializeField] Transform roomListContent;
     [SerializeField] Transform playerListContent;
     [SerializeField] GameObject roomListPrefab;
@@ -30,9 +31,10 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
     public List<string> takenColors;
     public ExitGames.Client.Photon.Hashtable PlayerCustomProperties = new ExitGames.Client.Photon.Hashtable();
     public int randomColor;
+
     void Awake()
     {
-
+        photonView2 = GetComponent<PhotonView>();
         {
          //   PlayerCustomProperties.Add("color", "none");
           //  PhotonNetwork.LocalPlayer.SetCustomProperties(PlayerCustomProperties);
@@ -82,8 +84,8 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
         PhotonNetwork.NickName = playerNameInputField.text;
         MenuManager.Instance.OpenMenu("title");
     }
-
-    public override void OnJoinedRoom()
+    [PunRPC]
+    public void OnJoinRoomColor()
     {
         randomColor = Random.Range(0, allowedColors.Count);
         PlayerCustomProperties.Add("color", allowedColors[randomColor]);
@@ -91,6 +93,17 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
         allowedColors.Remove(allowedColors[randomColor]);
         PhotonNetwork.LocalPlayer.SetCustomProperties(PlayerCustomProperties);
         Debug.Log(PlayerCustomProperties["color"]);
+    }
+
+    public override void OnJoinedRoom()
+    {
+        photonView2.RPC("OnJoinRoomColor", RpcTarget.All);
+        /*randomColor = Random.Range(0, allowedColors.Count);
+        PlayerCustomProperties.Add("color", allowedColors[randomColor]);
+        takenColors.Add(allowedColors[randomColor]);
+        allowedColors.Remove(allowedColors[randomColor]);
+        PhotonNetwork.LocalPlayer.SetCustomProperties(PlayerCustomProperties);
+        Debug.Log(PlayerCustomProperties["color"]);*/
         MenuManager.Instance.OpenMenu("room");
         TurnOnColorButtons();
         roomNameText.text = PhotonNetwork.CurrentRoom.Name;
@@ -126,13 +139,22 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
         PhotonNetwork.JoinRoom(info.Name); 
         MenuManager.Instance.OpenMenu("loading");
     }
-
-    public void LeaveRoom()
+    [PunRPC]
+    public void LeaveRoomColor()
     {
         allowedColors.Add(PlayerCustomProperties["color"].ToString());
         PlayerCustomProperties.Remove("color");
         takenColors.Remove(allowedColors[randomColor]);
         PhotonNetwork.LocalPlayer.SetCustomProperties(PlayerCustomProperties);
+    }
+
+    public void LeaveRoom()
+    {
+        photonView2.RPC("LeaveRoomColor", RpcTarget.All);
+        /*allowedColors.Add(PlayerCustomProperties["color"].ToString());
+        PlayerCustomProperties.Remove("color");
+        takenColors.Remove(allowedColors[randomColor]);
+        PhotonNetwork.LocalPlayer.SetCustomProperties(PlayerCustomProperties);*/
         PhotonNetwork.LeaveRoom();
         MenuManager.Instance.OpenMenu("loading");
         TurnOffColorButtons();
@@ -191,19 +213,32 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
         indigo.gameObject.SetActive(false);
         purple.gameObject.SetActive(false);
     }
+    [PunRPC]
+    public void colorButton(string color)
+    {
+        allowedColors.Add(PlayerCustomProperties["color"].ToString());
+        PlayerCustomProperties.Remove("color");
+        takenColors.Remove(allowedColors[randomColor]);
+        PlayerCustomProperties.Add("color", color);
+        takenColors.Add(color);
+        allowedColors.Remove(color);
+        Debug.Log(PlayerCustomProperties["color"]);
+        PhotonNetwork.LocalPlayer.SetCustomProperties(PlayerCustomProperties);
+    }
     public void RedButton()
     {
         string color = "red";
         if (allowedColors.Find(x => x == color) != null)
         {
-            allowedColors.Add(PlayerCustomProperties["color"].ToString());
+            photonView2.RPC("colorButton", RpcTarget.All, color);
+            /*allowedColors.Add(PlayerCustomProperties["color"].ToString());
             PlayerCustomProperties.Remove("color");
             takenColors.Remove(allowedColors[randomColor]);
             PlayerCustomProperties.Add("color", color);
             takenColors.Add(color);
             allowedColors.Remove(color);
             Debug.Log(PlayerCustomProperties["color"]);
-            PhotonNetwork.LocalPlayer.SetCustomProperties(PlayerCustomProperties);
+            PhotonNetwork.LocalPlayer.SetCustomProperties(PlayerCustomProperties);*/
         }
         else Debug.Log("color already chosen");
     }
@@ -212,14 +247,15 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
         string color = "orange";
         if (allowedColors.Find(x => x == color) != null)
         {
-            allowedColors.Add(PlayerCustomProperties["color"].ToString());
+            photonView2.RPC("colorButton", RpcTarget.All, color);
+            /*allowedColors.Add(PlayerCustomProperties["color"].ToString());
             PlayerCustomProperties.Remove("color");
             takenColors.Remove(allowedColors[randomColor]);
             PlayerCustomProperties.Add("color", color);
             takenColors.Add(color);
             allowedColors.Remove(color);
             Debug.Log(PlayerCustomProperties["color"]);
-            PhotonNetwork.LocalPlayer.SetCustomProperties(PlayerCustomProperties);
+            PhotonNetwork.LocalPlayer.SetCustomProperties(PlayerCustomProperties);*/
         }
         else Debug.Log("color already chosen");
     }
@@ -228,14 +264,15 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
         string color = "yellow";
         if (allowedColors.Find(x => x == color) != null)
         {
-            allowedColors.Add(PlayerCustomProperties["color"].ToString());
+            photonView2.RPC("colorButton", RpcTarget.All, color);
+            /*allowedColors.Add(PlayerCustomProperties["color"].ToString());
             PlayerCustomProperties.Remove("color");
             takenColors.Remove(allowedColors[randomColor]);
             PlayerCustomProperties.Add("color", color);
             takenColors.Add(color);
             allowedColors.Remove(color);
             Debug.Log(PlayerCustomProperties["color"]);
-            PhotonNetwork.LocalPlayer.SetCustomProperties(PlayerCustomProperties);
+            PhotonNetwork.LocalPlayer.SetCustomProperties(PlayerCustomProperties);*/
         }
         else Debug.Log("color already chosen");
     }
@@ -244,14 +281,15 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
         string color = "green";
         if (allowedColors.Find(x => x == color) != null)
         {
-            allowedColors.Add(PlayerCustomProperties["color"].ToString());
+            photonView2.RPC("colorButton", RpcTarget.All, color);
+            /*allowedColors.Add(PlayerCustomProperties["color"].ToString());
             PlayerCustomProperties.Remove("color");
             takenColors.Remove(allowedColors[randomColor]);
             PlayerCustomProperties.Add("color", color);
             takenColors.Add(color);
             allowedColors.Remove(color);
             Debug.Log(PlayerCustomProperties["color"]);
-            PhotonNetwork.LocalPlayer.SetCustomProperties(PlayerCustomProperties);
+            PhotonNetwork.LocalPlayer.SetCustomProperties(PlayerCustomProperties);*/
         }
         else Debug.Log("color already chosen");
     }
@@ -261,14 +299,15 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
         string color = "blue";
         if (allowedColors.Find(x => x == color) != null)
         {
-            allowedColors.Add(PlayerCustomProperties["color"].ToString());
+            photonView2.RPC("colorButton", RpcTarget.All, color);
+            /*allowedColors.Add(PlayerCustomProperties["color"].ToString());
             PlayerCustomProperties.Remove("color");
             takenColors.Remove(allowedColors[randomColor]);
             PlayerCustomProperties.Add("color", color);
             takenColors.Add(color);
             allowedColors.Remove(color);
             Debug.Log(PlayerCustomProperties["color"]);
-            PhotonNetwork.LocalPlayer.SetCustomProperties(PlayerCustomProperties);
+            PhotonNetwork.LocalPlayer.SetCustomProperties(PlayerCustomProperties);*/
         }
         else Debug.Log("color already chosen");
     }
@@ -277,6 +316,8 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
         string color = "indigo";
         if (allowedColors.Find(x => x == color) != null)
         {
+            photonView2.RPC("colorButton", RpcTarget.All, color);
+            /*
             allowedColors.Add(PlayerCustomProperties["color"].ToString());
             PlayerCustomProperties.Remove("color");
             takenColors.Remove(allowedColors[randomColor]);
@@ -284,7 +325,7 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
             takenColors.Add(color);
             allowedColors.Remove(color);
             Debug.Log(PlayerCustomProperties["color"]);
-            PhotonNetwork.LocalPlayer.SetCustomProperties(PlayerCustomProperties);
+            PhotonNetwork.LocalPlayer.SetCustomProperties(PlayerCustomProperties);*/
         }
         else Debug.Log("color already chosen");
     }
@@ -293,6 +334,7 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
         string color = "purple";
         if (allowedColors.Find(x => x == color) != null)
         {
+            photonView2.RPC("colorButton", RpcTarget.All, color);/*
             allowedColors.Add(PlayerCustomProperties["color"].ToString());
             PlayerCustomProperties.Remove("color");
             takenColors.Remove(allowedColors[randomColor]);
@@ -300,7 +342,7 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
             takenColors.Add(color);
             allowedColors.Remove(color);
             Debug.Log(PlayerCustomProperties["color"]);
-            PhotonNetwork.LocalPlayer.SetCustomProperties(PlayerCustomProperties);
+            PhotonNetwork.LocalPlayer.SetCustomProperties(PlayerCustomProperties);*/
         }
         else Debug.Log("color already chosen");
     }

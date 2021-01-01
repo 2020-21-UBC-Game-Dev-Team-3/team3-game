@@ -86,6 +86,7 @@
     <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
     <Compile Include="Assets\NameTextScript.cs" />
+    <Compile Include="Assets\colorManagerScript.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
