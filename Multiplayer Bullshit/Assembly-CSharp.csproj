@@ -73,13 +73,14 @@
      <Compile Include="Assets\Scripts\Player Stuff\PlayerMovementController.cs" />
      <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\IKCtrlRightHand.cs" />
      <Compile Include="Assets\Scripts\Player Stuff\PlayerManager.cs" />
+     <Compile Include="Assets\Scripts\Player Stuff\body.cs" />
      <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\FaceUpdate.cs" />
      <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\SpringBone.cs" />
      <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\RandomWind.cs" />
      <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs" />
      <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
      <Compile Include="Assets\ParrelSync\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
-     <Compile Include="Assets\Scripts\Player Stuff\body.cs" />
+     <Compile Include="Assets\Scripts\Player Stuff\CameraController1.cs" />
      <None Include="Assets\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\ParrelSync\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />

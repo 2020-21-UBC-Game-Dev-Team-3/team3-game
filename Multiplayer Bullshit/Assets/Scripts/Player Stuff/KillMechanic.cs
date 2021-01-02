@@ -88,7 +88,7 @@ public class KillMechanic : MonoBehaviour
         myAnim.SetBool("IsDead", isDead);
         myCollider.enabled = false;
 
-        Body tempBody = Instantiate(body, transform.position, transform.rotation).GetComponent<body>();
+      //  Body tempBody = Instantiate(body, transform.position, transform.rotation).GetComponent<body>();
 
     }
 
