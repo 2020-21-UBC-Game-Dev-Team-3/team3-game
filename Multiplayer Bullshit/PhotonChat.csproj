@@ -55,26 +55,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Photon\PhotonChat\Code\ChatParameterCode.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Code\ChatOperationCode.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Code\ChatDisconnectCause.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Code\ChatPeer.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Code\IChatClientListener.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Code\ChatChannel.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Code\ChatEventCode.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Code\ChatAppSettings.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Code\ChatState.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Code\ChannelCreationOptions.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Code\ChatClient.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Code\ChatUserStatus.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Code\ChannelWellKnownProperties.cs" />
-     <None Include="Assets\Photon\PhotonChat\Code\changes-chat.txt" />
-     <None Include="Assets\Photon\PhotonChat\Code\PhotonChat.asmdef" />
+     <Compile Include="Assets\Materials\Photon\PhotonChat\Code\ChatParameterCode.cs" />
+     <Compile Include="Assets\Materials\Photon\PhotonChat\Code\ChatOperationCode.cs" />
+     <Compile Include="Assets\Materials\Photon\PhotonChat\Code\ChatDisconnectCause.cs" />
+     <Compile Include="Assets\Materials\Photon\PhotonChat\Code\ChatPeer.cs" />
+     <Compile Include="Assets\Materials\Photon\PhotonChat\Code\IChatClientListener.cs" />
+     <Compile Include="Assets\Materials\Photon\PhotonChat\Code\ChatChannel.cs" />
+     <Compile Include="Assets\Materials\Photon\PhotonChat\Code\ChatEventCode.cs" />
+     <Compile Include="Assets\Materials\Photon\PhotonChat\Code\ChatAppSettings.cs" />
+     <Compile Include="Assets\Materials\Photon\PhotonChat\Code\ChatState.cs" />
+     <Compile Include="Assets\Materials\Photon\PhotonChat\Code\ChannelCreationOptions.cs" />
+     <Compile Include="Assets\Materials\Photon\PhotonChat\Code\ChatClient.cs" />
+     <Compile Include="Assets\Materials\Photon\PhotonChat\Code\ChatUserStatus.cs" />
+     <Compile Include="Assets\Materials\Photon\PhotonChat\Code\ChannelWellKnownProperties.cs" />
+     <None Include="Assets\Materials\Photon\PhotonChat\Code\changes-chat.txt" />
+     <None Include="Assets\Materials\Photon\PhotonChat\Code\PhotonChat.asmdef" />
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/Minigame/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/Minigame/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -269,10 +269,10 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/Minigame/team3-game/Multiplayer Bullshit/Assets/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
+ <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Assets/Materials/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
  </Reference>
  <Reference Include="websocket-sharp">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/Minigame/team3-game/Multiplayer Bullshit/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
+ <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Assets/Materials/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.12f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

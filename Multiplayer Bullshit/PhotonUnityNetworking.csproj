@@ -55,29 +55,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PunClasses.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Views\PhotonAnimatorView.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonHandler.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonNetwork.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonNetworkPart.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\CustomTypes.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonStreamQueue.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Views\PhotonRigidbody2DView.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Views\PhotonRigidbodyView.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Views\PhotonTransformView.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\ServerSettings.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Interfaces\IPhotonViewCallbacks.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Utilities\NestedComponentUtilities.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Views\PhotonTransformViewClassic.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Enums.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Interfaces\IPunCallbacks.cs" />
-     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonView.cs" />
-     <None Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonUnityNetworking.asmdef" />
+     <Compile Include="Assets\Materials\Photon\PhotonUnityNetworking\Code\PunClasses.cs" />
+     <Compile Include="Assets\Materials\Photon\PhotonUnityNetworking\Code\Views\PhotonAnimatorView.cs" />
+     <Compile Include="Assets\Materials\Photon\PhotonUnityNetworking\Code\PhotonHandler.cs" />
+     <Compile Include="Assets\Materials\Photon\PhotonUnityNetworking\Code\PhotonNetwork.cs" />
+     <Compile Include="Assets\Materials\Photon\PhotonUnityNetworking\Code\PhotonNetworkPart.cs" />
+     <Compile Include="Assets\Materials\Photon\PhotonUnityNetworking\Code\CustomTypes.cs" />
+     <Compile Include="Assets\Materials\Photon\PhotonUnityNetworking\Code\PhotonStreamQueue.cs" />
+     <Compile Include="Assets\Materials\Photon\PhotonUnityNetworking\Code\Views\PhotonRigidbody2DView.cs" />
+     <Compile Include="Assets\Materials\Photon\PhotonUnityNetworking\Code\Views\PhotonRigidbodyView.cs" />
+     <Compile Include="Assets\Materials\Photon\PhotonUnityNetworking\Code\Views\PhotonTransformView.cs" />
+     <Compile Include="Assets\Materials\Photon\PhotonUnityNetworking\Code\ServerSettings.cs" />
+     <Compile Include="Assets\Materials\Photon\PhotonUnityNetworking\Code\Interfaces\IPhotonViewCallbacks.cs" />
+     <Compile Include="Assets\Materials\Photon\PhotonUnityNetworking\Code\Utilities\NestedComponentUtilities.cs" />
+     <Compile Include="Assets\Materials\Photon\PhotonUnityNetworking\Code\Views\PhotonTransformViewClassic.cs" />
+     <Compile Include="Assets\Materials\Photon\PhotonUnityNetworking\Code\Enums.cs" />
+     <Compile Include="Assets\Materials\Photon\PhotonUnityNetworking\Code\Interfaces\IPunCallbacks.cs" />
+     <Compile Include="Assets\Materials\Photon\PhotonUnityNetworking\Code\PhotonView.cs" />
+     <None Include="Assets\Materials\Photon\PhotonUnityNetworking\Code\PhotonUnityNetworking.asmdef" />
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/Minigame/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/Minigame/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -272,10 +272,10 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/Minigame/team3-game/Multiplayer Bullshit/Assets/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
+ <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Assets/Materials/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
  </Reference>
  <Reference Include="websocket-sharp">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/Minigame/team3-game/Multiplayer Bullshit/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
+ <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Assets/Materials/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.12f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
