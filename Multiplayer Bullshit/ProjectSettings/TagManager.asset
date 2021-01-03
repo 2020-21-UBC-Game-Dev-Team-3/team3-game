@@ -16,6 +16,13 @@ TagManager:
   - TaskCanvas
   - Task1Indicator
   - Task2Indicator
+  - Vent
+  - Interactable
+  - Indicator
+  - Vent1Pos
+  - Vent2Pos
+  - Vent3Pos
+  - Vent3Test
   layers:
   - Default
   - TransparentFX

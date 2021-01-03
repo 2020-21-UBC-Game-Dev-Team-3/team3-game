@@ -11,18 +11,20 @@ public class PlayerMovementController : MonoBehaviour
     public GameObject Elevator;
     private float distToElevator;
 
-    //public GameObject[] taskLocations;
-    //public GameObject taskButton;
     public GameObject minigameCanvas;
-    //private float distToTask;
     private float distToIndicator;
     private float minTaskDist = 5;
-    private int numTasks = 2;
-    //private bool taskFlag;
-    public bool inMinigame;
-    public GameObject[] taskIndicators;
+    private int numInteractables = 5;
+    public GameObject[] interactables;
 
-    //public CharacterController controller;
+
+    private bool inVent;
+    public Transform Vent1Pos;
+    public Transform Vent2Pos;
+    public Transform Vent3Pos;
+    private float threshold = 1.0f; //magic number but it works and idk what else to do
+    private float thresholdSquared;
+
 
     public float moveSpeed;
     public float smoothTime;
@@ -55,17 +57,20 @@ public class PlayerMovementController : MonoBehaviour
         //For minigames
         minigameCanvas = getMinigameCanvas();
         //taskLocations = GameObject.FindGameObjectsWithTag("TaskLocation");
-        
         //taskButton = GameObject.FindGameObjectWithTag("TaskButton");
-        taskIndicators = new GameObject[numTasks];
-        taskIndicators[0] = GameObject.FindGameObjectWithTag("Task1Indicator");
-        taskIndicators[1] = GameObject.FindGameObjectWithTag("Task2Indicator");
-        foreach (GameObject indicator in taskIndicators)
+        interactables = GameObject.FindGameObjectsWithTag("Interactable");
+        foreach (GameObject interactable in interactables)
         {
-            indicator.SetActive(false);
+            interactable.SetActive(true);
+            interactable.transform.GetChild(0).gameObject.SetActive(false);
         }
-        //taskButton.SetActive(false);
-        inMinigame = false;
+
+        //For venting
+        inVent = false;
+        Vent1Pos = GameObject.FindGameObjectWithTag("Vent1Pos").transform;
+        Vent2Pos = GameObject.FindGameObjectWithTag("Vent2Pos").transform;
+        Vent3Pos = GameObject.FindGameObjectWithTag("Vent3Test").transform;
+        thresholdSquared = threshold * threshold;
 
         //Attatches all the necessary components to player
         Elevator = GameObject.FindGameObjectWithTag("Elevator");
@@ -84,12 +89,11 @@ public class PlayerMovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(minigameCanvas.activeSelf);
-        if (!minigameCanvas.activeSelf)
+        if (!minigameCanvas.activeSelf && !inVent)
         {
+            GetComponent<Animator>().enabled = true;
+            InteractableCheck();
             Interact();
-            //taskButtonCheck();
-            taskIndicatorCheck();
 
             //This is for elevator buttons
             distToElevator = Vector3.Distance(transform.position, Elevator.transform.position);
@@ -110,14 +114,12 @@ public class PlayerMovementController : MonoBehaviour
             Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
             moveAmount = Vector3.SmoothDamp(moveAmount, direction * moveSpeed, ref smoothMoveVelocity, smoothTime);
 
-            //controller.Move(direction.normalized * moveSpeed * Time.deltaTime);
 
 
             if (direction.magnitude >= 0.1f)
             {
                 animator.SetBool("IsWalking", true);
 
-                //RotatePlayer(direction);
             }
 
             else
@@ -125,21 +127,25 @@ public class PlayerMovementController : MonoBehaviour
                 animator.SetBool("IsWalking", false);
             }
         }
+        else
+        {
+            CheckFalse();
+        }
     }
 
-    //void RotatePlayer(Vector3 movement)
-    //{
-    //    float targetAngle = Mathf.Atan2(movement.x, movement.z) * Mathf.Rad2Deg;
-    //    float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+    void CheckFalse()
+    {
+        GetComponent<Animator>().enabled = false;
 
-    //    transform.Rotate(Vector3.up * angle);
-    //    Quaternion deltaRotation = Quaternion.Euler(0f, targetAngle, 0f);
-    //    rb.MoveRotation(rb.rotation * deltaRotation);
-    //}
+        if (inVent)
+        {
+            CurrentlyInVent();
+        }
+    }
 
     void FixedUpdate()
     {
-        if (!minigameCanvas.activeSelf) { 
+        if (!minigameCanvas.activeSelf && !inVent) { 
         rb.MovePosition(rb.position + transform.TransformDirection(moveAmount) * Time.fixedDeltaTime);
 
         Quaternion deltaRotation = Quaternion.Euler(moveAmount.x * rotationSpeed * Time.fixedDeltaTime);
@@ -160,40 +166,18 @@ public class PlayerMovementController : MonoBehaviour
     }
 
     //To show/hide the task button
-    /*void taskButtonCheck()
+    void InteractableCheck()
     {
-        taskFlag = false;
-
-        foreach (GameObject location in taskLocations)
+        foreach (GameObject interactable in interactables)
         {
-            distToTask = Vector3.Distance(transform.position, location.transform.position);
-
-            if (distToTask <= minTaskDist)
-            {
-                taskButton.SetActive(true);
-                taskFlag = true;
-                break;
-            }
-        }
-
-        if (!taskFlag)
-        {
-            taskButton.SetActive(false);
-        }
-    }*/
-
-    void taskIndicatorCheck()
-    {
-        foreach (GameObject indicator in taskIndicators)
-        {
-            distToIndicator = Vector3.Distance(transform.position, indicator.transform.position);
+            distToIndicator = Vector3.Distance(transform.position, interactable.transform.position);
 
             if (distToIndicator <= minTaskDist)
             {
-                indicator.SetActive(true);
+                interactable.transform.GetChild(0).gameObject.SetActive(true);
             } else
             {
-                indicator.SetActive(false);
+                interactable.transform.GetChild(0).gameObject.SetActive(false);
             }
         }
 
@@ -221,25 +205,6 @@ public class PlayerMovementController : MonoBehaviour
       
     }
 
-    //Set in/out of minigame to stop player movement while in minigame
-    /*public void setInMinigame()
-    {
-        StartCoroutine(setInMinigameCoroutine());
-        Debug.Log("got here");
-    }
-    public void setOutMinigame()
-    {
-        inMinigame = false;
-    }
-
-    IEnumerator setInMinigameCoroutine()
-    {
-        inMinigame = true;
-        Debug.Log("Set in minigame");
-        Debug.Log(inMinigame);
-        yield return new WaitForSeconds(2);
-    }*/
-
     void Interact()
     {
         if (Input.GetMouseButtonDown(0))
@@ -248,7 +213,7 @@ public class PlayerMovementController : MonoBehaviour
 
             if (Physics.Raycast(ray, out RaycastHit hit))
             {
-                if (hit.transform.CompareTag("TaskLocation") /*|| hit.transform.CompareTag("Interactable")*/)
+                if (hit.transform.CompareTag("Interactable"))
                 {
                     if (!hit.transform.gameObject.activeInHierarchy) return;
                     Interactable interactable = hit.collider.GetComponent<Interactable>();
@@ -259,16 +224,55 @@ public class PlayerMovementController : MonoBehaviour
     }
     void ChooseInteractionEvent(Interactable interactable)
     {
-        if (interactable.GetInteractableName() == "Minigame1" && taskIndicators[0].activeSelf)
+        if (interactable.GetInteractableName() == "Minigame1" && interactable.transform.GetChild(0).gameObject.activeSelf == true)
         {
-            Debug.Log("minigame 1");
             minigameCanvas.SetActive(true);
-
         }
-        if (interactable.GetInteractableName() == "Minigame2" && taskIndicators[1].activeSelf)
+        if (interactable.GetInteractableName() == "Minigame2" && interactable.transform.GetChild(0).gameObject.activeSelf == true)
         {
-            Debug.Log("minigame 2");
             minigameCanvas.SetActive(true);
+        }
+        if (interactable.GetInteractableName() == "Vent" && interactable.transform.GetChild(0).gameObject.activeSelf == true)
+        {
+            EnterVent(interactable);
+        }
+    }
+    void EnterVent(Interactable interactable)
+    {
+        foreach (GameObject interactable2 in interactables)
+        {
+            interactable2.SetActive(true);
+            interactable2.transform.GetChild(0).gameObject.SetActive(false);
+        }
+
+        inVent = true;
+        transform.position = interactable.transform.GetChild(1).gameObject.transform.position;
+        transform.GetChild(0).gameObject.SetActive(false);
+        transform.GetChild(1).gameObject.SetActive(false);
+
+    }
+    void CurrentlyInVent()
+    {
+        if (Input.GetKeyDown("space"))
+        {
+            if ((transform.position - Vent1Pos.transform.position).sqrMagnitude < thresholdSquared)
+            {
+                transform.position = Vent2Pos.transform.position;
+            }
+            else if ((transform.position - Vent2Pos.transform.position).sqrMagnitude < thresholdSquared)
+            {
+                transform.position = Vent3Pos.transform.position;
+            }
+            else if ((transform.position - Vent3Pos.transform.position).sqrMagnitude < thresholdSquared)
+            {
+                transform.position = Vent1Pos.transform.position;
+            }
+            
+        } else if (Input.GetKeyDown("a") || Input.GetKeyDown("w") || Input.GetKeyDown("d") || Input.GetKeyDown("s"))
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
+            transform.GetChild(1).gameObject.SetActive(true);
+            inVent = false;
         }
     }
 }
