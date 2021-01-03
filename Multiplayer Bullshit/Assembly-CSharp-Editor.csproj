@@ -670,6 +670,10 @@
       <Project>{075C27F3-9C30-73CE-7C36-3998FE589435}</Project>
       <Name>PhotonUnityNetworking.Utilities</Name>
     </ProjectReference>
+    <ProjectReference Include="ParrelSync.csproj">
+      <Project>{75819081-31EE-FE84-3837-4360B1D44294}</Project>
+      <Name>ParrelSync</Name>
+    </ProjectReference>
     <ProjectReference Include="PhotonRealtime.csproj">
       <Project>{E72970EB-1458-648A-2760-555806AA96FF}</Project>
       <Name>PhotonRealtime</Name>
@@ -689,10 +693,6 @@
     <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
       <Project>{D80AF8BC-B004-B734-9054-57262BA747B9}</Project>
       <Name>PhotonUnityNetworking.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="ParrelSync.csproj">
-      <Project>{75819081-31EE-FE84-3837-4360B1D44294}</Project>
-      <Name>ParrelSync</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
