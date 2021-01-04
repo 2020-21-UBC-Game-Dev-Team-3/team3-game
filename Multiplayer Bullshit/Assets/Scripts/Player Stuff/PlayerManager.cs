@@ -31,7 +31,7 @@ public class PlayerManager : MonoBehaviour
     [PunRPC]
     void IncrementPlayerNumber()
     {
-        GameObject.FindObjectOfType<RoleRandomizer>().numberOfPlayersAddedSoFar++;
+/*        GameObject.FindObjectOfType<RoleRandomizer>().numberOfPlayersAddedSoFar++;*/
     }
 
 }
