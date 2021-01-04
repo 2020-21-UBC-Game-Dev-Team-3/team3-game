@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: e8811b3794f2b7e468cfd8a9ef806b84, type: 2}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: 61202823411ac5548926c33b086e722f, type: 2}
+  m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -269,7 +269,6 @@ MonoBehaviour:
   roomListPrefab: {fileID: 1082044982988531461, guid: 9d15f0e648c9179419faac23e7a7eb20, type: 3}
   playerListPrefab: {fileID: 9165218043066380607, guid: c0ca7738330c17e4c8b60457aada17f1, type: 3}
   startGameButton: {fileID: 1413426436}
-  roomManager: {fileID: 1764365208}
 --- !u!114 &152756772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2400,7 +2399,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -3726,9 +3725,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41c9761a68a324b4ab859dcabb5e9723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxNumberOfPlayers: 0
-  currPercentForImposter: 0
-  baseImposterPercentage: 0
 --- !u!1 &1771466590
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,8 +4,26 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - LifeBoat
-  - Passenger
+  - Elevator
+  - Floor1Button
+  - Floor2Button
+  - Floor3Button
+  - TaskLocation
+  - TaskButton
+  - Minigame Test Button
+  - MinigameCanvas
+  - MinigameCloseButton
+  - TaskCanvas
+  - Task1Indicator
+  - Task2Indicator
+  - Vent
+  - Interactable
+  - Indicator
+  - Vent1Pos
+  - Vent2Pos
+  - Vent3Pos
+  - Vent3Test
+  - BadInteractable
   layers:
   - Default
   - TransparentFX
@@ -42,10 +60,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Background
-    uniqueID: 1587136305
-    locked: 0
-  - name: Game
-    uniqueID: 901751961
     locked: 0
