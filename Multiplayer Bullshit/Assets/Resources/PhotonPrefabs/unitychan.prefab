@@ -6934,7 +6934,7 @@ MonoBehaviour:
   floor3Button: {fileID: 0}
   Elevator: {fileID: 0}
   minigameCanvas: {fileID: 0}
-  interactables: []
+  badInteractables: []
   Vent1Pos: {fileID: 0}
   Vent2Pos: {fileID: 0}
   Vent3Pos: {fileID: 0}

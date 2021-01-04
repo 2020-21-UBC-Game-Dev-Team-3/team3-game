@@ -23,6 +23,7 @@ TagManager:
   - Vent2Pos
   - Vent3Pos
   - Vent3Test
+  - BadInteractable
   layers:
   - Default
   - TransparentFX

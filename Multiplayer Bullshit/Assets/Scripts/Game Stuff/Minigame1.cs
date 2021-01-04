@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class Minigame1 : Interactable
+public class Minigame1 : BadInteractable
 {
 
     void Start()
     {
-        interactableName = "Minigame1";
+        badInteractableName = "Minigame1";
     }
 
 

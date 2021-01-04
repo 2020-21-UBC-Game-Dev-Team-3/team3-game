@@ -826,7 +826,7 @@ GameObject:
   - component: {fileID: 543663455}
   m_Layer: 0
   m_Name: TaskLocation1
-  m_TagString: Interactable
+  m_TagString: BadInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1245,7 +1245,7 @@ GameObject:
   - component: {fileID: 633107215}
   m_Layer: 0
   m_Name: Vent3
-  m_TagString: Interactable
+  m_TagString: BadInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1386,7 +1386,7 @@ GameObject:
   - component: {fileID: 647408286}
   m_Layer: 0
   m_Name: TaskLocation2
-  m_TagString: Interactable
+  m_TagString: BadInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1776,7 +1776,7 @@ GameObject:
   - component: {fileID: 902640298}
   m_Layer: 0
   m_Name: Vent2
-  m_TagString: Interactable
+  m_TagString: BadInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2775,7 +2775,7 @@ GameObject:
   - component: {fileID: 1708177279}
   m_Layer: 0
   m_Name: Vent1
-  m_TagString: Interactable
+  m_TagString: BadInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
