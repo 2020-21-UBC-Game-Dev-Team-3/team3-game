@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using Photon.Pun;
 
-public class BadInteractable : MonoBehaviourPunCallbacks
+public class Interactable : MonoBehaviourPunCallbacks
 {
-   public string badInteractableName;
+    public string interactableName;
 
     public string GetInteractableName()
     {
-        return badInteractableName;
+        return interactableName;
     }
 }
