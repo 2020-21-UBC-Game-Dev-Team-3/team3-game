@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -920,7 +920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c61e81a0849579749afbcd2c29a16dc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableName: 
+  badInteractableName: 
 --- !u!1 &566659232
 GameObject:
   m_ObjectHideFlags: 0
@@ -1340,7 +1340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed711b062db2ce846a90835c36f999b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableName: 
+  badInteractableName: 
 --- !u!1 &636313066
 GameObject:
   m_ObjectHideFlags: 0
@@ -1480,7 +1480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f2b82bf1b08a04d8e65dc113b614df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableName: 
+  badInteractableName: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1509,7 +1509,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -1871,7 +1871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed711b062db2ce846a90835c36f999b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableName: 
+  badInteractableName: 
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2870,7 +2870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed711b062db2ce846a90835c36f999b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableName: 
+  badInteractableName: 
 --- !u!1 &1877937774
 GameObject:
   m_ObjectHideFlags: 0
