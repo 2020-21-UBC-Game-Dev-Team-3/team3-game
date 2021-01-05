@@ -102,6 +102,8 @@
     <Compile Include="Assets\Materials\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\TextManager.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\TextAlign.cs" />
+    <Compile Include="Assets\NameTextScript.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />

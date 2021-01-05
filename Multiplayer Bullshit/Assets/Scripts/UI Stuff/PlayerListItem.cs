@@ -8,7 +8,7 @@ using TMPro;
 public class PlayerListItem : MonoBehaviourPunCallbacks
 {
     [SerializeField] TMP_Text text;
-    Player playerItem;
+    [SerializeField ]Player playerItem;
     
     public void SetUp(Player player)
     {
@@ -27,5 +27,9 @@ public class PlayerListItem : MonoBehaviourPunCallbacks
     public override void OnLeftRoom()
     {
         Destroy(gameObject);
+    }
+    public void Update()
+    {
+
     }
 }

@@ -10,6 +10,7 @@ public class MenuManager : MonoBehaviour
 
     void Awake()
     {
+
         Instance = this;
     }
 
