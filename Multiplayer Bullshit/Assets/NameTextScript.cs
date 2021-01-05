@@ -24,6 +24,22 @@ public class NameTextScript : MonoBehaviour
         }
         else SetOwnerName();
     }
+    public void Update()
+    {
+        if (Input.GetKeyDown("space"))
+        {
+            Debug.Log("MyColor : " + PhotonNetwork.LocalPlayer.CustomProperties["color"]);
+            Debug.Log("MyColor : " + pv.Owner.CustomProperties["color"]);
+            Debug.Log("Taken Colors 1-6");
+            Debug.Log(PhotonNetwork.MasterClient.CustomProperties["takenColor1"]);
+            Debug.Log(PhotonNetwork.MasterClient.CustomProperties["takenColor2"]);
+            Debug.Log(PhotonNetwork.MasterClient.CustomProperties["takenColor3"]);
+            Debug.Log(PhotonNetwork.MasterClient.CustomProperties["takenColor4"]);
+            Debug.Log(PhotonNetwork.MasterClient.CustomProperties["takenColor5"]);
+            Debug.Log(PhotonNetwork.MasterClient.CustomProperties["takenColor6"]);
+            Debug.Log("TakenColorList");
+        }
+    }
     void Awake()
     {
         pv = GetComponent<PhotonView>();
@@ -57,7 +73,7 @@ public class NameTextScript : MonoBehaviour
         }
         else
         {
-            switch ((string)PhotonNetwork.LocalPlayer.CustomProperties["color"])
+            switch ((string)pv.Owner.CustomProperties["color"])
             {
                 case "red":
                     text.color = Color.red;

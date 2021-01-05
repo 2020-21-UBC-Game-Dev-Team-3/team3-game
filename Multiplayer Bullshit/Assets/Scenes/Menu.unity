@@ -401,11 +401,12 @@ MonoBehaviour:
   blue: {fileID: 1901229766}
   indigo: {fileID: 1514880931}
   purple: {fileID: 2121206901}
+  roomMenu: {fileID: 857215671}
   roomNameInputField: {fileID: 524759566}
   playerNameInputField: {fileID: 655116090}
   errorText: {fileID: 210702409}
   roomNameText: {fileID: 1591951543}
-  photonView2: {fileID: 0}
+  pv: {fileID: 0}
   roomListContent: {fileID: 1320104131}
   playerListContent: {fileID: 455531596}
   roomListPrefab: {fileID: 1082044982988531461, guid: 9d15f0e648c9179419faac23e7a7eb20, type: 3}
@@ -415,6 +416,17 @@ MonoBehaviour:
   allowedColors: []
   takenColors: []
   randomColor: 0
+  buttonToken: 0
+  buttonInUse: 0
+  btoken: 1
+  key: 1
+  redBool: 0
+  orangeBool: 0
+  yellowBool: 0
+  greenBool: 0
+  bllueBool: 0
+  indigoBool: 0
+  purpleBool: 0
 --- !u!114 &152756772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5305,7 +5317,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 152756771}
         m_TargetAssemblyTypeName: PhotonLauncher, Assembly-CSharp
-        m_MethodName: LeaveRoom
+        m_MethodName: LeaveRoomButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5401,7 +5413,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   observableSearch: 2
-  Synchronization: 3
+  Synchronization: 1
   OwnershipTransfer: 0
   ObservedComponents: []
   viewIdField: 999
