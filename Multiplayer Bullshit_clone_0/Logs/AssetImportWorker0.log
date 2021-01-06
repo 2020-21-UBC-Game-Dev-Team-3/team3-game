@@ -1,0 +1,84 @@
+Using pre-set license
+
+ COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+/Users/chiaralin/team3-game/Multiplayer Bullshit_clone_0
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+55805
+Successfully changed project path to: /Users/chiaralin/team3-game/Multiplayer Bullshit_clone_0
+/Users/chiaralin/team3-game/Multiplayer Bullshit_clone_0
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 64.65 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/chiaralin/team3-game/Multiplayer Bullshit_clone_0/Assets
+GfxDevice: creating device client; threaded=0
+2021-01-06 09:01:46.337 Unity[24425:405822] Color LCD preferred device: Intel(R) Iris(TM) Plus Graphics 650 (low power)
+2021-01-06 09:01:46.338 Unity[24425:405822] Metal devices available: 1
+2021-01-06 09:01:46.338 Unity[24425:405822] 0: Intel(R) Iris(TM) Plus Graphics 650 (low power)
+2021-01-06 09:01:46.339 Unity[24425:405822] Using device Intel(R) Iris(TM) Plus Graphics 650 (low power)
+Initializing Metal device caps: Intel(R) Iris(TM) Plus Graphics 650
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = '/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56425
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.010705 seconds.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 53.77 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.539 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.004438 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+OnLevelWasLoaded was found on GameManager
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 61.38 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.726 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launching external process: /Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1745 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.1 MB.
+System memory in use after: 149.1 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2198.
+Total: 3.172363 ms (FindLiveObjects: 0.292435 ms CreateObjectMapping: 0.086519 ms MarkObjects: 2.700792 ms  DeleteObjects: 0.090693 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/ship3.fbx
+  artifactKey: Guid(0efbf3bb813b825498094c0342f760b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ship3.fbx using Guid(0efbf3bb813b825498094c0342f760b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c858d99c81060da1cff6c5dd151fbbb1') in 1.233730 seconds
+  Import took 1.253327 seconds .
+
