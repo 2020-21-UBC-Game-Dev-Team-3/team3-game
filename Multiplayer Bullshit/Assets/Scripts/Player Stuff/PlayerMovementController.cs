@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using Photon.Pun;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovementController : MonoBehaviour {
   [SerializeField] GameObject playerCamera;
@@ -267,8 +268,9 @@ public class PlayerMovementController : MonoBehaviour {
 
   void BadChooseInteractionEvent(BadInteractable interactable) {
     if (interactable.GetInteractableName() == "Minigame1" && interactable.transform.GetChild(0).gameObject.activeSelf == true) {
-      minigameCanvas.SetActive(true);
-    }
+            //minigameCanvas.SetActive(true);
+            SceneManager.LoadScene(sceneName: "LifeBoat Minigame", LoadSceneMode.Additive);
+        }
     if (interactable.GetInteractableName() == "Minigame2" && interactable.transform.GetChild(0).gameObject.activeSelf == true) {
       minigameCanvas.SetActive(true);
     }
