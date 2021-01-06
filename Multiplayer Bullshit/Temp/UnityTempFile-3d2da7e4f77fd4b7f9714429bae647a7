@@ -1,0 +1,614 @@
+/target:library
+/out:"Temp/Unity.InputSystem.dll"
+/nowarn:0169
+/nowarn:0649
+/refout:"Temp/Unity.InputSystem.dll.ref"
+/unsafe
+/deterministic
+/debug:portable
+/optimize+
+/nostdlib+
+/preferreduilang:en-US
+/langversion:8.0
+/reference:"Library/ScriptAssemblies/UnityEditor.UI.dll"
+/reference:"Library/ScriptAssemblies/UnityEngine.UI.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEditor.Graphs.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.CoreModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.GraphViewModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.PackageManagerUIModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.SceneTemplateModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UIElementsModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UIElementsSamplesModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UIServiceModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ARModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AndroidJNIModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AnimationModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AudioModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ClothModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CoreModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.DSPGraphModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.DirectorModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.GIModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.GameCenterModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.GridModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.HotReloadModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.IMGUIModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.InputLegacyModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.InputModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.LocalizationModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.Physics2DModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.PhysicsModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ProfilerModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.StreamingModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SubstanceModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SubsystemsModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TLSModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TerrainModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TextCoreModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TilemapModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UIElementsModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UIElementsNativeModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UIModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UNETModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UmbraModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityCurlModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityTestProtocolModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VFXModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VRModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VehiclesModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VideoModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VirtualTexturingModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.WindModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.XRModule.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/Extensions/2.0.0/System.Numerics.Vectors.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.ComponentModel.Composition.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.Core.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.Data.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.Drawing.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.IO.Compression.FileSystem.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.Net.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.Numerics.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.Runtime.Serialization.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.ServiceModel.Web.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.Transactions.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.Web.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.Windows.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Linq.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.Xml.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/Microsoft.Win32.Primitives.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.AppContext.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.Concurrent.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.NonGeneric.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.Specialized.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.EventBasedAsync.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.Primitives.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.TypeConverter.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Console.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Data.Common.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Contracts.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Debug.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.FileVersionInfo.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Process.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.StackTrace.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.TextWriterTraceListener.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Tools.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.TraceSource.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Tracing.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Drawing.Primitives.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Dynamic.Runtime.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Globalization.Calendars.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Globalization.Extensions.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Globalization.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.IO.Compression.ZipFile.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.IO.Compression.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.DriveInfo.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.Primitives.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.Watcher.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.IO.IsolatedStorage.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.IO.MemoryMappedFiles.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.IO.Pipes.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.IO.UnmanagedMemoryStream.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.IO.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.Expressions.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.Parallel.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.Queryable.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Http.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Net.NameResolution.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Net.NetworkInformation.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Ping.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Primitives.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Requests.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Security.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Sockets.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Net.WebHeaderCollection.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Net.WebSockets.Client.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Net.WebSockets.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.ObjectModel.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Reflection.Extensions.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Reflection.Primitives.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Reflection.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Resources.Reader.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Resources.ResourceManager.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Resources.Writer.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.CompilerServices.VisualC.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Extensions.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Handles.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.InteropServices.RuntimeInformation.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.InteropServices.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Numerics.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Formatters.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Json.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Primitives.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Xml.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Claims.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Algorithms.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Csp.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Encoding.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Primitives.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.X509Certificates.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Principal.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Security.SecureString.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Text.Encoding.Extensions.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Text.Encoding.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Text.RegularExpressions.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Overlapped.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Tasks.Parallel.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Tasks.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Thread.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.ThreadPool.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Timer.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.ValueTuple.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.ReaderWriter.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XDocument.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XPath.XDocument.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XPath.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XmlDocument.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XmlSerializer.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll"
+/reference:"/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll"
+/reference:"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll"
+/reference:"Assets/Materials/Photon/PhotonLibs/Photon3Unity3D.dll"
+/reference:"Assets/Materials/Photon/PhotonLibs/WebSocket/websocket-sharp.dll"
+/define:CSHARP_7_3_OR_NEWER
+/define:CSHARP_7_OR_LATER
+/define:DEBUG
+/define:ENABLE_AR
+/define:ENABLE_AUDIO
+/define:ENABLE_BURST_AOT
+/define:ENABLE_CACHING
+/define:ENABLE_CLOTH
+/define:ENABLE_CLOUD_LICENSE
+/define:ENABLE_CLOUD_SERVICES
+/define:ENABLE_CLOUD_SERVICES_ADS
+/define:ENABLE_CLOUD_SERVICES_ANALYTICS
+/define:ENABLE_CLOUD_SERVICES_BUILD
+/define:ENABLE_CLOUD_SERVICES_COLLAB
+/define:ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS
+/define:ENABLE_CLOUD_SERVICES_CRASH_REPORTING
+/define:ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING
+/define:ENABLE_CLOUD_SERVICES_PURCHASING
+/define:ENABLE_CLOUD_SERVICES_UNET
+/define:ENABLE_CLOUD_SERVICES_USE_WEBREQUEST
+/define:ENABLE_CLUSTERINPUT
+/define:ENABLE_CLUSTER_SYNC
+/define:ENABLE_CRUNCH_TEXTURE_COMPRESSION
+/define:ENABLE_CUSTOM_RENDER_TEXTURE
+/define:ENABLE_DIRECTOR
+/define:ENABLE_DIRECTOR_AUDIO
+/define:ENABLE_DIRECTOR_TEXTURE
+/define:ENABLE_EDITOR_HUB_LICENSE
+/define:ENABLE_GAMECENTER
+/define:ENABLE_INPUT_SYSTEM
+/define:ENABLE_LEGACY_INPUT_MANAGER
+/define:ENABLE_LOCALIZATION
+/define:ENABLE_LZMA
+/define:ENABLE_MANAGED_ANIMATION_JOBS
+/define:ENABLE_MANAGED_AUDIO_JOBS
+/define:ENABLE_MANAGED_JOBS
+/define:ENABLE_MANAGED_TRANSFORM_JOBS
+/define:ENABLE_MICROPHONE
+/define:ENABLE_MONO
+/define:ENABLE_MONO_BDWGC
+/define:ENABLE_MOVIES
+/define:ENABLE_MULTIPLE_DISPLAYS
+/define:ENABLE_NETWORK
+/define:ENABLE_PHYSICS
+/define:ENABLE_PROFILER
+/define:ENABLE_RUNTIME_GI
+/define:ENABLE_SCRIPTING_GC_WBARRIERS
+/define:ENABLE_SPATIALTRACKING
+/define:ENABLE_SPRITES
+/define:ENABLE_TERRAIN
+/define:ENABLE_TEXTURE_STREAMING
+/define:ENABLE_TILEMAP
+/define:ENABLE_TIMELINE
+/define:ENABLE_UNET
+/define:ENABLE_UNITYEVENTS
+/define:ENABLE_UNITYWEBREQUEST
+/define:ENABLE_UNITY_COLLECTIONS_CHECKS
+/define:ENABLE_VIDEO
+/define:ENABLE_VIRTUALTEXTURING
+/define:ENABLE_VR
+/define:ENABLE_WEBCAM
+/define:ENABLE_WEBSOCKET_CLIENT
+/define:ENABLE_WEBSOCKET_HOST
+/define:ENABLE_WWW
+/define:INCLUDE_DYNAMIC_GI
+/define:NET_STANDARD_2_0
+/define:PHOTON_UNITY_NETWORKING
+/define:PLATFORM_ARCH_64
+/define:PLATFORM_STANDALONE
+/define:PLATFORM_STANDALONE_OSX
+/define:PLATFORM_SUPPORTS_MONO
+/define:PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP
+/define:PUN_2_0_OR_NEWER
+/define:PUN_2_19_OR_NEWER
+/define:PUN_2_OR_NEWER
+/define:RENDER_SOFTWARE_CURSOR
+/define:SCENE_TEMPLATE_MODULE
+/define:TRACE
+/define:UNITY_2017_1_OR_NEWER
+/define:UNITY_2017_2_OR_NEWER
+/define:UNITY_2017_3_OR_NEWER
+/define:UNITY_2017_4_OR_NEWER
+/define:UNITY_2018_1_OR_NEWER
+/define:UNITY_2018_2_OR_NEWER
+/define:UNITY_2018_3_OR_NEWER
+/define:UNITY_2018_4_OR_NEWER
+/define:UNITY_2019_1_OR_NEWER
+/define:UNITY_2019_2_OR_NEWER
+/define:UNITY_2019_3_OR_NEWER
+/define:UNITY_2019_4_OR_NEWER
+/define:UNITY_2020
+/define:UNITY_2020_1_OR_NEWER
+/define:UNITY_2020_2
+/define:UNITY_2020_2_1
+/define:UNITY_2020_2_OR_NEWER
+/define:UNITY_5_3_OR_NEWER
+/define:UNITY_5_4_OR_NEWER
+/define:UNITY_5_5_OR_NEWER
+/define:UNITY_5_6_OR_NEWER
+/define:UNITY_64
+/define:UNITY_ASSERTIONS
+/define:UNITY_EDITOR
+/define:UNITY_EDITOR_64
+/define:UNITY_EDITOR_OSX
+/define:UNITY_INCLUDE_TESTS
+/define:UNITY_INPUT_SYSTEM_ENABLE_PHYSICS
+/define:UNITY_INPUT_SYSTEM_ENABLE_PHYSICS2D
+/define:UNITY_INPUT_SYSTEM_ENABLE_UI
+/define:UNITY_INPUT_SYSTEM_ENABLE_VR
+/define:UNITY_INPUT_SYSTEM_ENABLE_XR
+/define:UNITY_STANDALONE
+/define:UNITY_STANDALONE_OSX
+/define:UNITY_TEAM_LICENSE
+/define:USE_SEARCH_ENGINE_API
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/Composites/AxisComposite.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/Composites/ButtonWithOneModifier.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/Composites/ButtonWithTwoModifiers.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/Composites/Vector2Composite.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/IInputActionCollection.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/IInputInteraction.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/InputAction.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/InputActionAsset.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/InputActionChange.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/InputActionMap.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/InputActionPhase.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/InputActionProperty.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/InputActionRebindingExtensions.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/InputActionReference.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/InputActionSetupExtensions.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/InputActionState.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/InputActionTrace.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/InputActionType.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/InputBinding.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/InputBindingComposite.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/InputBindingCompositeContext.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/InputBindingResolver.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/InputControlScheme.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/InputInteractionContext.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/Interactions/HoldInteraction.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/Interactions/MultiTapInteraction.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/Interactions/PressInteraction.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/Interactions/SlowTapInteraction.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Actions/Interactions/TapInteraction.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/AssemblyInfo.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/AnyKeyControl.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/AxisControl.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/ButtonControl.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/CommonUsages.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/DiscreteButtonControl.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/DoubleControl.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/DpadControl.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/InputControl.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/InputControlAttribute.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/InputControlExtensions.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/InputControlLayout.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/InputControlLayoutAttribute.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/InputControlLayoutChange.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/InputControlList.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/InputControlPath.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/InputProcessor.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/IntegerControl.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/KeyControl.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/Processors/AxisDeadzoneProcessor.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/Processors/ClampProcessor.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/Processors/CompensateDirectionProcessor.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/Processors/CompensateRotationProcessor.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/Processors/EditorWindowSpaceProcessor.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/Processors/InvertProcessor.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/Processors/InvertVector2Processor.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/Processors/InvertVector3Processor.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/Processors/NormalizeProcessor.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/Processors/NormalizeVector2Processor.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/Processors/NormalizeVector3Processor.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/Processors/ScaleProcessor.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/Processors/ScaleVector2Processor.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/Processors/ScaleVector3Processor.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/Processors/StickDeadzoneProcessor.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/QuaternionControl.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/StickControl.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/TouchControl.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/TouchPhaseControl.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/TouchPressControl.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/Vector2Control.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Controls/Vector3Control.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Commands/DisableDeviceCommand.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Commands/EnableDeviceCommand.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Commands/EnableIMECompositionCommand.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Commands/IInputDeviceCommandInfo.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Commands/InitiateUserAccountPairingCommand.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Commands/InputDeviceCommand.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Commands/QueryCanRunInBackground.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Commands/QueryDimensionsCommand.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Commands/QueryEditorWindowCoordinatesCommand.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Commands/QueryEnabledStateCommand.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Commands/QueryKeyNameCommand.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Commands/QueryKeyboardLayoutCommand.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Commands/QueryPairedUserAccountCommand.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Commands/QuerySamplingFrequencyCommand.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Commands/QueryUserIdCommand.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Commands/RequestResetCommand.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Commands/RequestSyncCommand.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Commands/SetIMECursorPositionCommand.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Commands/SetSamplingFrequencyCommand.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Commands/WarpMousePositionCommand.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Gamepad.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Haptics/DualMotorRumble.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Haptics/DualMotorRumbleCommand.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Haptics/IDualMotorRumble.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Haptics/IHaptics.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/IInputUpdateCallbackReceiver.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/ITextInputReceiver.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/InputDevice.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/InputDeviceBuilder.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/InputDeviceChange.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/InputDeviceDescription.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/InputDeviceMatcher.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Joystick.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Keyboard.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Mouse.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Pen.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Pointer.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Remote/InputRemoting.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Remote/RemoteInputPlayerConnection.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Sensor.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/Touchscreen.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Devices/TrackedDevice.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/AssetEditor/InputActionAssetManager.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/AssetEditor/InputActionEditorToolbar.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/AssetEditor/InputActionEditorWindow.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/AssetEditor/InputActionPropertiesView.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/AssetEditor/InputActionTreeView.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/AssetEditor/InputActionTreeViewItems.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/AssetEditor/InputBindingPropertiesView.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/AssetEditor/NameAndParameterListView.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/AssetEditor/ParameterListView.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/AssetEditor/PropertiesViewBase.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/AssetImporter/InputActionAssetEditor.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/AssetImporter/InputActionCodeGenerator.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/AssetImporter/InputActionImporter.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/AssetImporter/InputActionImporterEditor.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/ControlPicker/InputControlDropdownItem.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/ControlPicker/InputControlPathEditor.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/ControlPicker/InputControlPicker.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/ControlPicker/InputControlPickerDropdown.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/ControlPicker/InputControlPickerState.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/Debugger/InputActionDebuggerWindow.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/Debugger/InputDebuggerWindow.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/Debugger/InputDeviceDebuggerWindow.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/DownloadableSample.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/EditorInputControlLayoutCache.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/InputDiagnostics.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/InputParameterEditor.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/Internal/AdvancedDropdown/AdvancedDropdown.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/Internal/AdvancedDropdown/AdvancedDropdownDataSource.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/Internal/AdvancedDropdown/AdvancedDropdownGUI.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/Internal/AdvancedDropdown/AdvancedDropdownItem.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/Internal/AdvancedDropdown/AdvancedDropdownState.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/Internal/AdvancedDropdown/AdvancedDropdownWindow.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/Internal/AdvancedDropdown/CallbackDataSource.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/Internal/AdvancedDropdown/MultiLevelDataSource.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/Internal/EditorHelpers.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/Internal/GUIHelpers.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/Internal/InputActionSerializationHelpers.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/Internal/InputControlTreeView.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/Internal/InputEventTreeView.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/Internal/InputStateWindow.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/Internal/SerializedPropertyHelpers.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/Internal/TreeViewHelpers.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/PropertyDrawers/InputActionDrawer.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/PropertyDrawers/InputActionDrawerBase.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/PropertyDrawers/InputActionMapDrawer.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/PropertyDrawers/InputActionPropertyDrawer.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/PropertyDrawers/InputControlPathDrawer.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/Settings/EditorPlayerSettingHelpers.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/Settings/InputEditorUserSettings.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/Settings/InputSettingsBuildProvider.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Editor/Settings/InputSettingsProvider.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Events/ActionEvent.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Events/DeltaStateEvent.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Events/DeviceConfigurationEvent.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Events/DeviceRemoveEvent.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Events/IInputEventTypeInfo.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Events/IMECompositionEvent.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Events/InputEvent.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Events/InputEventBuffer.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Events/InputEventPtr.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Events/InputEventTrace.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Events/StateEvent.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Events/TextEvent.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/IInputDiagnostics.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/IInputRuntime.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/InputAnalytics.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/InputExtensions.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/InputManager.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/InputMetrics.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/InputSettings.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/InputSystem.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/InputSystemObject.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/InputUpdateType.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/NativeInputRuntime.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/Android/AndroidAxis.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/Android/AndroidGameController.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/Android/AndroidKeyCode.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/Android/AndroidSensors.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/Android/AndroidSupport.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/DualShock/DualShockGamepad.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/DualShock/DualShockGamepadHID.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/DualShock/DualShockSupport.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/DualShock/IDualShockHaptics.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/EnhancedTouch/EnhancedTouchSupport.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/EnhancedTouch/Finger.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/EnhancedTouch/Touch.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/EnhancedTouch/TouchHistory.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/EnhancedTouch/TouchSimulation.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/HID/HID.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/HID/HIDDescriptorWindow.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/HID/HIDParser.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/HID/HIDSupport.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/Linux/LinuxSupport.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/Linux/SDLDeviceBuilder.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/OnScreen/OnScreenButton.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/OnScreen/OnScreenControl.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/OnScreen/OnScreenStick.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/OnScreen/OnScreenSupport.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/PlayerInput/InputValue.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/PlayerInput/PlayerInput.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/PlayerInput/PlayerInputEditor.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/PlayerInput/PlayerInputManager.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/PlayerInput/PlayerInputManagerEditor.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/PlayerInput/PlayerJoinBehavior.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/PlayerInput/PlayerNotifications.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/Steam/IStreamControllerAPI.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/Steam/SteamController.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/Steam/SteamControllerType.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/Steam/SteamHandle.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/Steam/SteamIGAConverter.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/Steam/SteamSupport.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/Switch/SwitchProControllerHID.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/Switch/SwitchSupportHID.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/UI/BaseInputOverride.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/UI/ExtendedPointerEventData.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/UI/InputSystemUIInputModule.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/UI/InputSystemUIInputModuleEditor.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/UI/MultiplayerEventSystem.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/UI/NavigationModel.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/UI/PointerModel.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/UI/StandaloneInputModuleEditor.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/UI/TrackedDeviceRaycaster.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/UI/UISupport.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/Users/InputUser.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/Users/InputUserAccountHandle.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/Users/InputUserChange.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/Users/InputUserPairingOptions.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/Users/InputUserSettings.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/WebGL/WebGLGamepad.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/WebGL/WebGLJoystick.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/WebGL/WebGLSupport.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/XInput/IXboxOneRumble.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/XInput/XInputController.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/XInput/XInputControllerWindows.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/XInput/XInputSupport.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/XInput/XboxGamepadMacOS.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/XR/Devices/GoogleVR.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/XR/Devices/Oculus.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/XR/Devices/OpenVR.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/XR/Devices/WindowsMR.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/XR/GenericXRDevice.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/XR/Haptics/BufferedRumble.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/XR/Haptics/GetCurrentHapticStateCommand.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/XR/Haptics/GetHapticCapabilitiesCommand.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/XR/Haptics/SendBufferedHapticsCommand.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/XR/Haptics/SendHapticImpulseCommand.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/XR/TrackedPoseDriver.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/XR/XRLayoutBuilder.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/XR/XRSupport.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/iOS/IOSGameController.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Plugins/iOS/iOSSupport.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/State/IInputStateCallbackReceiver.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/State/IInputStateChangeMonitor.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/State/IInputStateTypeInfo.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/State/InputState.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/State/InputStateBlock.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/State/InputStateBuffers.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/State/InputStateHistory.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Utilities/ArrayHelpers.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Utilities/CSharpCodeHelpers.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Utilities/Comparers.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Utilities/DelegateHelpers.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Utilities/DisplayStringFormatAttribute.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Utilities/DynamicBitfield.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Utilities/ExceptionHelpers.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Utilities/FourCC.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Utilities/InlinedArray.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Utilities/InternedString.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Utilities/JsonParser.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Utilities/MemoryHelpers.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Utilities/NameAndParameters.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Utilities/NamedValue.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Utilities/NumberHelpers.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Utilities/OneOrMore.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Utilities/PrimitiveValue.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Utilities/ReadOnlyArray.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Utilities/StringHelpers.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Utilities/Substring.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Utilities/TypeHelpers.cs"
+"/Users/chiaralin/team3-game/Multiplayer Bullshit/Library/PackageCache/com.unity.inputsystem@1.0.1/InputSystem/Utilities/TypeTable.cs"

@@ -1,0 +1,436 @@
+Using pre-set license
+
+ COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+/Users/chiaralin/team3-game/Multiplayer Bullshit
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+55847
+Successfully changed project path to: /Users/chiaralin/team3-game/Multiplayer Bullshit
+/Users/chiaralin/team3-game/Multiplayer Bullshit
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 45.08 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/chiaralin/team3-game/Multiplayer Bullshit/Assets
+GfxDevice: creating device client; threaded=0
+2021-01-06 09:04:11.936 Unity[24903:410802] Color LCD preferred device: Intel(R) Iris(TM) Plus Graphics 650 (low power)
+2021-01-06 09:04:11.936 Unity[24903:410802] Metal devices available: 1
+2021-01-06 09:04:11.936 Unity[24903:410802] 0: Intel(R) Iris(TM) Plus Graphics 650 (low power)
+2021-01-06 09:04:11.938 Unity[24903:410802] Using device Intel(R) Iris(TM) Plus Graphics 650 (low power)
+Initializing Metal device caps: Intel(R) Iris(TM) Plus Graphics 650
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = '/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56903
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.002379 seconds.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 40.63 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.657 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.003384 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+OnLevelWasLoaded was found on GameManager
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 44.66 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.752 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launching external process: /Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.84 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1745 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.5 MB.
+System memory in use after: 149.6 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2198.
+Total: 4.022691 ms (FindLiveObjects: 0.542978 ms CreateObjectMapping: 0.155333 ms MarkObjects: 3.210018 ms  DeleteObjects: 0.111379 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/ship3.fbx
+  artifactKey: Guid(0efbf3bb813b825498094c0342f760b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ship3.fbx using Guid(0efbf3bb813b825498094c0342f760b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c858d99c81060da1cff6c5dd151fbbb1') in 1.106834 seconds
+  Import took 1.124167 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 49.544937 seconds.
+  path: Assets/Icebergs
+  artifactKey: Guid(5ec9c2dc9f12640e9aee34de850e6dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Icebergs using Guid(5ec9c2dc9f12640e9aee34de850e6dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e804e8666bdee852b4b5515b4fdec57') in 0.001959 seconds
+  Import took 0.005829 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.362266 seconds.
+  path: Assets/Icebergs/materials
+  artifactKey: Guid(5c761a9effaac48fa973f0c4b1a99bd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Icebergs/materials using Guid(5c761a9effaac48fa973f0c4b1a99bd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d7ff2deee416f136c9260fc50915cf9') in 0.002737 seconds
+  Import took 0.011337 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.223847 seconds.
+  path: Assets/Icebergs/materials/ground.mat
+  artifactKey: Guid(b4fd26ced063a48bf95e990cff8aedb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Icebergs/materials/ground.mat using Guid(b4fd26ced063a48bf95e990cff8aedb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5685012a7ae8cfa45d6b0ff95c84c202') in 0.214465 seconds
+  Import took 0.219181 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.061079 seconds.
+  path: Assets/Lights Minigame Assets/Materials and Textures/_oilerroom.png
+  artifactKey: Guid(5c0161102f71e8a439c5c2f12005a674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lights Minigame Assets/Materials and Textures/_oilerroom.png using Guid(5c0161102f71e8a439c5c2f12005a674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9179383f5ee14e8670cdff2fecfc29cb') in 0.412445 seconds
+  Import took 0.417199 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000331 seconds.
+  path: Assets/extra junk/among_us___emergency_template_by_domobfdi_de5per8-fullview.png
+  artifactKey: Guid(cba2227be75a8b24f80e843e5e309983) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/extra junk/among_us___emergency_template_by_domobfdi_de5per8-fullview.png using Guid(cba2227be75a8b24f80e843e5e309983) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c4b068821097791c905e3236362a2a0') in 0.051915 seconds
+  Import took 0.055358 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/Lights Minigame Assets/Materials and Textures/_oilerroom.png
+  artifactKey: Guid(5c0161102f71e8a439c5c2f12005a674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Lights Minigame Assets/Materials and Textures/_oilerroom.png using Guid(5c0161102f71e8a439c5c2f12005a674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9179383f5ee14e8670cdff2fecfc29cb') in 0.020625 seconds
+  Import took 0.024590 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002062 seconds.
+  path: Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/body_01.tga
+  artifactKey: Guid(f9c6074c5a78e71448f9efd3013cadda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/body_01.tga using Guid(f9c6074c5a78e71448f9efd3013cadda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79b85f3b58a5595f7f9d8801cd4117e1') in 0.409152 seconds
+  Import took 0.414272 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/unity-chan!/Unity-chan! Model/Art/Stage/Shader/Textures/AlphaMask.png
+  artifactKey: Guid(b6944b8ec29ad124c9ebbe7b111fdfd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/unity-chan!/Unity-chan! Model/Art/Stage/Shader/Textures/AlphaMask.png using Guid(b6944b8ec29ad124c9ebbe7b111fdfd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '767be8efaec162ae4fd9fd02f2627203') in 0.047452 seconds
+  Import took 0.053173 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000260 seconds.
+  path: Assets/Nokobot/ColonialShip/05_Textures/Barrels.png
+  artifactKey: Guid(83dc34ad4cf86904395652d06f6557f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nokobot/ColonialShip/05_Textures/Barrels.png using Guid(83dc34ad4cf86904395652d06f6557f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88d8cb75f3203a00e652bba0a599902c') in 0.047930 seconds
+  Import took 0.053465 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000245 seconds.
+  path: Assets/LifeBoatMinigame/boat6.png
+  artifactKey: Guid(13c59044a499397408b440eb3657ee2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LifeBoatMinigame/boat6.png using Guid(13c59044a499397408b440eb3657ee2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc4532c1a65696833dad4cbe07e13848') in 0.027129 seconds
+  Import took 0.032397 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000341 seconds.
+  path: Assets/LifeBoatMinigame/boat7.png
+  artifactKey: Guid(feefa3f6924aca646b51d9d99081ca12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LifeBoatMinigame/boat7.png using Guid(feefa3f6924aca646b51d9d99081ca12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c848aa24b10b437cdc307891062f2b8d') in 0.030527 seconds
+  Import took 0.035884 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000279 seconds.
+  path: Assets/LifeBoatMinigame/Ppl/BOAT.png
+  artifactKey: Guid(749cad75090e53844bb7e1b1718d1f0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LifeBoatMinigame/Ppl/BOAT.png using Guid(749cad75090e53844bb7e1b1718d1f0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78ef62a6ebf6b40ec0dee98b16642290') in 0.018836 seconds
+  Import took 0.023698 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.408398 seconds.
+  path: Assets/Nokobot/ColonialShip/05_Textures/Boxes+TreasureBoxes.png
+  artifactKey: Guid(2995827a8d533d84eac04fae70b0a3ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nokobot/ColonialShip/05_Textures/Boxes+TreasureBoxes.png using Guid(2995827a8d533d84eac04fae70b0a3ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8a11f12afd7f1d5486430e55923ab3c') in 0.014571 seconds
+  Import took 0.020529 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000245 seconds.
+  path: Assets/Nokobot/ColonialShip/05_Textures/Cannons+CannonBalls+Windows.png
+  artifactKey: Guid(2fe754ec510ab2d4da74f3db04491210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nokobot/ColonialShip/05_Textures/Cannons+CannonBalls+Windows.png using Guid(2fe754ec510ab2d4da74f3db04491210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94e8a1c79ecd9072fd98689e266aeeba') in 0.022208 seconds
+  Import took 0.026104 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/Nokobot/ColonialShip/05_Textures/Boxes+TreasureBoxes.png
+  artifactKey: Guid(2995827a8d533d84eac04fae70b0a3ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nokobot/ColonialShip/05_Textures/Boxes+TreasureBoxes.png using Guid(2995827a8d533d84eac04fae70b0a3ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8a11f12afd7f1d5486430e55923ab3c') in 0.011175 seconds
+  Import took 0.017205 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.022749 seconds.
+  path: Assets/Nokobot/ColonialShip/05_Textures/Cannons+CannonBalls+Windows.png
+  artifactKey: Guid(2fe754ec510ab2d4da74f3db04491210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nokobot/ColonialShip/05_Textures/Cannons+CannonBalls+Windows.png using Guid(2fe754ec510ab2d4da74f3db04491210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94e8a1c79ecd9072fd98689e266aeeba') in 0.014569 seconds
+  Import took 0.022926 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.790856 seconds.
+  path: Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/body_01_SPEC.tga
+  artifactKey: Guid(7ae1142e9b3a72048960dd9561e0e0d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/body_01_SPEC.tga using Guid(7ae1142e9b3a72048960dd9561e0e0d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35e8cf5b242f0694ef95594fb950ad2b') in 0.013160 seconds
+  Import took 0.017294 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000259 seconds.
+  path: Assets/unity-chan!/Unity-chan! Model/SplashScreen/Logo/Dark_Silhouette.png
+  artifactKey: Guid(214f7e62633ee4585a55b459cc6d0f53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/unity-chan!/Unity-chan! Model/SplashScreen/Logo/Dark_Silhouette.png using Guid(214f7e62633ee4585a55b459cc6d0f53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3365c5b387e61ad9bb5cedda07a40c8') in 0.015683 seconds
+  Import took 0.020097 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/unity-chan!/Unity-chan! Model/Documentation/UnityChanLicense2.0/License Logo/Others/png/Dark_Silhouette.png
+  artifactKey: Guid(e534fa5e8d6bad340bbc9196dabe6f51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/unity-chan!/Unity-chan! Model/Documentation/UnityChanLicense2.0/License Logo/Others/png/Dark_Silhouette.png using Guid(e534fa5e8d6bad340bbc9196dabe6f51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59c87d5b0ab9bda06cad34ca51d260b8') in 0.009125 seconds
+  Import took 0.013389 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.190688 seconds.
+  path: Assets/Nokobot/ColonialShip/05_Textures/Fin+Basket+Doors.png
+  artifactKey: Guid(be495abaf0c84c843b44732896ce3033) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nokobot/ColonialShip/05_Textures/Fin+Basket+Doors.png using Guid(be495abaf0c84c843b44732896ce3033) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2306c2aeed11d8965ef93e45ebbc52d7') in 0.028615 seconds
+  Import took 0.034429 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/Nokobot/ColonialShip/05_Textures/Window_Glasses.png
+  artifactKey: Guid(7bf81d9bfba22794e8af56c16d7fe0f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nokobot/ColonialShip/05_Textures/Window_Glasses.png using Guid(7bf81d9bfba22794e8af56c16d7fe0f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64b2289ed243f31faca015e997ed0d79') in 0.028488 seconds
+  Import took 0.033045 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000258 seconds.
+  path: Assets/Nokobot/ColonialShip/05_Textures/Lanterns+sandbags.png
+  artifactKey: Guid(7b46b05f2e8a34d4ab0c6f36a0b1b936) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nokobot/ColonialShip/05_Textures/Lanterns+sandbags.png using Guid(7b46b05f2e8a34d4ab0c6f36a0b1b936) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f8150a887e91e80fd11a5c51ea7f4f2') in 0.028766 seconds
+  Import took 0.033255 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000824 seconds.
+  path: Assets/Nokobot/ColonialShip/05_Textures/Sails_01.png
+  artifactKey: Guid(89838c85a72877a4597704c3ae4ac154) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nokobot/ColonialShip/05_Textures/Sails_01.png using Guid(89838c85a72877a4597704c3ae4ac154) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92ddd56751f43fccf4acc9b248a39608') in 0.028741 seconds
+  Import took 0.036092 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000581 seconds.
+  path: Assets/Nokobot/ColonialShip/05_Textures/Hatches+Stairs.png
+  artifactKey: Guid(c3c31b4869bd99d468bc886b0aaad4a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nokobot/ColonialShip/05_Textures/Hatches+Stairs.png using Guid(c3c31b4869bd99d468bc886b0aaad4a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5f0f1f25931df876876c54a52295697') in 0.024028 seconds
+  Import took 0.029196 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/Nokobot/ColonialShip/05_Textures/Floor+Wheel.png
+  artifactKey: Guid(9040ca56aebb96e46afbae68bf875e99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nokobot/ColonialShip/05_Textures/Floor+Wheel.png using Guid(9040ca56aebb96e46afbae68bf875e99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f06184634342a0bdaed0a69c0de810f') in 0.032807 seconds
+  Import took 0.036742 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000479 seconds.
+  path: Assets/Nokobot/ColonialShip/05_Textures/Mast_02.png
+  artifactKey: Guid(0d73393e2d397614a9b8ce83bf228f8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nokobot/ColonialShip/05_Textures/Mast_02.png using Guid(0d73393e2d397614a9b8ce83bf228f8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '675ee0f039ac09eb4b13b07e3c7c664b') in 0.024495 seconds
+  Import took 0.031042 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/Nokobot/ColonialShip/05_Textures/Ropes.png
+  artifactKey: Guid(9c204c4cf97f42242870a5e072da891c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nokobot/ColonialShip/05_Textures/Ropes.png using Guid(9c204c4cf97f42242870a5e072da891c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f165cf42f1b281e3e911bd016435a27f') in 0.028936 seconds
+  Import took 0.034845 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000576 seconds.
+  path: Assets/Nokobot/ColonialShip/05_Textures/Staircase.png
+  artifactKey: Guid(e59a6fdd9bccf7b47a533586d3ca8999) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nokobot/ColonialShip/05_Textures/Staircase.png using Guid(e59a6fdd9bccf7b47a533586d3ca8999) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ae908f5274b89bf39e43044e85c1947') in 0.027047 seconds
+  Import took 0.033393 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000278 seconds.
+  path: Assets/Nokobot/ColonialShip/05_Textures/Ship_Body.png
+  artifactKey: Guid(f64ed59b67824ab4598c64c52c7bc0ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nokobot/ColonialShip/05_Textures/Ship_Body.png using Guid(f64ed59b67824ab4598c64c52c7bc0ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c028bf4667440a93f113f19c8f5c955') in 0.026949 seconds
+  Import took 0.030106 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/Nokobot/ColonialShip/05_Textures/Sails_Jib+Back.png
+  artifactKey: Guid(fa663db133e5553479f06681446c4bf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nokobot/ColonialShip/05_Textures/Sails_Jib+Back.png using Guid(fa663db133e5553479f06681446c4bf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4fbf2c7e6b18f667a68ff2eb4959464') in 0.031032 seconds
+  Import took 0.035286 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/Nokobot/ColonialShip/05_Textures/Rail.png
+  artifactKey: Guid(32d66c8a6b21e60438619ceefbd4e853) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nokobot/ColonialShip/05_Textures/Rail.png using Guid(32d66c8a6b21e60438619ceefbd4e853) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b96a1a5d488f191149387a8a9fa11ac') in 0.016667 seconds
+  Import took 0.020977 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/Nokobot/ColonialShip/05_Textures/Sails_02+Ladders+Foremast.png
+  artifactKey: Guid(08f2d180d569c8345af7971fc1be09e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nokobot/ColonialShip/05_Textures/Sails_02+Ladders+Foremast.png using Guid(08f2d180d569c8345af7971fc1be09e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7abc7709cd3ebd0bf7ccc16f948aa42f') in 0.028997 seconds
+  Import took 0.033111 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000330 seconds.
+  path: Assets/Nokobot/ColonialShip/05_Textures/Mast_01+Box.png
+  artifactKey: Guid(eebb233b54f1c934e8dd9d27b90347aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nokobot/ColonialShip/05_Textures/Mast_01+Box.png using Guid(eebb233b54f1c934e8dd9d27b90347aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c9bd774d066466ead4959188d4d3809') in 0.022648 seconds
+  Import took 0.027353 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000261 seconds.
+  path: Assets/Nokobot/ColonialShip/05_Textures/Fin+Basket+Doors.png
+  artifactKey: Guid(be495abaf0c84c843b44732896ce3033) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nokobot/ColonialShip/05_Textures/Fin+Basket+Doors.png using Guid(be495abaf0c84c843b44732896ce3033) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2306c2aeed11d8965ef93e45ebbc52d7') in 0.031772 seconds
+  Import took 0.037912 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/Nokobot/ColonialShip/05_Textures/Rig.png
+  artifactKey: Guid(15c6cee4ebc309d46b966c27e2380f84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Nokobot/ColonialShip/05_Textures/Rig.png using Guid(15c6cee4ebc309d46b966c27e2380f84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71f9272005af5bfc5ad3d1e10c0f9338') in 0.017923 seconds
+  Import took 0.021998 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.190736 seconds.
+  path: Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/hair_01_SPEC.tga
+  artifactKey: Guid(c4271b2b1e8bfa949aa9230abaa7709e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/hair_01_SPEC.tga using Guid(c4271b2b1e8bfa949aa9230abaa7709e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e47966293befb9040294d9cc3c849cb') in 0.014630 seconds
+  Import took 0.018639 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/Materials/Photon/PhotonUnityNetworking/Code/Editor/help.png
+  artifactKey: Guid(9f1212502533cb34188dd6ef094188cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Photon/PhotonUnityNetworking/Code/Editor/help.png using Guid(9f1212502533cb34188dd6ef094188cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11ea9a3b5fff44d00b25b8fa0b4328c4') in 0.016002 seconds
+  Import took 0.019552 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000335 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+  artifactKey: Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset using Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4537c845667f4fa7a13ced69bf8f583b') in 0.482806 seconds
+  Import took 0.487780 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002754 seconds.
+  path: Assets/unity-chan!/Unity-chan! Model/Documentation/UnityChanLicense2.0/License Logo/Others/jpg/Light_Silhouette.jpg
+  artifactKey: Guid(c9231b186ae5e3f40b0e239756ad63e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/unity-chan!/Unity-chan! Model/Documentation/UnityChanLicense2.0/License Logo/Others/jpg/Light_Silhouette.jpg using Guid(c9231b186ae5e3f40b0e239756ad63e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fc5e5e6d1301cf05246e9121ed0aa73') in 0.616771 seconds
+  Import took 0.621100 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000253 seconds.
+  path: Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/hair_01_SPEC.tga
+  artifactKey: Guid(c4271b2b1e8bfa949aa9230abaa7709e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/unity-chan!/Unity-chan! Model/Art/UnityChanShader/Texture/hair_01_SPEC.tga using Guid(c4271b2b1e8bfa949aa9230abaa7709e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e47966293befb9040294d9cc3c849cb') in 0.008841 seconds
+  Import took 0.013127 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/unity-chan!/Unity-chan! Model/Documentation/UnityChanLicense2.0/License Logo/Others/png/Light_Frame.png
+  artifactKey: Guid(923fd2f82eaa9284ab1318842bb697df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/unity-chan!/Unity-chan! Model/Documentation/UnityChanLicense2.0/License Logo/Others/png/Light_Frame.png using Guid(923fd2f82eaa9284ab1318842bb697df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7806d0c80813f98cf544f05c688d138f') in 0.007013 seconds
+  Import took 0.010647 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset
+  artifactKey: Guid(8f586378b4e144a9851e7b34d9b748ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset using Guid(8f586378b4e144a9851e7b34d9b748ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cd17817fc4d44c47b5bfcc26bce58dd') in 0.070756 seconds
+  Import took 0.075565 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000306 seconds.
+  path: Assets/unity-chan!/Unity-chan! Model/Documentation/UnityChanLicense2.0/License Logo/Others/png/Light_Silhouette.png
+  artifactKey: Guid(5da648a54632ec64e9d42516f95a7fc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/unity-chan!/Unity-chan! Model/Documentation/UnityChanLicense2.0/License Logo/Others/png/Light_Silhouette.png using Guid(5da648a54632ec64e9d42516f95a7fc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '539c8b25843f3fa7e580ace23cabd7ec') in 0.016121 seconds
+  Import took 0.020668 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 34.426401 seconds.
+  path: Assets/Icebergs/materials/ground.mat
+  artifactKey: Guid(b4fd26ced063a48bf95e990cff8aedb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Icebergs/materials/ground.mat using Guid(b4fd26ced063a48bf95e990cff8aedb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4904e43df63482b24b078442c6160f92') in 0.049730 seconds
+  Import took 0.056374 seconds .
+
