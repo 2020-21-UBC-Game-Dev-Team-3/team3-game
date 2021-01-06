@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\UI Stuff\PlayerListItem.cs" />
     <Compile Include="Assets\Scripts\Player Stuff\TaskScreenScript.cs" />
+    <Compile Include="Assets\Scripts\TextAlign.cs" />
     <Compile Include="Assets\Scripts\Player Stuff\Assassin.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Game Stuff\Vent.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\ThirdPersonCamera.cs" />
     <Compile Include="Assets\LifeBoatMinigame\PassengerDrag.cs" />
     <Compile Include="Assets\Scripts\UI Stuff\Menu.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\EmergencyButton.cs" />
     <Compile Include="Assets\Scripts\UI Stuff\RoomManager.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\WinText.cs" />
     <Compile Include="Assets\Scripts\UI Stuff\RoomListItem.cs" />
@@ -94,16 +96,17 @@
     <Compile Include="Assets\Scripts\Player Stuff\Interactable.cs" />
     <Compile Include="Assets\LifeBoatMinigame\GameReset.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\FaceUpdate.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\MapManager.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\SpringBone.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\RandomWind.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs" />
     <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\MapPopUp.cs" />
     <Compile Include="Assets\Scripts\Roles\RoleRandomizer.cs" />
     <Compile Include="Assets\Materials\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
+    <Compile Include="Assets\NameTextScript.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\TextManager.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
-    <Compile Include="Assets\Scripts\TextAlign.cs" />
-    <Compile Include="Assets\NameTextScript.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
