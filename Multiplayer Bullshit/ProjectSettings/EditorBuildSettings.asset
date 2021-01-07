@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LifeBoat Minigame.unity
     guid: e4915cec901b22a41a660ca656914cc7
+  - enabled: 1
+    path: Assets/Scenes/Lights Minigame.unity
+    guid: 674f9c01eba11474da44ad680551b034
   m_configObjects: {}

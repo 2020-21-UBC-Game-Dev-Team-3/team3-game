@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TextManager : MonoBehaviour {
 
@@ -16,7 +17,8 @@ public class TextManager : MonoBehaviour {
   public void Win() {
     winText.gameObject.SetActive(true);
     FindObjectOfType<LightFlicker>().FreezeTime();
-  }
+        SceneManager.LoadScene(sceneName: "Gaming", LoadSceneMode.Single);
+    }
 
   public void IncrementCount() {
     switchCount.Increment();

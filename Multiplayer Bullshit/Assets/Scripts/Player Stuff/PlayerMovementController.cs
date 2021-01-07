@@ -49,8 +49,12 @@ public class PlayerMovementController : MonoBehaviour {
 
   Camera cam;
 
+    static bool switched;
+
   void Awake() {
-    animator = GetComponent<Animator>();
+       // DontDestroyOnLoad(transform.gameObject);
+
+        animator = GetComponent<Animator>();
     rb = GetComponent<Rigidbody>();
     pv = GetComponent<PhotonView>();
     cam = Camera.main;
@@ -82,6 +86,12 @@ public class PlayerMovementController : MonoBehaviour {
     ElevatorCallName = FindClosestStation().name;
     ElevatorButtonsOff();
     rotationSpeed = new Vector3(0, 40, 0);
+
+        if (switched)
+        {
+            PlayerIsComingBack();
+            Debug.Log("Test 3");
+        }
 
     if (!pv.IsMine) {
       Destroy(playerCamera);
@@ -160,10 +170,13 @@ public class PlayerMovementController : MonoBehaviour {
   //}
 
   void FixedUpdate() {
-    rb.MovePosition(rb.position + transform.TransformDirection(moveAmount) * Time.fixedDeltaTime);
+        if (!minigameCanvas.activeSelf && !inVent)
+        {
+            rb.MovePosition(rb.position + transform.TransformDirection(moveAmount) * Time.fixedDeltaTime);
 
-    Quaternion deltaRotation = Quaternion.Euler(moveAmount.x * rotationSpeed * Time.fixedDeltaTime);
-    rb.MoveRotation(rb.rotation * deltaRotation);
+            Quaternion deltaRotation = Quaternion.Euler(moveAmount.x * rotationSpeed * Time.fixedDeltaTime);
+            rb.MoveRotation(rb.rotation * deltaRotation);
+        }
   }
   void ElevatorButtonsOn() {
     floor1Button.transform.localPosition = new Vector3(254, -128, 0);
@@ -269,10 +282,15 @@ public class PlayerMovementController : MonoBehaviour {
   void BadChooseInteractionEvent(BadInteractable interactable) {
     if (interactable.GetInteractableName() == "Minigame1" && interactable.transform.GetChild(0).gameObject.activeSelf == true) {
             //minigameCanvas.SetActive(true);
-            SceneManager.LoadScene(sceneName: "LifeBoat Minigame", LoadSceneMode.Additive);
+            //gameObject.SetActive(false);
+
+            PlayerIsSwitchingScene();
+            //SceneManager.LoadScene(sceneName: "Lights Minigame", LoadSceneMode.Single);
+            SceneManager.LoadScene(sceneName: "LifeBoat Minigame", LoadSceneMode.Single);
+            
         }
     if (interactable.GetInteractableName() == "Minigame2" && interactable.transform.GetChild(0).gameObject.activeSelf == true) {
-      minigameCanvas.SetActive(true);
+      //minigameCanvas.SetActive(true);
     }
     if (interactable.GetInteractableName() == "Vent" && interactable.transform.GetChild(0).gameObject.activeSelf == true) {
       EnterVent(interactable);
@@ -316,4 +334,28 @@ public class PlayerMovementController : MonoBehaviour {
     transform.GetChild(1).gameObject.SetActive(false);
 
   }
+
+    void PlayerIsSwitchingScene()
+    {
+        PlayerPrefs.SetFloat("X", transform.position.x);
+        PlayerPrefs.SetFloat("Y", transform.position.y);
+        PlayerPrefs.SetFloat("Z", transform.position.z);
+        switched = true;
+        Debug.Log("Test 1");
+        // Player Switches Scene
+    }
+    void PlayerIsComingBack()
+    {
+        // Player comes back
+        //transform.position.x = PlayerPrefs.GetFloat("X");
+        //transform.position.y = PlayerPrefs.GetFloat("Y");
+        //transform.position.z = PlayerPrefs.GetFloat("Z");
+
+        transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
+
+        Debug.Log("Test 2");
+
+        switched = false;
+    }
+
 }
