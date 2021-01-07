@@ -21,6 +21,7 @@ public class PlayerMovementController : MonoBehaviour {
   private float minTaskDist = 5;
   private int numBadInteractables = 5;
   public GameObject[] badInteractables;
+  static bool switched;
 
   // venting stuff
   private bool inVent;
@@ -48,8 +49,6 @@ public class PlayerMovementController : MonoBehaviour {
   Rigidbody rb;
 
   Camera cam;
-
-    static bool switched;
 
   void Awake() {
        // DontDestroyOnLoad(transform.gameObject);
@@ -281,18 +280,15 @@ public class PlayerMovementController : MonoBehaviour {
 
   void BadChooseInteractionEvent(BadInteractable interactable) {
     if (interactable.GetInteractableName() == "Minigame1" && interactable.transform.GetChild(0).gameObject.activeSelf == true) {
-            //minigameCanvas.SetActive(true);
-            //gameObject.SetActive(false);
-
-            PlayerIsSwitchingScene();
-            //SceneManager.LoadScene(sceneName: "Lights Minigame", LoadSceneMode.Single);
+             PlayerIsSwitchingScene();
             SceneManager.LoadScene(sceneName: "LifeBoat Minigame", LoadSceneMode.Single);
             
         }
     if (interactable.GetInteractableName() == "Minigame2" && interactable.transform.GetChild(0).gameObject.activeSelf == true) {
-      //minigameCanvas.SetActive(true);
-    }
-    if (interactable.GetInteractableName() == "Vent" && interactable.transform.GetChild(0).gameObject.activeSelf == true) {
+            PlayerIsSwitchingScene();
+            SceneManager.LoadScene(sceneName: "Lights Minigame", LoadSceneMode.Single);
+        }
+        if (interactable.GetInteractableName() == "Vent" && interactable.transform.GetChild(0).gameObject.activeSelf == true) {
       EnterVent(interactable);
     }
   }
@@ -340,20 +336,12 @@ public class PlayerMovementController : MonoBehaviour {
         PlayerPrefs.SetFloat("X", transform.position.x);
         PlayerPrefs.SetFloat("Y", transform.position.y);
         PlayerPrefs.SetFloat("Z", transform.position.z);
+
         switched = true;
-        Debug.Log("Test 1");
-        // Player Switches Scene
     }
     void PlayerIsComingBack()
     {
-        // Player comes back
-        //transform.position.x = PlayerPrefs.GetFloat("X");
-        //transform.position.y = PlayerPrefs.GetFloat("Y");
-        //transform.position.z = PlayerPrefs.GetFloat("Z");
-
         transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
-
-        Debug.Log("Test 2");
 
         switched = false;
     }

@@ -56,12 +56,5 @@ void gradualFlicker()
     light.intensity = 0.8f;
   }
 
-  
-
-  public void FreezeTime() {
-    flickerOn = false;
-    lightOn();
-    Time.timeScale = 0;
-  }
 
 }

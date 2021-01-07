@@ -21,7 +21,7 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (movingLeft)
+        if (movingLeft)
         {
             if (transform.position.x >= maxX)
             {
@@ -43,6 +43,6 @@ public class CameraMovement : MonoBehaviour
         } else
         {
             transform.Translate(Vector2.right * speeds[Random.Range(0, speeds.Length)] * Time.deltaTime);
-        }*/
+        }
     }
 }

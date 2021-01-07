@@ -16,7 +16,6 @@ public class TextManager : MonoBehaviour {
 
   public void Win() {
     winText.gameObject.SetActive(true);
-    FindObjectOfType<LightFlicker>().FreezeTime();
         SceneManager.LoadScene(sceneName: "Gaming", LoadSceneMode.Single);
     }
 
