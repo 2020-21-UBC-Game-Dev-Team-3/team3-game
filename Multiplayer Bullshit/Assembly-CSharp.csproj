@@ -97,12 +97,12 @@
      <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\RandomWind.cs" />
      <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs" />
      <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
+     <Compile Include="Assets\Scripts\Game Stuff\Interactable.cs" />
      <Compile Include="Assets\Scripts\Roles\RoleRandomizer.cs" />
      <Compile Include="Assets\Materials\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
      <Compile Include="Assets\NameTextScript.cs" />
      <Compile Include="Assets\Lights Minigame Assets\Scripts\TextManager.cs" />
      <Compile Include="Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
-     <Compile Include="Assets\Scripts\Game Stuff\Interactable.cs" />
      <None Include="Assets\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Materials\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />

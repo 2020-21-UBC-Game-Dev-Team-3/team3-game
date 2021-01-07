@@ -16,11 +16,7 @@ public class PlayerMovementController : MonoBehaviour {
   private float distToElevatorCall;
 
   // minigame interaction stuff
-  public GameObject minigameCanvas;
-  private float distToIndicator;
-  private float minTaskDist = 5;
-  private int numBadInteractables = 5;
-  public GameObject[] badInteractables;
+  public GameObject[] interactables;
   static bool switched;
 
   // venting stuff
@@ -69,14 +65,14 @@ public class PlayerMovementController : MonoBehaviour {
     callElevatorButton1 = GameObject.Find("CallFloor1Button");
     callElevatorButton2 = GameObject.Find("CallFloor2Button");
     callElevatorButton3 = GameObject.Find("CallFloor3Button");
-    minigameCanvas = getMinigameCanvas();
-    badInteractables = GameObject.FindGameObjectsWithTag("BadInteractable");
-    foreach (GameObject interactable in badInteractables) {
+    interactables = GameObject.FindGameObjectsWithTag("Interactable");
+    
+    foreach (GameObject interactable in interactables) {
       interactable.SetActive(true);
       interactable.transform.GetChild(0).gameObject.SetActive(false);
     }
-    //For venting
-    inVent = false;
+        //For venting
+        inVent = false;
     Vent1Pos = GameObject.FindGameObjectWithTag("Vent1Pos").transform;
     Vent2Pos = GameObject.FindGameObjectWithTag("Vent2Pos").transform;
     Vent3Pos = GameObject.FindGameObjectWithTag("Vent3Test").transform;
@@ -99,9 +95,8 @@ public class PlayerMovementController : MonoBehaviour {
 
   // Update is called once per frame
   void Update() {
-    if (!minigameCanvas.activeSelf && !inVent) {
+    if (!switched && !inVent) {
       GetComponent<Animator>().enabled = true;
-      InteractableCheck();
       Interact();
       //This is for elevator buttons
       distToElevator = Vector3.Distance(transform.position, Elevator.transform.position);
@@ -169,7 +164,7 @@ public class PlayerMovementController : MonoBehaviour {
   //}
 
   void FixedUpdate() {
-        if (!minigameCanvas.activeSelf && !inVent)
+        if (!switched && !inVent)
         {
             rb.MovePosition(rb.position + transform.TransformDirection(moveAmount) * Time.fixedDeltaTime);
 
@@ -224,36 +219,9 @@ public class PlayerMovementController : MonoBehaviour {
     return closest;
   }
 
-  GameObject getMinigameCanvas() {
-    List<GameObject> allObjects = new List<GameObject>();
+ 
 
-    foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[]) {
-      if (!EditorUtility.IsPersistent(go.transform.root.gameObject) && !(go.hideFlags == HideFlags.NotEditable || go.hideFlags == HideFlags.HideAndDontSave))
-        allObjects.Add(go);
-    }
 
-    foreach (GameObject gameObject in allObjects) {
-      if (gameObject.tag == "MinigameCanvas") {
-        return gameObject;
-      }
-    }
-    //should never get here
-    return null;
-
-  }
-
-  //To show/hide the task button
-  void InteractableCheck() {
-    foreach (GameObject interactable in badInteractables) {
-      distToIndicator = Vector3.Distance(transform.position, interactable.transform.position);
-
-      if (distToIndicator <= minTaskDist) {
-        interactable.transform.GetChild(0).gameObject.SetActive(true);
-      } else {
-        interactable.transform.GetChild(0).gameObject.SetActive(false);
-      }
-    }
-  }
 
   void Interact() {
     if (Input.GetMouseButtonDown(0)) {
@@ -265,11 +233,7 @@ public class PlayerMovementController : MonoBehaviour {
           Interactable interactable = hit.collider.GetComponent<Interactable>();
           ChooseInteractionEvent(interactable);
         }
-        if (hit.transform.CompareTag("BadInteractable")) {
-          if (!hit.transform.gameObject.activeInHierarchy) return;
-          BadInteractable interactable = hit.collider.GetComponent<BadInteractable>();
-          BadChooseInteractionEvent(interactable);
-        }
+        
       }
     }
   }
@@ -280,26 +244,23 @@ public class PlayerMovementController : MonoBehaviour {
             pv.RPC("TurnOnEmergencyPopUp", RpcTarget.All);
         }*/
 
-        if (interactable.GetInteractableName() == "Minigame1")
+        if (interactable.GetInteractableName() == "Minigame1" && interactable.transform.GetChild(0).gameObject.activeSelf == true)
         {
+            PlayerIsSwitchingScene();
             SceneManager.LoadScene(sceneName: "LifeBoat Minigame", LoadSceneMode.Single);
         }
-    }
-
-  void BadChooseInteractionEvent(BadInteractable interactable) {
-    if (interactable.GetInteractableName() == "Minigame1" && interactable.transform.GetChild(0).gameObject.activeSelf == true) {
-             PlayerIsSwitchingScene();
-            SceneManager.LoadScene(sceneName: "LifeBoat Minigame", LoadSceneMode.Single);
-            
-        }
-    if (interactable.GetInteractableName() == "Minigame2" && interactable.transform.GetChild(0).gameObject.activeSelf == true) {
+        if (interactable.GetInteractableName() == "Minigame2" && interactable.transform.GetChild(0).gameObject.activeSelf == true)
+        {
             PlayerIsSwitchingScene();
             SceneManager.LoadScene(sceneName: "Lights Minigame", LoadSceneMode.Single);
         }
-        if (interactable.GetInteractableName() == "Vent" && interactable.transform.GetChild(0).gameObject.activeSelf == true) {
-      EnterVent(interactable);
+        if (interactable.GetInteractableName() == "Vent" && interactable.transform.GetChild(0).gameObject.activeSelf == true)
+        {
+            EnterVent(interactable);
+        }
     }
-  }
+
+  
 
   void CheckFalse() {
     GetComponent<Animator>().enabled = false;
@@ -326,8 +287,8 @@ public class PlayerMovementController : MonoBehaviour {
     }
   }
 
-  void EnterVent(BadInteractable interactable) {
-    foreach (GameObject interactable2 in badInteractables) {
+  void EnterVent(Interactable interactable) {
+    foreach (GameObject interactable2 in interactables) {
       interactable2.SetActive(true);
       interactable2.transform.GetChild(0).gameObject.SetActive(false);
     }
