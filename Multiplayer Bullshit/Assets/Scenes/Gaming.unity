@@ -1016,6 +1016,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TaskLocation1
       objectReference: {fileID: 0}
+    - target: {fileID: 8384753811824461225, guid: c0a258fa4afc1944fb8946a749a96186, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     - target: {fileID: 8384753811824461229, guid: c0a258fa4afc1944fb8946a749a96186, type: 3}
       propertyPath: m_RootOrder
       value: 12

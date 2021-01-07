@@ -275,8 +275,16 @@ public class PlayerMovementController : MonoBehaviour {
   }
 
   void ChooseInteractionEvent(Interactable interactable) {
-    //no changes
-  }
+        /*if (interactable.GetInteractableName() == "Emergency button")
+        {
+            pv.RPC("TurnOnEmergencyPopUp", RpcTarget.All);
+        }*/
+
+        if (interactable.GetInteractableName() == "Minigame1")
+        {
+            SceneManager.LoadScene(sceneName: "LifeBoat Minigame", LoadSceneMode.Single);
+        }
+    }
 
   void BadChooseInteractionEvent(BadInteractable interactable) {
     if (interactable.GetInteractableName() == "Minigame1" && interactable.transform.GetChild(0).gameObject.activeSelf == true) {
