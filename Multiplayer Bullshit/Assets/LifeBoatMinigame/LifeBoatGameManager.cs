@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LifeBoatGameManager : MonoBehaviour
 {
@@ -49,7 +50,8 @@ public class LifeBoatGameManager : MonoBehaviour
 
 
         if (score == Passengers){
-            TaskComplete.gameObject.SetActive(true); 
+            TaskComplete.gameObject.SetActive(true);
+            SceneManager.LoadScene(sceneName: "Gaming", LoadSceneMode.Single);
         }
 
 

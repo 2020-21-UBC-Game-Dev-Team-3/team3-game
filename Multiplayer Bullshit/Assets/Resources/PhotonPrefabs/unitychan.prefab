@@ -6999,8 +6999,7 @@ MonoBehaviour:
   callElevatorButton3: {fileID: 0}
   Elevator: {fileID: 0}
   ElevatorStation: {fileID: 0}
-  minigameCanvas: {fileID: 0}
-  badInteractables: []
+  interactables: []
   Vent1Pos: {fileID: 0}
   Vent2Pos: {fileID: 0}
   Vent3Pos: {fileID: 0}
@@ -7086,7 +7085,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 10
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4547622216708105833
 MonoBehaviour:

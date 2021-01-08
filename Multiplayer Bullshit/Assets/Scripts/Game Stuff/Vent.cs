@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class Vent : BadInteractable
+public class Vent : Interactable
 {
 
     void Start()
     {
-        badInteractableName = "Vent";
+        interactableName = "Vent";
     }
 }
