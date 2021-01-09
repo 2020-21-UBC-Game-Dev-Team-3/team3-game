@@ -26,15 +26,20 @@ public class Interactable : MonoBehaviourPunCallbacks {
 
   private void OnTriggerEnter(Collider other) {
     if (other.CompareTag("Player")) {
-            Debug.Log("triggerenter");
-      indicator.SetActive(true);
+            if (other.gameObject.GetComponent<PhotonView>().IsMine)
+            {
+                indicator.SetActive(true);
+            }
     }
   }
 
   private void OnTriggerExit(Collider other) {
     if (other.CompareTag("Player")) {
-      indicator.SetActive(false);
-    }
+            if (other.gameObject.GetComponent<PhotonView>().IsMine)
+            {
+                indicator.SetActive(false);
+            }
+        }
   }
 
 

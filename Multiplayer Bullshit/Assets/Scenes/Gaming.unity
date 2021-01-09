@@ -955,6 +955,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Interactable
       objectReference: {fileID: 0}
+    - target: {fileID: 4171673715619388470, guid: 3617644022741da46ab78e3235ecc3b0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3617644022741da46ab78e3235ecc3b0, type: 3}
 --- !u!1 &675085800 stripped
@@ -2350,6 +2354,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Interactable
       objectReference: {fileID: 0}
+    - target: {fileID: 8356006252682367580, guid: c3baca3fa01e68d40bc3d2f1d2be183d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3baca3fa01e68d40bc3d2f1d2be183d, type: 3}
 --- !u!1 &1321008266 stripped
@@ -2650,6 +2658,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 320287545107383729, guid: 2c9e380300f546b4785d821c8d836e23, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.949
+      objectReference: {fileID: 0}
     - target: {fileID: 320287545979273130, guid: 2c9e380300f546b4785d821c8d836e23, type: 3}
       propertyPath: m_RootOrder
       value: 18
