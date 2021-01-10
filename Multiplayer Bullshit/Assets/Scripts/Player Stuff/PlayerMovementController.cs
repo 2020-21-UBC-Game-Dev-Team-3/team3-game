@@ -325,7 +325,7 @@ public class PlayerMovementController : MonoBehaviour {
             float vertical = Input.GetAxisRaw("Vertical");
 
 
-            Vector3 playerMovement = new Vector3(horizontal, 0f, vertical) * moveSpeed * Time.deltaTime;
+            Vector3 playerMovement = new Vector3(-vertical, 0f, horizontal) * moveSpeed * Time.deltaTime;
             transform.Translate(playerMovement, Space.Self);
 
             SetAnimator(playerMovement);

@@ -20,18 +20,21 @@ public class KillMechanic : MonoBehaviour
     [SerializeField] InputAction KILL;
 
     //float killInput;
-
+    public GameObject deadPlayer;
+    public GameObject bodyPlayer;
+    public PhotonView photon;
     public List<KillMechanic> targets;
     [SerializeField] Collider myCollider;
-
+    public GameObject[] playerList;
+    public GameObject[] bodyList;
     public bool isDead;
-
-    PhotonView PV; 
-
-    [SerializeField] public GameObject BodyPrefab; 
+    public PhotonView targetPhoton;
+    public PhotonView PV;
+    public List<Component> components;
+    [SerializeField] public GameObject BodyPrefab;
     //[SerializeField] public GameObject GhostPrefab; 
     //[SerializeField] public GameObject BodyPrefab;  
-    
+    public string targetName;
     public GameObject Player;
     public Camera PerspectiveCamera;
     //public GameObject Ghost;
@@ -134,11 +137,15 @@ public class KillMechanic : MonoBehaviour
                 if(targets[targets.Count - 1].isDead){
                     return;
                 }
-                else{ 
-               // transform.position = target.transform.position;
-               // targets[targets.Count - 1].Die();
+                else{
+                    // transform.position = target.transform.position;
+                    // targets[targets.Count - 1].Die();
+                    targetPhoton = targets[targets.Count - 1].GetComponent<PhotonView>();
+                    targetName = (string)targetPhoton.Owner.NickName;
+                   // Debug.Log(targetName);
+                    PV.RPC("RPC_Kill", RpcTarget.All, targetName);
+                    //PV.RPC("makeBody", RpcTarget.MasterClient);
 
-               targets[targets.Count - 1].PV.RPC("RPC_Kill",RpcTarget.All);
                 
                 targets.RemoveAt(targets.Count - 1);
                 }
@@ -150,22 +157,20 @@ public class KillMechanic : MonoBehaviour
 
 
     [PunRPC]
-    void RPC_Kill() {
-        Die();
+    public void RPC_Kill(string targetName) {
+        Die(targetName);
     }
 
-    public void Die(){
+    public void Die(string targetName){
 
-        if(!PV.IsMine)
-        return;
+        //PhotonNetwork.PlayerList;
+        foreach (Player player in PhotonNetwork.PlayerList) {
+            if (player.NickName == targetName) {
+                makeGhost(player);
+                makeBody(player);
+            }
 
-
-        isDead = true;
-
-
-        makeGhost();
-        makeBody();
-
+        }
 
       
 
@@ -183,34 +188,69 @@ public class KillMechanic : MonoBehaviour
     }
 
 
-    void makeGhost(){
+    void makeGhost(Player player){
+
+        playerList = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject gameObj in playerList)
+        {
+            photon = gameObj.GetComponent<PhotonView>();
+            if (photon.Controller.NickName == player.NickName)
+            {
+                deadPlayer = gameObj;
+                /*        myAnim.SetBool("IsDead", isDead);*/
+        deadPlayer.layer = LayerMask.NameToLayer("Ghost");
+        Destroy(deadPlayer.GetComponent<Rigidbody>());
+                for (int i = 0; i < 3; i++)
+                {
+                    //Component component = deadPlayer.transform.GetChild(i);
+                    deadPlayer.transform.GetChild(i).gameObject.layer = LayerMask.NameToLayer("Ghost");
+                /*for(int j = 0; j < component.transform.childCount; j++)    
+                {
+                    component.transform.GetChild(j).gameObject.layer = LayerMask.NameToLayer("Ghost");
+                }*/
+                }
+
+               // for(int i = 0; i <; i++)
+        //myCollider.enabled = false;
+        deadPlayer.tag = "Ghost";
+     /*        PerspectiveCamera.cullingMask |= 1 << LayerMask.NameToLayer("Ghost");*/
+        deadPlayer.GetComponent<PlayerMovementController>().enabled = false;
+        deadPlayer.GetComponent<GhostController>().enabled = true;
+                deadPlayer = null;
+            }
+            photon = null;
+        }
 
 
-/*        myAnim.SetBool("IsDead", isDead);*/
-        Player.layer = LayerMask.NameToLayer("Ghost");
-        Destroy(Player.GetComponent<Rigidbody>());
-        myCollider.enabled = false;
-        Player.tag = "Ghost";
-/*        PerspectiveCamera.cullingMask |= 1 << LayerMask.NameToLayer("Ghost");*/
-        Player.GetComponent<PlayerMovementController>().enabled = false;
-        Player.GetComponent<GhostController>().enabled = true;
 
         
     }
+   // [PunRPC]
+    void makeBody(Player player){
 
-    void makeBody(){
+          bodyList = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject gameObj in playerList)
+        {
+            if (photon.Controller.NickName == player.NickName)
+            {
+                bodyPlayer = gameObj;
 
-        
-        Vector3 bodyPosition = new Vector3 (0,1f,0);
+                 Vector3 bodyPosition = new Vector3 (0,1f,0);
         //Quaternion bodyRotation = new Quaternion(90f,0,0,0);
 
         //body tempBody = Instantiate(BodyPrefab, transform.position, transform.rotation).GetComponent<body>();
         //body tempBody = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs","body"), transform.position + bodyPosition, transform.rotation).GetComponent<body>(); 
-        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs","body"), transform.position + bodyPosition, transform.rotation); 
+        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs","body"), bodyPlayer.transform.position + bodyPosition, bodyPlayer.transform.rotation); 
+               
+                }
+
+                bodyPlayer = null;
+            }
+        }
+
+        
+       
 
 
 
-    }
 }
-
-
