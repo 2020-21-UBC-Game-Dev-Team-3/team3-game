@@ -9,7 +9,7 @@ public class PlayerMovementController : MonoBehaviour {
   [SerializeField] GameObject playerCamera;
   [SerializeField] GameObject minimapCamera;
   [SerializeField] GameObject playerIndicator;
-  [SerializeField] GameObject emergencyMeetingEvent;
+  //[SerializeField] GameObject emergencyMeetingEvent;
 
 
   public GameObject floor1Button, floor2Button, floor3Button;
@@ -93,7 +93,7 @@ public class PlayerMovementController : MonoBehaviour {
   void Update() {
     if (!switched && !inVent) {
       GetComponent<Animator>().enabled = true;
-      Interact();
+      //Interact();
       //This is for elevator buttons
       distToElevator = Vector3.Distance(transform.position, Elevator.transform.position);
       if (distToElevator <= 1 && pv.IsMine) {
@@ -195,20 +195,20 @@ public class PlayerMovementController : MonoBehaviour {
   }
 
 
-  void Interact() {
-    if (Input.GetMouseButtonDown(0)) {
-      Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+  //void Interact() {
+  //  if (Input.GetMouseButtonDown(0)) {
+  //    Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
-      if (Physics.Raycast(ray, out RaycastHit hit)) {
-        if (hit.transform.CompareTag("Interactable")) {
-          if (!hit.transform.gameObject.activeInHierarchy) return;
-          Interactable interactable = hit.collider.GetComponent<Interactable>();
-          ChooseInteractionEvent(interactable);
-        }
+  //    if (Physics.Raycast(ray, out RaycastHit hit)) {
+  //      if (hit.transform.CompareTag("Interactable")) {
+  //        if (!hit.transform.gameObject.activeInHierarchy) return;
+  //        Interactable interactable = hit.collider.GetComponent<Interactable>();
+  //        ChooseInteractionEvent(interactable);
+  //      }
         
-      }
-    }
-  }
+  //    }
+  //  }
+  //}
 
   void ChooseInteractionEvent(Interactable interactable) {
     if (interactable.GetInteractableName() == "Emergency button") {
@@ -230,16 +230,16 @@ public class PlayerMovementController : MonoBehaviour {
     }
   }
 
-  [PunRPC]
-  public void TurnOnEmergencyPopUp() {
-    StartCoroutine(ShowEmergencyPopUp());
-  }
+  //[PunRPC]
+  //public void TurnOnEmergencyPopUp() {
+  //  StartCoroutine(ShowEmergencyPopUp());
+  //}
 
-  IEnumerator ShowEmergencyPopUp() {
-    emergencyMeetingEvent.SetActive(true);
-    yield return new WaitForSeconds(2);
-    emergencyMeetingEvent.SetActive(false);
-  }
+  //IEnumerator ShowEmergencyPopUp() {
+  //  emergencyMeetingEvent.SetActive(true);
+  //  yield return new WaitForSeconds(2);
+  //  emergencyMeetingEvent.SetActive(false);
+  //}
 
   void CheckFalse() {
     GetComponent<Animator>().enabled = false;

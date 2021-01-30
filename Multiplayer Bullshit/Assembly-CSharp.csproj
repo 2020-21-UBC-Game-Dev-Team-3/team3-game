@@ -66,7 +66,7 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\UI Stuff\PlayerListItem.cs" />
     <Compile Include="Assets\Scripts\Player Stuff\GhostController.cs" />
-    <Compile Include="Assets\Scripts\Player Stuff\TaskScreenScript.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\TaskScreenScript.cs" />
     <Compile Include="Assets\Scripts\TextAlign.cs" />
     <Compile Include="Assets\Scripts\Player Stuff\Assassin.cs" />
     <Compile Include="Assets\Scripts\Game Stuff\Vent.cs" />
@@ -88,7 +88,7 @@
     <Compile Include="Assets\Lights Minigame Assets\Scripts\ClickManager.cs" />
     <Compile Include="Assets\Scripts\Player Stuff\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\Player Stuff\Knife.cs" />
-    <Compile Include="Assets\Scripts\Player Stuff\Interactable.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\Interactable.cs" />
     <Compile Include="Assets\LifeBoatMinigame\GameReset.cs" />
     <Compile Include="Assets\Scripts\Game Stuff\MapManager.cs" />
     <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
@@ -99,6 +99,13 @@
     <Compile Include="Assets\NameTextScript.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\TextManager.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\Player Stuff\AssassinAbility.cs" />
+    <Compile Include="Assets\Scripts\Player Stuff\Shuriken.cs" />
+    <Compile Include="Assets\Scripts\Player Stuff\PlayerActionController.cs" />
+    <Compile Include="Assets\Scripts\Player Stuff\RoleAbility.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\IDamageable.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\ChangeCullingMask.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\DeadBody.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -11,6 +11,8 @@ public class PlayerManager : MonoBehaviour
     PhotonView pv;
     public GameObject myNameObject;
 
+    GameObject controller;
+
     void Awake()
     {
         pv = GetComponent<PhotonView>();
@@ -28,8 +30,27 @@ public class PlayerManager : MonoBehaviour
     void CreateController()
     {
         Vector3 position = new Vector3(0f, 10f, 0f);
-        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "unitychan"), position, Quaternion.identity);
+        controller = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "player"), position, Quaternion.identity, 0, new object[] { pv.ViewID });
         Debug.Log(PhotonNetwork.NickName);
         PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Elevator"), vec, Quaternion.identity);
+    }
+
+    public void Die()
+    {
+        PhotonNetwork.Destroy(controller);
+        CreateDeadBody(controller);
+        CreateGhostPlayer(controller);
+    }
+
+    void CreateDeadBody(GameObject oldController)
+    {
+        Vector3 position = oldController.transform.position;
+        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "DeadBody"), position, Quaternion.identity);
+    }
+
+    void CreateGhostPlayer(GameObject oldController)
+    {
+        Vector3 position = new Vector3(oldController.transform.position.x, oldController.transform.position.y + 1f, oldController.transform.position.z);
+        controller = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "GhostPlayer"), position, Quaternion.identity, 0, new object[] { pv.ViewID });
     }
 }

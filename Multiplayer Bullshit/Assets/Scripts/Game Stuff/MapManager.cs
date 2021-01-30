@@ -8,9 +8,9 @@ public class MapManager : MonoBehaviour
 {
     public GameObject player;
 
-    public GameObject topFloorPlane;
-    public GameObject middleFloorPlane;
-    public GameObject bottomFloorPlane;
+    GameObject topFloorPlane;
+    GameObject middleFloorPlane;
+    GameObject bottomFloorPlane;
 
     PhotonView pv;
 
@@ -29,21 +29,16 @@ public class MapManager : MonoBehaviour
     {
         if (!pv.IsMine) return;
 
-        if(Math.Round(player.transform.position.y) == Math.Round(middleFloorPlane.transform.position.y))
-        {
-            topFloorPlane.SetActive(false);
-            middleFloorPlane.SetActive(true);
-            bottomFloorPlane.SetActive(false);
-        } else if(Math.Round(player.transform.position.y) == Math.Round(topFloorPlane.transform.position.y))
-        {
-            topFloorPlane.SetActive(true);
-            middleFloorPlane.SetActive(false);
-            bottomFloorPlane.SetActive(false);
-        } else if(Math.Round(player.transform.position.y) == Math.Round(bottomFloorPlane.transform.position.y))
-        {
-            topFloorPlane.SetActive(false);
-            middleFloorPlane.SetActive(false);
-            bottomFloorPlane.SetActive(true);
-        }
+        float playerPlanePos = Mathf.Round(player.transform.position.y);
+        topFloorPlane.SetActive((Mathf.Round(topFloorPlane.transform.position.y)) == playerPlanePos);
+        middleFloorPlane.SetActive((Mathf.Round(middleFloorPlane.transform.position.y)) == playerPlanePos);
+        bottomFloorPlane.SetActive((Mathf.Round(bottomFloorPlane.transform.position.y)) == playerPlanePos);
+    }
+
+    public void ResetMap()
+    {
+        topFloorPlane.SetActive(true);
+        middleFloorPlane.SetActive(true);
+        bottomFloorPlane.SetActive(true);
     }
 }

@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637473255399079927
+      ticks: 637475616706040348
     m_Hash: 3767876462
   m_LockFileStatus:
     m_FilePath: C:/Users/kevin/OneDrive/Documents/GitHub/team3-game/Multiplayer Bullshit/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637473255399089939
+      ticks: 637475616706060347
     m_Hash: 278138693
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -3109,6 +3109,7 @@ m_PackageAssets:
         - 10.2.0
         - 10.2.1
         - 10.2.2
+        - 10.3.1
         compatible:
         - 8.2.0
         - 9.0.0-preview.13

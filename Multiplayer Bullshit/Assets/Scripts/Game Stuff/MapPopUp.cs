@@ -5,14 +5,24 @@ using UnityEngine;
 public class MapPopUp : MonoBehaviour
 {
     [SerializeField] GameObject map;
-    
-    public void Open()
+
+    bool mapOpen;
+
+    void Update()
     {
-        map.SetActive(true);
+        if (Input.GetKeyDown("tab") && !mapOpen) OpenMap();
+        else if (Input.GetKeyDown("tab") && mapOpen) CloseMap();
     }
 
-    public void Close()
+    public void OpenMap()
+    {
+        map.SetActive(true);
+        mapOpen = true;
+    }
+
+    public void CloseMap()
     {
         map.SetActive(false);
+        mapOpen = false;
     }
 }
