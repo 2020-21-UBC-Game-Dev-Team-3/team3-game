@@ -1,0 +1,468 @@
+Using pre-set license
+
+ COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+/Users/chiaralin/team3-game/Multiplayer Bullshit1
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+62114
+Successfully changed project path to: /Users/chiaralin/team3-game/Multiplayer Bullshit1
+/Users/chiaralin/team3-game/Multiplayer Bullshit1
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 66.09 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/chiaralin/team3-game/Multiplayer Bullshit1/Assets
+GfxDevice: creating device client; threaded=0
+2021-01-09 21:14:28.460 Unity[32755:737175] Color LCD preferred device: Intel(R) Iris(TM) Plus Graphics 650 (low power)
+2021-01-09 21:14:28.460 Unity[32755:737175] Metal devices available: 1
+2021-01-09 21:14:28.460 Unity[32755:737175] 0: Intel(R) Iris(TM) Plus Graphics 650 (low power)
+2021-01-09 21:14:28.461 Unity[32755:737175] Using device Intel(R) Iris(TM) Plus Graphics 650 (low power)
+Initializing Metal device caps: Intel(R) Iris(TM) Plus Graphics 650
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = '/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56755
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.003860 seconds.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 38.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.376 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.005962 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+OnLevelWasLoaded was found on GameManager
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 51.56 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.786 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launching external process: /Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1763 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 153.0 MB.
+System memory in use after: 153.1 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2216.
+Total: 4.594503 ms (FindLiveObjects: 0.501500 ms CreateObjectMapping: 0.261167 ms MarkObjects: 3.686066 ms  DeleteObjects: 0.143612 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Standard Assets/Environment/Water/Water4/Textures/SimpleFoam.png
+  artifactKey: Guid(36dd0b22da8874ed38075789055ca664) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Standard Assets/Environment/Water/Water4/Textures/SimpleFoam.png using Guid(36dd0b22da8874ed38075789055ca664) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9162c534bb274dd2f7a3bafdfba14c42') in 0.723122 seconds
+  Import took 0.729784 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006564 seconds.
+  path: Assets/fishing_boat/fishing_boat.FBX
+  artifactKey: Guid(fbb1810807a93534fbd814fb6b0aa55f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/fishing_boat/fishing_boat.FBX using Guid(fbb1810807a93534fbd814fb6b0aa55f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2710a4d74975ee05419b2bf808ebe4c') in 0.913500 seconds
+  Import took 0.918988 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003041 seconds.
+  path: Assets/Icebergs/materials/ground.mat
+  artifactKey: Guid(b4fd26ced063a48bf95e990cff8aedb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Icebergs/materials/ground.mat using Guid(b4fd26ced063a48bf95e990cff8aedb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cee4627ea5891981bd9fba17daafd0ba') in 0.301070 seconds
+  Import took 0.305897 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001723 seconds.
+  path: Assets/fishing_boat/Materials/fisher.mat
+  artifactKey: Guid(a18ac418243498d479e15c5a47442444) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/fishing_boat/Materials/fisher.mat using Guid(a18ac418243498d479e15c5a47442444) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7366147b168e9cb8b770733475793b53') in 0.015605 seconds
+  Import took 0.033000 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001878 seconds.
+  path: Assets/Standard Assets/Environment/Water/Water4/Models/OceanPlane.FBX
+  artifactKey: Guid(681e41ee1260343b395ca58745c94870) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Standard Assets/Environment/Water/Water4/Models/OceanPlane.FBX using Guid(681e41ee1260343b395ca58745c94870) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f2db6526d1ee36db4c06c02e4277977') in 0.488968 seconds
+  Import took 0.498963 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002729 seconds.
+  path: Assets/Icebergs/Scripts/Boat.cs
+  artifactKey: Guid(6ce8005c27d7a4e52bc74fb5ac2b7b03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Icebergs/Scripts/Boat.cs using Guid(6ce8005c27d7a4e52bc74fb5ac2b7b03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fddafc23f3bc06989ab4b96a567324e1') in 0.615524 seconds
+  Import took 0.619855 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002628 seconds.
+  path: Assets/Standard Assets/Environment/Water/Water/Scripts/Displace.cs
+  artifactKey: Guid(c62b7d87755b447919138e67f8e22e0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Standard Assets/Environment/Water/Water/Scripts/Displace.cs using Guid(c62b7d87755b447919138e67f8e22e0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59a0ce3da42540e7dbd98da6138578fe') in 0.002663 seconds
+  Import took 0.008883 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002881 seconds.
+  path: Assets/Standard Assets/Environment/Water/Water/Scripts/WaterTile.cs
+  artifactKey: Guid(2a91e8dd37cdd41efb4859b65aced7a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Standard Assets/Environment/Water/Water/Scripts/WaterTile.cs using Guid(2a91e8dd37cdd41efb4859b65aced7a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afcc05cfd14338a3d67bb426293762c9') in 0.001721 seconds
+  Import took 0.015621 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006294 seconds.
+  path: Assets/Standard Assets/Environment/Water/Water/Scripts/GerstnerDisplace.cs
+  artifactKey: Guid(42e7f46d0e5a84171a3909479c1646ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Standard Assets/Environment/Water/Water/Scripts/GerstnerDisplace.cs using Guid(42e7f46d0e5a84171a3909479c1646ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99403be450970c4725ce81a62ca4209b') in 0.001750 seconds
+  Import took 0.026832 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002314 seconds.
+  path: Assets/Standard Assets/Environment/Water/Water4/Shaders/FXWater4Simple.shader
+  artifactKey: Guid(8aaff0751054e4a9cb4642d01eaf5be9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Standard Assets/Environment/Water/Water4/Shaders/FXWater4Simple.shader using Guid(8aaff0751054e4a9cb4642d01eaf5be9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fb3380a0cd5e75fa6e59018162f1005') in 0.160141 seconds
+  Import took 0.164091 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001492 seconds.
+  path: Assets/Standard Assets/Environment/Water/Water/Scripts/PlanarReflection.cs
+  artifactKey: Guid(4185bc77c7194462ca3b1097ef4a5de0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Standard Assets/Environment/Water/Water/Scripts/PlanarReflection.cs using Guid(4185bc77c7194462ca3b1097ef4a5de0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9fb220916cd7ee8e8a182e19d0b1284') in 0.003574 seconds
+  Import took 0.007061 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.009777 seconds.
+  path: Assets/Icebergs/Scripts/CameraController.cs
+  artifactKey: Guid(8d4f8ea7e2a3742f39ce587e35e93fb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Icebergs/Scripts/CameraController.cs using Guid(8d4f8ea7e2a3742f39ce587e35e93fb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0c5cc93c5a3f7f487756b49adc9b76c') in 0.004844 seconds
+  Import took 0.009588 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002825 seconds.
+  path: Assets/fishing_boat/Materials/fishing_boat.mat
+  artifactKey: Guid(af3dab0ca502e014893047f7e80b814a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/fishing_boat/Materials/fishing_boat.mat using Guid(af3dab0ca502e014893047f7e80b814a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04d7dc8c07a5602ea510d351873c6104') in 0.014396 seconds
+  Import took 0.019205 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003015 seconds.
+  path: Assets/Standard Assets/Environment/Water/Water4/Textures/SmallWaves.png
+  artifactKey: Guid(fb6566c21f717904f83743a5a76dd0b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Standard Assets/Environment/Water/Water4/Textures/SmallWaves.png using Guid(fb6566c21f717904f83743a5a76dd0b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6b596db07c76c508b03bd6dc3a00f36') in 0.021633 seconds
+  Import took 0.026775 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002551 seconds.
+  path: Assets/Standard Assets/Environment/Water (Basic)/Scripts/WaterBasic.cs
+  artifactKey: Guid(0d2f50a8e0bb841a5aaa90ae55db8849) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Standard Assets/Environment/Water (Basic)/Scripts/WaterBasic.cs using Guid(0d2f50a8e0bb841a5aaa90ae55db8849) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d16fe79bfd4d5593734528f4cb1750f') in 0.004743 seconds
+  Import took 0.008728 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002259 seconds.
+  path: Assets/Standard Assets/Environment/Water/Water/Scripts/MeshContainer.cs
+  artifactKey: Guid(951d74f7d57bed84cb623c62436bd064) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Standard Assets/Environment/Water/Water/Scripts/MeshContainer.cs using Guid(951d74f7d57bed84cb623c62436bd064) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebc5625a22ec148e2c6e58061908b3e7') in 0.004666 seconds
+  Import took 0.009260 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001973 seconds.
+  path: Assets/Standard Assets/Environment/Water/Water/Scripts/Water.cs
+  artifactKey: Guid(a3d3ef1a5bbfb4e0a910fbbe5830b1f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Standard Assets/Environment/Water/Water/Scripts/Water.cs using Guid(a3d3ef1a5bbfb4e0a910fbbe5830b1f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13a44ce71c21bbdb89281b13c06b2040') in 0.004228 seconds
+  Import took 0.008444 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002191 seconds.
+  path: Assets/Standard Assets/Environment/Water/Water/Scripts/WaterBase.cs
+  artifactKey: Guid(a1da353243062479a9b31c85074a796b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Standard Assets/Environment/Water/Water/Scripts/WaterBase.cs using Guid(a1da353243062479a9b31c85074a796b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'addd9a3da5ad350d491dcf15399602e5') in 0.004765 seconds
+  Import took 0.009151 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002508 seconds.
+  path: Assets/Standard Assets/Environment/Water/Water/Scripts/SpecularLighting.cs
+  artifactKey: Guid(de2ab2b9ac93bb544b9552e49030371b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Standard Assets/Environment/Water/Water/Scripts/SpecularLighting.cs using Guid(de2ab2b9ac93bb544b9552e49030371b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '755354dcc381108f890e5e708d5c884d') in 0.004496 seconds
+  Import took 0.009038 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002459 seconds.
+  path: Assets/Icebergs/Scripts/PlayerCollision.cs
+  artifactKey: Guid(87a0a31f6fef0452ab5c664b62f70ea8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Icebergs/Scripts/PlayerCollision.cs using Guid(87a0a31f6fef0452ab5c664b62f70ea8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67d0f18524a40bc446ee715f5faa8e1a') in 0.004685 seconds
+  Import took 0.009283 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002361 seconds.
+  path: Assets/Icebergs/Scripts/BoatMovement.cs
+  artifactKey: Guid(e434e25021f6d4743a0ae33461125725) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Icebergs/Scripts/BoatMovement.cs using Guid(e434e25021f6d4743a0ae33461125725) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45b9b6142aff500d33c524237b9c8ffc') in 0.004607 seconds
+  Import took 0.009067 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001997 seconds.
+  path: Assets/Standard Assets/Environment/Water/Water4/Materials/Water4Simple.mat
+  artifactKey: Guid(656fde119942645aa8e062e04c119aa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Standard Assets/Environment/Water/Water4/Materials/Water4Simple.mat using Guid(656fde119942645aa8e062e04c119aa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bf725361ce9876a1bbc7b2c0771d78b') in 0.017180 seconds
+  Import took 0.021166 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004436 seconds.
+  path: Assets/fishing_boat/fishing_boat.jpg
+  artifactKey: Guid(56917e02a746322428709bb7a033ff58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/fishing_boat/fishing_boat.jpg using Guid(56917e02a746322428709bb7a033ff58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f3269d4021ad0174916ed81a0279534') in 0.691148 seconds
+  Import took 0.695882 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002208 seconds.
+  path: Assets/fishing_boat/net.jpg
+  artifactKey: Guid(56c0fd1c189ebbc4ea22d993e79a5357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/fishing_boat/net.jpg using Guid(56c0fd1c189ebbc4ea22d993e79a5357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc87a7676090b027cbf0ad1a03d3f217') in 0.007556 seconds
+  Import took 0.014257 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002801 seconds.
+  path: Assets/Icebergs/materials/New Material.mat
+  artifactKey: Guid(b84591e4085b04b38930fea909930d38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Icebergs/materials/New Material.mat using Guid(b84591e4085b04b38930fea909930d38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0f23c56874c9fbe0e191478e7163fa1') in 0.009126 seconds
+  Import took 0.014479 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003933 seconds.
+  path: Assets/Standard Assets/Environment/Water/Water4/Materials/OceanPlaneMaterial.mat
+  artifactKey: Guid(a437a9b380909fa4d98f929428f70388) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Standard Assets/Environment/Water/Water4/Materials/OceanPlaneMaterial.mat using Guid(a437a9b380909fa4d98f929428f70388) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5545bd0af4c0788339f0f8394ee4f9f5') in 0.010032 seconds
+  Import took 0.014787 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002318 seconds.
+  path: Assets/Standard Assets/Environment/Water/Water4/Prefabs/Water4Simple.prefab
+  artifactKey: Guid(843740dbe549a4a6ba9556d1b80001f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Standard Assets/Environment/Water/Water4/Prefabs/Water4Simple.prefab using Guid(843740dbe549a4a6ba9556d1b80001f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8762d0657592b0385e8e0b9a33e51e6') in 0.198997 seconds
+  Import took 0.203382 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002499 seconds.
+  path: Assets/fishing_boat/fisher.jpg
+  artifactKey: Guid(0ce9d538e3f9af5419589bc338d33ce4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/fishing_boat/fisher.jpg using Guid(0ce9d538e3f9af5419589bc338d33ce4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81d956c9584798c31e7becb85ed5ea9b') in 0.009844 seconds
+  Import took 0.013820 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006385 seconds.
+  path: Assets/fishing_boat/Materials/net.mat
+  artifactKey: Guid(4fd1a8dcfd3c4d44eb0a90f138ef092c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/fishing_boat/Materials/net.mat using Guid(4fd1a8dcfd3c4d44eb0a90f138ef092c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd000b3df1e4299f4d0fa5a899c533736') in 0.012326 seconds
+  Import took 0.016366 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.040711 seconds.
+OnLevelWasLoaded was found on GameManager
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+OnLevelWasLoaded was found on GameManager
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.53 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.987 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.11 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1727 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 185.9 MB.
+System memory in use after: 186.0 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2266.
+Total: 12.743160 ms (FindLiveObjects: 0.504909 ms CreateObjectMapping: 0.142284 ms MarkObjects: 11.775303 ms  DeleteObjects: 0.318407 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.018336 seconds.
+OnLevelWasLoaded was found on GameManager
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+OnLevelWasLoaded was found on GameManager
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  7.004 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.55 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1727 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 186.2 MB.
+System memory in use after: 186.3 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2268.
+Total: 9.297113 ms (FindLiveObjects: 3.118887 ms CreateObjectMapping: 0.234572 ms MarkObjects: 5.898208 ms  DeleteObjects: 0.038115 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005827 seconds.
+OnLevelWasLoaded was found on GameManager
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+OnLevelWasLoaded was found on GameManager
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.60 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.469 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.32 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1727 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 186.4 MB.
+System memory in use after: 186.5 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2270.
+Total: 4.081086 ms (FindLiveObjects: 0.563770 ms CreateObjectMapping: 0.136457 ms MarkObjects: 3.324557 ms  DeleteObjects: 0.054412 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006440 seconds.
+OnLevelWasLoaded was found on GameManager
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+OnLevelWasLoaded was found on GameManager
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.22 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.689 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1727 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 187.6 MB.
+System memory in use after: 187.7 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2272.
+Total: 2.167004 ms (FindLiveObjects: 0.261290 ms CreateObjectMapping: 0.069633 ms MarkObjects: 1.817293 ms  DeleteObjects: 0.017488 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.022246 seconds.
+OnLevelWasLoaded was found on GameManager
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+OnLevelWasLoaded was found on GameManager
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.58 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.774 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1727 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 186.8 MB.
+System memory in use after: 186.9 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2274.
+Total: 5.210586 ms (FindLiveObjects: 0.586917 ms CreateObjectMapping: 0.167219 ms MarkObjects: 4.391502 ms  DeleteObjects: 0.062267 ms)
+
