@@ -520,6 +520,7 @@ MonoBehaviour:
   roomListPrefab: {fileID: 1082044982988531461, guid: 9d15f0e648c9179419faac23e7a7eb20, type: 3}
   playerListPrefab: {fileID: 9165218043066380607, guid: c0ca7738330c17e4c8b60457aada17f1, type: 3}
   startGameButton: {fileID: 1413426436}
+  roomManager: {fileID: 1764365208}
   nameObject: {fileID: 0}
   allowedColors: []
   takenColors: []
@@ -5542,7 +5543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxNumberOfPlayers: 0
   currPercentForImposter: 0
-  baseImposterPercentage: 0
+  baseImposterPercentage: 50
 --- !u!1 &1771466590
 GameObject:
   m_ObjectHideFlags: 0

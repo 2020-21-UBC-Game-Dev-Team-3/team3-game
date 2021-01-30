@@ -25,6 +25,7 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
     [SerializeField] GameObject playerListPrefab;
 
     [SerializeField] GameObject startGameButton;
+    [SerializeField] RoomManager roomManager;
 
     [SerializeField] GameObject nameObject;
     public List<string> allowedColors;
@@ -61,7 +62,6 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
     void Start()
     {
         Debug.Log("Connecting to master.");
-        PhotonNetwork.ConnectUsingSettings();
     }
 
     public override void OnConnectedToMaster()
@@ -412,34 +412,43 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
 
     public void StartGame()
     {
+        roomManager.maxNumberOfPlayers = PhotonNetwork.PlayerList.Length;
         PhotonNetwork.LoadLevel(1);
     }
 
     public void Update()
     {
-        RemoveDupes();
-        if (Input.GetKeyDown("space"))
+        if (!PhotonNetwork.IsConnected)
         {
-            Debug.Log("MyColor : " + PlayerCustomProperties["color"]);
-            Debug.Log("Taken Colors 1-6");
-            Debug.Log(PhotonNetwork.MasterClient.CustomProperties["takenColor1"]);
-            Debug.Log(PhotonNetwork.MasterClient.CustomProperties["takenColor2"]);
-            Debug.Log(PhotonNetwork.MasterClient.CustomProperties["takenColor3"]);
-            Debug.Log(PhotonNetwork.MasterClient.CustomProperties["takenColor4"]);
-            Debug.Log(PhotonNetwork.MasterClient.CustomProperties["takenColor5"]);
-            Debug.Log(PhotonNetwork.MasterClient.CustomProperties["takenColor6"]);
-            Debug.Log("TakenColorList");
-            for(int x = 0; x < takenColors.Count; x++)
-        {
-            Debug.Log(takenColors[x]);
+            Debug.Log("Connecting to master.");
+            PhotonNetwork.ConnectUsingSettings();
         }
-            Debug.Log("AllowedColorsList");
-            for (int x = 0; x < allowedColors.Count; x++)
+        else
+        {
+            RemoveDupes();
+            if (Input.GetKeyDown("space"))
             {
-                Debug.Log(allowedColors[x]);
+                Debug.Log("MyColor : " + PlayerCustomProperties["color"]);
+                Debug.Log("Taken Colors 1-6");
+                Debug.Log(PhotonNetwork.MasterClient.CustomProperties["takenColor1"]);
+                Debug.Log(PhotonNetwork.MasterClient.CustomProperties["takenColor2"]);
+                Debug.Log(PhotonNetwork.MasterClient.CustomProperties["takenColor3"]);
+                Debug.Log(PhotonNetwork.MasterClient.CustomProperties["takenColor4"]);
+                Debug.Log(PhotonNetwork.MasterClient.CustomProperties["takenColor5"]);
+                Debug.Log(PhotonNetwork.MasterClient.CustomProperties["takenColor6"]);
+                Debug.Log("TakenColorList");
+                for (int x = 0; x < takenColors.Count; x++)
+                {
+                    Debug.Log(takenColors[x]);
+                }
+                Debug.Log("AllowedColorsList");
+                for (int x = 0; x < allowedColors.Count; x++)
+                {
+                    Debug.Log(allowedColors[x]);
+                }
             }
+            if (roomMenu.gameObject.activeSelf == true) { UpdateList(); }
         }
-        if (roomMenu.gameObject.activeSelf == true) { UpdateList(); }
     }
     public void TurnOnColorButtons()
     {

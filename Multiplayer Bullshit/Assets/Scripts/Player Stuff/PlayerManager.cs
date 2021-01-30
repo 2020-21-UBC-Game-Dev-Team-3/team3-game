@@ -31,7 +31,7 @@ public class PlayerManager : MonoBehaviour
     {
         Vector3 position = new Vector3(0f, 10f, 0f);
         controller = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "player"), position, Quaternion.identity, 0, new object[] { pv.ViewID });
-        Debug.Log(PhotonNetwork.NickName);
+        pv.RPC("IncrementPlayerNumber", RpcTarget.MasterClient);
         PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Elevator"), vec, Quaternion.identity);
     }
 
@@ -52,5 +52,12 @@ public class PlayerManager : MonoBehaviour
     {
         Vector3 position = new Vector3(oldController.transform.position.x, oldController.transform.position.y + 1f, oldController.transform.position.z);
         controller = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "GhostPlayer"), position, Quaternion.identity, 0, new object[] { pv.ViewID });
+    }
+
+
+    [PunRPC]
+    void IncrementPlayerNumber()
+    {
+        GameObject.FindObjectOfType<RoleRandomizer>().numberOfPlayersAddedSoFar++;
     }
 }
