@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviourPunCallbacks
 {
     [HideInInspector] public bool isConnectedToMaster;
+    [HideInInspector] public Color playerColor;
     // Start is called before the first frame update
 
     public IEnumerator EndGame()

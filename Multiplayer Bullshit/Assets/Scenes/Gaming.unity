@@ -144,7 +144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8404388821629234630, guid: 437e43706f4e8d945aa980bbba8667d4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.61
+      value: 30.2
       objectReference: {fileID: 0}
     - target: {fileID: 8404388821629234630, guid: 437e43706f4e8d945aa980bbba8667d4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -588,7 +588,7 @@ Transform:
   m_GameObject: {fileID: 393011895}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 1.450043, y: 75, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -1243,6 +1243,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 720507158956401161, guid: 080208fcd8747ad418f063a919b8ffa3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 720507158995071175, guid: 080208fcd8747ad418f063a919b8ffa3, type: 3}
       propertyPath: map
       value: 
@@ -1334,6 +1338,14 @@ PrefabInstance:
     - target: {fileID: 720507159475246924, guid: 080208fcd8747ad418f063a919b8ffa3, type: 3}
       propertyPath: m_Name
       value: Minimap System
+      objectReference: {fileID: 0}
+    - target: {fileID: 720507159475246924, guid: 080208fcd8747ad418f063a919b8ffa3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 720507160657545551, guid: 080208fcd8747ad418f063a919b8ffa3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 080208fcd8747ad418f063a919b8ffa3, type: 3}
