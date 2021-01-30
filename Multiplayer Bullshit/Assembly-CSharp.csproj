@@ -56,9 +56,11 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Player Stuff\AssassinAbility.cs" />
     <Compile Include="Assets\Scripts\UI Stuff\MenuManager.cs" />
     <Compile Include="Assets\Scripts\Game Stuff\Minigame1.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\Switch.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\ChangeCullingMask.cs" />
     <Compile Include="Assets\Scripts\Player Stuff\PlayerVision.cs" />
     <Compile Include="Assets\Scripts\Player Stuff\body.cs" />
     <Compile Include="Assets\Scripts\Player Stuff\Ghost.cs" />
@@ -70,17 +72,22 @@
     <Compile Include="Assets\Scripts\TextAlign.cs" />
     <Compile Include="Assets\Scripts\Player Stuff\Assassin.cs" />
     <Compile Include="Assets\Scripts\Game Stuff\Vent.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\DeadBody.cs" />
+    <Compile Include="Assets\Scripts\Player Stuff\Shuriken.cs" />
     <Compile Include="Assets\Scripts\Player Stuff\CameraController1.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\SwitchCount.cs" />
     <Compile Include="Assets\LifeBoatMinigame\LifeBoatGameManager.cs" />
+    <Compile Include="Assets\Scripts\Player Stuff\PlayerActionController.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\LightFlicker.cs" />
     <Compile Include="Assets\Scripts\PhotonLauncher.cs" />
     <Compile Include="Assets\LifeBoatMinigame\PassengerDrag.cs" />
     <Compile Include="Assets\Scripts\UI Stuff\Menu.cs" />
+    <Compile Include="Assets\Scripts\Player Stuff\RoleAbility.cs" />
     <Compile Include="Assets\Scripts\Game Stuff\EmergencyButton.cs" />
     <Compile Include="Assets\Scripts\UI Stuff\RoomManager.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\WinText.cs" />
     <Compile Include="Assets\Scripts\UI Stuff\RoomListItem.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\IDamageable.cs" />
     <Compile Include="Assets\Materials\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
     <Compile Include="Assets\Scripts\Player Stuff\PlayerMovementController.cs" />
     <Compile Include="Assets\Scripts\Roles\Role.cs" />
@@ -99,13 +106,6 @@
     <Compile Include="Assets\NameTextScript.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\TextManager.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
-    <Compile Include="Assets\Scripts\Player Stuff\AssassinAbility.cs" />
-    <Compile Include="Assets\Scripts\Player Stuff\Shuriken.cs" />
-    <Compile Include="Assets\Scripts\Player Stuff\PlayerActionController.cs" />
-    <Compile Include="Assets\Scripts\Player Stuff\RoleAbility.cs" />
-    <Compile Include="Assets\Scripts\Game Stuff\IDamageable.cs" />
-    <Compile Include="Assets\Scripts\Game Stuff\ChangeCullingMask.cs" />
-    <Compile Include="Assets\Scripts\Game Stuff\DeadBody.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

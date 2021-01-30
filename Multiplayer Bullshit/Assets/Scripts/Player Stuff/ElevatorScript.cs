@@ -19,6 +19,7 @@ public class ElevatorScript : MonoBehaviour
     private bool openingDoor, closingDoor, isDoorClosed, overridder, moving, cooldown;
     private int currentFloor;
     private int destination;
+    private float scale;
     void Start()
     {
 
@@ -76,11 +77,11 @@ public class ElevatorScript : MonoBehaviour
             pv.RPC("OpeningDoor", RpcTarget.All);
         }
         //door Logic
-        if (door.transform.position == doorClosed.transform.position)
+        if (door.transform.localScale.y >= 1f)
         {
             pv.RPC("DoorClosedTrue", RpcTarget.All);
         }
-        else if (door.transform.position == doorOpened.transform.position)
+        else if (door.transform.localScale.y <= 0)
         {
             pv.RPC("DoorClosedFalse", RpcTarget.All);
         }
@@ -103,11 +104,13 @@ public class ElevatorScript : MonoBehaviour
         //door movement
         if (closingDoor && !isDoorClosed)
         {
-            door.transform.position = Vector3.MoveTowards(door.transform.position, doorClosed.transform.position, 5f * Time.deltaTime);
+            scale += 0.05f;
+            door.transform.localScale = new Vector3(1f, scale, 1f);
         }
         if (openingDoor && isDoorClosed && destination == 0 && !moving)
         {
-            door.transform.position = Vector3.MoveTowards(door.transform.position, doorOpened.transform.position, 5f * Time.deltaTime);
+            scale -= 0.05f;
+            door.transform.localScale = new Vector3(1f, scale, 1f);
         }
     }
     public void Button1()
@@ -115,11 +118,11 @@ public class ElevatorScript : MonoBehaviour
         if (!buttonPressed && currentFloor != 1 && !cooldown)
         {
             pv.RPC("PressButton", RpcTarget.All);
-            pv.RPC("StartMove", RpcTarget.All,1);
+            pv.RPC("StartMove", RpcTarget.All, 1);
             if (pv.IsMine) { StartCoroutine(ElevatorTexting("Moving to floor 1")); }
 
         }
-        else if(currentFloor != 1 && pv.IsMine)
+        else if (currentFloor != 1 && pv.IsMine)
         {
             StartCoroutine(ElevatorTexting("Elevator is busy"));
         }
@@ -133,7 +136,7 @@ public class ElevatorScript : MonoBehaviour
     public void Button2()
     {
         if (!buttonPressed && currentFloor != 2 && !cooldown)
-        {            
+        {
             pv.RPC("PressButton", RpcTarget.All);
             pv.RPC("StartMove", RpcTarget.All, 2);
             if (pv.IsMine) { StartCoroutine(ElevatorTexting("Moving to floor 2")); }
@@ -147,9 +150,9 @@ public class ElevatorScript : MonoBehaviour
     public void Button3()
     {
         if (!buttonPressed && currentFloor != 3 && !cooldown)
-        {            
+        {
             pv.RPC("PressButton", RpcTarget.All);
-            pv.RPC("StartMove", RpcTarget.All,3);
+            pv.RPC("StartMove", RpcTarget.All, 3);
             if (pv.IsMine) { StartCoroutine(ElevatorTexting("Moving to floor 3")); }
         }
         else if (currentFloor != 3 && pv.IsMine)
@@ -170,11 +173,11 @@ public class ElevatorScript : MonoBehaviour
         pv.RPC("ClosingTrue", RpcTarget.All);
         yield return new WaitForSeconds(4);
         pv.RPC("ClosingFalse", RpcTarget.All);
-        if(floorNum == 1)
+        if (floorNum == 1)
         {
             pv.RPC("Destination1", RpcTarget.All);
         }
-        else if(floorNum == 2)
+        else if (floorNum == 2)
         {
             pv.RPC("Destination2", RpcTarget.All);
         }
@@ -281,7 +284,7 @@ public class ElevatorScript : MonoBehaviour
         isDoorClosed = false;
     }
     IEnumerator OpenDoor()
-    { 
+    {
         pv.RPC("Destination0", RpcTarget.All);
         pv.RPC("OpeningTrue", RpcTarget.All);
         yield return new WaitForSeconds(6);
@@ -291,3 +294,5 @@ public class ElevatorScript : MonoBehaviour
     }
 
 }
+
+
