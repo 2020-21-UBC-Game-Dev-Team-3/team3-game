@@ -195,36 +195,21 @@ public class PlayerMovementController : MonoBehaviour {
   }
 
 
-  //void Interact() {
-  //  if (Input.GetMouseButtonDown(0)) {
-  //    Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-
-  //    if (Physics.Raycast(ray, out RaycastHit hit)) {
-  //      if (hit.transform.CompareTag("Interactable")) {
-  //        if (!hit.transform.gameObject.activeInHierarchy) return;
-  //        Interactable interactable = hit.collider.GetComponent<Interactable>();
-  //        ChooseInteractionEvent(interactable);
-  //      }
-        
-  //    }
-  //  }
-  //}
-
   void ChooseInteractionEvent(Interactable interactable) {
-    if (interactable.GetInteractableName() == "Emergency button") {
+    if (interactable.interactableName == "Emergency button") {
       pv.RPC("TurnOnEmergencyPopUp", RpcTarget.All);
     }
-    if (interactable.GetInteractableName() == "Minigame1" && interactable.transform.GetChild(0).gameObject.activeSelf == true)
+    if (interactable.interactableName == "Minigame1" && interactable.transform.GetChild(0).gameObject.activeSelf == true)
     {
       PlayerIsSwitchingScene();
       SceneManager.LoadScene(sceneName: "LifeBoat Minigame", LoadSceneMode.Single);
     }
-    if (interactable.GetInteractableName() == "Minigame2" && interactable.transform.GetChild(0).gameObject.activeSelf == true)
+    if (interactable.interactableName == "Minigame2" && interactable.transform.GetChild(0).gameObject.activeSelf == true)
     {
       PlayerIsSwitchingScene();
       SceneManager.LoadScene(sceneName: "Lights Minigame", LoadSceneMode.Single);
     }
-    if (interactable.GetInteractableName() == "Vent" && interactable.transform.GetChild(0).gameObject.activeSelf == true)
+    if (interactable.interactableName == "Vent" && interactable.transform.GetChild(0).gameObject.activeSelf == true)
     {
       EnterVent(interactable);
     }

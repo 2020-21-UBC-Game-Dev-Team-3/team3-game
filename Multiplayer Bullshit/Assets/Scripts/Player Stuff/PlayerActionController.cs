@@ -5,7 +5,8 @@ using Photon.Pun;
 
 public class PlayerActionController : MonoBehaviour, IDamageable
 {
-    [SerializeField] GameObject emergencyMeetingEvent;
+    [SerializeField] GameObject emergencyMeetingImage;
+    [SerializeField] GameObject bodyReportedImage;
 
     MapManager mm;
 
@@ -63,28 +64,48 @@ public class PlayerActionController : MonoBehaviour, IDamageable
     void Interact()
     {
         if (Input.GetKeyDown("e"))
-        { 
-            if (!interactable.indicator.activeSelf) return;
+        {
+            if (!interactable.transform.GetChild(0).gameObject.activeInHierarchy) return;
             ChooseInteractionEvent(interactable);
         }
     }
 
     void ChooseInteractionEvent(Interactable interactable)
     {
-        if (interactable.GetInteractableName() == "Emergency button" || interactable.GetInteractableName() == "Dead body")
+        switch (interactable.interactableName)
         {
-            pv.RPC("TurnOnEmergencyPopUp", RpcTarget.All);
+            case "Emergency button":
+                pv.RPC("TurnOnEmergencyPopUp", RpcTarget.All, "Emergency meeting");
+                break;
+
+            case "Dead body":
+                pv.RPC("TurnOnEmergencyPopUp", RpcTarget.All, "Body reported");
+                break;
+
+            default:
+                Debug.Log("not applicable");
+                break;
         }
     }
 
-    [PunRPC]
-    public void TurnOnEmergencyPopUp() => StartCoroutine(ShowEmergencyPopUp());
 
-    IEnumerator ShowEmergencyPopUp()
+    [PunRPC]
+    public void TurnOnEmergencyPopUp(string eventName)
     {
-        emergencyMeetingEvent.SetActive(true);
+        if (eventName == "Emergency meeting")
+        {
+            StartCoroutine(ShowEmergencyPopUp(emergencyMeetingImage));
+        } else if (eventName == "Body reported")
+        {
+            StartCoroutine(ShowEmergencyPopUp(bodyReportedImage));
+        }
+    }
+
+    IEnumerator ShowEmergencyPopUp(GameObject eventImage)
+    {
+        eventImage.SetActive(true);
         yield return new WaitForSeconds(2);
-        emergencyMeetingEvent.SetActive(false);
+        eventImage.SetActive(false);
     }
 
     public void TakeHit() => pv.RPC("RPC_TakeHit", RpcTarget.All);

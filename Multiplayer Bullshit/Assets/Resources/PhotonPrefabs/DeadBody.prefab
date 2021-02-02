@@ -241,13 +241,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2308636091230592425}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -3.37, y: 1.3, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 6861532341014901332}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &7920097717684208040
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -288,7 +288,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8eff91ff7db01ca469d38696189822aa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1f11abdb634cccb498a554675e4488ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -706,7 +706,7 @@ Animator:
   m_GameObject: {fileID: 6085172216670742766}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7f6ec6ede27ab1541a9b4759a17e607f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -727,10 +727,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75a1627b4f71c34a97ca28c582252de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indicatorOn: 0
   interactableName: 
   interactableTransform: {fileID: 6861532341014901332}
   indicator: {fileID: 2308636091230592425}
-  radius: 0
 --- !u!65 &-5473387900840151848
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -5,11 +5,7 @@ using Photon.Pun;
 
 public class EmergencyButton : Interactable
 {
-
-    void Start()
-    {
-        interactableName = "Emergency button";
-    }
+    void Start() => interactableName = "Emergency button";
 
 
     //bool isActivated = false;

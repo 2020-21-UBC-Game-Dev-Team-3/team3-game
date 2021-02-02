@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotonUnityNetworking.Utilities", "PhotonUnityNetworking.Utilities.csproj", "{075C27F3-9C30-73CE-7C36-3998FE589435}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{19DB90F3-4E9A-D95D-96E5-AC5AB35CDDE8}"
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotonRealtime", "PhotonRealtime.csproj", "{E72970EB-1458-648A-2760-555806AA96FF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{BA6142C4-A693-1AED-C55F-011C260E4B4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OEBIF", "OEBIF.csproj", "{8C4196DD-4C41-B079-F83B-5AFE81EB09DB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotonUnityNetworking.Editor", "PhotonUnityNetworking.Editor.csproj", "{D80AF8BC-B004-B734-9054-57262BA747B9}"
 EndProject
@@ -51,6 +53,10 @@ Global
 		{BA6142C4-A693-1AED-C55F-011C260E4B4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA6142C4-A693-1AED-C55F-011C260E4B4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA6142C4-A693-1AED-C55F-011C260E4B4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C4196DD-4C41-B079-F83B-5AFE81EB09DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C4196DD-4C41-B079-F83B-5AFE81EB09DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C4196DD-4C41-B079-F83B-5AFE81EB09DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C4196DD-4C41-B079-F83B-5AFE81EB09DB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D80AF8BC-B004-B734-9054-57262BA747B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D80AF8BC-B004-B734-9054-57262BA747B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D80AF8BC-B004-B734-9054-57262BA747B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
