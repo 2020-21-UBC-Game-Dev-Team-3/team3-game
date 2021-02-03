@@ -11692,6 +11692,18 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1950028551646165440, guid: bee8e4b30c2a27a4c8b469328a3be3bf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.274
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950028551646165440, guid: bee8e4b30c2a27a4c8b469328a3be3bf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.8588
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950028551646165440, guid: bee8e4b30c2a27a4c8b469328a3be3bf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.5563
+      objectReference: {fileID: 0}
     - target: {fileID: 2028447020883082894, guid: bee8e4b30c2a27a4c8b469328a3be3bf, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -11966,7 +11978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5959451694759991764, guid: bee8e4b30c2a27a4c8b469328a3be3bf, type: 3}
       propertyPath: m_Name
-      value: ColorShip final 1
+      value: Ship
       objectReference: {fileID: 0}
     - target: {fileID: 5959451694759991764, guid: bee8e4b30c2a27a4c8b469328a3be3bf, type: 3}
       propertyPath: m_StaticEditorFlags
