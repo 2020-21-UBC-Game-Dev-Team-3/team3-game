@@ -103,6 +103,7 @@
     <Compile Include="Assets\Scripts\Game Stuff\MapManager.cs" />
     <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
     <Compile Include="Assets\Scripts\Game Stuff\MapPopUp.cs" />
+    <Compile Include="Assets\Main Assets\AllSkyFree\AllSkyFree_Menu.cs" />
     <Compile Include="Assets\Scripts\Player Stuff\KillMechanic.cs" />
     <Compile Include="Assets\Scripts\Roles\RoleRandomizer.cs" />
     <Compile Include="Assets\Icebergs\Scripts\PlayerCollision.cs" />
@@ -110,7 +111,6 @@
     <Compile Include="Assets\NameTextScript.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\TextManager.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
-    <Compile Include="Assets\Main Assets\AllSkyFree\AllSkyFree_Menu.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

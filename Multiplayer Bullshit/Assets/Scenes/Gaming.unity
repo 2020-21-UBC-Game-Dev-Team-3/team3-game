@@ -12488,6 +12488,26 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6806434837280720646, guid: bee8e4b30c2a27a4c8b469328a3be3bf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.3945034
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806434837280720646, guid: bee8e4b30c2a27a4c8b469328a3be3bf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806434837280720646, guid: bee8e4b30c2a27a4c8b469328a3be3bf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9188945
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806434837280720646, guid: bee8e4b30c2a27a4c8b469328a3be3bf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806434837280720646, guid: bee8e4b30c2a27a4c8b469328a3be3bf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 133.53
+      objectReference: {fileID: 0}
     - target: {fileID: 6806434837334528856, guid: bee8e4b30c2a27a4c8b469328a3be3bf, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -12759,6 +12779,18 @@ PrefabInstance:
     - target: {fileID: 6806890663563525632, guid: bee8e4b30c2a27a4c8b469328a3be3bf, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808315746500666557, guid: bee8e4b30c2a27a4c8b469328a3be3bf, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808315746500666557, guid: bee8e4b30c2a27a4c8b469328a3be3bf, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808315746500666557, guid: bee8e4b30c2a27a4c8b469328a3be3bf, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6812797821967676452, guid: bee8e4b30c2a27a4c8b469328a3be3bf, type: 3}
       propertyPath: m_StaticEditorFlags
