@@ -6,6 +6,8 @@ using Photon.Pun;
 public class PlayerActionController : MonoBehaviour, IDamageable
 {
     [SerializeField] GameObject emergencyMeetingEvent;
+    [SerializeField] GameObject votingManager;
+    [SerializeField] CameraController cameraController;
 
     MapManager mm;
 
@@ -85,6 +87,9 @@ public class PlayerActionController : MonoBehaviour, IDamageable
         emergencyMeetingEvent.SetActive(true);
         yield return new WaitForSeconds(2);
         emergencyMeetingEvent.SetActive(false);
+        votingManager.SetActive(true);
+        cameraController.enabled = false;
+        GetComponent<PlayerMovementController>().enabled = false;
     }
 
     public void TakeHit() => pv.RPC("RPC_TakeHit", RpcTarget.All);
