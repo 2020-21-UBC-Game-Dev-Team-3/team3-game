@@ -95,6 +95,7 @@
     <Compile Include="Assets\Scripts\Roles\Role.cs" />
     <Compile Include="Assets\Scripts\Game Stuff\Minigame2.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\ClickManager.cs" />
+    <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
     <Compile Include="Assets\Scripts\Player Stuff\PlayerManager.cs" />
     <Compile Include="Assets\Icebergs\Scripts\Boat.cs" />
     <Compile Include="Assets\Scripts\Player Stuff\Knife.cs" />
@@ -111,7 +112,6 @@
     <Compile Include="Assets\NameTextScript.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\TextManager.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
-    <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
