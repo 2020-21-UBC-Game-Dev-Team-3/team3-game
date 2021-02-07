@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.31988475, g: 0.2581039, b: 0.36732426, a: 1}
+  m_IndirectSpecularColor: {r: 0.3198708, g: 0.25813186, b: 0.36720064, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13410,9 +13410,52 @@ PrefabInstance:
       propertyPath: m_Name
       value: Emergency Button Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 9111592499330193202, guid: 5012b9cbb1389b840918a2c3de78aff7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111592499330193202, guid: 5012b9cbb1389b840918a2c3de78aff7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111592499330193202, guid: 5012b9cbb1389b840918a2c3de78aff7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111592499330193202, guid: 5012b9cbb1389b840918a2c3de78aff7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 9111592499330193212, guid: 5012b9cbb1389b840918a2c3de78aff7, type: 3}
       propertyPath: viewIdField
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9111592499330193215, guid: 5012b9cbb1389b840918a2c3de78aff7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5012b9cbb1389b840918a2c3de78aff7, type: 3}
+--- !u!1 &9111592498729541579 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6848128453926236201, guid: 5012b9cbb1389b840918a2c3de78aff7, type: 3}
+  m_PrefabInstance: {fileID: 9111592498729541578}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9111592498729541580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9111592498729541579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0.98039216, g: 0.22587812, b: 0, a: 1}
+  outlineWidth: 4
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

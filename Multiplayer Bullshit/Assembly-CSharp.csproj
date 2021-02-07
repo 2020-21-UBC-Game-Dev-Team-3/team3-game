@@ -111,6 +111,7 @@
     <Compile Include="Assets\NameTextScript.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\TextManager.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -120,6 +121,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+     <None Include="Assets\QuickOutline\Resources\Shaders\OutlineMask.shader" />
      <None Include="Assets\Materials\Photon\PhotonLibs\WebSocket\websocket-sharp.dll" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\Main Assets\AllSkyFree\AllSkyFree_Readme.txt" />
@@ -132,6 +134,7 @@
      <None Include="Assets\Materials\Photon\PhotonLibs\changes-library.txt" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\QuickOutline\Readme.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\Materials\Photon\PhotonUnityNetworking\readme.txt" />
      <None Include="Assets\Materials\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll" />
@@ -142,6 +145,7 @@
      <None Include="Assets\Materials\Photon\PhotonLibs\Photon3Unity3D.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\Materials\Photon\PhotonUnityNetworking\link.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
@@ -780,10 +784,6 @@
     <ProjectReference Include="PhotonUnityNetworking.csproj">
       <Project>{87E9A2D8-2AB8-43FB-11D9-D50FDC310B67}</Project>
       <Name>PhotonUnityNetworking</Name>
-    </ProjectReference>
-    <ProjectReference Include="OEBIF.csproj">
-      <Project>{8C4196DD-4C41-B079-F83B-5AFE81EB09DB}</Project>
-      <Name>OEBIF</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonChat.csproj">
       <Project>{038CBCEE-1043-9425-F050-1A14F0280A47}</Project>

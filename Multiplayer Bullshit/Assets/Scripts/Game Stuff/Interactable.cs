@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using Photon.Pun;
-using cakeslice;
 
 public abstract class Interactable : MonoBehaviourPunCallbacks
 {    
@@ -10,6 +9,10 @@ public abstract class Interactable : MonoBehaviourPunCallbacks
 
     [SerializeField] GameObject indicator;
 
+    Outline outline;
+
+    void Awake() => outline = GetComponent<Outline>();
+
     public override void OnEnable() => indicator = interactableTransform.GetChild(0).gameObject;
 
     private void OnTriggerEnter(Collider other)
@@ -17,6 +20,7 @@ public abstract class Interactable : MonoBehaviourPunCallbacks
         if (other.CompareTag("Player"))
         {
             indicator.SetActive(true);
+            outline.enabled = true;
         }
     }
 
@@ -25,6 +29,7 @@ public abstract class Interactable : MonoBehaviourPunCallbacks
         if (other.CompareTag("Player"))
         {
             indicator.SetActive(false);
+            outline.enabled = false;
         }
     }
 
