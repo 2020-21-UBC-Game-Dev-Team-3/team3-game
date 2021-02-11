@@ -3,7 +3,12 @@ guid: 3905e87ad90d0fe428db54c64f566de3
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Menu_stand_05Mat
+    second: {fileID: 2100000, guid: 435a720a816b8d84e88cdc226953a5de, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

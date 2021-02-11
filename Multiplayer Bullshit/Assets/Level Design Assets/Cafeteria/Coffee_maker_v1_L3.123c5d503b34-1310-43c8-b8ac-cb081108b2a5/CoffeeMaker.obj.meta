@@ -3,7 +3,47 @@ guid: 696d62f55940b1a4f93062571680f656
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Coffee_maker_lacemary_boltsMat
+    second: {fileID: 2100000, guid: 0848517bb354bc44c9ba641316445392, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Coffee_maker_lacemary_corpusMat
+    second: {fileID: 2100000, guid: 53920891c4f69054ebfd8a56fe0afb87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Coffee_maker_lacemary_cupMat
+    second: {fileID: 2100000, guid: 18788e21c332cc546a1791cb704e776b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Coffee_maker_lacemary_glassMat
+    second: {fileID: 2100000, guid: 16848af5d6190114d85b424969b8052f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Coffee_maker_lacemary_logoMat
+    second: {fileID: 2100000, guid: 0890e3b3ea5f9e341a4e49c1448f37ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Coffee_maker_lacemary_panelsMat
+    second: {fileID: 2100000, guid: d6d48f349c9be4a44bfa30684ec76ab1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Coffee_maker_lacemary_red_lampMat
+    second: {fileID: 2100000, guid: 431639a97011c9240b1ee1580035c931, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Coffee_maker_lacemary_ring_metalMat
+    second: {fileID: 2100000, guid: 0791ebb1c2e1c9c4c8bd69e7d2523ab9, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
