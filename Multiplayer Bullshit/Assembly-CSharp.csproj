@@ -113,6 +113,9 @@
      <Compile Include="Assets\NameTextScript.cs" />
      <Compile Include="Assets\Lights Minigame Assets\Scripts\TextManager.cs" />
      <Compile Include="Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
+     <Compile Include="Assets\RhythmTrapMinigame\KeyActivateScript.cs" />
+     <Compile Include="Assets\RhythmTrapMinigame\NoteScript.cs" />
+     <Compile Include="Assets\RhythmTrapMinigame\ResetScript.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Materials\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

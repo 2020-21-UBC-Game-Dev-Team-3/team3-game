@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/OLD Rhythm Trap Minigame.unity
+- path: Assets/Scenes/Rhythm Trap Minigame.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
