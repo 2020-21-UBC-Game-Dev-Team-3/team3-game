@@ -13,6 +13,8 @@ public class KeyActivateScript : MonoBehaviour
     public bool createMode;
     public GameObject n;
 
+    public bool keyDown;
+
     void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -27,6 +29,10 @@ public class KeyActivateScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (keyDown)
+        {
+            return;
+        }
 
         if (createMode) {
             if(Input.GetKeyDown(key)){

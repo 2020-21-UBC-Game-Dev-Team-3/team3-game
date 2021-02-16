@@ -116,6 +116,10 @@
      <Compile Include="Assets\NameTextScript.cs" />
      <Compile Include="Assets\Lights Minigame Assets\Scripts\TextManager.cs" />
      <Compile Include="Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
+     <Compile Include="Assets\Trap Chance Minigame\CursorScript.cs" />
+     <Compile Include="Assets\Trap Chance Minigame\TrapChanceScript.cs" />
+     <Compile Include="Assets\Trap Chance Minigame\HighlightScript.cs" />
+     <Compile Include="Assets\RhythmTrapMinigame\RhythmManager.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Materials\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -149,73 +153,73 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
  <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+ <HintPath>C:/Users/Adrienne/Desktop/Amoongus/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>C:/Users/Adrienne/Desktop/Amoongus/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Cinemachine">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ <HintPath>C:/Users/Adrienne/Desktop/Amoongus/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Universal.Shaders">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+ <HintPath>C:/Users/Adrienne/Desktop/Amoongus/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>C:/Users/Adrienne/Desktop/Amoongus/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.Editor">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+ <HintPath>C:/Users/Adrienne/Desktop/Amoongus/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.InputSystem">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
+ <HintPath>C:/Users/Adrienne/Desktop/Amoongus/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.Runtime">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+ <HintPath>C:/Users/Adrienne/Desktop/Amoongus/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/Adrienne/Desktop/Amoongus/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Universal.Runtime">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+ <HintPath>C:/Users/Adrienne/Desktop/Amoongus/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Universal.Editor">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+ <HintPath>C:/Users/Adrienne/Desktop/Amoongus/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/Adrienne/Desktop/Amoongus/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Searcher.Editor">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
+ <HintPath>C:/Users/Adrienne/Desktop/Amoongus/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>C:/Users/Adrienne/Desktop/Amoongus/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>C:/Users/Adrienne/Desktop/Amoongus/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+ <HintPath>C:/Users/Adrienne/Desktop/Amoongus/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ <HintPath>C:/Users/Adrienne/Desktop/Amoongus/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.cinemachine.editor">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ <HintPath>C:/Users/Adrienne/Desktop/Amoongus/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ <HintPath>C:/Users/Adrienne/Desktop/Amoongus/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ShaderGraph.Editor">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+ <HintPath>C:/Users/Adrienne/Desktop/Amoongus/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+ <HintPath>C:/Users/Adrienne/Desktop/Amoongus/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/Adrienne/Desktop/Amoongus/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/Adrienne/Desktop/Amoongus/team3-game/Multiplayer Bullshit/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -401,10 +405,10 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Assets/Materials/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
+ <HintPath>C:/Users/Adrienne/Desktop/Amoongus/team3-game/Multiplayer Bullshit/Assets/Materials/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
  </Reference>
  <Reference Include="websocket-sharp">
- <HintPath>C:/Users/Nafis20/Desktop/Gaming/team3-game/Multiplayer Bullshit/Assets/Materials/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
+ <HintPath>C:/Users/Adrienne/Desktop/Amoongus/team3-game/Multiplayer Bullshit/Assets/Materials/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.12f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
