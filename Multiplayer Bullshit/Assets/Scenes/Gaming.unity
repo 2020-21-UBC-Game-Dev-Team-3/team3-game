@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.31988475, g: 0.2581039, b: 0.36732426, a: 1}
+  m_IndirectSpecularColor: {r: 0.31985432, g: 0.2581995, b: 0.367262, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4135,6 +4135,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4171673715148964507, guid: 3617644022741da46ab78e3235ecc3b0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4171673715509042784, guid: 3617644022741da46ab78e3235ecc3b0, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -4203,6 +4207,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7ab2124270c19ac478a102c5091bdadb, type: 2}
+    - target: {fileID: 4171673715619388471, guid: 3617644022741da46ab78e3235ecc3b0, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3617644022741da46ab78e3235ecc3b0, type: 3}
 --- !u!1 &675085800 stripped
@@ -4786,6 +4794,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8384753810834526848, guid: c0a258fa4afc1944fb8946a749a96186, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8384753810834526848, guid: c0a258fa4afc1944fb8946a749a96186, type: 3}
+      propertyPath: m_TagString
+      value: Indicator
+      objectReference: {fileID: 0}
     - target: {fileID: 8384753811824461224, guid: c0a258fa4afc1944fb8946a749a96186, type: 3}
       propertyPath: m_IsTrigger
       value: 0
@@ -7806,6 +7822,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Interactable
       objectReference: {fileID: 0}
+    - target: {fileID: 8356006252682367651, guid: c3baca3fa01e68d40bc3d2f1d2be183d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356006253856078514, guid: c3baca3fa01e68d40bc3d2f1d2be183d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3baca3fa01e68d40bc3d2f1d2be183d, type: 3}
 --- !u!1 &1321008266 stripped
@@ -9202,6 +9226,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 320287544404811119, guid: 2c9e380300f546b4785d821c8d836e23, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 320287545107383728, guid: 2c9e380300f546b4785d821c8d836e23, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 320287545979273128, guid: 2c9e380300f546b4785d821c8d836e23, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -9499,6 +9531,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 352089273624992198, guid: 6f489236fbe15534bbc73d019ad933ae, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 352089273668442649, guid: 6f489236fbe15534bbc73d019ad933ae, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -11712,6 +11748,10 @@ PrefabInstance:
     - target: {fileID: 1352202193721585256, guid: bee8e4b30c2a27a4c8b469328a3be3bf, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1389935784254635294, guid: bee8e4b30c2a27a4c8b469328a3be3bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1389935784254635294, guid: bee8e4b30c2a27a4c8b469328a3be3bf, type: 3}
       propertyPath: m_StaticEditorFlags

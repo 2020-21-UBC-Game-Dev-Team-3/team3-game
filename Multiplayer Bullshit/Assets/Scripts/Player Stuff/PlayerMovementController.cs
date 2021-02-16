@@ -24,13 +24,6 @@ public class PlayerMovementController : MonoBehaviour {
   public GameObject[] interactables;
   static bool switched;
 
-  // venting stuff
-  private bool inVent;
-  public Transform Vent1Pos;
-  public Transform Vent2Pos;
-  public Transform Vent3Pos;
-  private float threshold = 1.0f; //magic number but it works and idk what else to do
-  private float thresholdSquared;
 
   //public CharacterController controller;
 
@@ -62,17 +55,8 @@ public class PlayerMovementController : MonoBehaviour {
     callElevatorButton2 = GameObject.Find("CallFloor2Button");
     callElevatorButton3 = GameObject.Find("CallFloor3Button");
 
-    interactables = GameObject.FindGameObjectsWithTag("Interactable");
-    foreach (GameObject interactable in interactables) {
-      interactable.SetActive(true);
-      interactable.transform.GetChild(0).gameObject.SetActive(false);
-    }
-    //For venting
-    inVent = false;
-    Vent1Pos = GameObject.FindGameObjectWithTag("Vent1Pos").transform;
-    Vent2Pos = GameObject.FindGameObjectWithTag("Vent2Pos").transform;
-    Vent3Pos = GameObject.FindGameObjectWithTag("Vent3Test").transform;
-    thresholdSquared = threshold * threshold;
+
+  
     ElevatorStation = FindClosestStation();
     ElevatorCallName = FindClosestStation().name;
     ElevatorButtonsOff();
@@ -91,7 +75,7 @@ public class PlayerMovementController : MonoBehaviour {
 
   // Update is called once per frame
   void Update() {
-    if (!switched && !inVent) {
+    if (!switched) {
       GetComponent<Animator>().enabled = true;
       //Interact();
       //This is for elevator buttons
@@ -194,27 +178,6 @@ public class PlayerMovementController : MonoBehaviour {
     return closest;
   }
 
-
-  void ChooseInteractionEvent(Interactable interactable) {
-    if (interactable.interactableName == "Emergency button") {
-      pv.RPC("TurnOnEmergencyPopUp", RpcTarget.All);
-    }
-    if (interactable.interactableName == "Minigame1" && interactable.transform.GetChild(0).gameObject.activeSelf == true)
-    {
-      PlayerIsSwitchingScene();
-      SceneManager.LoadScene(sceneName: "LifeBoat Minigame", LoadSceneMode.Single);
-    }
-    if (interactable.interactableName == "Minigame2" && interactable.transform.GetChild(0).gameObject.activeSelf == true)
-    {
-      PlayerIsSwitchingScene();
-      SceneManager.LoadScene(sceneName: "Lights Minigame", LoadSceneMode.Single);
-    }
-    if (interactable.interactableName == "Vent" && interactable.transform.GetChild(0).gameObject.activeSelf == true)
-    {
-      EnterVent(interactable);
-    }
-  }
-
   //[PunRPC]
   //public void TurnOnEmergencyPopUp() {
   //  StartCoroutine(ShowEmergencyPopUp());
@@ -230,62 +193,7 @@ public class PlayerMovementController : MonoBehaviour {
     GetComponent<Animator>().enabled = false;
         Debug.Log("check2");
 
-    if (inVent) {
-            Debug.Log("check3");
-      CurrentlyInVent();
-    }
   }
-
-  void CurrentlyInVent() {
-        Debug.Log("check4");
-    if (Input.GetKeyDown("space")) {
-            Debug.Log("owo");
-      if ((transform.position - Vent1Pos.transform.position).sqrMagnitude < thresholdSquared) {
-        transform.position = Vent2Pos.transform.position;
-      } else if ((transform.position - Vent2Pos.transform.position).sqrMagnitude < thresholdSquared) {
-        transform.position = Vent3Pos.transform.position;
-      } else if ((transform.position - Vent3Pos.transform.position).sqrMagnitude < thresholdSquared) {
-        transform.position = Vent1Pos.transform.position;
-      }
-
-    } else if (Input.GetKeyDown("a") || Input.GetKeyDown("w") || Input.GetKeyDown("d") || Input.GetKeyDown("s")) {
-      pv.RPC("stopInvis", RpcTarget.All);
-      inVent = false;
-    }
-  }
-
-  void EnterVent(Interactable interactable) {
-    foreach (GameObject interactable2 in interactables) {
-      interactable2.SetActive(true);
-      interactable2.transform.GetChild(0).gameObject.SetActive(false);
-    }
-
-    inVent = true;
-    transform.position = interactable.transform.GetChild(1).gameObject.transform.position;
-    pv.RPC("turnInvis", RpcTarget.All);
-
-  }
-
-   [PunRPC]
-   void turnInvis()//Interactable interactable)
-   {
-
-        //transform.position = interactable.transform.GetChild(1).gameObject.transform.position;
-        transform.GetChild(0).gameObject.SetActive(false);
-        transform.GetChild(1).gameObject.SetActive(false);
-        transform.GetChild(2).gameObject.SetActive(false);
-        transform.GetChild(3).gameObject.SetActive(false);
-   }
-   [PunRPC]
-   void stopInvis()//Interactable interactable)
-   {
-
-        //transform.position = interactable.transform.GetChild(1).gameObject.transform.position;
-        transform.GetChild(0).gameObject.SetActive(true);
-        transform.GetChild(1).gameObject.SetActive(true);
-        transform.GetChild(2).gameObject.SetActive(true);
-        transform.GetChild(3).gameObject.SetActive(true);
-   }
 
     void PlayerIsSwitchingScene()
     {
@@ -303,7 +211,7 @@ public class PlayerMovementController : MonoBehaviour {
     }
 
     void PlayerMovement() {
-        if (!switched && !inVent)
+        if (!switched)
         {
 
             float horizontal = Input.GetAxisRaw("Horizontal");
