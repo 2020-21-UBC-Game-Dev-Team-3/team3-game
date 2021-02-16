@@ -12,7 +12,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable
 
     Interactable interactable = null;
 
-    PhotonView pv;
+    public PhotonView pv;
 
     PlayerManager pm;
 

@@ -2,7 +2,7 @@
 using Photon.Pun;
 
 public abstract class Interactable : MonoBehaviourPunCallbacks
-{    
+{
     public string interactableName;
 
     public Transform interactableTransform;
@@ -17,7 +17,7 @@ public abstract class Interactable : MonoBehaviourPunCallbacks
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && other.gameObject.GetComponent<PlayerActionController>().pv.IsMine)
         {
             indicator.SetActive(true);
             outline.enabled = true;
@@ -26,7 +26,7 @@ public abstract class Interactable : MonoBehaviourPunCallbacks
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && other.gameObject.GetComponent<PlayerActionController>().pv.IsMine)
         {
             indicator.SetActive(false);
             outline.enabled = false;
