@@ -30,8 +30,6 @@ public class TargetMovement : MonoBehaviour
             randomPosition = new Vector2(Random.Range(-670,1070), Random.Range(-1050,-100));
            // Debug.Log(randomPosition);
             timer = 0f;
-            Debug.Log(Random.Range(-670,1070));
-            Debug.Log(Random.Range(-1050,-100));
 
         }
       
