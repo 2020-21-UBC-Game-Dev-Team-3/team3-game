@@ -60,6 +60,7 @@
     <Compile Include="Assets\Icebergs\Scripts\BoatMovement.cs" />
     <Compile Include="Assets\Scripts\UI Stuff\MenuManager.cs" />
     <Compile Include="Assets\Scripts\Game Stuff\Minigame1.cs" />
+    <Compile Include="Assets\DartsMinigame\Targets\scripts\RandomNumberGenerator.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\Switch.cs" />
     <Compile Include="Assets\Scripts\Game Stuff\ChangeCullingMask.cs" />
     <Compile Include="Assets\Scripts\Player Stuff\PlayerVision.cs" />
@@ -114,7 +115,7 @@
     <Compile Include="Assets\Lights Minigame Assets\Scripts\TextManager.cs" />
     <Compile Include="Assets\DartsMinigame\Targets\scripts\TargetMovement.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
-    <Compile Include="Assets\DartsMinigame\Targets\scripts\RandomNumberGenerator.cs" />
+    <Compile Include="Assets\DartsMinigame\Targets\scripts\DartsPointSystem.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

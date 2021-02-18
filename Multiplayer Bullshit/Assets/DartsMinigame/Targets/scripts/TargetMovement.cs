@@ -18,6 +18,7 @@ public class TargetMovement : MonoBehaviour
         // Debug.Log(screenBounds);
         randomPosition = new Vector2(Random.Range(-670, 1070), Random.Range(-1050, -100));
         speed = Random.Range(50, 200);
+        transform.position = new Vector2(Random.Range(-670, 1070), Random.Range(-1050, -100));
     }
 
     // Update is called once per frame
