@@ -79,6 +79,7 @@
     <Compile Include="Assets\Lights Minigame Assets\Scripts\SwitchCount.cs" />
     <Compile Include="Assets\Icebergs\Scripts\CameraController.cs" />
     <Compile Include="Assets\LifeBoatMinigame\LifeBoatGameManager.cs" />
+    <Compile Include="Assets\DartsMinigame\Targets\scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Player Stuff\PlayerActionController.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\LightFlicker.cs" />
     <Compile Include="Assets\Scripts\PhotonLauncher.cs" />
@@ -111,7 +112,9 @@
     <Compile Include="Assets\Materials\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
     <Compile Include="Assets\NameTextScript.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\TextManager.cs" />
+    <Compile Include="Assets\DartsMinigame\Targets\scripts\TargetMovement.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\DartsMinigame\Targets\scripts\RandomNumberGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
