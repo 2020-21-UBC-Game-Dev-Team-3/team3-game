@@ -94,7 +94,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: d7644b5a03c7442cd860c337d08e61c6, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -226,7 +226,7 @@ Material:
     - _IridescenceThickness: 1
     - _LinkDetailsWithBase: 0
     - _MaterialID: 1
-    - _Metallic: 0.45626342
+    - _Metallic: 0.673
     - _Mode: 0
     - _NormalMapSpace: 0
     - _NormalScale: 1
@@ -242,7 +242,7 @@ Material:
     - _ReceivesSSR: 1
     - _RefractionModel: 0
     - _SSRefractionProjectionModel: 0
-    - _Smoothness: 0.6
+    - _Smoothness: 0.094
     - _SmoothnessRemapMax: 0.6
     - _SmoothnessRemapMin: 0
     - _SmoothnessTextureChannel: 0

@@ -3,7 +3,22 @@ guid: fe86afaa145060a4c86e06e2c2c21485
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ligne_roset_snowdonia_large_settee_main_02_mtl_1
+    second: {fileID: 2100000, guid: 20b890200b83c244a9a7cc6b239ce2d9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ligne_roset_snowdonia_large_settee_main_02_mtl_2
+    second: {fileID: 2100000, guid: 1beb8e897dab95a479b928c2f0bbcebd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ligne_roset_snowdonia_large_settee_main_02_mtl_3
+    second: {fileID: 2100000, guid: 89567118889cd864aa8c65801acb69f0, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
