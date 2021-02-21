@@ -102,6 +102,7 @@
     <Compile Include="Assets\Scripts\Game Stuff\Interactable.cs" />
     <Compile Include="Assets\LifeBoatMinigame\GameReset.cs" />
     <Compile Include="Assets\Scripts\Game Stuff\MapManager.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\ElevatorInteraction.cs" />
     <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
     <Compile Include="Assets\Scripts\Game Stuff\MapPopUp.cs" />
     <Compile Include="Assets\Main Assets\AllSkyFree\AllSkyFree_Menu.cs" />
@@ -112,7 +113,11 @@
     <Compile Include="Assets\NameTextScript.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\TextManager.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
-    <Compile Include="Assets\Scripts\Game Stuff\ElevatorInteraction.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\ScavengerItemMaster.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\ScavengerProgressUI.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\ScavengerHuntItem.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\TaskBar.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\ScavengerHuntStarter.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -142,6 +147,7 @@
      <None Include="Assets\Materials\Photon\PhotonLibs\Photon3Unity3D.dll" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\Materials\Photon\PhotonLibs\Metro\Photon3Unity3D.dll" />
+     <None Include="Assets\Survival Tools\ReadMe\ReadMe.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\Materials\Photon\PhotonLibs\Photon3Unity3D.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
