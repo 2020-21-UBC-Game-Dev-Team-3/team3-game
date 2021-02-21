@@ -22,7 +22,7 @@ public class PassengerDrag : MonoBehaviour
 
     {
 
-        if (myYpos > 33)
+        if (myYpos > 30)
         {
             mZCoord = Camera.main.WorldToScreenPoint(
 
@@ -66,7 +66,7 @@ public class PassengerDrag : MonoBehaviour
     void OnMouseDrag()
 
     {
-        if (myYpos>33) {
+        if (myYpos>30) {
             transform.position = GetMouseAsWorldPoint() + mOffset;
             }
 

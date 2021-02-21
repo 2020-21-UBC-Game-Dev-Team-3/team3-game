@@ -348,14 +348,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 152756771}
         m_TargetAssemblyTypeName: PhotonLauncher, Assembly-CSharp
-        m_MethodName: OrangeButton
-        m_Mode: 1
+        m_MethodName: ButtonFunctions
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: orange
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &120360440
@@ -521,11 +521,9 @@ MonoBehaviour:
   playerListPrefab: {fileID: 9165218043066380607, guid: c0ca7738330c17e4c8b60457aada17f1, type: 3}
   startGameButton: {fileID: 1413426436}
   roomManager: {fileID: 1764365208}
-  nameObject: {fileID: 0}
   allowedColors: []
   takenColors: []
   randomColor: 0
-  buttonToken: 0
   buttonInUse: 0
   btoken: 1
   key: 1
@@ -536,6 +534,7 @@ MonoBehaviour:
   bllueBool: 0
   indigoBool: 0
   purpleBool: 0
+  MaxPlayerCount: 6
 --- !u!114 &152756772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1081,14 +1080,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 152756771}
         m_TargetAssemblyTypeName: PhotonLauncher, Assembly-CSharp
-        m_MethodName: GreenButton
-        m_Mode: 1
+        m_MethodName: ButtonFunctions
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: green
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &210101674
@@ -3588,14 +3587,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 152756771}
         m_TargetAssemblyTypeName: PhotonLauncher, Assembly-CSharp
-        m_MethodName: RedButton
-        m_Mode: 1
+        m_MethodName: ButtonFunctions
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: red
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1216687391
@@ -4529,14 +4528,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 152756771}
         m_TargetAssemblyTypeName: PhotonLauncher, Assembly-CSharp
-        m_MethodName: IndigoButton
-        m_Mode: 1
+        m_MethodName: ButtonFunctions
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: indigo
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1514880932
@@ -5742,14 +5741,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 152756771}
         m_TargetAssemblyTypeName: PhotonLauncher, Assembly-CSharp
-        m_MethodName: YellowButton
-        m_Mode: 1
+        m_MethodName: ButtonFunctions
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: yellow
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1808576926
@@ -6206,14 +6205,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 152756771}
         m_TargetAssemblyTypeName: PhotonLauncher, Assembly-CSharp
-        m_MethodName: BlueButton
-        m_Mode: 1
+        m_MethodName: ButtonFunctions
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: blue
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1901229767
@@ -7003,14 +7002,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 152756771}
         m_TargetAssemblyTypeName: PhotonLauncher, Assembly-CSharp
-        m_MethodName: PurpleButton
-        m_Mode: 1
+        m_MethodName: ButtonFunctions
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: purple
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2121206902
