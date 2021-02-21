@@ -10,7 +10,6 @@ TagManager:
   - Floor3Button
   - TaskLocation
   - TaskButton
-  - Minigame Test Button
   - MinigameCanvas
   - MinigameCloseButton
   - TaskCanvas
@@ -29,6 +28,7 @@ TagManager:
   - CallFloor2
   - Body
   - Ghost
+  - Drawing
   layers:
   - Default
   - TransparentFX

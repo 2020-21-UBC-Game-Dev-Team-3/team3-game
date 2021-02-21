@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ce0fdb4e39b5744abf0c061bd2a3e30, type: 3}
+  m_Name: PatternLoopWhirl
+  m_EditorClassIdentifier: 
+  id: loopwhirl
+  points: []
+  gesture:
+    lines:
+    - points:
+      - {x: 0.8666667, y: 0.01791048}
+      - {x: 0.41890547, y: 0.122388065}
+      - {x: 0.1800995, y: 0.43582094}
+      - {x: 0.3044776, y: 0.7343284}
+      - {x: 0.5333333, y: 0.8189055}
+      - {x: 0.80199003, y: 0.74427867}
+      - {x: 0.8368159, y: 0.4109453}
+      - {x: 0.5432836, y: 0.3114428}
+      - {x: 0.39402983, y: 0.43582094}
+      - {x: 0.5333333, y: 0.5701493}
+      - {x: 0.6029851, y: 0.4905473}
+      closedLine: 0
+  useLinesOrder: 0
+  useLinesDirections: 0
