@@ -463,6 +463,7 @@ GameObject:
   - component: {fileID: 4862361173540564989}
   - component: {fileID: 4699217666456998728}
   - component: {fileID: 2777487066322967787}
+  - component: {fileID: -3004459473416961289}
   m_Layer: 9
   m_Name: player
   m_TagString: Player
@@ -529,14 +530,6 @@ MonoBehaviour:
   playerCamera: {fileID: 1976684064029000036}
   minimapCamera: {fileID: 6979622759835090274}
   playerIndicator: {fileID: 5364972399607504284}
-  floor1Button: {fileID: 0}
-  floor2Button: {fileID: 0}
-  floor3Button: {fileID: 0}
-  callElevatorButton1: {fileID: 0}
-  callElevatorButton2: {fileID: 0}
-  callElevatorButton3: {fileID: 0}
-  Elevator: {fileID: 0}
-  ElevatorStation: {fileID: 0}
   interactables: []
   moveSpeed: 6
 --- !u!114 &-1002286812453700745
@@ -808,6 +801,26 @@ MonoBehaviour:
   assassinRange: 20
   shurikenPrefab: {fileID: 1245360488091752, guid: 05222e7ebee9c2741b376b8859ce6d39, type: 3}
   shurikenTransform: {fileID: 6753214186814695581}
+--- !u!114 &-3004459473416961289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2268599413859011575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e71bc5ddd5ee8b849bead61a6c4a1f44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floor1Button: {fileID: 0}
+  floor2Button: {fileID: 0}
+  floor3Button: {fileID: 0}
+  callElevatorButton1: {fileID: 0}
+  callElevatorButton2: {fileID: 0}
+  callElevatorButton3: {fileID: 0}
+  Elevator: {fileID: 0}
+  ElevatorStation: {fileID: 0}
 --- !u!1 &2426985087978818115
 GameObject:
   m_ObjectHideFlags: 0

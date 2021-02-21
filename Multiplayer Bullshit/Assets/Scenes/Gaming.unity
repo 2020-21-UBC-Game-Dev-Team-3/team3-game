@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.31988475, g: 0.2581039, b: 0.36732426, a: 1}
+  m_IndirectSpecularColor: {r: 0.31985432, g: 0.2581995, b: 0.367262, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2069,7 +2069,7 @@ GameObject:
   - component: {fileID: 339097279}
   m_Layer: 5
   m_Name: Floor1Button
-  m_TagString: Floor1Button
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6156,7 +6156,7 @@ GameObject:
   - component: {fileID: 837298083}
   m_Layer: 0
   m_Name: CallFloor2
-  m_TagString: CallFloor1
+  m_TagString: CallFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6347,7 +6347,7 @@ GameObject:
   - component: {fileID: 840302342}
   m_Layer: 5
   m_Name: CallFloor3Button
-  m_TagString: CallFloor3
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7394,7 +7394,7 @@ GameObject:
   - component: {fileID: 1056709571}
   m_Layer: 5
   m_Name: CallFloor1Button
-  m_TagString: CallFloor1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8006,7 +8006,7 @@ GameObject:
   - component: {fileID: 1254005974}
   m_Layer: 5
   m_Name: CallFloor2Button
-  m_TagString: CallFloor2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8455,7 +8455,7 @@ GameObject:
   - component: {fileID: 1283450483}
   m_Layer: 5
   m_Name: Floor2Button
-  m_TagString: Floor2Button
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8782,7 +8782,7 @@ GameObject:
   - component: {fileID: 1300258342}
   m_Layer: 5
   m_Name: Floor3Button
-  m_TagString: Floor3Button
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11514,7 +11514,7 @@ GameObject:
   - component: {fileID: 1743361884}
   m_Layer: 0
   m_Name: CallFloor3
-  m_TagString: CallFloor1
+  m_TagString: CallFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16385,7 +16385,7 @@ GameObject:
   - component: {fileID: 2072117301}
   m_Layer: 0
   m_Name: CallFloor1
-  m_TagString: CallFloor1
+  m_TagString: CallFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

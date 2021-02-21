@@ -5,16 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - Elevator
-  - Floor1Button
-  - Floor2Button
-  - Floor3Button
   - Interactable
   - Indicator
-  - CallFloor1
-  - CallFloor3
-  - CallFloor2
   - Body
   - Ghost
+  - BadInteractable
+  - Vent2Pos
+  - Vent1Pos
+  - Vent3Test
+  - CallFloor
   layers:
   - Default
   - TransparentFX
