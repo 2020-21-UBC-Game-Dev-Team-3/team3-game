@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_2020_1_12;UNITY_2020_1;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;PHOTON_UNITY_NETWORKING;PUN_2_0_OR_NEWER;PUN_2_OR_NEWER;PUN_2_19_OR_NEWER;PLAYMAKER;PLAYMAKER_1_9;PLAYMAKER_1_9_1;PLAYMAKER_1_8_OR_NEWER;PLAYMAKER_1_8_5_OR_NEWER;PLAYMAKER_1_9_OR_NEWER;PLAYMAKER_TMPRO;PLAYMAKER_URP;ECOSYSTEM;ECOSYSTEM_0_6;ECOSYSTEM_0_6_OR_NEWER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;NET_STANDARD_2_0;DEVELOPMENT_BUILD</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_2020_1_12;UNITY_2020_1;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;PHOTON_UNITY_NETWORKING;PUN_2_0_OR_NEWER;PUN_2_OR_NEWER;PUN_2_19_OR_NEWER;PLAYMAKER;PLAYMAKER_1_9;PLAYMAKER_1_9_1;PLAYMAKER_1_8_OR_NEWER;PLAYMAKER_1_8_5_OR_NEWER;PLAYMAKER_1_9_OR_NEWER;PLAYMAKER_TMPRO;PLAYMAKER_URP;ECOSYSTEM;ECOSYSTEM_0_6;ECOSYSTEM_0_6_OR_NEWER;PLAYMAKER_UTILS;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;NET_STANDARD_2_0;DEVELOPMENT_BUILD</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -56,13 +56,7 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\PlayMaker\Editor\PlayMakerEditorStartup.cs" />
-    <Compile Include="Assets\PlayMaker\Editor\DefinesHelper.cs" />
-    <Compile Include="Assets\PlayMaker\Editor\AssetGUIDs.cs" />
-    <Compile Include="Assets\PlayMaker\Editor\PlayMakerAddonManager.cs" />
-    <Compile Include="Assets\PlayMaker\Editor\PreUpdateChecker.cs" />
-    <Compile Include="Assets\PlayMaker\Editor\EditorStartupPrefs.cs" />
-    <Compile Include="Assets\PlayMaker\Editor\PlayMakerWelcomeWindow.cs" />
+    <Compile Include="Assets\net.fabrejean\Editor\Plugins\HttpWrapper.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorIsLayerInTransitionActionEditor.cs" />
     <Compile Include="Assets\PlayMaker\Editor\PlayMakerGlobalsInspector.cs" />
     <Compile Include="Assets\PlayMaker\Editor\PlayMakerBuildCallbacks.cs" />
@@ -73,17 +67,21 @@
     <Compile Include="Assets\PlayMaker\Actions\SceneManager\Editor\UnLoadSceneCustomEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Quaternion\Editor\GetQuaternionEulerAnglesCustomEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Tween\Editor\TweenVariableEditor.cs" />
+    <Compile Include="Assets\net.fabrejean\Editor\MarkDownSharp\ObjectInspector.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorIKGoalActionEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorNextStateInfoActionEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Editor\SetPropertyEditor.cs" />
+    <Compile Include="Assets\net.fabrejean\Editor\PlayMaker\Ecosystem\Classes\ItemDocumentation.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics\Editor\FindOverlapsEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Quaternion\Editor\QuaternionLookRotationCustomEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorTargetActionEditor.cs" />
+    <Compile Include="Assets\net.fabrejean\Editor\MarkDownSharp\MarkDownFileInspector.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\BaseClasses\OnAnimatorUpdateActionEditorBase.cs" />
     <Compile Include="Assets\PlayMaker\Editor\PlayMakerBugReportWindow.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Quaternion\Editor\QuaternionEulerCustomEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics\Editor\RaycastAllEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Quaternion\Editor\QuaternionRotateTowardsCustomEditor.cs" />
+    <Compile Include="Assets\PlayMaker\Editor\PlayMakerEditorStartup.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Quaternion\Editor\QuaternionLerpCustomEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics2D\Editor\SmoothLookAt2dEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorPivotActionEditor.cs" />
@@ -100,10 +98,12 @@
     <Compile Include="Assets\PlayMaker\Actions\SceneManager\Editor\GetScenePathCustomEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Editor\RunFsmEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorAnimatorRootActionEditor.cs" />
+    <Compile Include="Assets\net.fabrejean\Editor\Common\Utils.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Editor\PlayMakerEventProxyEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Tween\Editor\TweenRotationEditor.cs" />
     <Compile Include="Assets\PlayMaker\Editor\PlayMakerAutoUpdater.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Tween\Editor\TweenUiPositionEditor.cs" />
+    <Compile Include="Assets\net.fabrejean\Editor\PlayMaker\Ecosystem\EcosystemBrowser.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\SetAnimatorIntActionEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Editor\LookAtActionEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\SceneManager\Editor\GetSceneNameCustomEditor.cs" />
@@ -112,6 +112,7 @@
     <Compile Include="Assets\PlayMaker\Actions\SceneManager\Editor\GetSceneIsDirtyCustomEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorIntActionEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\SceneManager\Editor\SetActiveSceneCustomEditor.cs" />
+    <Compile Include="Assets\net.fabrejean\Editor\Common\WWW.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorLayerWeightActionEditor.cs" />
     <Compile Include="Assets\PlayMaker\Editor\FsmLogWindow.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorCurrentStateInfoIsTagActionEditor.cs" />
@@ -120,15 +121,21 @@
     <Compile Include="Assets\PlayMaker\Actions\SceneManager\Editor\GetSceneRootGameObjectsCustomEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\SceneManager\Editor\GetSceneIsLoadedCustomEditor.cs" />
     <Compile Include="Assets\PlayMaker\Editor\FsmTimelineWindow.cs" />
+    <Compile Include="Assets\PlayMaker\Editor\DefinesHelper.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Tween\Editor\TweenPositionEditor.cs" />
+    <Compile Include="Assets\net.fabrejean\Editor\MarkDownSharp\MarkdownGUI.cs" />
     <Compile Include="Assets\PlayMaker\Actions\SceneManager\Editor\UnLoadSceneAsynchCustomEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Quaternion\Editor\GetQuaternionFromRotationCustomEditor.cs" />
     <Compile Include="Assets\PlayMaker\Editor\PlayMakerCustomActionWizard.cs" />
     <Compile Include="Assets\PlayMaker\Actions\SceneManager\Editor\MergeScenesCustomEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Tween\Editor\TweenEditorBase.cs" />
+    <Compile Include="Assets\PlayMaker\Editor\AssetGUIDs.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Tween\Editor\TweenColorEditor.cs" />
+    <Compile Include="Assets\net.fabrejean\Editor\Plugins\EditorCoroutine.cs" />
     <Compile Include="Assets\PlayMaker\Editor\PlayMakerUpgradeGuide.cs" />
     <Compile Include="Assets\PlayMaker\Editor\FsmTemplateWindow.cs" />
+    <Compile Include="Assets\net.fabrejean\Editor\PlayMaker\Ecosystem\Classes\Item.cs" />
+    <Compile Include="Assets\net.fabrejean\Editor\MarkDownSharp\MarkdownParser.cs" />
     <Compile Include="Assets\PlayMaker\Editor\FsmErrorWindow.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorCurrentTransitionInfoIsNameActionEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Editor\CallMethodEditor.cs" />
@@ -138,15 +145,22 @@
     <Compile Include="Assets\PlayMaker\Actions\SceneManager\Editor\GetSceneBuildIndexCustomEditor.cs" />
     <Compile Include="Assets\PlayMaker\Editor\PlayMakerDefines.cs" />
     <Compile Include="Assets\PlayMaker\Editor\FsmTemplateEditor.cs" />
+    <Compile Include="Assets\PlayMaker\Editor\PlayMakerAddonManager.cs" />
+    <Compile Include="Assets\net.fabrejean\Editor\PlayMaker\Ecosystem\Classes\EcosystemEditorDefinesUtils.cs" />
+    <Compile Include="Assets\net.fabrejean\Editor\MarkDownSharp\Escapes.cs" />
+    <Compile Include="Assets\net.fabrejean\Editor\Plugins\JSON.cs" />
+    <Compile Include="Assets\net.fabrejean\Editor\PlayMaker\Ecosystem\Classes\EcosystemUtils.cs" />
     <Compile Include="Assets\PlayMaker\Editor\AboutWindow.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorCurrentStateInfoIsNameActionEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Math\Editor\Vector2RandomValueEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorDeltaActionEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Tween\Editor\TweenPropertyEditor.cs" />
+    <Compile Include="Assets\net.fabrejean\Editor\PlayMaker\Ecosystem\Classes\WebImageManager.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Quaternion\Editor\QuaternionInverseCustomEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\SetAnimatorFloatActionEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Tween\Editor\TweenScaleEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Tween\Editor\TweenUiSizeEditor.cs" />
+    <Compile Include="Assets\net.fabrejean\Editor\PlayMaker\Ecosystem\Tools\ProjectScanner\ProjectScanner.cs" />
     <Compile Include="Assets\PlayMaker\Editor\PlayMakerGUIInspector.cs" />
     <Compile Include="Assets\PlayMaker\Actions\SceneManager\Editor\Internal\GetSceneActionBaseCustomEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Quaternion\Editor\QuaternionSlerpCustomEditor.cs" />
@@ -161,8 +175,10 @@
     <Compile Include="Assets\PlayMaker\Editor\PlayMakerUpgradeTools.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\Editor\UiIcons.cs" />
     <Compile Include="Assets\PlayMaker\Actions\SceneManager\Editor\GetSceneRootCountCustomEditor.cs" />
+    <Compile Include="Assets\net.fabrejean\Editor\Common\VersionInfo.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Editor\MoveTowardsActionEditor.cs" />
     <Compile Include="Assets\PlayMaker\Editor\PlayMakerGuidedTour.cs" />
+    <Compile Include="Assets\PlayMaker\Editor\PreUpdateChecker.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorCurrentTransitionInfoIsUserNameActionEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Quaternion\Editor\QuaternionLowPassFilterCustomEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Quaternion\Editor\QuaternionAngleAxisCustomEditor.cs" />
@@ -171,31 +187,49 @@
     <Compile Include="Assets\PlayMaker\Editor\PlayMakerUpdater.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Tween\Editor\TweenQuaternionEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\SetAnimatorBoolActionEditor.cs" />
+    <Compile Include="Assets\PlayMaker\Editor\EditorStartupPrefs.cs" />
     <Compile Include="Assets\PlayMaker\Editor\FsmActionWindow.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Debug\Editor\CommentEditor.cs" />
     <Compile Include="Assets\PlayMaker\Editor\ReportWindow.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorFloatActionEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Tween\Editor\TweenCameraEditor.cs" />
+    <Compile Include="Assets\PlayMaker\Editor\PlayMakerWelcomeWindow.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorIsMatchingTargetActionEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics2D\Editor\SetVelocity2dEditor.cs" />
-    <Compile Include="Assets\net.fabrejean\Editor\Plugins\HttpWrapper.cs" />
-    <Compile Include="Assets\net.fabrejean\Editor\MarkDownSharp\ObjectInspector.cs" />
-    <Compile Include="Assets\net.fabrejean\Editor\PlayMaker\Ecosystem\Classes\ItemDocumentation.cs" />
-    <Compile Include="Assets\net.fabrejean\Editor\MarkDownSharp\MarkDownFileInspector.cs" />
-    <Compile Include="Assets\net.fabrejean\Editor\Common\Utils.cs" />
-    <Compile Include="Assets\net.fabrejean\Editor\PlayMaker\Ecosystem\EcosystemBrowser.cs" />
-    <Compile Include="Assets\net.fabrejean\Editor\Common\WWW.cs" />
-    <Compile Include="Assets\net.fabrejean\Editor\MarkDownSharp\MarkdownGUI.cs" />
-    <Compile Include="Assets\net.fabrejean\Editor\Plugins\EditorCoroutine.cs" />
-    <Compile Include="Assets\net.fabrejean\Editor\PlayMaker\Ecosystem\Classes\Item.cs" />
-    <Compile Include="Assets\net.fabrejean\Editor\MarkDownSharp\MarkdownParser.cs" />
-    <Compile Include="Assets\net.fabrejean\Editor\PlayMaker\Ecosystem\Classes\EcosystemEditorDefinesUtils.cs" />
-    <Compile Include="Assets\net.fabrejean\Editor\MarkDownSharp\Escapes.cs" />
-    <Compile Include="Assets\net.fabrejean\Editor\Plugins\JSON.cs" />
-    <Compile Include="Assets\net.fabrejean\Editor\PlayMaker\Ecosystem\Classes\EcosystemUtils.cs" />
-    <Compile Include="Assets\net.fabrejean\Editor\PlayMaker\Ecosystem\Classes\WebImageManager.cs" />
-    <Compile Include="Assets\net.fabrejean\Editor\PlayMaker\Ecosystem\Tools\ProjectScanner\ProjectScanner.cs" />
-    <Compile Include="Assets\net.fabrejean\Editor\Common\VersionInfo.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Editor\PlayMakerPunEditorUtils.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Editor\PlayMakerPhotonWizard.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PropertyDrawers\PlayMakerFsmVariableTarget\Editor\PlayMakerFsmVariableTargetPropertyDrawer.cs" />
+    <Compile Include="Assets\PlayMaker Utils\Wizards\LinkerWizard\Editor\LinkerEditorChecks.cs" />
+    <Compile Include="Assets\PlayMaker Utils\Wizards\EnumCreator\Editor\EnumFileFinder.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PropertyDrawers\PlayMakerFsmVariable\Editor\PlayMakerFsmVariablePropertyDrawer.cs" />
+    <Compile Include="Assets\PlayMaker Utils\Editor\PlayMakerInspectorUtils_Reflection.cs" />
+    <Compile Include="Assets\PlayMaker Utils\Editor\PlayMakerStats.cs" />
+    <Compile Include="Assets\PlayMaker Utils\Wizards\LinkerWizard\Editor\LinkerDataCustomInspector.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PropertyDrawers\PlayMakerFsmTarget\Editor\PlayMakerFsmTargetPropertyDrawer.cs" />
+    <Compile Include="Assets\PlayMaker Utils\Editor\PlayMakerInspectorUtils.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PropertyDrawers\ButtonAttribute\Editor\ButtonDrawer.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Editor\PlayMakerPhotonEditorSetup.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PropertyDrawers\Owner\Editor\OwnerPropertyDrawer.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\Common\Editor\PlayerReferencePropertyDrawer.cs" />
+    <Compile Include="Assets\PlayMaker Utils\Wizards\PlayMakerEventProxy\Editor\PlayMakerEventProxyCreator.cs" />
+    <Compile Include="Assets\PlayMaker Utils\Editor\PlayMakerInspectorUtils_Variables.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PropertyDrawers\PlayMakerTimelineEventTarget\Editor\PlayMakerTimelineEventTargetPropertyDrawer.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Editor\PlayMakerPhotonEditorUtility.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PropertyDrawers\Editor\PlayMakerPropertyDrawerBaseClass.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\Common\Editor\PunActionHeaderPropertyDrawer.cs" />
+    <Compile Include="Assets\PlayMaker Utils\Wizards\EnumCreator\Editor\EnumCreator.cs" />
+    <Compile Include="Assets\PlayMaker Utils\Wizards\EnumCreator\Editor\EnumCreatorWizard.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PropertyDrawers\PlayMakerEventTarget\Editor\PlayMakerEventTargetPropertyDrawer.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PropertyDrawers\PlayMakerEvent\Editor\PlayMakerEventPropertyDrawer.cs" />
+    <Compile Include="Assets\PlayMaker Utils\Editor\PlayMakerInspectorUtils_Events.cs" />
+    <Compile Include="Assets\PlayMaker Utils\Editor\PlayMakerUtilsDefine.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Editor\PlayMakerPhotonGameObjectProxyEditor.cs" />
+    <Compile Include="Assets\PlayMaker Utils\Components\Editor\CommentInspector.cs" />
+    <Compile Include="Assets\PlayMaker Utils\Editor\PlayMakerCurrentEventDataEditor.cs" />
+    <Compile Include="Assets\PlayMaker Utils\Wizards\PlayMakerEventProxy\Editor\PlayMakerEventProxyCreatorWizard.cs" />
+    <Compile Include="Assets\PlayMaker Utils\Editor\PlayMakerEditorUtils.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PropertyDrawers\MainCameraTarget\Editor\MainCameraTargetPropertyDrawer.cs" />
+    <Compile Include="Assets\PlayMaker Utils\Wizards\PlayMakerEventProxy\Editor\EventProxyFileFinder.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\PlayMaker\Editor\Install\Resources\CheckActions.txt" />
@@ -422,8 +456,14 @@
     <Reference Include="websocket-sharp">
       <HintPath>Assets\Materials\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
     </Reference>
-    <Reference Include="ICSharpCode.NRefactory">
-      <HintPath>Library\PackageCache\com.unity.render-pipelines.core@8.2.0\Editor\ShaderGenerator\ICSharpCode.NRefactory.dll</HintPath>
+    <Reference Include="ConditionalExpression">
+      <HintPath>Assets\PlayMaker\ConditionalExpression.dll</HintPath>
+    </Reference>
+    <Reference Include="ConditionalExpressionEditor">
+      <HintPath>Assets\PlayMaker\Editor\ConditionalExpressionEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="PlayMakerEditor">
+      <HintPath>Assets\PlayMaker\Editor\PlayMakerEditor.dll</HintPath>
     </Reference>
     <Reference Include="PlayMakerEditorResources">
       <HintPath>Assets\PlayMaker\Editor\PlayMakerEditorResources.dll</HintPath>
@@ -431,14 +471,8 @@
     <Reference Include="PlayMaker">
       <HintPath>Assets\Plugins\PlayMaker\PlayMaker.dll</HintPath>
     </Reference>
-    <Reference Include="PlayMakerEditor">
-      <HintPath>Assets\PlayMaker\Editor\PlayMakerEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="ConditionalExpressionEditor">
-      <HintPath>Assets\PlayMaker\Editor\ConditionalExpressionEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="ConditionalExpression">
-      <HintPath>Assets\PlayMaker\ConditionalExpression.dll</HintPath>
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>Library\PackageCache\com.unity.render-pipelines.core@8.2.0\Editor\ShaderGenerator\ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll</HintPath>

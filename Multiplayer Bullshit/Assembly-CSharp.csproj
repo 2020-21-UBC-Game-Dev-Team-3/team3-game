@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_2020_1_12;UNITY_2020_1;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;PHOTON_UNITY_NETWORKING;PUN_2_0_OR_NEWER;PUN_2_OR_NEWER;PUN_2_19_OR_NEWER;PLAYMAKER;PLAYMAKER_1_9;PLAYMAKER_1_9_1;PLAYMAKER_1_8_OR_NEWER;PLAYMAKER_1_8_5_OR_NEWER;PLAYMAKER_1_9_OR_NEWER;PLAYMAKER_TMPRO;PLAYMAKER_URP;ECOSYSTEM;ECOSYSTEM_0_6;ECOSYSTEM_0_6_OR_NEWER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;DEVELOPMENT_BUILD</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_2020_1_12;UNITY_2020_1;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;PHOTON_UNITY_NETWORKING;PUN_2_0_OR_NEWER;PUN_2_OR_NEWER;PUN_2_19_OR_NEWER;PLAYMAKER;PLAYMAKER_1_9;PLAYMAKER_1_9_1;PLAYMAKER_1_8_OR_NEWER;PLAYMAKER_1_8_5_OR_NEWER;PLAYMAKER_1_9_OR_NEWER;PLAYMAKER_TMPRO;PLAYMAKER_URP;ECOSYSTEM;ECOSYSTEM_0_6;ECOSYSTEM_0_6_OR_NEWER;PLAYMAKER_UTILS;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;DEVELOPMENT_BUILD</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -56,72 +56,11 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Player Stuff\AssassinAbility.cs" />
-    <Compile Include="Assets\Icebergs\Scripts\BoatMovement.cs" />
-    <Compile Include="Assets\Scripts\UI Stuff\MenuManager.cs" />
-    <Compile Include="Assets\Scripts\Game Stuff\Minigame1.cs" />
-    <Compile Include="Assets\Lights Minigame Assets\Scripts\Switch.cs" />
-    <Compile Include="Assets\Scripts\Game Stuff\ChangeCullingMask.cs" />
-    <Compile Include="Assets\Scripts\Game Stuff\ScavengerItemMaster.cs" />
-    <Compile Include="Assets\Scripts\Player Stuff\PlayerVision.cs" />
-    <Compile Include="Assets\Scripts\Player Stuff\body.cs" />
-    <Compile Include="Assets\Scripts\Player Stuff\Ghost.cs" />
-    <Compile Include="Assets\Scripts\Game Stuff\ScavengerProgressUI.cs" />
-    <Compile Include="Assets\Scripts\Game Stuff\ScavengerHuntItem.cs" />
-    <Compile Include="Assets\Scripts\Player Stuff\ElevatorScript.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\UI Stuff\PlayerListItem.cs" />
-    <Compile Include="Assets\Scripts\Player Stuff\GhostController.cs" />
-    <Compile Include="Assets\Scripts\Game Stuff\TaskScreenScript.cs" />
-    <Compile Include="Assets\Scripts\TextAlign.cs" />
-    <Compile Include="Assets\Scripts\Player Stuff\Assassin.cs" />
-    <Compile Include="Assets\Scripts\Game Stuff\Vent.cs" />
-    <Compile Include="Assets\Scripts\Game Stuff\DeadBody.cs" />
-    <Compile Include="Assets\Scripts\Player Stuff\Shuriken.cs" />
-    <Compile Include="Assets\Scripts\Player Stuff\CameraController1.cs" />
-    <Compile Include="Assets\Lights Minigame Assets\Scripts\SwitchCount.cs" />
-    <Compile Include="Assets\Icebergs\Scripts\CameraController.cs" />
-    <Compile Include="Assets\LifeBoatMinigame\LifeBoatGameManager.cs" />
-    <Compile Include="Assets\Scripts\Player Stuff\PlayerActionController.cs" />
-    <Compile Include="Assets\Lights Minigame Assets\Scripts\LightFlicker.cs" />
-    <Compile Include="Assets\Scripts\Game Stuff\TaskBar.cs" />
-    <Compile Include="Assets\Scripts\PhotonLauncher.cs" />
-    <Compile Include="Assets\LifeBoatMinigame\PassengerDrag.cs" />
-    <Compile Include="Assets\Scripts\UI Stuff\Menu.cs" />
-    <Compile Include="Assets\Scripts\Player Stuff\RoleAbility.cs" />
-    <Compile Include="Assets\Scripts\Game Stuff\EmergencyButton.cs" />
-    <Compile Include="Assets\Scripts\UI Stuff\RoomManager.cs" />
-    <Compile Include="Assets\Lights Minigame Assets\Scripts\WinText.cs" />
-    <Compile Include="Assets\Scripts\UI Stuff\RoomListItem.cs" />
-    <Compile Include="Assets\Scripts\Game Stuff\IDamageable.cs" />
-    <Compile Include="Assets\Materials\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
-    <Compile Include="Assets\Scripts\Player Stuff\PlayerMovementController.cs" />
-    <Compile Include="Assets\Scripts\Roles\Role.cs" />
-    <Compile Include="Assets\Scripts\Game Stuff\Minigame2.cs" />
-    <Compile Include="Assets\Lights Minigame Assets\Scripts\ClickManager.cs" />
-    <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
-    <Compile Include="Assets\Scripts\Player Stuff\PlayerManager.cs" />
-    <Compile Include="Assets\Icebergs\Scripts\Boat.cs" />
-    <Compile Include="Assets\Scripts\Player Stuff\Knife.cs" />
-    <Compile Include="Assets\Scripts\Game Stuff\Interactable.cs" />
-    <Compile Include="Assets\LifeBoatMinigame\GameReset.cs" />
-    <Compile Include="Assets\Scripts\Game Stuff\MapManager.cs" />
-    <Compile Include="Assets\Scripts\Game Stuff\ElevatorInteraction.cs" />
-    <Compile Include="Assets\Scripts\Game Stuff\ScavengerHuntStarter.cs" />
-    <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
-    <Compile Include="Assets\Scripts\Game Stuff\MapPopUp.cs" />
-    <Compile Include="Assets\Main Assets\AllSkyFree\AllSkyFree_Menu.cs" />
-    <Compile Include="Assets\Scripts\Player Stuff\KillMechanic.cs" />
-    <Compile Include="Assets\Scripts\Roles\RoleRandomizer.cs" />
-    <Compile Include="Assets\Icebergs\Scripts\PlayerCollision.cs" />
-    <Compile Include="Assets\Materials\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
-    <Compile Include="Assets\NameTextScript.cs" />
-    <Compile Include="Assets\Lights Minigame Assets\Scripts\TextManager.cs" />
-    <Compile Include="Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GameObject\DetachChildren.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\SetPosition2d.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GameObject\DeactivateSelf.cs" />
     <Compile Include="Assets\PlayMaker\Actions\ProceduralMaterial\SetProceduralColor.cs" />
+    <Compile Include="Assets\Scripts\Player Stuff\AssassinAbility.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Convert\ConvertBoolToInt.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Vector3\Vector3Multiply.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiScrollbarSetSize.cs" />
@@ -135,10 +74,12 @@
     <Compile Include="Assets\PlayMaker\Actions\Movie\StopMovieTexture.cs" />
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\SendEvent.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Debug\DrawDebugRay.cs" />
+    <Compile Include="Assets\Icebergs\Scripts\BoatMovement.cs" />
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\LoopState.cs" />
     <Compile Include="Assets\PlayMaker\Actions\VideoPlayer\VideoPlayerPrepare.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GUI\SetMouseCursor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Tween\TweenFade.cs" />
+    <Compile Include="Assets\Scripts\UI Stuff\MenuManager.cs" />
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\GetEventStringData.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\Components\PlayMakerUiEventBase.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiSliderSetNormalizedValue.cs" />
@@ -155,6 +96,7 @@
     <Compile Include="Assets\PlayMaker\Actions\SceneManager\GetSceneActivateChangedEventData.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Application\ApplicationRunInBackground.cs" />
     <Compile Include="Assets\PlayMaker\Actions\String\SetStringValue.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\Minigame1.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\GetAnimatorSpeed.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Tween\BaseActions\TweenActionBase.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Debug\DebugDrawShape.cs" />
@@ -175,6 +117,7 @@
     <Compile Include="Assets\PlayMaker\Actions\GUIElement\SetGUITextureColor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\GetAnimatorHumanScale.cs" />
     <Compile Include="Assets\PlayMaker\Actions\SceneManager\GetScenePath.cs" />
+    <Compile Include="Assets\Lights Minigame Assets\Scripts\Switch.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Device\GetTouchInfo.cs" />
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\GetEventIntData.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Audio\SetGameVolume.cs" />
@@ -192,6 +135,7 @@
     <Compile Include="Assets\PlayMaker\Actions\UI\Selectable\UiNavigationGetMode.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Vector2\Vector2SnapToGrid.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiScrollbarGetValue.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\ChangeCullingMask.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Quaternion\GetQuaternionMultipliedByVector.cs" />
     <Compile Include="Assets\PlayMaker\Actions\SceneManager\GetSceneProperties.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiInputFieldGetTextAsInt.cs" />
@@ -237,9 +181,11 @@
     <Compile Include="Assets\PlayMaker\Actions\Physics\TranslatePosition.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Math\FloatAddMultiple.cs" />
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\SetFsmRect.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\ScavengerItemMaster.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Vector3\Vector3ClampMagnitude.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Material\SetMaterial.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Logic\GameObjectCompareTag.cs" />
+    <Compile Include="Assets\Scripts\Player Stuff\PlayerVision.cs" />
     <Compile Include="Assets\PlayMaker\Actions\RectTransform\RectTransformPixelAdjustRect.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Material\GetMaterial.cs" />
     <Compile Include="Assets\PlayMaker\Actions\VideoPlayer\VideoPlayerSetSendFrameReadyEvents.cs" />
@@ -252,6 +198,7 @@
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\BlockEvents.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Screen\ScreenWrap.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Array\ArrayLength.cs" />
+    <Compile Include="Assets\Scripts\Player Stuff\body.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics\GetParticleCollisionInfo.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GameObject\GetRandomChild.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\SyncAnimatorBoolToState.cs" />
@@ -312,11 +259,13 @@
     <Compile Include="Assets\PlayMaker\Actions\GUILayout\GUILayoutFloatLabel.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GameObject\GetTag.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Quaternion\GetQuaternionMultipliedByQuaternion.cs" />
+    <Compile Include="Assets\Scripts\Player Stuff\Ghost.cs" />
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\LateUpdateEvent.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Quaternion\QuaternionRotateTowards.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\SetPosition.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Application\GetScreenWidth.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Logic\GameObjectChanged.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\ScavengerProgressUI.cs" />
     <Compile Include="Assets\PlayMaker\Actions\AnimateVariables\EaseColor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\VideoPlayer\VideoPlayerGetIsPrepared.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Input\ScreenPick.cs" />
@@ -339,6 +288,7 @@
     <Compile Include="Assets\PlayMaker\Actions\AnimateVariables\AnimateFloat.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Vector2\Vector2ClampMagnitude.cs" />
     <Compile Include="Assets\PlayMaker\Actions\VideoPlayer\VideoPlayerStop.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\ScavengerHuntItem.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animation\BlendAnimation.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiScrollRectSetVertical.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Tween\BaseActions\TweenPropertyBase.cs" />
@@ -364,6 +314,7 @@
     <Compile Include="Assets\PlayMaker\Actions\UI\UiInputFieldOnEndEditEvent.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiSliderSetValue.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UnityObject\SetProperty.cs" />
+    <Compile Include="Assets\Scripts\Player Stuff\ElevatorScript.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\ClampPosition.cs" />
     <Compile Include="Assets\PlayMaker\Actions\VideoPlayer\VideoPlayerSetTime.cs" />
     <Compile Include="Assets\PlayMaker\Actions\RectTransform\RectTransformWorldToScreenPoint.cs" />
@@ -442,6 +393,7 @@
     <Compile Include="Assets\PlayMaker\Actions\VideoPlayer\VideoPlayerSetSkipOnDrop.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics\GetSpeed.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Debug\DebugBool.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GUIElement\SetGUITextureAlpha.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics2D\SetGravity2d.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Array\ArrayClear.cs" />
@@ -451,6 +403,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Vector3\Vector3Invert.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Vector2\Vector2RotateTowards.cs" />
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\BroadcastEvent.cs" />
+    <Compile Include="Assets\Scripts\UI Stuff\PlayerListItem.cs" />
     <Compile Include="Assets\PlayMaker\Actions\ComponentAction.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GUILayout\UseGUILayout.cs" />
     <Compile Include="Assets\PlayMaker\Actions\ScriptControl\SendMessage.cs" />
@@ -479,6 +432,7 @@
     <Compile Include="Assets\PlayMaker\Actions\SpriteRenderer\SetSpriteColor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics2D\MovePosition2d.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\Selectable\UiExplicitNavigationGetProperties.cs" />
+    <Compile Include="Assets\Scripts\Player Stuff\GhostController.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Material\SetTextureValue.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Array\GetFsmArrayItem.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Material\SetTextureOffset.cs" />
@@ -493,9 +447,12 @@
     <Compile Include="Assets\PlayMaker\Actions\Device\DetectDeviceOrientation.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GameObject\AddComponent.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Math\SampleCurve.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\TaskScreenScript.cs" />
     <Compile Include="Assets\PlayMaker\Actions\AnimateVariables\EaseFloat.cs" />
+    <Compile Include="Assets\Scripts\TextAlign.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Tween\TweenUiPosition.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics\Sleep.cs" />
+    <Compile Include="Assets\Scripts\Player Stuff\Assassin.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiGraphicCrossFadeColor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\RectTransform\RectTransformGetRect.cs" />
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\GetFsmGameObject.cs" />
@@ -506,6 +463,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Material\SetMaterialFloat.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Tween\TweenPosition.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Quaternion\QuaternionLowPassFilter.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\Vent.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Quaternion\QuaternionInverse.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GameObject\CreateEmptyObject.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics\GetMass.cs" />
@@ -578,11 +536,13 @@
     <Compile Include="Assets\PlayMaker\Actions\Logic\GameObjectTagSwitch.cs" />
     <Compile Include="Assets\PlayMaker\Actions\RectTransform\RectTransformSetPivot.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Debug\DrawStateLabel.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\DeadBody.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Debug\DebugInt.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animation\RemoveMixingTransform.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Vector2\Vector2AddXY.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Input\WaitAnyKey.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Vector3\Vector3Subtract.cs" />
+    <Compile Include="Assets\Scripts\Player Stuff\Shuriken.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GUILayout\GUILayoutSelectionGrid.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GUILayout\GUILayoutVerticalSlider.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\EventSystem\UiOnSubmitEvent.cs" />
@@ -598,8 +558,10 @@
     <Compile Include="Assets\PlayMaker\Actions\UI\UiGraphicSetColor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GUILayout\GUILayoutBox.cs" />
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\ForwardEvent.cs" />
+    <Compile Include="Assets\Scripts\Player Stuff\CameraController1.cs" />
     <Compile Include="Assets\PlayMaker\Actions\TestAction.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics2D\GetNextOverlapArea2d.cs" />
+    <Compile Include="Assets\Lights Minigame Assets\Scripts\SwitchCount.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\EventSystem\UiOnCancelEvent.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Trigonometry\GetCosine.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Vector3\SetVector3Value.cs" />
@@ -608,7 +570,9 @@
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\SetFsmGameObject.cs" />
     <Compile Include="Assets\PlayMaker\Actions\PlayerPrefs\PlayerPrefsDeleteAll.cs" />
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\IgnoreEvents.cs" />
+    <Compile Include="Assets\Icebergs\Scripts\CameraController.cs" />
     <Compile Include="Assets\PlayMaker\Actions\ScriptControl\StartCoroutine.cs" />
+    <Compile Include="Assets\LifeBoatMinigame\LifeBoatGameManager.cs" />
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\SetFsmObject.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Quaternion\QuaternionSlerp.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\GetAnimatorRoot.cs" />
@@ -625,6 +589,7 @@
     <Compile Include="Assets\PlayMaker\Actions\VideoPlayer\VideoPlayerPlay.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiSliderGetDirection.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Math\IntAdd.cs" />
+    <Compile Include="Assets\Scripts\Player Stuff\PlayerActionController.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Character\GetControllerHitInfo.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics\Raycast.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animation\RewindAnimation.cs" />
@@ -664,6 +629,7 @@
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\GetFsmState.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics2D\SetVelocity2d.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\Canvas\UiCanvasScalerSetScaleFactor.cs" />
+    <Compile Include="Assets\Lights Minigame Assets\Scripts\LightFlicker.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics2D\IsFixedAngle2d.cs" />
     <Compile Include="Assets\PlayMaker\Actions\VideoPlayer\VideoPlayerGetAudioOutputMode.cs" />
     <Compile Include="Assets\PlayMaker\Actions\VideoPlayer\VideoPlayerSetSource.cs" />
@@ -673,6 +639,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Transform\GetScale.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Lights\SetLightFlare.cs" />
     <Compile Include="Assets\PlayMaker\Actions\RectTransform\RectTransformSetAnchoredPosition.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\TaskBar.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Color\SetColorRGBA.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics2D\GetNextOverlapPoint2d.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GUILayout\GUILayoutIntField.cs" />
@@ -693,6 +660,7 @@
     <Compile Include="Assets\PlayMaker\Actions\UI\UiInputFieldOnValueChangeEvent.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiScrollbarSetValue.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics\GetVelocity.cs" />
+    <Compile Include="Assets\Scripts\PhotonLauncher.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Device\StartLocationServiceUpdates.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animation\CapturePoseAsAnimationClip.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Convert\ConvertBoolToString.cs" />
@@ -743,6 +711,8 @@
     <Compile Include="Assets\PlayMaker\Actions\UI\Selectable\UiTransitionSetType.cs" />
     <Compile Include="Assets\PlayMaker\Actions\AnimateVariables\AnimateRect.cs" />
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\BaseFsmVariableAction.cs" />
+    <Compile Include="Assets\LifeBoatMinigame\PassengerDrag.cs" />
+    <Compile Include="Assets\Scripts\UI Stuff\Menu.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Quaternion\GetQuaternionEulerAngles.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics2D\AddRelativeForce2d.cs" />
     <Compile Include="Assets\PlayMaker\Actions\VideoPlayer\VideoPlayerSetPlayOnAwake.cs" />
@@ -751,13 +721,16 @@
     <Compile Include="Assets\PlayMaker\Actions\RenderSettings\SetFogColor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Debug\DebugVector3.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics2D\WakeUp2d.cs" />
+    <Compile Include="Assets\Scripts\Player Stuff\RoleAbility.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiScrollbarSetDirection.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GUIElement\SetGUIText.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiButtonOnClickEvent.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GUILayout\GUILayoutSpace.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\EmergencyButton.cs" />
     <Compile Include="Assets\PlayMaker\Actions\RectTransform\RectTransformSetAnchorRectPosition.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics\Explosion.cs" />
     <Compile Include="Assets\PlayMaker\Actions\ScriptControl\AxisEvent.cs" />
+    <Compile Include="Assets\Scripts\UI Stuff\RoomManager.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animation\AddAnimationClip.cs" />
     <Compile Include="Assets\PlayMaker\Actions\RectTransform\RectTransformSetSizeDelta.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\SetAnimatorIKGoal.cs" />
@@ -769,8 +742,11 @@
     <Compile Include="Assets\PlayMaker\Actions\UI\UiDropDownClearOptions.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\GetAnimatorDelta.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\Components\PlayMakerUiBoolValueChangedEvent.cs" />
+    <Compile Include="Assets\Lights Minigame Assets\Scripts\WinText.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GUI\RotateGUI.cs" />
+    <Compile Include="Assets\Scripts\UI Stuff\RoomListItem.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\SetScale.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\IDamageable.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Time\RandomWait.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\TransformPoint.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Debug\BaseLogAction.cs" />
@@ -779,6 +755,7 @@
     <Compile Include="Assets\PlayMaker\Actions\GUI\SetGUIDepth.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Debug\DebugEnum.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Vector2\DebugVector2.cs" />
+    <Compile Include="Assets\Materials\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Device\GetDeviceAcceleration.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\GetAnimatorNextStateInfo.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Convert\ConvertIntToString.cs" />
@@ -800,6 +777,7 @@
     <Compile Include="Assets\PlayMaker\Actions\UI\UiInputFieldSetHideMobileInput.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Input\MousePickEvent.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Vector2\Vector2Operator.cs" />
+    <Compile Include="Assets\Scripts\Player Stuff\PlayerMovementController.cs" />
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\SetFsmVector3.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics\TriggerEvent.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\EventSystem\UiSetSelectedGameObject.cs" />
@@ -813,6 +791,7 @@
     <Compile Include="Assets\PlayMaker\Actions\SceneManager\MoveGameObjectToScene.cs" />
     <Compile Include="Assets\PlayMaker\Actions\VideoPlayer\VideoPlayerGetCanSetDirectAudioVolume.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Array\GetFsmArray.cs" />
+    <Compile Include="Assets\Scripts\Roles\Role.cs" />
     <Compile Include="Assets\PlayMaker\Actions\SpriteRenderer\GetspriteSortPoint.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Vector3\GetVectorLength.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\LookAtDirection.cs" />
@@ -825,6 +804,7 @@
     <Compile Include="Assets\PlayMaker\Actions\UI\Components\PlayMakerUiDropEvent.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Vector2\Vector2HighPassFilter.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Vector3\Vector3HighPassFilter.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\Minigame2.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiInputFieldMoveCaretToTextEnd.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\Canvas\UiCanvasGroupSetProperties.cs" />
     <Compile Include="Assets\PlayMaker\Actions\VideoClip\VideoClipGetAudioTrackCount.cs" />
@@ -836,6 +816,7 @@
     <Compile Include="Assets\PlayMaker\Actions\UI\UiSliderGetValue.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GUILayout\GUILayoutEndHorizontal.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics\GetRaycastHitInfo.cs" />
+    <Compile Include="Assets\Lights Minigame Assets\Scripts\ClickManager.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GUI\GUIVerticalSlider.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics\RaycastAll.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GameObject\FindClosest.cs" />
@@ -860,6 +841,7 @@
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\SetFsmTexture.cs" />
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\GetFsmVector3.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GameObject\SetParent.cs" />
+    <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Math\RandomInt.cs" />
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\GetFsmColor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Level\LoadLevelNum.cs" />
@@ -897,6 +879,7 @@
     <Compile Include="Assets\PlayMaker\Actions\GUILayout\GUILayoutBeginCentered.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GameObject\GetTagCount.cs" />
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\SequenceEvent.cs" />
+    <Compile Include="Assets\Scripts\Player Stuff\PlayerManager.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Trigonometry\GetACosine.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\AnimatorStopPlayback.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GameObject\FindGameObject.cs" />
@@ -905,6 +888,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Audio\PlayRandomSound.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GameObject\FindChild.cs" />
     <Compile Include="Assets\PlayMaker\Actions\SceneManager\GetSceneUnLoadedEventData.cs" />
+    <Compile Include="Assets\Icebergs\Scripts\Boat.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics2D\MousePick2dEvent.cs" />
     <Compile Include="Assets\PlayMaker\Actions\SpriteRenderer\SetSpriteFlip.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Character\ControllerSimpleMove.cs" />
@@ -917,14 +901,17 @@
     <Compile Include="Assets\PlayMaker\Actions\Animator\GetAnimatorIsHuman.cs" />
     <Compile Include="Assets\PlayMaker\Actions\BaseUpdateAction.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiInputFieldGetCaretBlinkRate.cs" />
+    <Compile Include="Assets\Scripts\Player Stuff\Knife.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Rect\RectContains.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Camera\WorldToScreenPoint.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\Interactable.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Effects\ParticleSystemPlay.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Vector3\Vector3LowPassFilter.cs" />
     <Compile Include="Assets\PlayMaker\Actions\VideoPlayer\VideoPlayerSetUrl.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Convert\ConvertMaterialToObject.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Quaternion\QuaternionAngleAxis.cs" />
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\GetFsmMaterial.cs" />
+    <Compile Include="Assets\LifeBoatMinigame\GameReset.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\Selectable\UiGetBlockColor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Logic\Vector2Compare.cs" />
     <Compile Include="Assets\PlayMaker\Actions\RectTransform\RectTransformSetAnchorMin.cs" />
@@ -959,6 +946,7 @@
     <Compile Include="Assets\PlayMaker\Actions\SceneManager\MergeScenes.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Logic\EnumSwitch.cs" />
     <Compile Include="Assets\PlayMaker\Actions\SpriteRenderer\SetSpriteSortingLayerById.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\MapManager.cs" />
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\EnableFSM.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiToggleOnValueChangedEvent.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\Layout\UiLayoutElementGetValues.cs" />
@@ -1012,6 +1000,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Animator\SetAnimatorLayerWeight.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiRebuild.cs" />
     <Compile Include="Assets\PlayMaker\Actions\SpriteRenderer\GetSpriteColor.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\ElevatorInteraction.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics\UseGravity.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\AnimatorInterruptMatchTarget.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\AnimatorStartRecording.cs" />
@@ -1023,16 +1012,19 @@
     <Compile Include="Assets\PlayMaker\Actions\Animator\GetAnimatorBody.cs" />
     <Compile Include="Assets\PlayMaker\Actions\VideoPlayer\VideoPlayerGetTargetTexture.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiScrollRectSetHorizontal.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\ScavengerHuntStarter.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Math\FloatWrap.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Effects\Blink.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics2D\WakeAllRigidBodies2d.cs" />
     <Compile Include="Assets\PlayMaker\Actions\String\StringSplit.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Tween\TweenAudio.cs" />
+    <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
     <Compile Include="Assets\PlayMaker\Actions\AnimateVariables\CurveVector3.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiInputFieldGetHideMobileInput.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Camera\CutToCamera.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GUILayout\GUILayoutBeginArea.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Math\RandomBool.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\MapPopUp.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Rect\SetRectValue.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Mesh\GetVertexPosition.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\SetAnimatorPlayBackSpeed.cs" />
@@ -1077,6 +1069,7 @@
     <Compile Include="Assets\PlayMaker\Actions\GUILayout\GUILayoutTextField.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Vector2\Vector2MoveTowards.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Color\SetColorValue.cs" />
+    <Compile Include="Assets\Scripts\Player Stuff\KillMechanic.cs" />
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\SendEventToFsm.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiInputFieldSetCharacterLimit.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\GetAnimatorGravityWeight.cs" />
@@ -1084,11 +1077,13 @@
     <Compile Include="Assets\PlayMaker\Actions\GameObject\GetOwner.cs" />
     <Compile Include="Assets\PlayMaker\Actions\String\StringReplace.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Debug\DebugFsmVariable.cs" />
+    <Compile Include="Assets\Scripts\Roles\RoleRandomizer.cs" />
     <Compile Include="Assets\PlayMaker\UpdateHelper.cs" />
     <Compile Include="Assets\PlayMaker\Actions\VideoPlayer\VideoPlayerSetTargetCameraAlpha.cs" />
     <Compile Include="Assets\PlayMaker\Actions\VideoPlayer\VideoPlayerSeekCompletedEvent.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\EventSystem\UiOnScrollEvent.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GUI\GUIButton.cs" />
+    <Compile Include="Assets\Icebergs\Scripts\PlayerCollision.cs" />
     <Compile Include="Assets\PlayMaker\Actions\RectTransform\RectTransformPixelAdjustPoint.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Time\GetTimeInfo.cs" />
     <Compile Include="Assets\PlayMaker\Actions\EasingFunction.cs" />
@@ -1099,6 +1094,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Trigonometry\GetTan.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\GetAnimatorLayerCount.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\SetAnimatorStabilizeFeet.cs" />
+    <Compile Include="Assets\Materials\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\LookAt.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\GetAnimatorApplyRootMotion.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Device\ProjectLocationToMap.cs" />
@@ -1113,9 +1109,11 @@
     <Compile Include="Assets\PlayMaker\Actions\Tween\TweenUiSize.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Input\GetMouseY.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics2D\GetTrigger2dInfo.cs" />
+    <Compile Include="Assets\NameTextScript.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Device\DeviceOrientationEvent.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\EventSystem\UiOnPointerDownEvent.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Input\GetMouseButtonUp.cs" />
+    <Compile Include="Assets\Lights Minigame Assets\Scripts\TextManager.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Math\FloatAdd.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiImageGetFillAmount.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GUILayout\GUILayoutEndScrollView.cs" />
@@ -1134,7 +1132,126 @@
     <Compile Include="Assets\PlayMaker\Actions\Transform\GetAngleToTarget.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiSliderOnValueChangedEvent.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Array\ArrayGetRandom.cs" />
+    <Compile Include="Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\SmoothFollowAction.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Scripts\PlayMakerPhotonGameObjectProxy.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunJoinRoom.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PropertyDrawers\GenericAttributes\ShowOptionsAttribute.cs" />
+    <Compile Include="Assets\PlayMaker Utils\Internal\PlayMakerUtilsDotNetExtensions.cs" />
+    <Compile Include="Assets\PlayMaker Utils\Components\Comment.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PlayMakerUtils_Serialization.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PropertyDrawers\GenericAttributes\FsmVariableTypeAttribute.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunReconnect.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetPhotonViewInParent.cs" />
+    <Compile Include="Assets\PlayMaker Utils\Internal\EventDataSenderProxy.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetOwnerProperties.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetRoomProperties.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PlayMakerUtils_FsmVar.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetAuthenticationValues.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PhotonViewGetControllerActorNumber.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PhotonViewGetViewID.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetServerTimeStamp.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetNickName.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PlayMakerUtils_conversions.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunJoinRandomRoom.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PhotonViewGetOwnerActorNumber.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetRoomsCount.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunConnectToBestCloudServer.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunCreateRoomAdvanced.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PropertyDrawers\PlayMakerFsmVariableTarget\PlayMakerFsmVariableTarget.cs" />
+    <Compile Include="Assets\PlayMaker Utils\Event Properties\Actions\SetEventProperties.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PropertyDrawers\GenericAttributes\EventTargetVariableAttribute.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetUseAlternativeUdpPorts.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetSendRate.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Scripts\PlayMakerPhotonProxy.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetIsMessageQueueRunning.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunInstantiate.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\Common\PlayerReferenceProperty.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Scripts\Utils\PlayMakerPhotonLUT.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunFindFriends.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetLoadLevelProgress.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetEventData.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunConnectToRegion.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetSerializationRate.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetOfflineMode.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PlayMakerUtils_Events.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PropertyDrawers\Owner\OwnerClass.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunRejoinRoom.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetPlayersCount.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetAppVersion.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PropertyDrawers\PlayMakerEventTarget\PlayMakerEventTarget.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetServerTime.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PropertyDrawers\PlayMakerTimelineEventTarget\PlayMakerTimelineEventTarget.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetAutomaticallySyncScene.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PropertyDrawers\MainCameraTarget\MainCameraTarget.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunDeleteRoomCustomProperty.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunCreateRoom.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PlayMakerUtils_Fsm.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetPlayersInRoomsCount.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunLeaveRoom.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PhotonViewFindByViewID.cs" />
+    <Compile Include="Assets\PlayMaker Utils\Event Properties\Actions\GetEventProperties.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\Common\TypedLobbyProperty.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetOfflineMode.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetAutomaticallySyncScene.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Scripts\Utils\PlayMakerPhotonExtensions.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunLeaveLobby.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetRoomCustomProperty.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Scripts\PlayMakerPhotonRoomListProxy.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PhotonViewRpcBroadcastFsmEventToPlayer.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetClientState.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunReconnectAndRejoin.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunInstantiateSceneObject.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Scripts\UnitySerializer.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PropertyDrawers\PlayMakerFsmTarget\PlayMakerFsmTarget.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunLoadLevel.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PropertyDrawers\GenericAttributes\RequiredAttribute.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Scripts\PlayMakerPunCallbacksProxy.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PhotonViewDeleteOwnerCustomProperty.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PropertyDrawers\ButtonAttribute\ButtonAttribute.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetGameVersion.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PhotonViewRpcBroadcastFsmEvent.cs" />
+    <Compile Include="Assets\PlayMaker Utils\Wizards\LinkerWizard\LinkerData.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\Common\PunComponentActionBase.cs" />
+    <Compile Include="Assets\PlayMaker Utils\Actions\MonoBehaviour\TransformEventsBridge.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\Common\PunActionHeader.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunDestroy.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PropertyDrawers\PlayMakerEvent\PlayMakerEvent.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetSendRate.cs" />
+    <Compile Include="Assets\PlayMaker Utils\Scripts\VersionInfo.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetIsMasterClient.cs" />
+    <Compile Include="Assets\PlayMaker Utils\Extensions\PlayMakerUtils_extensions.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetIsConnected.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PhotonViewGetCreatorActorNumber.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunRemoveRpc.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PlayMakerUtils.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetPing.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunConnectUsingSettings.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetLastMessagePlayerProperties.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunClearRoomExpectedUsers.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PhotonViewGetIsMine.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\Common\PunActionBase.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetPlayersOnMasterCount.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunDisconnect.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PhotonViewRequestOwnerShip.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetMasterClient.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunDestroyPlayer.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PhotonViewGetIsSceneView.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunConnectToMaster.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetLastDisconnectionCause.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Scripts\PlayMakerPhotonView.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PropertyDrawers\GenericAttributes\FsmVariableTargetVariableAttribute.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunJoinLobby.cs" />
+    <Compile Include="Assets\PlayMaker Utils\Wizards\PlayMakerEventProxy\PlayMakerEventProxy.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetPlayerProperties.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PropertyDrawers\GenericAttributes\ExpectComponentAttribute.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunCloseConnection.cs" />
+    <Compile Include="Assets\PlayMaker Utils\PropertyDrawers\PlayMakerFsmVariable\PlayMakerFsmVariable.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetCloudRegion.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetSerializationRate.cs" />
+    <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetPlayerCustomProperty.cs" />
+    <Compile Include="Assets\PlayMaker Custom Actions\Vector3\Vector3LerpAdvanced.cs" />
+    <Compile Include="Assets\PlayMaker Custom Actions\__Internal\PlayMakerActionsUtils.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -1150,7 +1267,6 @@
      <None Include="Assets\Materials\Photon\PhotonLibs\WebSocket\websocket-sharp.dll" />
      <None Include="Assets\PlayMaker\ConditionalExpression.dll" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
-     <None Include="Assets\Main Assets\AllSkyFree\AllSkyFree_Readme.txt" />
      <None Include="Assets\PlayMaker\Resources\PlayMakerAssemblies.txt" />
      <None Include="Assets\PlayMaker\Actions\MathExpression\Mathos\MathosLicense.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
@@ -1376,11 +1492,11 @@
     <Reference Include="websocket-sharp">
       <HintPath>Assets\Materials\Photon\PhotonLibs\WebSocket\websocket-sharp.dll</HintPath>
     </Reference>
-    <Reference Include="PlayMaker">
-      <HintPath>Assets\Plugins\PlayMaker\PlayMaker.dll</HintPath>
-    </Reference>
     <Reference Include="ConditionalExpression">
       <HintPath>Assets\PlayMaker\ConditionalExpression.dll</HintPath>
+    </Reference>
+    <Reference Include="PlayMaker">
+      <HintPath>Assets\Plugins\PlayMaker\PlayMaker.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.12f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>

@@ -57,7 +57,7 @@ public class PlayerMovementController : MonoBehaviour {
 
       if (!pv.IsMine) return;
 
-      PlayerMovement();
+      //PlayerMovement();
     } else {
             Debug.Log("check1");
       CheckFalse();
@@ -107,20 +107,20 @@ public class PlayerMovementController : MonoBehaviour {
         switched = false;
     }
 
-    void PlayerMovement() {
-        if (!switched)
-        {
+    //void PlayerMovement() {
+    //    if (!switched)
+    //    {
 
-            float horizontal = Input.GetAxisRaw("Horizontal");
-            float vertical = Input.GetAxisRaw("Vertical");
+    //        float horizontal = Input.GetAxisRaw("Horizontal");
+    //        float vertical = Input.GetAxisRaw("Vertical");
 
 
-            Vector3 playerMovement = new Vector3(-vertical, 0f, horizontal) * moveSpeed * Time.deltaTime;
-            transform.Translate(playerMovement, Space.Self);
+    //        Vector3 playerMovement = new Vector3(-vertical, 0f, horizontal) * moveSpeed * Time.deltaTime;
+    //        transform.Translate(playerMovement, Space.Self);
 
-            SetAnimator(playerMovement);
-        }
-  }
+    //        SetAnimator(playerMovement);
+    //    }
+ // }
 
   void SetAnimator(Vector3 direction) {
     //Debug.Log(direction.magnitude);
