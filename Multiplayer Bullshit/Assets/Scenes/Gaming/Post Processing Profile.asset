@@ -1,44 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5997427912946941852
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 558a8e2b6826cf840aae193990ba9f2e, type: 3}
-  m_Name: ShadowsMidtonesHighlights
-  m_EditorClassIdentifier: 
-  active: 1
-  m_AdvancedMode: 0
-  shadows:
-    m_OverrideState: 1
-    m_Value: {x: 0.99577063, y: 0.94712025, z: 1, w: 0}
-  midtones:
-    m_OverrideState: 1
-    m_Value: {x: 0.97615445, y: 0.9576885, z: 1, w: 0}
-  highlights:
-    m_OverrideState: 0
-    m_Value: {x: 1, y: 1, z: 1, w: 0}
-  shadowsStart:
-    m_OverrideState: 0
-    m_Value: 0
-    min: 0
-  shadowsEnd:
-    m_OverrideState: 0
-    m_Value: 0.3
-    min: 0
-  highlightsStart:
-    m_OverrideState: 0
-    m_Value: 0.55
-    min: 0
-  highlightsEnd:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
 --- !u!114 &-4713151974172295077
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -54,12 +15,12 @@ MonoBehaviour:
   active: 1
   m_AdvancedMode: 0
   threshold:
-    m_OverrideState: 0
-    m_Value: 0.9
+    m_OverrideState: 1
+    m_Value: 1.08
     min: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 2.71
+    m_Value: 8.6
     min: 0
   scatter:
     m_OverrideState: 0
@@ -102,7 +63,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   postExposure:
     m_OverrideState: 1
-    m_Value: 0.6
+    m_Value: 0.05
   contrast:
     m_OverrideState: 0
     m_Value: 2.09
@@ -140,7 +101,6 @@ MonoBehaviour:
   - {fileID: -4713151974172295077}
   - {fileID: -2158328139923890910}
   - {fileID: 4760733859453954161}
-  - {fileID: -5997427912946941852}
 --- !u!114 &4760733859453954161
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -162,16 +122,16 @@ MonoBehaviour:
     showAlpha: 0
     showEyeDropper: 1
   center:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.4
+    m_Value: 0.146
     min: 0
     max: 1
   smoothness:
     m_OverrideState: 1
-    m_Value: 0.259
+    m_Value: 0.622
     min: 0.01
     max: 1
   rounded:

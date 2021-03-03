@@ -30,7 +30,7 @@ public class PlayerManager : MonoBehaviour
     void CreateController()
     {
         Vector3 position = new Vector3(0f, 10f, 0f);
-        controller = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "player"), position, Quaternion.identity, 0, new object[] { pv.ViewID });
+        controller = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "player2"), position, Quaternion.identity, 0, new object[] { pv.ViewID });
         pv.RPC("IncrementPlayerNumber", RpcTarget.MasterClient);
         PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Elevator"), vec, Quaternion.identity);
     }
