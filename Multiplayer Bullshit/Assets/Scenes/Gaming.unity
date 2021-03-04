@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.31988475, g: 0.2581039, b: 0.36732426, a: 1}
+  m_IndirectSpecularColor: {r: 0.3198708, g: 0.25813186, b: 0.36720064, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previewOnGUI: 1
   enableGUILayout: 1
-  drawStateLabels: 0
+  drawStateLabels: 1
   enableStateLabelsInBuilds: 0
   GUITextureStateLabels: 0
   GUITextStateLabels: 0
@@ -6892,6 +6892,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 675085801}
     - target: {fileID: 4171673715509042787, guid: 3617644022741da46ab78e3235ecc3b0, type: 3}
+      propertyPath: interactableName
+      value: Vent
+      objectReference: {fileID: 0}
+    - target: {fileID: 4171673715509042787, guid: 3617644022741da46ab78e3235ecc3b0, type: 3}
       propertyPath: interactableTransform
       value: 
       objectReference: {fileID: 675085802}
@@ -6907,6 +6911,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7ab2124270c19ac478a102c5091bdadb, type: 2}
+    - target: {fileID: 4171673715509042799, guid: 3617644022741da46ab78e3235ecc3b0, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4171673715619388471, guid: 3617644022741da46ab78e3235ecc3b0, type: 3}
       propertyPath: m_TagString
       value: Untagged
@@ -6928,19 +6936,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4171673715509042784, guid: 3617644022741da46ab78e3235ecc3b0, type: 3}
   m_PrefabInstance: {fileID: 675085799}
   m_PrefabAsset: {fileID: 0}
---- !u!135 &675085803
-SphereCollider:
+--- !u!114 &675085803
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675085800}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
+  outlineWidth: 4
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &691435719
 GameObject:
   m_ObjectHideFlags: 0
@@ -7823,6 +7836,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8155730665825293974, guid: c0a258fa4afc1944fb8946a749a96186, type: 3}
+      propertyPath: outlineWidth
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8384753810834526848, guid: c0a258fa4afc1944fb8946a749a96186, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -7850,7 +7867,7 @@ PrefabInstance:
     - target: {fileID: 8384753811824461228, guid: c0a258fa4afc1944fb8946a749a96186, type: 3}
       propertyPath: indicator
       value: 
-      objectReference: {fileID: 814401162}
+      objectReference: {fileID: 0}
     - target: {fileID: 8384753811824461228, guid: c0a258fa4afc1944fb8946a749a96186, type: 3}
       propertyPath: interactableTransform
       value: 
@@ -7905,34 +7922,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c8b43b9889367bb489fe44ddf2f80f22, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0a258fa4afc1944fb8946a749a96186, type: 3}
---- !u!1 &814401162 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8384753810834526848, guid: c0a258fa4afc1944fb8946a749a96186, type: 3}
-  m_PrefabInstance: {fileID: 814401161}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &814401163 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8384753811824461229, guid: c0a258fa4afc1944fb8946a749a96186, type: 3}
   m_PrefabInstance: {fileID: 814401161}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &814401164 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8384753811824461225, guid: c0a258fa4afc1944fb8946a749a96186, type: 3}
-  m_PrefabInstance: {fileID: 814401161}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &814401165
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 814401164}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &831490234
 GameObject:
   m_ObjectHideFlags: 0
@@ -10968,6 +10962,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5100880950123122785, guid: c3baca3fa01e68d40bc3d2f1d2be183d, type: 3}
+      propertyPath: outlineWidth
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8356006252270635168, guid: c3baca3fa01e68d40bc3d2f1d2be183d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -11023,7 +11021,7 @@ PrefabInstance:
     - target: {fileID: 8356006252270635171, guid: c3baca3fa01e68d40bc3d2f1d2be183d, type: 3}
       propertyPath: indicator
       value: 
-      objectReference: {fileID: 1321008267}
+      objectReference: {fileID: 0}
     - target: {fileID: 8356006252270635171, guid: c3baca3fa01e68d40bc3d2f1d2be183d, type: 3}
       propertyPath: interactableTransform
       value: 
@@ -11036,6 +11034,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Interactable
       objectReference: {fileID: 0}
+    - target: {fileID: 8356006252270635175, guid: c3baca3fa01e68d40bc3d2f1d2be183d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8356006252682367651, guid: c3baca3fa01e68d40bc3d2f1d2be183d, type: 3}
       propertyPath: m_TagString
       value: Untagged
@@ -11046,34 +11048,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3baca3fa01e68d40bc3d2f1d2be183d, type: 3}
---- !u!1 &1321008266 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8356006252270635174, guid: c3baca3fa01e68d40bc3d2f1d2be183d, type: 3}
-  m_PrefabInstance: {fileID: 1321008265}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1321008267 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8356006253856078514, guid: c3baca3fa01e68d40bc3d2f1d2be183d, type: 3}
-  m_PrefabInstance: {fileID: 1321008265}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1321008268 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8356006252270635170, guid: c3baca3fa01e68d40bc3d2f1d2be183d, type: 3}
   m_PrefabInstance: {fileID: 1321008265}
   m_PrefabAsset: {fileID: 0}
---- !u!135 &1321008269
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1321008266}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1325281668
 GameObject:
   m_ObjectHideFlags: 0
@@ -12822,6 +12801,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1641497523}
     - target: {fileID: 320287545979273131, guid: 2c9e380300f546b4785d821c8d836e23, type: 3}
+      propertyPath: interactableName
+      value: Vent
+      objectReference: {fileID: 0}
+    - target: {fileID: 320287545979273131, guid: 2c9e380300f546b4785d821c8d836e23, type: 3}
       propertyPath: interactableTransform
       value: 
       objectReference: {fileID: 1641497524}
@@ -12850,19 +12833,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 320287545979273130, guid: 2c9e380300f546b4785d821c8d836e23, type: 3}
   m_PrefabInstance: {fileID: 1641497521}
   m_PrefabAsset: {fileID: 0}
---- !u!135 &1641497525
-SphereCollider:
+--- !u!114 &1641497525
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1641497522}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
+  outlineWidth: 4
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1663846524
 GameObject:
   m_ObjectHideFlags: 0
@@ -13212,7 +13200,7 @@ PrefabInstance:
     - target: {fileID: 352089273668442650, guid: 6f489236fbe15534bbc73d019ad933ae, type: 3}
       propertyPath: indicator
       value: 
-      objectReference: {fileID: 1675017594}
+      objectReference: {fileID: 0}
     - target: {fileID: 352089273668442650, guid: 6f489236fbe15534bbc73d019ad933ae, type: 3}
       propertyPath: interactableTransform
       value: 
@@ -13225,40 +13213,25 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Interactable
       objectReference: {fileID: 0}
+    - target: {fileID: 352089273668442654, guid: 6f489236fbe15534bbc73d019ad933ae, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 352089273668442655, guid: 6f489236fbe15534bbc73d019ad933ae, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c8b43b9889367bb489fe44ddf2f80f22, type: 2}
+    - target: {fileID: 2535931925702065861, guid: 6f489236fbe15534bbc73d019ad933ae, type: 3}
+      propertyPath: outlineWidth
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f489236fbe15534bbc73d019ad933ae, type: 3}
---- !u!1 &1675017593 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 352089273668442653, guid: 6f489236fbe15534bbc73d019ad933ae, type: 3}
-  m_PrefabInstance: {fileID: 1675017592}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1675017594 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 352089273624992198, guid: 6f489236fbe15534bbc73d019ad933ae, type: 3}
-  m_PrefabInstance: {fileID: 1675017592}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1675017595 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 352089273668442649, guid: 6f489236fbe15534bbc73d019ad933ae, type: 3}
   m_PrefabInstance: {fileID: 1675017592}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1675017596
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1675017593}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1687501349
 GameObject:
   m_ObjectHideFlags: 0
@@ -16239,7 +16212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 0, b: 0, a: 1}
-  outlineWidth: 2
+  outlineWidth: 4
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -16256,7 +16229,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableName: Scavenger hunt starter
-  interactableTransform: {fileID: 955433749810807534}
   outline: {fileID: 0}
   transforms:
   - {fileID: 2912892204703067264}
@@ -16431,7 +16403,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableName: Scavenger hunt item
-  interactableTransform: {fileID: 960623503060343207}
   outline: {fileID: 0}
 --- !u!4 &960623503060343207
 Transform:
@@ -16569,7 +16540,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableName: Scavenger hunt item
-  interactableTransform: {fileID: 960623503352800127}
   outline: {fileID: 0}
 --- !u!4 &960623503352800127
 Transform:
@@ -16616,7 +16586,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableName: Scavenger hunt item
-  interactableTransform: {fileID: 960623503628705237}
   outline: {fileID: 0}
 --- !u!4 &960623503628705237
 Transform:
@@ -16797,7 +16766,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableName: Scavenger hunt item
-  interactableTransform: {fileID: 960623503894248246}
   outline: {fileID: 0}
 --- !u!1 &960623503894248250
 GameObject:
@@ -16902,7 +16870,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableName: Scavenger hunt item
-  interactableTransform: {fileID: 960623504032350311}
   outline: {fileID: 0}
 --- !u!4 &960623504032350311
 Transform:
@@ -16952,7 +16919,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableName: Scavenger hunt item
-  interactableTransform: {fileID: 960623504124992705}
   outline: {fileID: 0}
 --- !u!4 &960623504124992705
 Transform:
@@ -17120,7 +17086,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableName: Scavenger hunt item
-  interactableTransform: {fileID: 2912892204703067264}
   outline: {fileID: 0}
 --- !u!23 &2912892204703067266
 MeshRenderer:
@@ -17959,7 +17924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 1
-  outlineColor: {r: 0.98039216, g: 0.22587812, b: 0, a: 1}
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
   outlineWidth: 4
   precomputeOutline: 0
   bakeKeys: []

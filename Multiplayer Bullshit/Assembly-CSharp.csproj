@@ -116,6 +116,7 @@
     <Compile Include="Assets\PlayMaker\Actions\EaseEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Logic\EnumCompare.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\GetAnimatorIsLayerInTransition.cs" />
+    <Compile Include="Assets\Scripts\lights sabotage\crewmateLightsOut.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Color\GetColorRGBA.cs" />
     <Compile Include="Assets\PlayMaker\Actions\RectTransform\RectTransformFlipLayoutAxes.cs" />
     <Compile Include="Assets\PlayMaker\Actions\VideoPlayer\VideoPlayerGetWaitForFirstFrame.cs" />
@@ -795,6 +796,7 @@
     <Compile Include="Assets\Scripts\Game Stuff\EmergencyButton.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Actions\PhotonViewRpcBroadcastFsmEventToPlayer.cs" />
     <Compile Include="Assets\PlayMaker\Actions\RectTransform\RectTransformSetAnchorRectPosition.cs" />
+    <Compile Include="Assets\Scripts\lights sabotage\CrewmateLightsOn.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics\Explosion.cs" />
     <Compile Include="Assets\PlayMaker\Actions\ScriptControl\AxisEvent.cs" />
     <Compile Include="Assets\Scripts\UI Stuff\RoomManager.cs" />
@@ -990,6 +992,7 @@
     <Compile Include="Assets\PlayMaker\Actions\UI\UiInputFieldGetCaretBlinkRate.cs" />
     <Compile Include="Assets\Scripts\Player Stuff\Knife.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Rect\RectContains.cs" />
+    <Compile Include="Assets\PlayMaker Custom Actions\Material\SetMaterialHDRColor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Camera\WorldToScreenPoint.cs" />
     <Compile Include="Assets\Scripts\Game Stuff\Interactable.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Effects\ParticleSystemPlay.cs" />
@@ -1252,9 +1255,6 @@
     <Compile Include="Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\SmoothFollowAction.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetPlayerCustomProperty.cs" />
-    <Compile Include="Assets\Scripts\lights sabotage\crewmateLightsOut.cs" />
-    <Compile Include="Assets\Scripts\lights sabotage\CrewmateLightsOn.cs" />
-    <Compile Include="Assets\PlayMaker Custom Actions\Material\SetMaterialHDRColor.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

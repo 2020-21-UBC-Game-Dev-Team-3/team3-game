@@ -4,7 +4,7 @@ using Photon.Pun;
 public abstract class Interactable : MonoBehaviourPunCallbacks {
   public string interactableName;
 
-  public Transform interactableTransform;
+  //public Transform interactableTransform;
 
   //[SerializeField] GameObject indicator;
 

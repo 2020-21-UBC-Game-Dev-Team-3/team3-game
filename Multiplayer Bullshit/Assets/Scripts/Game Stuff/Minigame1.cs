@@ -6,10 +6,10 @@ using Photon.Pun;
 public class Minigame1 : Interactable
 {
 
-    void Start()
-    {
-        interactableName = "Minigame1";
-    }
+    //void Start()
+    //{
+    //    interactableName = "Minigame1";
+    //}
 
 
     //bool isActivated = false;

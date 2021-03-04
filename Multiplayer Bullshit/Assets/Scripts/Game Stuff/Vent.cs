@@ -6,8 +6,8 @@ using Photon.Pun;
 public class Vent : Interactable
 {
 
-    void Start()
-    {
-        interactableName = "Vent";
-    }
+    //void Start()
+    //{
+    //    interactableName = "Vent";
+    //}
 }
