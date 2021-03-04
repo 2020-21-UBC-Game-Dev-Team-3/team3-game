@@ -29244,7 +29244,7 @@ GameObject:
   - component: {fileID: 5605299229130930992}
   - component: {fileID: 4279860292342972497}
   - component: {fileID: 7183006238311443107}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: 2nd floor walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54331,32 +54331,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3270351879934324368
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5962568766276674590}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 7.077493, y: 3.8453188, z: 17.73559}
-  m_Center: {x: 2.6397624, y: 1.4226594, z: 1.297993}
---- !u!65 &2067862076
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5962568766276674590}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.6880386, y: 2.929373, z: 2.183979}
-  m_Center: {x: -1.3440214, y: 0.9646865, z: 3.8791807}
 --- !u!65 &2067862075
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54370,6 +54344,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.6373951, y: 3.0252435, z: 2.1678681}
   m_Center: {x: -1.3186976, y: 1.0126218, z: -3.9229708}
+--- !u!65 &2067862076
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5962568766276674590}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.6880386, y: 2.929373, z: 2.183979}
+  m_Center: {x: -1.3440214, y: 0.9646865, z: 3.8791807}
+--- !u!65 &3270351879934324368
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5962568766276674590}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.077493, y: 3.8453188, z: 17.73559}
+  m_Center: {x: 2.6397624, y: 1.4226594, z: 1.297993}
 --- !u!1 &5968285604470762529
 GameObject:
   m_ObjectHideFlags: 0
@@ -74988,7 +74988,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableName: 
-  interactableTransform: {fileID: 7788625639186356965}
   outline: {fileID: 0}
 --- !u!1 &7450746449698442615
 GameObject:

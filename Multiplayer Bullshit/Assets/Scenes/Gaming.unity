@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.3198708, g: 0.25813186, b: 0.36720064, a: 1}
+  m_IndirectSpecularColor: {r: 0.31988475, g: 0.2581039, b: 0.36732426, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previewOnGUI: 1
   enableGUILayout: 1
-  drawStateLabels: 1
+  drawStateLabels: 0
   enableStateLabelsInBuilds: 0
   GUITextureStateLabels: 0
   GUITextStateLabels: 0
@@ -3101,7 +3101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 243313930}
   - component: {fileID: 243313931}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: meeting room couch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5918,7 +5918,7 @@ GameObject:
   m_Component:
   - component: {fileID: 616586637}
   - component: {fileID: 616586638}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: coffeeshop deck collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6273,7 +6273,7 @@ GameObject:
   - component: {fileID: 635830450}
   - component: {fileID: 635830452}
   - component: {fileID: 635830451}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ship side colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6305,8 +6305,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.548271, y: 12.155514, z: 0.1563976}
-  m_Center: {x: -4.0743594, y: -1.4742107, z: 2.356709}
+  m_Size: {x: 8.548271, y: 12.155514, z: 2.6057155}
+  m_Center: {x: -4.0743594, y: -1.4742107, z: 3.5813801}
 --- !u!65 &635830452
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6318,8 +6318,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.496587, y: 12.081524, z: 0.097344995}
-  m_Center: {x: -4.054957, y: -0.261652, z: 0.024792092}
+  m_Size: {x: 8.496587, y: 12.081524, z: 3.1533842}
+  m_Center: {x: -4.054957, y: -0.261652, z: -1.5032276}
 --- !u!1 &636313066
 GameObject:
   m_ObjectHideFlags: 0
@@ -7059,7 +7059,7 @@ GameObject:
   m_Component:
   - component: {fileID: 703553485}
   - component: {fileID: 703553486}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: stairs top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8915,7 +8915,7 @@ GameObject:
   m_Component:
   - component: {fileID: 949876851}
   - component: {fileID: 949876852}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: 'coffee shop '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9009,7 +9009,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 567
+    m_Bits: 2615
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -9028,9 +9028,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0.051703233, y: 0.6036039, z: 0.03927366, w: 0.79463625}
-  m_LocalPosition: {x: -1.080903, y: 7.6629124, z: -7.894514}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.18149619, y: -0.6704491, z: 0.17433965, w: 0.69797057}
+  m_LocalPosition: {x: 29.96659, y: 5.8122973, z: 0.48634017}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 142640233}
   - {fileID: 6340473932739498402}
@@ -9054,7 +9054,7 @@ MonoBehaviour:
   m_ShowCameraFrustum: 1
   m_IgnoreTimeScale: 0
   m_WorldUpOverride: {fileID: 0}
-  m_UpdateMethod: 2
+  m_UpdateMethod: 0
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 1
@@ -9107,7 +9107,7 @@ MonoBehaviour:
     m_Bits: 1847
   m_VolumeTrigger: {fileID: 0}
   m_RenderPostProcessing: 1
-  m_Antialiasing: 1
+  m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
@@ -9449,7 +9449,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1071724270}
   - component: {fileID: 1071724271}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: coffee shop  (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12324,7 +12324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1529808827}
   - component: {fileID: 1529808828}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: back of stairs collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12368,7 +12368,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1534514311}
   - component: {fileID: 1534514312}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: coffeeshop deck collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12603,7 +12603,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1617320938}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14709,7 +14709,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1911626626}
   - component: {fileID: 1911626627}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: bar chairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
