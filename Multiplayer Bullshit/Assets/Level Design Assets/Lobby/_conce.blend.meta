@@ -3,7 +3,27 @@ guid: 9edf8b0b87d1e944e92f8475eafc732c
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bulb
+    second: {fileID: 2100000, guid: e4ddf6dc948126743a7e68c49298cd90, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chromPBR
+    second: {fileID: 2100000, guid: 08838c8cc32d83c428d90cb74c50aa86, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: edge
+    second: {fileID: 2100000, guid: 9c842ab305ec57e42b12142edfe45603, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass
+    second: {fileID: 2100000, guid: 8ac8a6d9aa10346439de889998fa3fd2, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

@@ -607,6 +607,7 @@
     <Compile Include="Assets\PlayMaker\Actions\SpriteRenderer\SetSpriteMaskInteraction.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Vector3\Vector3Operator.cs" />
     <Compile Include="Assets\PlayMaker\Actions\String\StringAppend.cs" />
+    <Compile Include="Assets\cameraOffset.cs" />
     <Compile Include="Assets\PlayMaker\Actions\AnimateVariables\EaseRect.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Logic\FloatCompare.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Logic\BoolTest.cs" />
@@ -1255,7 +1256,6 @@
     <Compile Include="Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\SmoothFollowAction.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetPlayerCustomProperty.cs" />
-    <Compile Include="Assets\cameraOffset.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

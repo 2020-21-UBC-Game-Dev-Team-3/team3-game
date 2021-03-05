@@ -3133,8 +3133,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.21323417, y: 1.1545749, z: 0.10250679}
-  m_Center: {x: -0.0010330478, y: -0.077287436, z: 0.015639625}
+  m_Size: {x: 0.21323417, y: 2.1679058, z: 0.14814076}
+  m_Center: {x: -0.0026115282, y: 0.42937803, z: -0.0073822658}
 --- !u!1 &253765083
 GameObject:
   m_ObjectHideFlags: 0
@@ -7091,8 +7091,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.040185507, y: 3.017725, z: 0.43436188}
-  m_Center: {x: -0.0020757047, y: 1.4545355, z: 0.11507157}
+  m_Size: {x: 0.031345855, y: 3.017725, z: 0.37959}
+  m_Center: {x: -0.0038609975, y: 1.4545355, z: 0.08768549}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -17832,6 +17832,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3107038289599581544, guid: 5012b9cbb1389b840918a2c3de78aff7, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 6071591338526435987, guid: 5012b9cbb1389b840918a2c3de78aff7, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -17876,9 +17880,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6360343633849990940, guid: 5012b9cbb1389b840918a2c3de78aff7, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 6848128453926236201, guid: 5012b9cbb1389b840918a2c3de78aff7, type: 3}
       propertyPath: m_Name
       value: Emergency Button Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 6848128453926236201, guid: 5012b9cbb1389b840918a2c3de78aff7, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 9111592499330193202, guid: 5012b9cbb1389b840918a2c3de78aff7, type: 3}
       propertyPath: m_LocalScale.x
@@ -17899,6 +17911,10 @@ PrefabInstance:
     - target: {fileID: 9111592499330193212, guid: 5012b9cbb1389b840918a2c3de78aff7, type: 3}
       propertyPath: viewIdField
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111592499330193215, guid: 5012b9cbb1389b840918a2c3de78aff7, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 9111592499330193215, guid: 5012b9cbb1389b840918a2c3de78aff7, type: 3}
       propertyPath: m_IsActive
