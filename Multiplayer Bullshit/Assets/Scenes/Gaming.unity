@@ -474,7 +474,6 @@ GameObject:
   - component: {fileID: 107471160}
   - component: {fileID: 107471163}
   - component: {fileID: 107471162}
-  - component: {fileID: 107471161}
   m_Layer: 0
   m_Name: greenlight8
   m_TagString: Untagged
@@ -496,19 +495,6 @@ Transform:
   m_Father: {fileID: 421588086}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &107471161
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 107471159}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &107471162
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6965,7 +6951,6 @@ GameObject:
   - component: {fileID: 691435720}
   - component: {fileID: 691435723}
   - component: {fileID: 691435722}
-  - component: {fileID: 691435721}
   m_Layer: 0
   m_Name: greenlight 2
   m_TagString: Untagged
@@ -6987,19 +6972,6 @@ Transform:
   m_Father: {fileID: 421588086}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &691435721
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 691435719}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &691435722
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7745,7 +7717,6 @@ GameObject:
   - component: {fileID: 801159189}
   - component: {fileID: 801159192}
   - component: {fileID: 801159191}
-  - component: {fileID: 801159190}
   m_Layer: 0
   m_Name: greenlight6
   m_TagString: Untagged
@@ -7767,19 +7738,6 @@ Transform:
   m_Father: {fileID: 421588086}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &801159190
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 801159188}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &801159191
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11448,7 +11406,6 @@ GameObject:
   - component: {fileID: 1399097367}
   - component: {fileID: 1399097370}
   - component: {fileID: 1399097369}
-  - component: {fileID: 1399097368}
   m_Layer: 0
   m_Name: greenlight 3
   m_TagString: Untagged
@@ -11470,19 +11427,6 @@ Transform:
   m_Father: {fileID: 421588086}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1399097368
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399097366}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1399097369
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12019,7 +11963,6 @@ GameObject:
   - component: {fileID: 1486935629}
   - component: {fileID: 1486935632}
   - component: {fileID: 1486935631}
-  - component: {fileID: 1486935630}
   m_Layer: 0
   m_Name: greenlight7
   m_TagString: Untagged
@@ -12041,19 +11984,6 @@ Transform:
   m_Father: {fileID: 421588086}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1486935630
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1486935628}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1486935631
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13683,7 +13613,6 @@ GameObject:
   - component: {fileID: 1753384370}
   - component: {fileID: 1753384373}
   - component: {fileID: 1753384372}
-  - component: {fileID: 1753384371}
   m_Layer: 0
   m_Name: greenlight4
   m_TagString: Untagged
@@ -13705,19 +13634,6 @@ Transform:
   m_Father: {fileID: 421588086}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1753384371
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1753384369}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1753384372
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13853,7 +13769,6 @@ GameObject:
   - component: {fileID: 1761132307}
   - component: {fileID: 1761132310}
   - component: {fileID: 1761132309}
-  - component: {fileID: 1761132308}
   m_Layer: 0
   m_Name: greenlight5
   m_TagString: Untagged
@@ -13875,19 +13790,6 @@ Transform:
   m_Father: {fileID: 421588086}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1761132308
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1761132306}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1761132309
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14235,7 +14137,6 @@ GameObject:
   - component: {fileID: 1834538069}
   - component: {fileID: 1834538072}
   - component: {fileID: 1834538071}
-  - component: {fileID: 1834538070}
   m_Layer: 0
   m_Name: greenlight 1
   m_TagString: Untagged
@@ -14257,19 +14158,6 @@ Transform:
   m_Father: {fileID: 421588086}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1834538070
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1834538068}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1834538071
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15769,6 +15657,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 883485797723448495, guid: bee8e4b30c2a27a4c8b469328a3be3bf, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5959451694759991764, guid: bee8e4b30c2a27a4c8b469328a3be3bf, type: 3}
       propertyPath: m_Name
       value: Ship

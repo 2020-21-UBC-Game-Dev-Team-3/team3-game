@@ -67,7 +67,6 @@ ScriptsOnlyBuild:
     - Photon.Pun.PhotonView
     - Photon.Pun.ServerSettings
     PlayMaker.dll:
-    - FsmTemplate
     - PlayMakerFSM
     - PlayMakerFixedUpdate
     - PlayMakerGUI
@@ -275,9 +274,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 20288}
     - Class: 114
-      Script: {instanceID: 23136}
+      Script: {instanceID: 24042}
     - Class: 114
-      Script: {instanceID: 23164}
+      Script: {instanceID: 24070}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -540,11 +539,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 20324}
     - Class: 114
-      Script: {instanceID: 59818}
+      Script: {instanceID: 46788}
     - Class: 114
-      Script: {instanceID: 68442}
+      Script: {instanceID: 47626}
     - Class: 114
-      Script: {instanceID: 69278}
+      Script: {instanceID: 47640}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
