@@ -5,12 +5,17 @@ using Photon.Pun;
 
 public class PlayerAudio : MonoBehaviour
 {
+    public AudioListener audioListener;
     public AudioSource Footsteps;
     public AudioSource Music;
     private PhotonView pv;
     private void Awake()
     {
         pv = GetComponent<PhotonView>();
+        if (!pv.IsMine)
+        {
+            audioListener.GetComponent<AudioListener>().enabled = false;
+        }
     }
     void OnTriggerEnter(Collider other)
     {
@@ -33,11 +38,16 @@ public class PlayerAudio : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
         if(horizontal != 0 || vertical != 0)
         {
-            Footsteps.mute = false;
+            pv.RPC("MuteFoot", RpcTarget.All, false);
         }
         else
         {
-            Footsteps.mute = true;
+            pv.RPC("MuteFoot", RpcTarget.All, true);
         }
+    }
+    [PunRPC]
+    private void MuteFoot(bool boolean)
+    {
+        Footsteps.mute = boolean;
     }
 }

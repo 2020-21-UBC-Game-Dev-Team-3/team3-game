@@ -4960,6 +4960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55091500678315a428b69e4793850749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioListener: {fileID: -1785865605553043759}
   Footsteps: {fileID: 1421552905554903987}
   Music: {fileID: -3398186497074434744}
 --- !u!82 &-3398186497074434744
@@ -4985,7 +4986,7 @@ AudioSource:
   MinDistance: 0
   MaxDistance: 0.01
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -5002,7 +5003,7 @@ AudioSource:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1
+      time: 0.9588623
       value: 0
       inSlope: 0
       outSlope: 0
