@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.SceneManagement;
 
 public class PlayerActionController : MonoBehaviour, IDamageable {
   [SerializeField] GameObject emergencyMeetingImage;
@@ -23,6 +24,11 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
   public Transform Vent3Pos;
   private float threshold = 1.0f; //magic number but it works and idk what else to do
 
+  public GameObject minimap;
+  public GameObject cam;
+  public GameObject reticle;
+  
+
   void Awake() {
     mm = GetComponent<MapManager>();
     pv = GetComponent<PhotonView>();
@@ -37,13 +43,31 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
     Vent1Pos = GameObject.Find("Vent1Pos").transform;
     Vent2Pos = GameObject.Find("Vent2Pos").transform;
     Vent3Pos = GameObject.Find("Vent3Pos").transform;
+
+    minimap = GameObject.Find("Minimap System");
+    cam = GameObject.Find("Main Camera");
+    reticle = GameObject.Find("Assassin Reticle");
   }
 
   // Update is called once per frame
   void Update() {
     if (!pv.IsMine) return;
 
-    Interact();
+    if (SceneManager.sceneCount > 1)
+        {
+            return;
+        } else
+        {
+            cam.SetActive(true);
+            minimap.SetActive(true);
+            reticle.SetActive(true);
+            GetComponents<PlayMakerFSM>()[2].enabled = true;
+            GetComponent<PlayMakerFixedUpdate>().enabled = true;
+            GetComponent<PlayMakerLateUpdate>().enabled = true;
+        }
+
+
+        Interact();
 
     if (inVent) {
       CurrentlyInVent();
@@ -95,6 +119,16 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
 
       case "Scavenger hunt starter":
         interactable.GetComponent<ScavengerHuntStarter>().ActivateScavengerHunt();
+        break;
+
+      case "Minigame1":
+        SceneManager.LoadScene("LifeBoat Minigame", LoadSceneMode.Additive);
+        cam.SetActive(false);
+        minimap.SetActive(false);
+        reticle.SetActive(false);
+        GetComponents<PlayMakerFSM>()[2].enabled = false;
+        GetComponent<PlayMakerFixedUpdate>().enabled = false;
+        GetComponent<PlayMakerLateUpdate>().enabled = false;
         break;
 
       default:

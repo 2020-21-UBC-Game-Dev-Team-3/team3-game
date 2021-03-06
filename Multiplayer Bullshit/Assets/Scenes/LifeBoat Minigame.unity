@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 34564213}
   - component: {fileID: 34564212}
   - component: {fileID: 34564211}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 84284641}
   - component: {fileID: 84284640}
   - component: {fileID: 84284639}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Passenger4
   m_TagString: Passenger
   m_Icon: {fileID: 0}
@@ -364,7 +364,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84284638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.9, y: 35.5, z: 0}
+  m_LocalPosition: {x: 35.9, y: 35.5, z: -0.001}
   m_LocalScale: {x: 8, y: 8, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 120287146}
   - component: {fileID: 120287145}
   - component: {fileID: 120287148}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: KillBarrier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -502,7 +502,7 @@ GameObject:
   m_Component:
   - component: {fileID: 430345071}
   - component: {fileID: 430345070}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -558,7 +558,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 8192
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -597,7 +597,7 @@ GameObject:
   - component: {fileID: 448307450}
   - component: {fileID: 448307449}
   - component: {fileID: 448307448}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Passenger5
   m_TagString: Passenger
   m_Icon: {fileID: 0}
@@ -725,7 +725,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448307447}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.120003, y: 35.5, z: 0}
+  m_LocalPosition: {x: 38.120003, y: 35.5, z: -0.001}
   m_LocalScale: {x: 8, y: 8, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -740,7 +740,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 473083028}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Boundary line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -776,7 +776,7 @@ GameObject:
   - component: {fileID: 539899593}
   - component: {fileID: 539899594}
   - component: {fileID: 539899596}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LifeBoat
   m_TagString: LifeBoat
   m_Icon: {fileID: 0}
@@ -942,7 +942,7 @@ GameObject:
   - component: {fileID: 621120693}
   - component: {fileID: 621120695}
   - component: {fileID: 621120694}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: Task Complete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1023,7 +1023,7 @@ GameObject:
   - component: {fileID: 999722915}
   - component: {fileID: 999722914}
   - component: {fileID: 999722913}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Passenger2
   m_TagString: Passenger
   m_Icon: {fileID: 0}
@@ -1151,7 +1151,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999722912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.840004, y: 35.5, z: 0}
+  m_LocalPosition: {x: 33.840004, y: 35.5, z: -0.001}
   m_LocalScale: {x: 8, y: 8, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1167,7 +1167,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1069377347}
   - component: {fileID: 1069377348}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: New Sprite (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1249,7 +1249,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1300052529}
   - component: {fileID: 1300052528}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1333,7 +1333,7 @@ GameObject:
   - component: {fileID: 1303986116}
   - component: {fileID: 1303986115}
   - component: {fileID: 1303986118}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -1374,12 +1374,12 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 30
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 8192
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1399,7 +1399,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1303986114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10.309999, z: -50}
+  m_LocalPosition: {x: 0, y: 11, z: -50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1448,7 +1448,7 @@ GameObject:
   - component: {fileID: 1316327769}
   - component: {fileID: 1316327768}
   - component: {fileID: 1316327771}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: ShipFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1580,7 +1580,7 @@ GameObject:
   - component: {fileID: 1425637512}
   - component: {fileID: 1425637515}
   - component: {fileID: 1425637516}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Passenger1
   m_TagString: Passenger
   m_Icon: {fileID: 0}
@@ -1667,7 +1667,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1425637511}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 42.4, y: 35.5, z: 0}
+  m_LocalPosition: {x: 42.4, y: 35.5, z: -0.001}
   m_LocalScale: {x: 8, y: 8, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1727,7 +1727,7 @@ GameObject:
   - component: {fileID: 1701576827}
   - component: {fileID: 1701576826}
   - component: {fileID: 1701576825}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Passenger6
   m_TagString: Passenger
   m_Icon: {fileID: 0}
@@ -1855,7 +1855,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701576824}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.460007, y: 35.5, z: 0}
+  m_LocalPosition: {x: 40.460007, y: 35.5, z: -0.001}
   m_LocalScale: {x: 8, y: 8, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1874,7 +1874,7 @@ GameObject:
   - component: {fileID: 1800475579}
   - component: {fileID: 1800475578}
   - component: {fileID: 1800475577}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Passenger3
   m_TagString: Passenger
   m_Icon: {fileID: 0}
@@ -2002,7 +2002,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800475576}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.560005, y: 35.5, z: 0}
+  m_LocalPosition: {x: 31.560005, y: 35.5, z: -0.001}
   m_LocalScale: {x: 8, y: 8, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2019,7 +2019,7 @@ GameObject:
   - component: {fileID: 1869607626}
   - component: {fileID: 1869607628}
   - component: {fileID: 1869607627}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: Score Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2098,7 +2098,7 @@ GameObject:
   - component: {fileID: 1911642196}
   - component: {fileID: 1911642195}
   - component: {fileID: 1911642194}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}

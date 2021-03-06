@@ -11,7 +11,10 @@ public class GameReset : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
 
         Destroy(other.gameObject);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+
+        SceneManager.UnloadSceneAsync("LifeBoat Minigame");
+        SceneManager.LoadScene(sceneName: "LifeBoat Minigame", LoadSceneMode.Additive);
 
     }
 

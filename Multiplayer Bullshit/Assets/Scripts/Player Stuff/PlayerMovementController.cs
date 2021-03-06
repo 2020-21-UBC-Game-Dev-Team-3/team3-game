@@ -37,10 +37,10 @@ public class PlayerMovementController : MonoBehaviour {
   // Start is called before the first frame update
   void Start() {
 
-   if (switched)
-   {
-    PlayerIsComingBack();
-   }
+   //if (switched)
+   //{
+   // PlayerIsComingBack();
+   //}
 
     if (!pv.IsMine) {
       Destroy(playerCamera);
@@ -58,10 +58,11 @@ public class PlayerMovementController : MonoBehaviour {
       if (!pv.IsMine) return;
 
       //PlayerMovement();
-    } else {
-            Debug.Log("check1");
-      CheckFalse();
     }
+    //    else {
+    //        Debug.Log("check1");
+    //  CheckFalse();
+    //}
   }
 
   //void RotatePlayer(Vector3 movement)
@@ -86,26 +87,26 @@ public class PlayerMovementController : MonoBehaviour {
   //  emergencyMeetingEvent.SetActive(false);
   //}
 
-  void CheckFalse() {
-    GetComponent<Animator>().enabled = false;
-        Debug.Log("check2");
+  //void CheckFalse() {
+  //  GetComponent<Animator>().enabled = false;
+  //      Debug.Log("check2");
 
-  }
+  //}
 
-    void PlayerIsSwitchingScene()
-    {
-        PlayerPrefs.SetFloat("X", transform.position.x);
-        PlayerPrefs.SetFloat("Y", transform.position.y);
-        PlayerPrefs.SetFloat("Z", transform.position.z);
+  //  void PlayerIsSwitchingScene()
+  //  {
+  //      PlayerPrefs.SetFloat("X", transform.position.x);
+  //      PlayerPrefs.SetFloat("Y", transform.position.y);
+  //      PlayerPrefs.SetFloat("Z", transform.position.z);
 
-        switched = true;
-    }
-    void PlayerIsComingBack()
-    {
-        transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
+  //      switched = true;
+  //  }
+  //  void PlayerIsComingBack()
+  //  {
+  //      transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
 
-        switched = false;
-    }
+  //      switched = false;
+  //  }
 
     //void PlayerMovement() {
     //    if (!switched)
