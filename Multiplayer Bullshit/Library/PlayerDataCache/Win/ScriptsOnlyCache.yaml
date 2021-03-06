@@ -1,10 +1,5 @@
 ScriptsOnlyBuild:
   usedScripts:
-    Assembly-CSharp-Editor.dll:
-    - HutongGames.PlayMakerEditor.EditorStartupPrefs
-    - HutongGames.PlayMakerEditor.FsmActionWindow
-    - HutongGames.PlayMakerEditor.FsmEditorWindow
-    - Net.FabreJean.PlayMaker.Ecosystem.EcosystemBrowser
     Assembly-CSharp.dll:
     - Assassin
     - AssassinAbility
@@ -60,6 +55,9 @@ ScriptsOnlyBuild:
     - Cinemachine.CinemachineTransposer
     - Cinemachine.CinemachineVirtualCamera
     PhotonUnityNetworking.Editor.dll:
+    - Photon.Pun.PhotonAnimatorViewEditor
+    - Photon.Pun.PhotonTransformViewEditor
+    - Photon.Pun.PhotonViewInspector
     - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
@@ -72,7 +70,6 @@ ScriptsOnlyBuild:
     - PlayMakerGUI
     - PlayMakerGlobals
     - PlayMakerLateUpdate
-    - PlayMakerPrefs
     Unity.InputSystem.dll:
     - UnityEngine.InputSystem.InputSettings
     - UnityEngine.InputSystem.InputSystemObject
@@ -274,9 +271,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 20288}
     - Class: 114
-      Script: {instanceID: 24042}
+      Script: {instanceID: 24908}
     - Class: 114
-      Script: {instanceID: 24070}
+      Script: {instanceID: 24936}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -539,11 +536,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 20324}
     - Class: 114
-      Script: {instanceID: 46788}
+      Script: {instanceID: 20876}
     - Class: 114
-      Script: {instanceID: 47626}
+      Script: {instanceID: 68696}
     - Class: 114
-      Script: {instanceID: 47640}
+      Script: {instanceID: 68698}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
