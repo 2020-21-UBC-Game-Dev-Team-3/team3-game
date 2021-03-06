@@ -14,6 +14,7 @@ TagManager:
   - Vent1Pos
   - Vent3Test
   - CallFloor
+  - MusicMaker
   layers:
   - Default
   - TransparentFX

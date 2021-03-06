@@ -55,13 +55,13 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
   }
 
   void OnTriggerEnter(Collider other) {
-    if (other.CompareTag("Interactable")) {
+    if (other.CompareTag("Interactable") || (other.CompareTag("MusicMaker"))) {
       interactable = other.gameObject.GetComponent<Interactable>();
     }
   }
 
   void OnTriggerExit(Collider other) {
-    if (other.CompareTag("Interactable")) {
+    if (other.CompareTag("Interactable") || (other.CompareTag("MusicMaker"))) {
       interactable = null;
     }
   }
@@ -96,15 +96,25 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
       case "Scavenger hunt starter":
         interactable.GetComponent<ScavengerHuntStarter>().ActivateScavengerHunt();
         break;
-
-      default:
-        Debug.Log("not applicable");
-        break;
+            
+       case "Interactable sound":
+                interactable.GetComponent<SoundInteract>().PlaySound();
+                break;
+       case "Piano":
+                pv.RPC("PianoInteract", RpcTarget.All, "Piano");
+                break;
+            default:
+                Debug.Log("not applicable");
+                break;
+        }
     }
-  }
+    [PunRPC]
+    public void PianoInteract(string name)
+    {
+        GameObject.Find(name).GetComponent<PianoInteract>().PlaySound();
+    }
 
-
-  [PunRPC]
+    [PunRPC]
   public void TurnOnEmergencyPopUp(string eventName) {
     if (eventName == "Emergency meeting") {
       StartCoroutine(ShowEmergencyPopUp(emergencyMeetingImage));

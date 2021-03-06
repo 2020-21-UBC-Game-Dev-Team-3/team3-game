@@ -1256,6 +1256,9 @@
     <Compile Include="Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\SmoothFollowAction.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetPlayerCustomProperty.cs" />
+    <Compile Include="Assets\Main Assets\Music\Scripts\SoundInteract.cs" />
+    <Compile Include="Assets\Main Assets\Music\Scripts\PianoInteract.cs" />
+    <Compile Include="Assets\Main Assets\Music\Scripts\PlayerAudio.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
