@@ -726,6 +726,7 @@ GameObject:
   - component: {fileID: 321787599963053131}
   - component: {fileID: 3812512839572925355}
   - component: {fileID: 326899396115219013}
+  - component: {fileID: -6516275165155891059}
   m_Layer: 9
   m_Name: player2
   m_TagString: Player
@@ -3591,6 +3592,14 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 1
+--- !u!81 &-6516275165155891059
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3266545680786733594}
+  m_Enabled: 1
 --- !u!1 &3464390445804641302
 GameObject:
   m_ObjectHideFlags: 0

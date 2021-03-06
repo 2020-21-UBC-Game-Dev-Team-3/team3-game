@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class ElevatorInteraction : MonoBehaviour
 {
@@ -11,8 +12,13 @@ public class ElevatorInteraction : MonoBehaviour
     private float distToElevator;
     private string ElevatorCallName;
     private float distToElevatorCall;
+    private PhotonView pv;
 
     // Start is called before the first frame update
+    private void Awake()
+    {
+        pv = GetComponent<PhotonView>();
+    }
     void Start()
     {
         Elevator = GameObject.FindGameObjectWithTag("Elevator");
@@ -30,41 +36,44 @@ public class ElevatorInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        distToElevator = Vector3.Distance(transform.position, Elevator.transform.position);
-        if (distToElevator <= 1)
+        if (pv.IsMine)
         {
-            ElevatorButtonsOn();
-        }
-        else if (distToElevator > 1)
-        {
-            ElevatorButtonsOff();
-        }
-        ElevatorStation = FindClosestStation();
-        ElevatorCallName = ElevatorStation.name;
-        distToElevatorCall = Vector3.Distance(transform.position, ElevatorStation.transform.position);
-        if (distToElevatorCall <= 2)
-        {
-            switch (ElevatorCallName)
+            distToElevator = Vector3.Distance(transform.position, Elevator.transform.position);
+            if (distToElevator <= 1)
             {
-                case "CallFloor1":
-                    CallElevatorButtonOn1();
-                    break;
-                case "CallFloor2":
-                    CallElevatorButtonOn2();
-                    break;
-                case "CallFloor3":
-                    CallElevatorButtonOn3();
-                    break;
-                default:
-                    Debug.Log("What?");
-                    break;
+                ElevatorButtonsOn();
             }
-        }
-        else if (distToElevatorCall > 2)
-        {
-            CallElevatorButtonOff1();
-            CallElevatorButtonOff2();
-            CallElevatorButtonOff3();
+            else if (distToElevator > 1)
+            {
+                ElevatorButtonsOff();
+            }
+            ElevatorStation = FindClosestStation();
+            ElevatorCallName = ElevatorStation.name;
+            distToElevatorCall = Vector3.Distance(transform.position, ElevatorStation.transform.position);
+            if (distToElevatorCall <= 2)
+            {
+                switch (ElevatorCallName)
+                {
+                    case "CallFloor1":
+                        CallElevatorButtonOn1();
+                        break;
+                    case "CallFloor2":
+                        CallElevatorButtonOn2();
+                        break;
+                    case "CallFloor3":
+                        CallElevatorButtonOn3();
+                        break;
+                    default:
+                        Debug.Log("What?");
+                        break;
+                }
+            }
+            else if (distToElevatorCall > 2)
+            {
+                CallElevatorButtonOff1();
+                CallElevatorButtonOff2();
+                CallElevatorButtonOff3();
+            }
         }
     }
     void ElevatorButtonsOn()

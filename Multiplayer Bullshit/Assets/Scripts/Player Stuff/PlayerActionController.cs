@@ -97,12 +97,22 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
         interactable.GetComponent<ScavengerHuntStarter>().ActivateScavengerHunt();
         break;
 
-      default:
+      case "Interactable sound":
+                interactable.GetComponent<SoundInteract>().PlaySound();
+                break;
+      case "Piano":
+                pv.RPC("PianoInteract", RpcTarget.All, "Piano");
+                break;
+            default:
         Debug.Log("not applicable");
         break;
     }
   }
-
+    [PunRPC]
+    public void PianoInteract(string name)
+    {
+        GameObject.Find(name).GetComponent<PianoInteract>().PlaySound();
+    }
 
   [PunRPC]
   public void TurnOnEmergencyPopUp(string eventName) {
