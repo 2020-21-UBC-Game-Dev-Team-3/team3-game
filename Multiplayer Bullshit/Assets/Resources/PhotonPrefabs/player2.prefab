@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 2.0827825, z: -1.8855828}
+  m_FollowOffset: {x: 0, y: -0.07, z: -2.22}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_RollDamping: 0
   m_AngularDamping: 0
   m_Heading:
-    m_Definition: 2
+    m_Definition: 3
     m_VelocityFilterStrength: 4
     m_Bias: 0
   m_RecenterToTargetHeading:
@@ -200,7 +200,7 @@ MonoBehaviour:
     m_LegacyHeadingDefinition: -1
     m_LegacyVelocityFilterStrength: -1
   m_XAxis:
-    Value: 85.776245
+    Value: 0
     m_SpeedMode: 0
     m_MaxSpeed: 300
     m_AccelTime: 0.1
@@ -1066,7 +1066,7 @@ MonoBehaviour:
   pv: {fileID: 0}
   assassinRange: 20
   shurikenPrefab: {fileID: 1245360488091752, guid: 05222e7ebee9c2741b376b8859ce6d39, type: 3}
-  shurikenTransform: {fileID: 0}
+  shurikenTransform: {fileID: 2189087810573607889}
 --- !u!114 &1965030280839596255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5215,7 +5215,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3464390445804641302}
-  m_LocalRotation: {x: 0.2602806, y: 0.64077324, z: -0.2455383, w: 0.67924565}
+  m_LocalRotation: {x: -0.3152429, y: 0.10483025, z: 0.035061214, w: 0.9425515}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5624995, y: 1.5624996, z: 1.5624996}
   m_Children:
@@ -5290,7 +5290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3588007284757267199}
   m_LocalRotation: {x: 0.28478235, y: 0.63143116, z: -0.26865232, w: 0.6693427}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -4.1788034, y: 4.7839613, z: 4.6247196}
   m_LocalScale: {x: 1.5624995, y: 1.5624996, z: 1.5624996}
   m_Children:
   - {fileID: 6540701464570828565}
@@ -5357,7 +5357,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6682194816961625746
 Transform:
   m_ObjectHideFlags: 0
@@ -5522,7 +5522,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4350257086163800055}
-  m_LocalRotation: {x: 0.27256027, y: 0.63621336, z: -0.2571225, w: 0.67441195}
+  m_LocalRotation: {x: -0.29809177, y: 0.105449036, z: 0.033153653, w: 0.94811535}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5624995, y: 1.5624996, z: 1.5624996}
   m_Children:
@@ -5723,7 +5723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 2.0827825, z: -1.8855828}
+  m_FollowOffset: {x: 0, y: -0.07, z: -2.22}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -5733,7 +5733,7 @@ MonoBehaviour:
   m_RollDamping: 0
   m_AngularDamping: 0
   m_Heading:
-    m_Definition: 2
+    m_Definition: 3
     m_VelocityFilterStrength: 4
     m_Bias: 0
   m_RecenterToTargetHeading:
@@ -5743,7 +5743,7 @@ MonoBehaviour:
     m_LegacyHeadingDefinition: -1
     m_LegacyVelocityFilterStrength: -1
   m_XAxis:
-    Value: 85.776245
+    Value: 0
     m_SpeedMode: 0
     m_MaxSpeed: 300
     m_AccelTime: 0.1
@@ -6470,7 +6470,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7909981271565913725}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.1788034, y: 4.6284056, z: -0.30861405}
+  m_LocalPosition: {x: 0, y: -0.15555556, z: -4.9333334}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 31252806386139707}
@@ -6750,7 +6750,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2189087810573607889}
   m_Layer: 9
-  m_Name: Target Position
+  m_Name: Shuriken Target Position
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6763,9 +6763,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8156786979760574270}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 1.3487144, y: 2.1866684, z: 0.058727268}
-  m_LocalScale: {x: 1.7777779, y: 1.7777778, z: 1.7777779}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.369, y: 2.086, z: 0.589}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2746854176688529568}
   m_RootOrder: 9
@@ -6958,7 +6958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 2.0827825, z: -1.8855828}
+  m_FollowOffset: {x: 0, y: -0.07, z: -2.22}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -6968,7 +6968,7 @@ MonoBehaviour:
   m_RollDamping: 0
   m_AngularDamping: 0
   m_Heading:
-    m_Definition: 2
+    m_Definition: 3
     m_VelocityFilterStrength: 4
     m_Bias: 0
   m_RecenterToTargetHeading:
@@ -6978,7 +6978,7 @@ MonoBehaviour:
     m_LegacyHeadingDefinition: -1
     m_LegacyVelocityFilterStrength: -1
   m_XAxis:
-    Value: 85.776245
+    Value: 0
     m_SpeedMode: 0
     m_MaxSpeed: 300
     m_AccelTime: 0.1

@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\PlayMaker\Actions\GameObject\DetachChildren.cs" />
+    <Compile Include="Assets\Main Assets\Music\Scripts\PlayerAudio.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\SetPosition2d.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GameObject\DeactivateSelf.cs" />
     <Compile Include="Assets\PlayMaker\Actions\ProceduralMaterial\SetProceduralColor.cs" />
@@ -385,6 +386,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Vector2\Vector2Normalize.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Lights\SetShadowStrength.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Actions\PunInstantiate.cs" />
+    <Compile Include="Assets\Main Assets\Music\Scripts\PianoInteract.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiInputFieldDeactivate.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GUI\SetGUIColor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\Layout\UiLayoutElementSetValues.cs" />
@@ -1158,6 +1160,7 @@
     <Compile Include="Assets\PlayMaker\Actions\RectTransform\RectTransformSetAnchorMinAndMax.cs" />
     <Compile Include="Assets\PlayMaker\Actions\RenderSettings\SetFlareStrength.cs" />
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\SetFsmEnum.cs" />
+    <Compile Include="Assets\Main Assets\Music\Scripts\SoundInteract.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\GetAnimatorFloat.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Actions\PhotonViewGetIsSceneView.cs" />
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\GetFsmEnum.cs" />
@@ -1256,9 +1259,6 @@
     <Compile Include="Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\SmoothFollowAction.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetPlayerCustomProperty.cs" />
-    <Compile Include="Assets\Main Assets\Music\Scripts\SoundInteract.cs" />
-    <Compile Include="Assets\Main Assets\Music\Scripts\PianoInteract.cs" />
-    <Compile Include="Assets\Main Assets\Music\Scripts\PlayerAudio.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
