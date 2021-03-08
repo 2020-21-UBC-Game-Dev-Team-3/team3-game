@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class Shuriken : MonoBehaviour
 {
@@ -19,8 +20,10 @@ public class Shuriken : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Before mass destruction");
         if(other.CompareTag("Player"))
         {
+            Debug.Log("Destroy Player");
             other.gameObject.GetComponent<IDamageable>()?.TakeHit();
             Destroy(gameObject);
         }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2750483058602140041}
   - component: {fileID: 7839313321431858098}
   - component: {fileID: 4010350638506293435}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Assassin Shuriken
   m_TagString: Untagged
   m_Icon: {fileID: 0}

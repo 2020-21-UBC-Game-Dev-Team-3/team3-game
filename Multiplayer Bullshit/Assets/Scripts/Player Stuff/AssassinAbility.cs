@@ -30,10 +30,8 @@ public class AssassinAbility : RoleAbility
         ray.origin = cam.transform.position;
 
         if (Physics.Raycast(ray, out RaycastHit hit, assassinRange))
-        {
-            Debug.DrawRay(ray.origin, ray.direction, Color.green, 20f);
-            
-            if(hit.collider.CompareTag("Player"))
+        {   
+            if(hit.collider.CompareTag("Player") && !hit.collider.gameObject.GetComponent<PhotonView>().IsMine)
             {
                 pv.RPC("KnifeTravel", RpcTarget.All, hit.point);
             }
