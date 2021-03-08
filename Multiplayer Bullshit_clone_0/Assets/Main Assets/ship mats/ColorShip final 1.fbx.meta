@@ -1,0 +1,666 @@
+fileFormatVersion: 2
+guid: 1192cfa4ec81efb429ec0029cd68833e
+ModelImporter:
+  serializedVersion: 20101
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar Cashier Desk
+    second: {fileID: 2100000, guid: 34145190d4cc9584fb8fd7105ad8cb9e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar Cashier Desk 3
+    second: {fileID: 2100000, guid: 106966e8ce947194d9c6de436b83054d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar Chair leather
+    second: {fileID: 2100000, guid: 6f5a42ae36e592a4ca11f9bf9dfa6c0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar Chair plastic
+    second: {fileID: 2100000, guid: fe319d1c8d0b60c4d8794030be024dfc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar JackDaniels
+    second: {fileID: 2100000, guid: 1286f896b75b07a468ce1e50441805f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar JackDaniels Sticker
+    second: {fileID: 2100000, guid: 0cf6d61b71de4c9418c972de7da93978, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar JackDaniels Sticker 2
+    second: {fileID: 2100000, guid: ba097eeb8291b8b4bb6733e823765dc4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar Transparent glass
+    second: {fileID: 2100000, guid: ec19635da3e5f4c46b65ed29f99e81cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar Window
+    second: {fileID: 2100000, guid: 542be1a1d66f8664d9fc0dace2ae7394, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar cabinet baseboard
+    second: {fileID: 2100000, guid: 530f1c12845a0e34997d436edca7e8ae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar chair grey leather
+    second: {fileID: 2100000, guid: 34e4c25a82c4813478e50f67a8bb5708, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar floor
+    second: {fileID: 2100000, guid: dd995ce91d7471143a27bf2f85ed4e32, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar marble
+    second: {fileID: 2100000, guid: 426576f48164bd746b6490267276dca6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar room divider
+    second: {fileID: 2100000, guid: 5bc471b86f658414eb4974c1e249f53f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar second wood
+    second: {fileID: 2100000, guid: bb3d0faed3aec64428b1b01c55a7d75f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar sink.001
+    second: {fileID: 2100000, guid: ac60a60489e33e247ab2bc909c27e4db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar sink.002
+    second: {fileID: 2100000, guid: 5bf4ef02a6458214fac49e21c16d3595, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar wood
+    second: {fileID: 2100000, guid: e5f4343a4e0d3cf4c91bab741510c1f4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bathroom sign black
+    second: {fileID: 2100000, guid: 917fbb1cf2bbfa04fbff8e3ed8f6828c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Champagne
+    second: {fileID: 2100000, guid: b71019428a930b74e9f303558eb3c194, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Champagne sticker
+    second: {fileID: 2100000, guid: d016a14905554bf4491ae69f9a8a5ecb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Champagne sticker 2
+    second: {fileID: 2100000, guid: 344d3577117ff5e4ba538cd1ed3ebf17, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door_inside
+    second: {fileID: 2100000, guid: 11e8b3561811cf84195d84b9f6f57d0f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Elevator Shaft
+    second: {fileID: 2100000, guid: b7e702ffbb136444e9b05ab5e272c736, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fence Metal
+    second: {fileID: 2100000, guid: bee0b477f9f39074f9380afbf183bcb8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fence Wood
+    second: {fileID: 2100000, guid: e2adc54e262d3484c8ee80c08ab60cdc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fence_glass
+    second: {fileID: 2100000, guid: 7061d29683b51a349b4bff4a61779c31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Handle_inside
+    second: {fileID: 2100000, guid: 8a2cc7bbd83e2064c967de87c43f1cb1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hennessy
+    second: {fileID: 2100000, guid: 5969216b09157a2448b217872b50a0cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hennessy_Sticker
+    second: {fileID: 2100000, guid: 6219ffc3a1e64a6498282edf5fac8e92, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hennessy_Sticker_Up
+    second: {fileID: 2100000, guid: 9dd0a641e63668d479b109a8a8583eb2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 9b95047f480111647907a1a903bd6f93, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Nav room wall
+    second: {fileID: 2100000, guid: 04ad8fc6bd2c56a4790e0e9102e7c940, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pole
+    second: {fileID: 2100000, guid: 83796a2a5835b06419fd267c96d77c9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pool Concrete
+    second: {fileID: 2100000, guid: 2dc8b0b2cbe94204a838995ad68641fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pool Tiles
+    second: {fileID: 2100000, guid: 9312a0af3179e714795fff249c0c3738, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pool side
+    second: {fileID: 2100000, guid: a8287faad4f555542b6d2069cd769343, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pool side lip
+    second: {fileID: 2100000, guid: 3b9a0773835302b468d37c1b3556f95b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Restaurant round table Top
+    second: {fileID: 2100000, guid: 9388165a93fa153479259a2049d87683, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Restaurant square table Chair  legs
+    second: {fileID: 2100000, guid: 004c2d7dbf996c04fb62cbb7e67156b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Restaurant square table Chair feet
+    second: {fileID: 2100000, guid: bd827a3dd90af6844b2321b7efff4a5e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Restaurant square table Chair red
+    second: {fileID: 2100000, guid: 13146c3391d8f4a41bc45a8642c7f6e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Restaurant square table Chair white
+    second: {fileID: 2100000, guid: 1cac96f9322c7c9458b8ad4ec3fa39d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Restaurant square table Metal rod
+    second: {fileID: 2100000, guid: cfe2a9ed1afe0144286bbe23c8792797, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Restaurant square table top
+    second: {fileID: 2100000, guid: ce728c6ff0d20e7489d463d82488dfae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rooms_hallways
+    second: {fileID: 2100000, guid: cbc53db218ea19040a1564ca8f1591ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shelves_material
+    second: {fileID: 2100000, guid: 8498ce63071616d468519b3dca31bd49, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shops
+    second: {fileID: 2100000, guid: a098637af601a0a4599d994e8b220ab3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stair_glass
+    second: {fileID: 2100000, guid: f93c6b2a3d657794d9d179241e780702, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stair_metal
+    second: {fileID: 2100000, guid: 5426ab991cec24547a1fa0f821ea7f28, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stair_wood
+    second: {fileID: 2100000, guid: 98f687cb7f342244eaf263626d6bd0b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Starbucks Blender
+    second: {fileID: 2100000, guid: 3bb034441f5a17c4a9fbc5bf7a431341, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Starbucks Counter top
+    second: {fileID: 2100000, guid: add8f2b78a8b88d4f9e7b8e52740832c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Starbucks Drink texture
+    second: {fileID: 2100000, guid: 4e46acac01a45c24b95bd44b9f87ccba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Starbucks Drink texture 2
+    second: {fileID: 2100000, guid: 39e6c7b562f471b41a33b97d11afe546, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Starbucks Drink texture 3
+    second: {fileID: 2100000, guid: 8005db8a31714f34c99fb5481837bafe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Starbucks Drink texxture 4
+    second: {fileID: 2100000, guid: 097e081d6ae30214c95757b1e8fbbe14, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Starbucks Grey foundation
+    second: {fileID: 2100000, guid: cee0de6fcd60f7248867b5afd27b5e21, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Starbucks blender drink
+    second: {fileID: 2100000, guid: 06a8b7484fb3d514db9574469cbb3998, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Starbucks blender middle
+    second: {fileID: 2100000, guid: 350ea4b881ae14048b3c7d1c01d4ec7f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Starbucks sign
+    second: {fileID: 2100000, guid: 951ce669fecbb934f98e451055dc1cba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Starbucks sink
+    second: {fileID: 2100000, guid: 0f28ee042e4573a42893d8efc8ea1625, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Starbucks stripes
+    second: {fileID: 2100000, guid: 9aecbab51f50fe94fa0f2f3585759243, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Starbucks wood
+    second: {fileID: 2100000, guid: 93e5964e61e69f7439aad1cbe3409484, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WINDOW BEHIND
+    second: {fileID: 2100000, guid: 65f56b6cf317a734d8c97ea33ed4f1c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wine
+    second: {fileID: 2100000, guid: 79c34bcfc6aaa7d4d8ccb33917384bd5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wine_Sticker
+    second: {fileID: 2100000, guid: 0624446630967624e97f39757c068abc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wine_Sticker_Up
+    second: {fileID: 2100000, guid: b51f22d929e55fe4e8c4ac6c60a591ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bar cabinet counter
+    second: {fileID: 2100000, guid: 1e13e1f42e85f3a4692584f443380b2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bar cabinet door material
+    second: {fileID: 2100000, guid: 8610aa8fe65fd394fb36a6e8faebfabe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bar cabinet glass
+    second: {fileID: 2100000, guid: 3fda539ea97b4574baea8b6a134281e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bar cabinet handle
+    second: {fileID: 2100000, guid: e761545cffca4344faf9d36f0e8c948b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bar cabinet material
+    second: {fileID: 2100000, guid: 17a491463aad4384eab78269b37cc89a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bathroom door
+    second: {fileID: 2100000, guid: 8633b4b1da0c1dc44b248e93e12baa80, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bathroom floor
+    second: {fileID: 2100000, guid: 3ff77db1856d953439bfde6b252a42fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bathroom sign female
+    second: {fileID: 2100000, guid: 8939e6cb8726e5a4da3c0640f2657f7f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bathroom sign grey
+    second: {fileID: 2100000, guid: c5f1dbc9bcb2c714994b646c070d8a38, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bathroom sign male
+    second: {fileID: 2100000, guid: 6cfa10a1fc7ec604191472fc68741357, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bathroom stall
+    second: {fileID: 2100000, guid: b1f121b4b11bc0c4590c2f0c67398a28, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bathrooms
+    second: {fileID: 2100000, guid: 48296593557bb3a43a99d7c785f5947f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blue on bottom of ship
+    second: {fileID: 2100000, guid: 74886728c60b7e04b871dbb52cef635f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bottom floors carpet
+    second: {fileID: 2100000, guid: 93afdf9ae3ce3814cb45a6d1ce1c7e4f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: button room floor
+    second: {fileID: 2100000, guid: ebe48d6842795c14abcaf79816375d34, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gameroom carpet
+    second: {fileID: 2100000, guid: ac8d0de05e5aca142af80053360d0b66, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: inside wall of button room
+    second: {fileID: 2100000, guid: 5b45fa0c04bcf434e92b870b2da5c227, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lifeboat right
+    second: {fileID: 2100000, guid: 8ed27caa21c65de44bf3d7f521ea20bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pipe above red building.001
+    second: {fileID: 2100000, guid: 7cfac2b19f3b80e4993967b29c8afcba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pizza box
+    second: {fileID: 2100000, guid: 42cc313729a993a46b333fb8ef0739d9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pizza box logo
+    second: {fileID: 2100000, guid: 6c1a97d1ba4d0a54f948cf1100e74e4d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pizza shop cash register
+    second: {fileID: 2100000, guid: 2301eadcd6974664e95f46e8c58e642d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pizza shop cash register.001
+    second: {fileID: 2100000, guid: 90f5a37011b96004c982a1df95a6e4af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pizza shop desk front
+    second: {fileID: 2100000, guid: 35316109ee8530a46ab369987cc7938a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pizza shop fridge
+    second: {fileID: 2100000, guid: a3e6101c85512c94d8342b02cfa84f99, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pizza shop knifes
+    second: {fileID: 2100000, guid: 55bf4b797090a774b8fcb2c0b83f644b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pizza shop knifes 2
+    second: {fileID: 2100000, guid: 5215338553d9a774e95ae35699d59a90, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pizza shop knifes 3
+    second: {fileID: 2100000, guid: 16156c8a8cd4fa84d95877cbcb2137b0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pizza shop oven metal
+    second: {fileID: 2100000, guid: fd402a6a89d2dac4faa52d75921b6cf7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pizza shop slicer
+    second: {fileID: 2100000, guid: db3f0306e4637e540a07b608b278d812, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pizza shop slicer 2
+    second: {fileID: 2100000, guid: fe58b1b23cdbdf342b9b5abcda3792d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pizza shop slicer 3
+    second: {fileID: 2100000, guid: c7daf206b2c3cec49860cbfc32d214cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pizzaria glass
+    second: {fileID: 2100000, guid: c34110a3c4a12fc47a6a411a0e83df9a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pizzeria metal
+    second: {fileID: 2100000, guid: 6a4d8871ec6b7ed4c98ac586057fafd2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pizzeria metal.001
+    second: {fileID: 2100000, guid: fa5330aa4a4278449846277d9c7c4d3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: poles
+    second: {fileID: 2100000, guid: 3fe8a61f80ad3bf4eb28f18276fce5b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pool lip top
+    second: {fileID: 2100000, guid: dda580b03f51a7544a76790c59b33bda, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: red circular building on deck.001
+    second: {fileID: 2100000, guid: 12594485c3f02b749b9e84456ef59687, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: room tops
+    second: {fileID: 2100000, guid: 07f0de613f297fc48a27ef311bd9ba79, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ship_deck mat
+    second: {fileID: 2100000, guid: a89d8d36f3d331449bfd86b32aeed891, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ships front glass
+    second: {fileID: 2100000, guid: 507fede5d02dbbf44a8b1e5e61e62e77, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stair front
+    second: {fileID: 2100000, guid: 3ca030dca19a6e04aa6777ddee55877e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wall of basement _ outside of ship
+    second: {fileID: 2100000, guid: a6190bd537209c04190aff7c3de085be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wall of middle floor
+    second: {fileID: 2100000, guid: f99018b7197c87e4782693e3b770fb63, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wine sticker lines
+    second: {fileID: 2100000, guid: 370f165bed7296947b683c9912ba9da6, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

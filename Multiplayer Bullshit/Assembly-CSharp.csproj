@@ -1259,6 +1259,8 @@
     <Compile Include="Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\SmoothFollowAction.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetPlayerCustomProperty.cs" />
+    <Compile Include="Assets\Scripts\GameScripts\Voting\VoteSection.cs" />
+    <Compile Include="Assets\Scripts\GameScripts\Voting\VotingManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
