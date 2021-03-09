@@ -17,16 +17,16 @@ public class PlayerAudio : MonoBehaviour
             audioListener.GetComponent<AudioListener>().enabled = false;
         }
     }
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision other)
     {
-        if (other.CompareTag("MusicMaker"))
+        if (other.gameObject.CompareTag("MusicZone"))
         {
             Music.mute = true;
         }
     }
-    void OnTriggerExit(Collider other)
+    void OnCollisionExit(Collision other)
     {
-        if (other.CompareTag("MusicMaker"))
+        if (other.gameObject.CompareTag("MusicZone"))
         {
             Music.mute = false;
         }
