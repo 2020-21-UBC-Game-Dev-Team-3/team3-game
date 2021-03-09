@@ -61,7 +61,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Transform\SetPosition2d.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GameObject\DeactivateSelf.cs" />
     <Compile Include="Assets\PlayMaker\Actions\ProceduralMaterial\SetProceduralColor.cs" />
-    <Compile Include="Assets\Main Assets\Scripts\Player Stuff\AssassinAbility.cs" />
+    <Compile Include="Assets\Main Assets\Scripts\Roles\Role Abilities\AssassinAbility.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Convert\ConvertBoolToInt.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Scripts\PlayMakerPhotonGameObjectProxy.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Vector3\Vector3Multiply.cs" />
@@ -601,7 +601,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Input\WaitAnyKey.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Vector3\Vector3Subtract.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetPlayersInRoomsCount.cs" />
-    <Compile Include="Assets\Main Assets\Scripts\Player Stuff\Shuriken.cs" />
+    <Compile Include="Assets\Main Assets\Scripts\Game Stuff\Shuriken.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GUILayout\GUILayoutSelectionGrid.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GUILayout\GUILayoutVerticalSlider.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\EventSystem\UiOnSubmitEvent.cs" />
@@ -799,7 +799,7 @@
     <Compile Include="Assets\PlayMaker\Actions\RenderSettings\SetFogColor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Debug\DebugVector3.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics2D\WakeUp2d.cs" />
-    <Compile Include="Assets\Main Assets\Scripts\Player Stuff\RoleAbility.cs" />
+    <Compile Include="Assets\Main Assets\Scripts\Roles\Role Abilities\RoleAbility.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiScrollbarSetDirection.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GUIElement\SetGUIText.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiButtonOnClickEvent.cs" />

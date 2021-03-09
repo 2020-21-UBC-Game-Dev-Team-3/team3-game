@@ -20,13 +20,11 @@ public class Shuriken : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Before mass destruction");
-        if(other.CompareTag("Player"))
+        if(other.CompareTag("Player") && !other.gameObject.GetComponent<PhotonView>().IsMine)
         {
-            Debug.Log("Destroy Player");
             other.gameObject.GetComponent<IDamageable>()?.TakeHit();
-            Destroy(gameObject);
         }
+        Destroy(gameObject);
     }
 
 }
