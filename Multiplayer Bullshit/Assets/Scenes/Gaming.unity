@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previewOnGUI: 1
   enableGUILayout: 1
-  drawStateLabels: 1
+  drawStateLabels: 0
   enableStateLabelsInBuilds: 0
   GUITextureStateLabels: 0
   GUITextStateLabels: 0
@@ -8907,7 +8907,7 @@ GameObject:
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
   - component: {fileID: 963194231}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -8972,8 +8972,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0.21785937, y: 0.20475753, z: 0.046802867, w: 0.95311135}
-  m_LocalPosition: {x: -11.737894, y: 10.90411, z: 11.115014}
+  m_LocalRotation: {x: -0.041480396, y: 0.942921, z: -0.12848277, w: -0.30442008}
+  m_LocalPosition: {x: 2.413214, y: 1.2472811, z: 3.3478346}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 142640233}

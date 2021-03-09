@@ -120,6 +120,9 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.Universal.Vignette
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.ShaderGraph.Editor.dll:
+    - UnityEditor.Graphing.GraphObject
+    - UnityEditor.ShaderGraph.Drawing.MaterialGraphEditWindow
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_InputField
@@ -558,11 +561,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 20338}
     - Class: 114
-      Script: {instanceID: 74898}
+      Script: {instanceID: 42952}
     - Class: 114
-      Script: {instanceID: 108612}
+      Script: {instanceID: 72884}
     - Class: 114
-      Script: {instanceID: 109448}
+      Script: {instanceID: 72886}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128

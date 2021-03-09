@@ -96,13 +96,13 @@ public class PlayerVision : MonoBehaviour {
 
     void EnableChildren(GameObject c)
     {
-        c.transform.Find("player").gameObject.SetActive(true);
+        //c.transform.Find("player").gameObject.SetActive(true);
         c.transform.Find("NameCanvas").gameObject.SetActive(true);
     }
 
     void DisableChildren(GameObject c)
     {
-        c.transform.Find("player").gameObject.SetActive(false);
+        //c.transform.Find("player").gameObject.SetActive(false);
         c.transform.Find("NameCanvas").gameObject.SetActive(false);
     }
 
