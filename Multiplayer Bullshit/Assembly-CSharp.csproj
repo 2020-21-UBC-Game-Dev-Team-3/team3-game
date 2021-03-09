@@ -1260,6 +1260,9 @@
      <Compile Include="Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\PlayMaker\Actions\Transform\SmoothFollowAction.cs" />
      <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetPlayerCustomProperty.cs" />
+     <Compile Include="Assets\AntiAliasCtrl.cs" />
+     <Compile Include="Assets\PCSettings.cs" />
+     <Compile Include="Assets\BloomSlid.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Materials\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
