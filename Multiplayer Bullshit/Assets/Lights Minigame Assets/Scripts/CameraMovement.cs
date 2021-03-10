@@ -7,7 +7,7 @@ public class CameraMovement : MonoBehaviour
     private int currChance;
     private float minX = 1f;
     private float maxX = 8f;
-    private int[] speeds = { 1, 1, 10, 10, 20 };
+    private int[] speeds = { 1, 1, 6, 7, 15 };
     private bool movingLeft;
 
 

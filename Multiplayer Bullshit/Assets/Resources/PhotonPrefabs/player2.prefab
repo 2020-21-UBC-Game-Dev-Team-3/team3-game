@@ -1049,6 +1049,9 @@ MonoBehaviour:
   minimap: {fileID: 0}
   cam: {fileID: 0}
   reticle: {fileID: 0}
+  sun: {fileID: 0}
+  currMinigame: 
+  minigameInterrupt: 0
 --- !u!114 &207398781907947271
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -27,7 +27,9 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
   public GameObject minimap;
   public GameObject cam;
   public GameObject reticle;
-  
+  public GameObject sun;
+  public string currMinigame;
+  public bool minigameInterrupt;
 
   void Awake() {
     mm = GetComponent<MapManager>();
@@ -47,6 +49,9 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
     minimap = GameObject.Find("Minimap System");
     cam = GameObject.Find("Main Camera");
     reticle = GameObject.Find("Assassin Reticle");
+    sun = GameObject.Find("sun");
+    currMinigame = "none";
+    minigameInterrupt = false;
   }
 
   // Update is called once per frame
@@ -55,15 +60,25 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
 
     if (SceneManager.sceneCount > 1)
         {
+            if (minigameInterrupt)
+            {
+                SceneManager.UnloadSceneAsync(currMinigame);
+                exitMinigame(true);
+                currMinigame = "none";
+                RenderSettings.ambientIntensity = 0.85f;
+                RenderSettings.reflectionIntensity = 1f;
+                RenderSettings.fogColor = new Color(177f, 161f, 185f, 255f);
+
+            } else
+            {
+                return;
+            }
             return;
         } else
         {
-            cam.SetActive(true);
-            minimap.SetActive(true);
-            reticle.SetActive(true);
-            GetComponents<PlayMakerFSM>()[2].enabled = true;
-            GetComponent<PlayMakerFixedUpdate>().enabled = true;
-            GetComponent<PlayMakerLateUpdate>().enabled = true;
+            exitMinigame(true);
+            currMinigame = "none";
+            RenderSettings.ambientIntensity = 0.85f;
         }
 
 
@@ -122,13 +137,24 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
         break;
 
       case "Minigame1":
+        exitMinigame(false);
+        currMinigame = "LifeBoat Minigame";
         SceneManager.LoadScene("LifeBoat Minigame", LoadSceneMode.Additive);
-        cam.SetActive(false);
-        minimap.SetActive(false);
-        reticle.SetActive(false);
-        GetComponents<PlayMakerFSM>()[2].enabled = false;
-        GetComponent<PlayMakerFixedUpdate>().enabled = false;
-        GetComponent<PlayMakerLateUpdate>().enabled = false;
+        break;
+
+      case "Minigame2":
+        exitMinigame(false);
+        currMinigame = "Lights Minigame";
+        RenderSettings.ambientIntensity = 0f;
+        SceneManager.LoadScene("Lights Minigame", LoadSceneMode.Additive);
+        break;
+
+      case "Minigame3":
+        exitMinigame(false);
+        currMinigame = "Icebergs";
+        RenderSettings.reflectionIntensity = 0f;
+        RenderSettings.fogColor = new Color(0.7830189f, 0.7830189f, 0.7830189f, 0.7830189f);
+        SceneManager.LoadScene("Icebergs", LoadSceneMode.Additive); 
         break;
 
       default:
@@ -205,5 +231,16 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
     transform.GetChild(3).gameObject.SetActive(true);
     transform.GetChild(4).gameObject.SetActive(true);
   }
+
+  void exitMinigame(bool exiting)
+    {
+        cam.SetActive(exiting);
+        minimap.SetActive(exiting);
+        reticle.SetActive(exiting);
+        sun.SetActive(exiting);
+        GetComponents<PlayMakerFSM>()[2].enabled = exiting;
+        GetComponent<PlayMakerFixedUpdate>().enabled = exiting;
+        GetComponent<PlayMakerLateUpdate>().enabled = exiting;
+    }
 
 }

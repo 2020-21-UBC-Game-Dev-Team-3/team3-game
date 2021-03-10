@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LifeBoat Minigame.unity
     guid: e4915cec901b22a41a660ca656914cc7
+  - enabled: 1
+    path: Assets/Scenes/Icebergs.unity
+    guid: bc447389781f6439f822a5e78eb006db
   m_configObjects: {}
