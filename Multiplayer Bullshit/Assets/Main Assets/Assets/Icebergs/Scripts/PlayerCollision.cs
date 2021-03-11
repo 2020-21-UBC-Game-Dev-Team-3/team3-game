@@ -22,7 +22,7 @@ public class PlayerCollision : MonoBehaviour
         }
 
         if(other.gameObject.tag == "Wall"){
-            player.transform.position = startingPosition;
+            SceneManager.UnloadSceneAsync("Icebergs");
         }
         
         

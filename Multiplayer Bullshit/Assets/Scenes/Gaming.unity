@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.3198708, g: 0.25813186, b: 0.36720064, a: 1}
+  m_IndirectSpecularColor: {r: 0.31985432, g: 0.2581995, b: 0.367262, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8597,7 +8597,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c8b43b9889367bb489fe44ddf2f80f22, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8384753811824461228, guid: c0a258fa4afc1944fb8946a749a96186, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c0a258fa4afc1944fb8946a749a96186, type: 3}
 --- !u!4 &814401163 stripped
 Transform:
@@ -11854,6 +11855,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1283026112}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1283135258 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8384753811824461225, guid: c0a258fa4afc1944fb8946a749a96186, type: 3}
+  m_PrefabInstance: {fileID: 814401161}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1283135259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283135258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9bfc98ee147ba3458506fcdcad10f7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableName: Lifeboat minigame
+  outline: {fileID: 0}
 --- !u!1 &1283450481
 GameObject:
   m_ObjectHideFlags: 0
@@ -16309,7 +16329,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874885263}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 11, y: 5, z: 5}

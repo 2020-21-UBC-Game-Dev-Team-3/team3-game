@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.SceneManagement;
 
-public class PlayerActionController : MonoBehaviour, IDamageable {
+public class PlayerActionController : MonoBehaviour, IDamageable
+{
     [SerializeField] GameObject emergencyMeetingImage;
     [SerializeField] GameObject bodyReportedImage;
     [SerializeField] GameObject votingManager;
 
     MapManager mm;
 
-    Interactable interactable = null;
+    public Interactable interactable = null;
 
     public PhotonView pv;
 
@@ -23,6 +25,13 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
     public Transform Vent2Pos;
     public Transform Vent3Pos;
     private float threshold = 1.0f; //magic number but it works and idk what else to do
+
+    public GameObject minimap;
+    public GameObject cam;
+    public GameObject reticle;
+    public GameObject sun;
+    public string currMinigame;
+    public bool minigameInterrupt;
 
     void Awake()
     {
@@ -40,12 +49,44 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
         Vent1Pos = GameObject.Find("Vent1Pos").transform;
         Vent2Pos = GameObject.Find("Vent2Pos").transform;
         Vent3Pos = GameObject.Find("Vent3Pos").transform;
+
+        minimap = GameObject.Find("Minimap System");
+        cam = GameObject.Find("Main Camera");
+        reticle = GameObject.Find("Assassin Reticle");
+        sun = GameObject.Find("sun");
+        currMinigame = "none";
+        minigameInterrupt = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         if (!pv.IsMine) return;
+
+        if (SceneManager.sceneCount > 1)
+        {
+            if (minigameInterrupt)
+            {
+                SceneManager.UnloadSceneAsync(currMinigame);
+                exitMinigame(true);
+                currMinigame = "none";
+                RenderSettings.ambientIntensity = 0.85f;
+                RenderSettings.reflectionIntensity = 1f;
+                RenderSettings.fogColor = new Color(177f, 161f, 185f, 255f);
+
+            }
+            else
+            {
+                return;
+            }
+            return;
+        }
+        else
+        {
+            exitMinigame(true);
+            currMinigame = "none";
+            RenderSettings.ambientIntensity = 0.85f;
+        }
 
         Interact();
 
@@ -121,6 +162,29 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
                 GetComponent<TrapAbility>().DecrementCurrTraps();
                 Destroy(interactable.gameObject);
                 break;
+
+            case "Lifeboat minigame":
+                Debug.Log("LIFEBOAT ENTER");
+                exitMinigame(false);
+                currMinigame = "LifeBoat Minigame";
+                SceneManager.LoadScene("LifeBoat Minigame", LoadSceneMode.Additive);
+                break;
+
+            case "Lights minigame":
+                exitMinigame(false);
+                currMinigame = "Lights Minigame";
+                RenderSettings.ambientIntensity = 0f;
+                SceneManager.LoadScene("Lights Minigame", LoadSceneMode.Additive);
+                break;
+
+            case "Iceberg minigame":
+                exitMinigame(false);
+                currMinigame = "Icebergs";
+                RenderSettings.reflectionIntensity = 0f;
+                RenderSettings.fogColor = new Color(0.7830189f, 0.7830189f, 0.7830189f, 0.7830189f);
+                SceneManager.LoadScene("Icebergs", LoadSceneMode.Additive);
+                break;
+
             default:
                 Debug.Log("not applicable");
                 break;
@@ -217,6 +281,17 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
         transform.GetChild(2).gameObject.SetActive(true);
         transform.GetChild(3).gameObject.SetActive(true);
         transform.GetChild(4).gameObject.SetActive(true);
+    }
+
+    void exitMinigame(bool exiting)
+    {
+        cam.SetActive(exiting);
+        minimap.SetActive(exiting);
+        reticle.SetActive(exiting);
+        sun.SetActive(exiting);
+        GetComponents<PlayMakerFSM>()[2].enabled = exiting;
+        GetComponent<PlayMakerFixedUpdate>().enabled = exiting;
+        GetComponent<PlayMakerLateUpdate>().enabled = exiting;
     }
 
 }
