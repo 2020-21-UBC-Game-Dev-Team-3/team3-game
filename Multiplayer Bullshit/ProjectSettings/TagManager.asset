@@ -16,6 +16,8 @@ TagManager:
   - CallFloor
   - MusicMaker
   - MusicZone
+  - Passenger
+  - LifeBoat
   layers:
   - Default
   - TransparentFX
@@ -31,7 +33,7 @@ TagManager:
   - wall of ship
   - PlayerWalkThrough
   - Shuriken
-  - 
+  - Minigame
   - 
   - 
   - 
@@ -52,4 +54,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: front
+    uniqueID: 2463440007
+    locked: 0
+  - name: back
+    uniqueID: 2092037897
     locked: 0
