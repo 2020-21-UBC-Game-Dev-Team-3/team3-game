@@ -57,7 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Player\AssassinAbility.cs" />
-    <Compile Include="Assets\Scripts\Game Folder\Minigames\GlyphPatternScript.cs" />
+    <Compile Include="Assets\Scripts\Game Folder\Minigames\DrawingMinigame\GlyphPatternScript.cs" />
     <Compile Include="Assets\Icebergs\Scripts\BoatMovement.cs" />
     <Compile Include="Assets\Scripts\UI Stuff\MenuManager.cs" />
     <Compile Include="Assets\Scripts\Game Folder\Minigame1.cs" />
@@ -85,6 +85,7 @@
     <Compile Include="Assets\Icebergs\Scripts\CameraController.cs" />
     <Compile Include="Assets\LifeBoatMinigame\LifeBoatGameManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerActionController.cs" />
+    <Compile Include="Assets\Scripts\Game Folder\Minigames\DrawingMinigame\DrawingManager.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\LightFlicker.cs" />
     <Compile Include="Assets\Scripts\PhotonLauncher.cs" />
     <Compile Include="Assets\LifeBoatMinigame\PassengerDrag.cs" />
@@ -99,6 +100,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerMovementController.cs" />
     <Compile Include="Assets\GestureRecognizer\Scripts\Recognizer.cs" />
     <Compile Include="Assets\Scripts\Roles\Role.cs" />
+    <Compile Include="Assets\Scripts\Game Folder\Minigames\DrawingMinigame\GestureHandler.cs" />
     <Compile Include="Assets\Scripts\Game Folder\Minigame2.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\ClickManager.cs" />
     <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
@@ -108,7 +110,7 @@
     <Compile Include="Assets\Scripts\Game Folder\Interactable.cs" />
     <Compile Include="Assets\LifeBoatMinigame\GameReset.cs" />
     <Compile Include="Assets\GestureRecognizer\Scripts\GesturePatternDraw.cs" />
-    <Compile Include="Assets\Scripts\Game Folder\Minigames\DrawingScript.cs" />
+    <Compile Include="Assets\Scripts\Game Folder\Minigames\DrawingMinigame\DrawingScript.cs" />
     <Compile Include="Assets\GestureRecognizer\Example\ExampleGestureHandler.cs" />
     <Compile Include="Assets\Scripts\Game Folder\MapManager.cs" />
     <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
@@ -122,8 +124,6 @@
     <Compile Include="Assets\NameTextScript.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\TextManager.cs" />
     <Compile Include="Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
-    <Compile Include="Assets\Scripts\Game Folder\Minigames\DrawingManager.cs" />
-    <Compile Include="Assets\Scripts\Game Folder\Minigames\GestureHandler.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\GestureRecognizer\UPDATE GUIDE.txt" />
