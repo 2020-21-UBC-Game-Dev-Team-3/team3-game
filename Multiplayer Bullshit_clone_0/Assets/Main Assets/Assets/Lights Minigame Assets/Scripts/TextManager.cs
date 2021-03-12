@@ -19,7 +19,7 @@ public class TextManager : MonoBehaviour
     public void Win()
     {
         winText.gameObject.SetActive(true);
-        SceneManager.LoadScene(sceneName: "Gaming", LoadSceneMode.Single);
+        SceneManager.UnloadSceneAsync("Lights Minigame");
     }
 
     public void IncrementCount()

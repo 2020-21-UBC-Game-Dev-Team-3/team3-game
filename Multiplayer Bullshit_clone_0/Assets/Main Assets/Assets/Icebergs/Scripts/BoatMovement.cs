@@ -22,19 +22,19 @@ public class BoatMovement : MonoBehaviour
     void Update()
     {
         
-        if(Input.GetKey(KeyCode.UpArrow)){
+        if(Input.GetKey("w")){
             transform.Translate(Vector3.forward * Time.deltaTime * speed, Space.Self);
 
         }
-        if(Input.GetKey(KeyCode.DownArrow)){
+        if (Input.GetKey("s")){
             transform.Translate(Vector3.forward * Time.deltaTime * -speed, Space.Self);
         }
 
-        if(Input.GetKey(KeyCode.LeftArrow)){
+        if(Input.GetKey("a")){
             transform.Rotate(Vector3.up * Time.deltaTime * -rotationSpeed, Space.Self);
         }   
 
-        if(Input.GetKey(KeyCode.RightArrow)){
+        if(Input.GetKey("d")){
             transform.Rotate(Vector3.up * Time.deltaTime * rotationSpeed, Space.Self);
         }
         //float h = Input.GetAxis("Horizontal");

@@ -65,6 +65,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Convert\ConvertBoolToInt.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Scripts\PlayMakerPhotonGameObjectProxy.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Vector3\Vector3Multiply.cs" />
+    <Compile Include="Assets\Scripts\Game Folder\Minigames\DrawingMinigame\GlyphPatternScript.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiScrollbarSetSize.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics2D\GetNextOverlapCircle2d.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GameObject\DestroySelf.cs" />
@@ -269,6 +270,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Camera\SetCameraFOV.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Tween\TweenInt.cs" />
     <Compile Include="Assets\PlayMaker\Actions\SpriteRenderer\GetSpriteOrderInLayer.cs" />
+    <Compile Include="Assets\GestureRecognizer\Example\GestureOptions.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Input\MouseLook.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\GetPosition2d.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GameObject\SetTagsOnChildren.cs" />
@@ -364,6 +366,7 @@
     <Compile Include="Assets\PlayMaker\Actions\GUI\GUILabel.cs" />
     <Compile Include="Assets\PlayMaker\Actions\VideoPlayer\VideoPlayerGetTimeSource.cs" />
     <Compile Include="Assets\PlayMaker\Actions\VideoPlayer\VideoPlayerSetAspectRatio.cs" />
+    <Compile Include="Assets\GestureRecognizer\Scripts\GestureData.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\GetAnimatorLeftFootBottomHeight.cs" />
     <Compile Include="Assets\PlayMaker\Actions\String\GetStringLeft.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GUILayout\GUILayoutToolbar.cs" />
@@ -407,6 +410,7 @@
     <Compile Include="Assets\PlayMaker\Actions\UI\EventSystem\UiOnUpdateSelectedEvent.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Actions\Common\PlayerReferenceProperty.cs" />
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\GetEventBoolData.cs" />
+    <Compile Include="Assets\GestureRecognizer\Scripts\GesturePattern.cs" />
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\GetFsmVariable.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Logic\IntCompare.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Array\ArrayRemoveAll.cs" />
@@ -501,6 +505,7 @@
     <Compile Include="Assets\PlayMaker Utils\PropertyDrawers\Owner\OwnerClass.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Tween\TweenUiPosition.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics\Sleep.cs" />
+    <Compile Include="Assets\GestureRecognizer\Scripts\UILineRenderer.cs" />
     <Compile Include="Assets\Scripts\Player Stuff\Assassin.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiGraphicCrossFadeColor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\RectTransform\RectTransformGetRect.cs" />
@@ -688,6 +693,7 @@
     <Compile Include="Assets\PlayMaker\Actions\GUI\EnableGUI.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Vector3\Vector3Normalize.cs" />
     <Compile Include="Assets\PlayMaker\Actions\VideoPlayer\VideoPlayerPause.cs" />
+    <Compile Include="Assets\Scripts\Game Folder\Minigames\DrawingMinigame\DrawingManager.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\Components\PlayMakerUiClickEvent.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Actions\PhotonViewFindByViewID.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Enum\SetEnumValue.cs" />
@@ -870,6 +876,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Input\MousePickEvent.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Vector2\Vector2Operator.cs" />
     <Compile Include="Assets\Scripts\Player Stuff\PlayerMovementController.cs" />
+    <Compile Include="Assets\GestureRecognizer\Scripts\Recognizer.cs" />
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\SetFsmVector3.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics\TriggerEvent.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\EventSystem\UiSetSelectedGameObject.cs" />
@@ -886,6 +893,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Array\GetFsmArray.cs" />
     <Compile Include="Assets\Scripts\Roles\Role.cs" />
     <Compile Include="Assets\PlayMaker\Actions\SpriteRenderer\GetspriteSortPoint.cs" />
+    <Compile Include="Assets\Scripts\Game Folder\Minigames\DrawingMinigame\GestureHandler.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Vector3\GetVectorLength.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\LookAtDirection.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Convert\ConvertEnumToString.cs" />
@@ -1024,6 +1032,7 @@
     <Compile Include="Assets\PlayMaker Utils\Extensions\PlayMakerUtils_extensions.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\Selectable\UiGetBlockColor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Logic\Vector2Compare.cs" />
+    <Compile Include="Assets\GestureRecognizer\Scripts\GesturePatternDraw.cs" />
     <Compile Include="Assets\PlayMaker\Actions\RectTransform\RectTransformSetAnchorMin.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GameObject\ActivateGameObject.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetIsConnected.cs" />
@@ -1033,12 +1042,14 @@
     <Compile Include="Assets\PlayMaker\Actions\Physics2D\SetMass2d.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Movie\PlayMovieTexture.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Actions\PunRemoveRpc.cs" />
+    <Compile Include="Assets\Scripts\Game Folder\Minigames\DrawingMinigame\DrawingScript.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Tween\TweenRotation.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GUILayout\GUILayoutBeginAreaFollowObject.cs" />
     <Compile Include="Assets\PlayMaker Utils\PlayMakerUtils.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\TransformDirection.cs" />
     <Compile Include="Assets\PlayMaker\Actions\RectTransform\RectTransformSetLocalRotation.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GUILayout\GUILayoutEndVertical.cs" />
+    <Compile Include="Assets\GestureRecognizer\Example\ExampleGestureHandler.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Tween\BaseActions\TweenEnums.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Input\GetButton.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetPing.cs" />
@@ -1244,6 +1255,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Movie\MovieTextureAudioSettings.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics2D\SetCollider2dIsTrigger.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GUILayout\GUILayoutRepeatButton.cs" />
+    <Compile Include="Assets\GestureRecognizer\Scripts\DrawDetector.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Tween\TweenUiSize.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Input\GetMouseY.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics2D\GetTrigger2dInfo.cs" />
@@ -1279,18 +1291,6 @@
     <Compile Include="Assets\Main Assets\Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\SmoothFollowAction.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetPlayerCustomProperty.cs" />
-    <Compile Include="Assets\Scripts\Game Folder\Minigames\DrawingMinigame\GlyphPatternScript.cs" />
-    <Compile Include="Assets\GestureRecognizer\Example\GestureOptions.cs" />
-    <Compile Include="Assets\GestureRecognizer\Scripts\GestureData.cs" />
-    <Compile Include="Assets\GestureRecognizer\Scripts\GesturePattern.cs" />
-    <Compile Include="Assets\GestureRecognizer\Scripts\UILineRenderer.cs" />
-    <Compile Include="Assets\Scripts\Game Folder\Minigames\DrawingMinigame\DrawingManager.cs" />
-    <Compile Include="Assets\GestureRecognizer\Scripts\Recognizer.cs" />
-    <Compile Include="Assets\Scripts\Game Folder\Minigames\DrawingMinigame\GestureHandler.cs" />
-    <Compile Include="Assets\GestureRecognizer\Scripts\GesturePatternDraw.cs" />
-    <Compile Include="Assets\Scripts\Game Folder\Minigames\DrawingMinigame\DrawingScript.cs" />
-    <Compile Include="Assets\GestureRecognizer\Example\ExampleGestureHandler.cs" />
-    <Compile Include="Assets\GestureRecognizer\Scripts\DrawDetector.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\GestureRecognizer\UPDATE GUIDE.txt" />
@@ -1538,12 +1538,6 @@
     </Reference>
     <Reference Include="PlayMaker">
       <HintPath>Assets\Plugins\PlayMaker\PlayMaker.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.12f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.12f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.12f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>

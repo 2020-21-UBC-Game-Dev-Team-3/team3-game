@@ -171,6 +171,7 @@
     <Compile Include="Assets\net.fabrejean\Editor\MarkDownSharp\Escapes.cs" />
     <Compile Include="Assets\net.fabrejean\Editor\Plugins\JSON.cs" />
     <Compile Include="Assets\net.fabrejean\Editor\PlayMaker\Ecosystem\Classes\EcosystemUtils.cs" />
+    <Compile Include="Assets\GestureRecognizer\Scripts\Editor\GesturePatternEditor.cs" />
     <Compile Include="Assets\PlayMaker\Editor\AboutWindow.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorCurrentStateInfoIsNameActionEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Math\Editor\Vector2RandomValueEditor.cs" />
@@ -230,7 +231,6 @@
     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorIsMatchingTargetActionEditor.cs" />
     <Compile Include="Assets\PlayMaker Utils\Wizards\PlayMakerEventProxy\Editor\EventProxyFileFinder.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics2D\Editor\SetVelocity2dEditor.cs" />
-    <Compile Include="Assets\GestureRecognizer\Scripts\Editor\GesturePatternEditor.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\PlayMaker\Editor\Install\Resources\CheckActions.txt" />
@@ -445,12 +445,6 @@
     <Reference Include="UnityEditor.Graphs">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.12f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.OSXStandalone.Extensions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.12f1\Editor\Data\PlaybackEngines\MacStandaloneSupport\UnityEditor.OSXStandalone.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.12f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.12f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
@@ -483,12 +477,6 @@
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.12f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.12f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.12f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>
