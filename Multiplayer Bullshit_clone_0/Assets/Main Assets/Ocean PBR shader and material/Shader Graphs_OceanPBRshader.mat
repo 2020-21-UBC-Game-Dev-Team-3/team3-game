@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shader Graphs_OceanPBRshader
+  m_Shader: {fileID: -6465566751694194690, guid: ac032236203f62743a3194c301a91fc2, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    MotionVector: User
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_A3C245F6:
+        m_Texture: {fileID: 2800000, guid: b4c9bdddcf7ae8d47878014feef1da71, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_3542B4AB: 0.008
+    - Vector1_48154CD6: 84.8
+    - Vector1_57EB1A26: 4.29
+    - Vector1_5F04504F: 0.85
+    - Vector1_99B15B94: 0.56
+    - Vector1_A19A4D66: 0.5
+    - Vector1_A9E38404: 66.58
+    - Vector1_B38DE997: 0.008
+    - Vector1_B6A0707D: 0.1
+    - Vector1_D2C47E47: -12.1
+    - Vector1_E448D72A: 80.2
+    m_Colors:
+    - Color_70FC8CB5: {r: 0.19379672, g: 0.37401232, b: 0.6132076, a: 0.94509804}
+    - Color_74C67A2B: {r: 0.2723389, g: 0.3026779, b: 0.3773585, a: 0}
+    - Color_E46FA272: {r: 0, g: 0.8962264, b: 0.812727, a: 1}
+    - Vector2_29F3B7FB: {r: 0.09, g: 0.51, b: 0, a: 0}
+    - Vector2_3CD60FEE: {r: 1, g: 1, b: 0, a: 0}
+  m_BuildTextureStacks: []

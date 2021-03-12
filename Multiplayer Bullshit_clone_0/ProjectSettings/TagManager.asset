@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Elevator
+  - Floor1Button
+  - Floor2Button
+  - Floor3Button
+  - TaskLocation
+  - TaskButton
+  - Minigame Test Button
+  - MinigameCanvas
+  - MinigameCloseButton
+  - TaskCanvas
+  - Task1Indicator
+  - Task2Indicator
+  - Vent
+  - Interactable
+  - Indicator
+  - Vent1Pos
+  - Vent2Pos
+  - Vent3Pos
+  - Vent3Test
+  - BadInteractable
+  - CallFloor1
+  - CallFloor3
+  - CallFloor2
+  - Body
+  - Ghost
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Minimap
+  - Player
+  - Ghost
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
