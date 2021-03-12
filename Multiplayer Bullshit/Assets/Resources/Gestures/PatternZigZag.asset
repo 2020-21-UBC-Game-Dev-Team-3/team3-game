@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ce0fdb4e39b5744abf0c061bd2a3e30, type: 3}
+  m_Name: PatternZigZag
+  m_EditorClassIdentifier: 
+  id: zigzag
+  points: []
+  gesture:
+    lines:
+    - points:
+      - {x: 1, y: 0.01293534}
+      - {x: 0.7522388, y: 0.51542294}
+      - {x: 0.49353233, y: 0}
+      - {x: 0.25472635, y: 0.520398}
+      - {x: 0, y: 0}
+      closedLine: 0
+  useLinesOrder: 0
+  useLinesDirections: 0
