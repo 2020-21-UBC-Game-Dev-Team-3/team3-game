@@ -1159,6 +1159,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900a138fcf423a44b84839ddc982afe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanceToClient: 0
+  clientPlayer: {fileID: 0}
   text: {fileID: 3359744501543821062}
 --- !u!114 &5053801866619700791
 MonoBehaviour:
@@ -6022,7 +6024,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3266545680786733594}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: efca39329f70f014cb6b62498b7a25ff, type: 3}
   m_Name: 
@@ -6567,7 +6569,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5513475122440547884
 Transform:
   m_ObjectHideFlags: 0
@@ -8625,6 +8627,14 @@ PrefabInstance:
     - target: {fileID: 4139487682052387769, guid: dbf6af28bf03b6d4e8eb798c89604c0e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5501617188738471953, guid: dbf6af28bf03b6d4e8eb798c89604c0e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.43111134
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668135687911316894, guid: dbf6af28bf03b6d4e8eb798c89604c0e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.43111134
       objectReference: {fileID: 0}
     - target: {fileID: 5668135688328247859, guid: dbf6af28bf03b6d4e8eb798c89604c0e, type: 3}
       propertyPath: m_AnchoredPosition.x
