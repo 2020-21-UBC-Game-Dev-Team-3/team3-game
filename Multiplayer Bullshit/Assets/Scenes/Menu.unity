@@ -1596,7 +1596,7 @@ MonoBehaviour:
   aaDropdown: {fileID: 1441025462}
   resolutionDropdown: {fileID: 90299710}
   fullscreenToggle: {fileID: 238887440}
-  fovSlider: {fileID: 0}
+  fovSlider: {fileID: 1285377906}
   volume: {fileID: 1376124915}
   mainCam: {fileID: 425221277}
 --- !u!1 &162324891
@@ -4539,7 +4539,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 38
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -9142,7 +9142,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -279}
+  m_AnchoredPosition: {x: 0, y: -278.99997}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1214809388

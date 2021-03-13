@@ -17,6 +17,7 @@ public class Settings : MonoBehaviour
         ChangeBloomIntensitySettings();
         ChangeBrightnessSettings();
         ChangeShadowSettings();
+        ChangeFOV();
     }
 
     public void ChangeBloomIntensitySettings()
@@ -45,9 +46,16 @@ public class Settings : MonoBehaviour
         ShadowsMidtonesHighlights smh;
         volume.profile.TryGet(out smh);
         float shadows = OptionsPP.shadowsValue;
-        Debug.Log(shadows);
 
         smh.shadows.value = new Vector3(shadows, shadows, shadows);
+
+    }
+
+    public void ChangeFOV(){
+        GameObject gameObject = GameObject.Find("Main Camera");
+        Camera proj = gameObject.GetComponent<Camera>();
+        proj.fieldOfView = OptionsPP.fovValue;
+        Debug.Log(OptionsPP.fovValue);
 
     }
 

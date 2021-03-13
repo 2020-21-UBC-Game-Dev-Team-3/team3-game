@@ -12,6 +12,6 @@ public static class OptionsPP {
 
   public static float shadowsValue = 1;
 
-  public static float fovValue = 0;
+  public static float fovValue = 40;
 
 }

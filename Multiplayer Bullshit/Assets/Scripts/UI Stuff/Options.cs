@@ -57,6 +57,7 @@ public class Options : MonoBehaviour {
     OptionsPP.bloomValue = bloomSlider.value;
     OptionsPP.brightnessValue = brightnessSlider.value;
     OptionsPP.shadowsValue = shadowsSlider.value;
+    OptionsPP.fovValue = fovSlider.value;
     AdjustBloom(bloomSlider.value);
     AdjustBrightness(brightnessSlider.value);
     AdjustShadows(shadowsSlider.value);
