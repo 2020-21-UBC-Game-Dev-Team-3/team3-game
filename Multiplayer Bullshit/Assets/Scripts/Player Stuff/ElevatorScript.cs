@@ -11,6 +11,7 @@ public class ElevatorScript : MonoBehaviour
 {
     PhotonView pv;
     public GameObject door;
+    public GameObject bigDoor1, bigDoor2, bigDoor3;
     public Button button1, button2, button3, callButton1, callButton2, callButton3;
     public Transform floor1, floor2, floor3;
     public Transform doorOpened, doorClosed;
@@ -19,7 +20,10 @@ public class ElevatorScript : MonoBehaviour
     private bool openingDoor, closingDoor, isDoorClosed, overridder, moving, cooldown;
     private int currentFloor;
     private int destination;
-    private float scale;
+    private float scale = 0.0f;
+    private int bigDoorNumOpen = 1;
+    private bool bigDoorNumClose = false;
+    private float bigDoorScale = 0.0f;
     void Start()
     {
 
@@ -30,6 +34,9 @@ public class ElevatorScript : MonoBehaviour
 
         buttonPressed = false;
         currentFloor = 1;
+        bigDoor1 = GameObject.Find("BigDoor1");
+        bigDoor2 = GameObject.Find("BigDoor2");
+        bigDoor3 = GameObject.Find("BigDoor3");
         floor1 = GameObject.Find("Floor1pos").transform;
         Debug.Log(GameObject.Find("Floor1pos").name);
         floor2 = GameObject.Find("Floor2pos").transform;
@@ -58,7 +65,21 @@ public class ElevatorScript : MonoBehaviour
     [PunRPC]
     void Update()
     {
-        if (floor1.transform.position == transform.position)
+        switch (transform.position.y)
+        {
+            case 0:
+                currentFloor = 1;
+                break;
+            case 3.6f:
+                currentFloor = 2;
+                break;
+            case 7.08f:
+                currentFloor = 3;
+                break;
+            default:
+                break;
+        }
+        /*if (floor1.transform.position == transform.position)
         {
             currentFloor = 1;
         }
@@ -69,12 +90,14 @@ public class ElevatorScript : MonoBehaviour
         else if (floor3.transform.position == transform.position)
         {
             currentFloor = 3;
-        }
+        }*/
         // stops elevator at destination
         if (destination == currentFloor && !overridder)
         {
             pv.RPC("MovingFalse", RpcTarget.All);
             pv.RPC("OpeningDoor", RpcTarget.All);
+            pv.RPC("CloseBigDoors", RpcTarget.All, false);
+            pv.RPC("OpenBigDoor", RpcTarget.All, currentFloor);
         }
         //door Logic
         if (door.transform.localScale.y >= 1f)
@@ -111,6 +134,33 @@ public class ElevatorScript : MonoBehaviour
         {
             scale -= 0.05f;
             door.transform.localScale = new Vector3(1f, scale, 1f);
+        }
+        if (!bigDoorNumClose)
+        {
+            switch (bigDoorNumOpen)
+            {
+                case 1:
+                    if (bigDoorScale > 0) { bigDoorScale -= 0.05f; }
+                    bigDoor1.transform.localScale = new Vector3(1f, bigDoorScale, 1.2f);
+                    break;
+                case 2:
+                    if (bigDoorScale > 0) { bigDoorScale -= 0.05f; }
+                    bigDoor2.transform.localScale = new Vector3(1f, bigDoorScale, 1.2f);
+                    break;
+                case 3:
+                    if (bigDoorScale > 0) { bigDoorScale -= 0.05f; }
+                    bigDoor3.transform.localScale = new Vector3(1f, bigDoorScale, 1.2f);
+                    break;
+                default:
+                    break;
+            }
+        }
+        if (bigDoorNumClose)
+        {
+            if (bigDoorScale <= 1.2) { bigDoorScale += 0.05f; }
+            if (bigDoor3.transform.localScale.y <= 1.2f) { bigDoor3.transform.localScale = new Vector3(1f, bigDoorScale, 1.2f); };
+            if (bigDoor2.transform.localScale.y <= 1.2f) { bigDoor2.transform.localScale = new Vector3(1f, bigDoorScale, 1.2f); };
+            if (bigDoor1.transform.localScale.y <= 1.2f) { bigDoor1.transform.localScale = new Vector3(1f, bigDoorScale, 1.2f); };
         }
     }
     public void Button1()
@@ -167,6 +217,7 @@ public class ElevatorScript : MonoBehaviour
     }
     IEnumerator MoveElevator(int floorNum)
     {
+        pv.RPC("CloseBigDoors", RpcTarget.All, true);
         pv.RPC("CooldownTrue", RpcTarget.All);
         pv.RPC("OverrideTrue", RpcTarget.All);
         pv.RPC("MovingTrue", RpcTarget.All);
@@ -292,7 +343,16 @@ public class ElevatorScript : MonoBehaviour
         pv.RPC("CooldownFalse", RpcTarget.All);
 
     }
-
+    [PunRPC]
+    void CloseBigDoors(bool b)
+    {
+        bigDoorNumClose = b;
+    }
+    [PunRPC]
+    void OpenBigDoor(int i)
+    {
+        bigDoorNumOpen = i;
+    }
 }
 
 

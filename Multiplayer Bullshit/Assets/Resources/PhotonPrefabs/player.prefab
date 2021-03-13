@@ -845,10 +845,17 @@ MonoBehaviour:
   emergencyMeetingImage: {fileID: 4163456015619971650}
   bodyReportedImage: {fileID: 3674460001212861253}
   votingManager: {fileID: 0}
+  interactable: {fileID: 0}
   pv: {fileID: 0}
   Vent1Pos: {fileID: 0}
   Vent2Pos: {fileID: 0}
   Vent3Pos: {fileID: 0}
+  minimap: {fileID: 0}
+  cam: {fileID: 0}
+  reticle: {fileID: 0}
+  sun: {fileID: 0}
+  currMinigame: 
+  minigameInterrupt: 0
 --- !u!114 &2777487066322967787
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class PlayerAudio : MonoBehaviour
     public AudioSource Footsteps;
     public AudioSource Music;
     private PhotonView pv;
+    private float threshold;
     private void Awake()
     {
         pv = GetComponent<PhotonView>();
@@ -22,13 +23,14 @@ public class PlayerAudio : MonoBehaviour
         if (other.gameObject.CompareTag("MusicZone"))
         {
             Music.mute = true;
+            threshold = 0;
         }
     }
-    void OnCollisionExit(Collision other)
+    void OnCollisionStay(Collision other)
     {
         if (other.gameObject.CompareTag("MusicZone"))
         {
-            Music.mute = false;
+            threshold = 0;
         }
     }
     private void Update()
@@ -43,6 +45,11 @@ public class PlayerAudio : MonoBehaviour
         else
         {
             pv.RPC("MuteFoot", RpcTarget.All, true);
+        }
+        threshold++;
+        if(threshold > 20)
+        {
+            Music.mute = false;
         }
     }
     [PunRPC]
