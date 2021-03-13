@@ -22,27 +22,28 @@ public class Options : MonoBehaviour {
   public Volume volume;
 
   private void Start() {
+    resolutions = Screen.resolutions;
     resolutionDropdown.ClearOptions();
     List<string> options = new List<string>();
-    resolutions = Screen.resolutions;
+        
     int currentResolutionIndex = 0;
-
-    for (int i = 0; i < resolutions.Length; i++)
-        {
-            string option = resolutions[i].width + " x " + resolutions[i].height;
-            options.Add(option);
-
-            if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
-                currentResolutionIndex = i;
+    for(int i = 0; i < resolutions.Length; i++){
+        string option = resolutions[i].width + "x" + resolutions[i].height;
+        options.Add(option);
+        if(resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height){
+            currentResolutionIndex = i;
         }
-
+    }
     resolutionDropdown.AddOptions(options);
+    resolutionDropdown.value = currentResolutionIndex;
     resolutionDropdown.RefreshShownValue();
     
+   
+    
     bloomSlider.value = OptionsPP.bloomValue;
-
     brightnessSlider.value = OptionsPP.brightnessValue;
     shadowsSlider.value = OptionsPP.shadowsValue;
+    
 
     
 
@@ -53,7 +54,6 @@ public class Options : MonoBehaviour {
     OptionsPP.bloomValue = bloomSlider.value;
     OptionsPP.brightnessValue = brightnessSlider.value;
     OptionsPP.shadowsValue = shadowsSlider.value;
-    Debug.Log(OptionsPP.brightnessValue);
     AdjustBloom(bloomSlider.value);
     AdjustBrightness(brightnessSlider.value);
     AdjustShadows(shadowsSlider.value);

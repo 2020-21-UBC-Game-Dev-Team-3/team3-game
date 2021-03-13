@@ -16,6 +16,7 @@ public class Settings : MonoBehaviour
     private void Update(){
         ChangeBloomIntensitySettings();
         ChangeBrightnessSettings();
+        ChangeShadowSettings();
     }
 
     public void ChangeBloomIntensitySettings()
