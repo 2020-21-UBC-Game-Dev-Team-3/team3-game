@@ -164,7 +164,6 @@ public class PlayerActionController : MonoBehaviour, IDamageable
                 break;
 
             case "Lifeboat minigame":
-                Debug.Log("LIFEBOAT ENTER");
                 exitMinigame(false);
                 currMinigame = "LifeBoat Minigame";
                 SceneManager.LoadScene("LifeBoat Minigame", LoadSceneMode.Additive);
