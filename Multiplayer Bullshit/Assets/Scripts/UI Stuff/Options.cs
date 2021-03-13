@@ -16,10 +16,12 @@ public class Options : MonoBehaviour {
   [SerializeField] Dropdown aaDropdown;
   [SerializeField] Dropdown resolutionDropdown;
   [SerializeField] Toggle fullscreenToggle;
+  [SerializeField] Slider fovSlider;
   Resolution[] resolutions;
 
   
   public Volume volume;
+  public Camera mainCam;
 
   private void Start() {
     resolutions = Screen.resolutions;
@@ -43,6 +45,7 @@ public class Options : MonoBehaviour {
     bloomSlider.value = OptionsPP.bloomValue;
     brightnessSlider.value = OptionsPP.brightnessValue;
     shadowsSlider.value = OptionsPP.shadowsValue;
+    fovSlider.value = OptionsPP.fovValue;
     
 
     
@@ -57,6 +60,7 @@ public class Options : MonoBehaviour {
     AdjustBloom(bloomSlider.value);
     AdjustBrightness(brightnessSlider.value);
     AdjustShadows(shadowsSlider.value);
+    ChangeFOV(fovSlider.value);
 
   }
 
@@ -142,6 +146,35 @@ public class Options : MonoBehaviour {
         }
         
         qualityDropdown.value = qualityIndex;
+    }
+
+    public void ChangeFOV(float slideVal){
+        GameObject gameObject = GameObject.Find("Main Camera");
+        Camera proj = gameObject.GetComponent<Camera>();
+        proj.fieldOfView = slideVal;
+
+    }
+
+    public void ChangeVSync(bool isOn){
+        int valueOfVSync;
+        if (isOn == true){
+            valueOfVSync = 2;
+        }else{
+            valueOfVSync = 0; 
+        }
+        QualitySettings.vSyncCount = valueOfVSync;
+    }
+
+    public void InvertYAxis(bool invert){
+        if(invert == true){
+            float invertedAxis = -Input.GetAxis("Vertical");
+        }
+    }
+
+    public void InvertXAxis(bool xInvert){
+        if(xInvert == true){
+            float invertedAxis = -Input.GetAxis("Horizontal");
+        }
     }
    
 }
