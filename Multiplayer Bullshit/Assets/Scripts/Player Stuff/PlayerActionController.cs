@@ -93,7 +93,12 @@ public class PlayerActionController : MonoBehaviour, IDamageable
         }
         else
         {   
-            if (currMinigame != "none")
+            if (currMinigame == "Rhythm Trap Minigame")
+            {
+                GetComponent<TrapAbility>().DecrementCurrTraps();
+                Destroy(interactable.gameObject);
+            }
+            else if (currMinigame != "none" )
             {
                 tbIHolder = true;
             }
@@ -173,8 +178,9 @@ public class PlayerActionController : MonoBehaviour, IDamageable
                 pv.RPC("PianoInteract", RpcTarget.All, "Piano");
                 break;
             case "Disarm trap":
-                GetComponent<TrapAbility>().DecrementCurrTraps();
-                Destroy(interactable.gameObject);
+                exitMinigame(false);
+                currMinigame = "Rhythm Trap Minigame";
+                SceneManager.LoadScene("Rhythm Trap Minigame", LoadSceneMode.Additive);
                 break;
 
             case "Lifeboat minigame":
