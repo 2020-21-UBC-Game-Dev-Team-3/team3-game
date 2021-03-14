@@ -721,6 +721,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900a138fcf423a44b84839ddc982afe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanceToClient: 0
+  clientPlayer: {fileID: 0}
   text: {fileID: 4467708181678733126}
 --- !u!114 &2932352188953572542
 MonoBehaviour:
