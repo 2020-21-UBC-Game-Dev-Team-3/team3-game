@@ -1290,6 +1290,13 @@
      <Compile Include="Assets\Main Assets\Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\PlayMaker\Actions\Transform\SmoothFollowAction.cs" />
      <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetPlayerCustomProperty.cs" />
+     <Compile Include="Assets\Main Assets\Assets\RhythmTrapMinigame\ResetScript.cs" />
+     <Compile Include="Assets\Main Assets\Assets\RhythmTrapMinigame\RhythmManager.cs" />
+     <Compile Include="Assets\Main Assets\Assets\RhythmTrapMinigame\NoteScript.cs" />
+     <Compile Include="Assets\Main Assets\Assets\Trap Chance Minigame\HighlightScript.cs" />
+     <Compile Include="Assets\Main Assets\Assets\Trap Chance Minigame\TrapChanceScript.cs" />
+     <Compile Include="Assets\Main Assets\Assets\RhythmTrapMinigame\KeyActivateScript.cs" />
+     <Compile Include="Assets\Main Assets\Assets\Trap Chance Minigame\CursorScript.cs" />
      <None Include="Assets\GestureRecognizer\UPDATE GUIDE.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Materials\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
