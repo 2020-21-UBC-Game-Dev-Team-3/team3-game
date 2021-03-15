@@ -54,6 +54,7 @@ public class KeyActivateScript : MonoBehaviour
         if (Input.GetKeyDown(key) && active)
         {
             Destroy(note);
+        FindObjectOfType<NoteCounter>().count++;
         }
 
         }

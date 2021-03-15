@@ -20,6 +20,9 @@ public class ResetScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         Destroy(other.gameObject);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
+
+    /*SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);*/
+    SceneManager.UnloadSceneAsync("Rhythm Trap Minigame");
+    SceneManager.LoadScene(sceneName: "Rhythm Trap Minigame", LoadSceneMode.Additive);
+  }
 }

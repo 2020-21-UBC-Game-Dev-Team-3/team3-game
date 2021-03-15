@@ -813,6 +813,7 @@
     <Compile Include="Assets\PlayMaker\Actions\UI\UiDropDownAddOptions.cs" />
     <Compile Include="Assets\PlayMaker\Actions\RenderSettings\SetFogColor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Debug\DebugVector3.cs" />
+    <Compile Include="Assets\Scripts\UI Stuff\VolumeSettings.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Physics2D\WakeUp2d.cs" />
     <Compile Include="Assets\Scripts\Roles\Role Abilities\RoleAbility.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiScrollbarSetDirection.cs" />
@@ -1016,6 +1017,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Animator\SetAnimatorInt.cs" />
     <Compile Include="Assets\PlayMaker\Actions\SceneManager\GetSceneBuildIndex.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Lights\SetLightColor.cs" />
+    <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\GetAnimatorRightFootBottomHeight.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Vector2\Vector2Multiply.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\GetAnimatorIsHuman.cs" />
@@ -1301,8 +1303,7 @@
     <Compile Include="Assets\Main Assets\Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\SmoothFollowAction.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetPlayerCustomProperty.cs" />
-    <Compile Include="Assets\Scripts\SoundManager.cs" />
-    <Compile Include="Assets\Scripts\UI Stuff\VolumeSettings.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\Interactables\NoteCounter.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\GestureRecognizer\UPDATE GUIDE.txt" />
