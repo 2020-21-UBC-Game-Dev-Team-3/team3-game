@@ -17,6 +17,7 @@ public class PlayerAudio : MonoBehaviour
         {
             audioListener.GetComponent<AudioListener>().enabled = false;
         }
+        StartCoroutine(LateStart(0.1f));
     }
     void OnCollisionEnter(Collision other)
     {
@@ -56,5 +57,10 @@ public class PlayerAudio : MonoBehaviour
     private void MuteFoot(bool boolean)
     {
         Footsteps.mute = boolean;
+    }
+    IEnumerator LateStart(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        Music.Play();
     }
 }

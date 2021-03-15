@@ -19,8 +19,7 @@ public class Options : MonoBehaviour {
   [SerializeField] Slider fovSlider;
   Resolution[] resolutions;
 
-  
-  public Volume volume;
+    public Volume volume;
   public Camera mainCam;
 
   private void Start() {
