@@ -42,6 +42,12 @@ public class PlayerManager : MonoBehaviour
         CreateGhostPlayer(controller);
     }
 
+    public void GetVotedOff()
+    {
+        PhotonNetwork.Destroy(controller);
+        CreateGhostPlayer(controller);
+    }
+
     void CreateDeadBody(GameObject oldController)
     {
         Vector3 position = oldController.transform.position;

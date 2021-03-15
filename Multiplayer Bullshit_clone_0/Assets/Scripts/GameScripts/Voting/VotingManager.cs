@@ -9,15 +9,24 @@ using UnityEngine.EventSystems;
 public class VotingManager : MonoBehaviour
 {
     private bool isTiedInVotes;
-
+    private int numOfPlayersNeededToVote;
+    private int numOfSkipVotes;
     private int numOfPlayersVotedSoFar;
+    private int numOfPlayersVotingForYou;
     private Dictionary<GameObject, bool> playerVotingSections = new Dictionary<GameObject, bool>();
-    private List<Color> playersVotingForYou = new List<Color>();
     private Player playerWithHighestVotes;
     private int currNumOfHighestVotes;
     PhotonView pv;
     [SerializeField] private PlayerMovementController playerMovementController;
+    [SerializeField] private GameObject skipBoxIconArea;
     [SerializeField] private GameObject playerBoxes;
+    [SerializeField] private List<Player> playersAllowedToVote;
+
+    private void Awake()
+    {
+        playersAllowedToVote = new List<Player>(PhotonNetwork.PlayerList);
+        Debug.Log("Vote count: " + playersAllowedToVote);
+    }
 
     void Start()
     {
@@ -26,20 +35,26 @@ public class VotingManager : MonoBehaviour
 
     public void SetupVoting()
     {
-
         for (int i = 0; i < playerBoxes.transform.childCount; i++)
         {
             playerVotingSections.Add(playerBoxes.transform.GetChild(i).gameObject, false);
         }
         foreach (Player player in PhotonNetwork.PlayerList)
         {
-            foreach(KeyValuePair<GameObject, bool> section in playerVotingSections)
+            bool isPlayerAllowedToVote = playersAllowedToVote.Contains(player);
+            Debug.Log("Player ID: " + player.UserId);
+            Debug.Log("Player allowed to vote nickname: " + playersAllowedToVote[0].UserId);
+            foreach (KeyValuePair<GameObject, bool> section in playerVotingSections)
             {
                 if (!section.Value)
                 {
                     playerVotingSections[section.Key] = true;
-                    Debug.Log("SETUP SECTION");
                     section.Key.GetComponent<VoteSection>().SetupVoteSection(player);
+                    if (!isPlayerAllowedToVote)
+                    {
+                        section.Key.transform.Find("InteractButton").gameObject.SetActive(false);
+                        section.Key.transform.Find("DeadMan").gameObject.SetActive(true);
+                    }
                     section.Key.SetActive(true);
                     break;
                 }
@@ -51,11 +66,15 @@ public class VotingManager : MonoBehaviour
     public void ConfirmVoteForPlayer()
     {
         GameObject votingBox = EventSystem.current.currentSelectedGameObject.transform.parent.gameObject;
-        Player player = PhotonNetwork.PlayerList[votingBox.transform.parent.transform.parent.gameObject.GetComponent<VoteSection>().playerInSectionIndex];
-        int playerNum = System.Array.IndexOf(PhotonNetwork.PlayerList, PhotonNetwork.LocalPlayer);
-        votingBox.SetActive(false);
         pv.RPC("UserHasVoted", PhotonNetwork.LocalPlayer);
-        pv.RPC("SetIconsForVoting", player, playerNum);
+        votingBox.SetActive(false);
+        if (votingBox.transform.parent.parent.name == "SkipBox") pv.RPC("SkipVoteSelected", RpcTarget.All);
+        else
+        {
+            Player player = PhotonNetwork.PlayerList[votingBox.transform.parent.transform.parent.gameObject.GetComponent<VoteSection>().playerInSectionIndex];
+           // int playerNum = System.Array.IndexOf(PhotonNetwork.PlayerList, PhotonNetwork.LocalPlayer);
+            pv.RPC("SetIconsForVoting", player);
+        }
         pv.RPC("IsVotingFinished", RpcTarget.MasterClient);
     }
 
@@ -73,20 +92,28 @@ public class VotingManager : MonoBehaviour
     public void UserHasVoted()
     {
         for (int i = 0; i < playerBoxes.transform.childCount; i++)
-            playerBoxes.transform.GetChild(i).GetComponentInChildren<Button>().gameObject.SetActive(false);
+            playerBoxes.transform.GetChild(i).Find("InteractButton").gameObject.SetActive(false);
     }
 
     [PunRPC]
-    private void SetIconsForVoting(int playerNum)
+    private void SetIconsForVoting()
     {
-        playersVotingForYou.Add(Color.white);
+        numOfPlayersVotingForYou++;
+
+    }
+
+    [PunRPC]
+    private void SkipVoteSelected()
+    {
+        numOfSkipVotes++;
 
     }
 
     [PunRPC]
     private void CompareVotes()
     {
-        for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++) {
+        for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
+        {
             pv.RPC("CompareTwoPlayers", PhotonNetwork.PlayerList[i], i);
         }
     }
@@ -94,9 +121,9 @@ public class VotingManager : MonoBehaviour
     [PunRPC]
     private void CompareTwoPlayers(int playerIndex)
     {
-        if (playersVotingForYou.Count > currNumOfHighestVotes)
-            pv.RPC("SetToLargestList", RpcTarget.All, playersVotingForYou.Count, playerIndex, false);
-        else if (playersVotingForYou.Count == currNumOfHighestVotes)
+        if (numOfPlayersVotingForYou > currNumOfHighestVotes)
+            pv.RPC("SetToLargestList", RpcTarget.All, numOfPlayersVotingForYou, playerIndex, false);
+        else if (numOfPlayersVotingForYou == currNumOfHighestVotes)
             pv.RPC("SetToLargestList", RpcTarget.All, currNumOfHighestVotes, playerIndex, true);
     }
 
@@ -112,7 +139,7 @@ public class VotingManager : MonoBehaviour
     private void IsVotingFinished()
     {
         numOfPlayersVotedSoFar++;
-        if (numOfPlayersVotedSoFar >= PhotonNetwork.PlayerList.Length)
+        if (numOfPlayersVotedSoFar >= playersAllowedToVote.Count)
         {
             Debug.Log("Compare votes");
             pv.RPC("CompareVotes", RpcTarget.MasterClient);
@@ -131,20 +158,30 @@ public class VotingManager : MonoBehaviour
 
     private IEnumerator VotingResults()
     {
-        int playerNum = System.Array.IndexOf(PhotonNetwork.PlayerList, PhotonNetwork.LocalPlayer);
-        GameObject playerIcons = playerBoxes.transform.GetChild(playerNum).Find("PlayerIconsArea").gameObject;
-        for (int i = 0; i < playersVotingForYou.Count; i++)
-        {
-            playerIcons.transform.GetChild(i).GetComponent<Image>().color = playersVotingForYou[i];
-            playerIcons.transform.GetChild(i).gameObject.SetActive(true);
-        }
+        pv.RPC("ShowSkipResults", RpcTarget.All, numOfSkipVotes);
+        pv.RPC("ShowVotingResults", RpcTarget.All, numOfPlayersVotingForYou, System.Array.IndexOf(PhotonNetwork.PlayerList, PhotonNetwork.LocalPlayer));
 
-        yield return new WaitForSeconds(5f);
-
-        for (int i = 0; i < playersVotingForYou.Count; i++) playerIcons.transform.GetChild(i).gameObject.SetActive(false);
-        this.gameObject.SetActive(false);
-        if (!isTiedInVotes) pv.RPC("KillPlayerWithHighestVotes", RpcTarget.All, playerWithHighestVotes);
+        yield return new WaitForSeconds(4f);
         PlayMakerFSM.BroadcastEvent("GlobalTurnMovementOn");
+        yield return new WaitForSeconds(1f);
+        if (!isTiedInVotes && currNumOfHighestVotes > numOfSkipVotes)
+            pv.RPC("KillPlayerWithHighestVotes", RpcTarget.All, playerWithHighestVotes);
+        this.gameObject.SetActive(false);
+    }
+
+    [PunRPC]
+    private void ShowVotingResults(int numOfVotes, int playerIndex)
+    {
+        GameObject playerIcons = playerBoxes.transform.GetChild(playerIndex).Find("PlayerIconsArea").gameObject;
+        for (int i = 0; i < numOfVotes; i++)
+            playerIcons.transform.GetChild(i).gameObject.SetActive(true);
+    }
+
+    [PunRPC]
+    private void ShowSkipResults(int numOfVotes)
+    {
+       for (int i = 0; i < numOfVotes; i++)
+            skipBoxIconArea.transform.GetChild(i).gameObject.SetActive(true);
     }
 
     [PunRPC]
@@ -157,12 +194,14 @@ public class VotingManager : MonoBehaviour
     [PunRPC]
     private void KillCurrPlayer()
     {
-        //Replace this with ghost mechanic
-        transform.parent.Find("DeadScreen").gameObject.SetActive(true);
+        transform.parent.GetComponentInParent<MapManager>().ResetMap();
+        PhotonView.Find((int)pv.InstantiationData[0]).GetComponent<PlayerManager>().GetVotedOff();
+        playersAllowedToVote.Remove(PhotonNetwork.LocalPlayer);
     }
 
     public void OnEnable()
     {
+        numOfPlayersNeededToVote = playersAllowedToVote.Count;
         SetupVoting();
     }
 }

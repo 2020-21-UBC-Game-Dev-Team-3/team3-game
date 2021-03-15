@@ -238,10 +238,23 @@ public class PlayerActionController : MonoBehaviour, IDamageable
     {
         eventImage.SetActive(true);
         PlayMakerFSM.BroadcastEvent("GlobalTurnMovementOff");
+        TeleportPlayers();
         //TODO: ADD TELEPORTATION HERE
         yield return new WaitForSeconds(2);
         votingManager.SetActive(true);
         eventImage.SetActive(false);
+    }
+
+    void TeleportPlayers()
+    {
+/*        int currTeleportLocation = 0;
+        GameObject teleport = GameObject.Find("Teleport Locations");
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject player in players)
+        {
+            player.transform.position = teleport.transform.GetChild(currTeleportLocation).transform.position;
+            currTeleportLocation++;
+        }*/
     }
 
     public void TakeHit() => pv.RPC("RPC_TakeHit", RpcTarget.All);

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GestureHandler : MonoBehaviour
 {
@@ -55,6 +56,7 @@ public class GestureHandler : MonoBehaviour
 	void WinGestureMinigame()
     {
 		winText.SetActive(true);
+        SceneManager.UnloadSceneAsync("DrinkMixingMinigame");
     }
 
 	IEnumerator Blink(string id)

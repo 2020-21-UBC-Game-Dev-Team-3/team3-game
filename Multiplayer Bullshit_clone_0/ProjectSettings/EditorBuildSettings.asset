@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Icebergs.unity
     guid: bc447389781f6439f822a5e78eb006db
+  - enabled: 1
+    path: Assets/Scenes/DrinkMixingMinigame.unity
+    guid: a18940a76bca4a34b9fcbe5d09377e0c
+  - enabled: 1
+    path: Assets/Scenes/Rhythm Trap Minigame.unity
+    guid: a6ba0c97e0d807a4a8efda60a0b96a4c
+  - enabled: 1
+    path: Assets/Scenes/Trap Chance Minigame.unity
+    guid: 19fd461a9af59574db2019b056446b8c
   m_configObjects: {}

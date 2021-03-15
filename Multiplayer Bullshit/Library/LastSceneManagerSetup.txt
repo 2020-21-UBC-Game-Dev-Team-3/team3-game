@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Trap Chance Minigame.unity
+- path: Assets/Scenes/Gaming.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

@@ -33,6 +33,9 @@ public class PlayerActionController : MonoBehaviour, IDamageable
     public string currMinigame;
     public bool minigameInterrupt;
 
+    TaskBar tb;
+    public bool tbIHolder = false;
+
     void Awake()
     {
         mm = GetComponent<MapManager>();
@@ -56,12 +59,19 @@ public class PlayerActionController : MonoBehaviour, IDamageable
         sun = GameObject.Find("sun");
         currMinigame = "none";
         minigameInterrupt = false;
+
+        tb = GameObject.Find("Main Camera/TaskbarCanvas/Taskbar").GetComponent<TaskBar>();
     }
 
     // Update is called once per frame
     void Update()
     {
         if (!pv.IsMine) return;
+
+        if (tbIHolder)
+        {
+            tb.Increment();
+        }
 
         if (SceneManager.sceneCount > 1)
         {
@@ -82,7 +92,16 @@ public class PlayerActionController : MonoBehaviour, IDamageable
             return;
         }
         else
-        {
+        {   
+            if (currMinigame == "Rhythm Trap Minigame")
+            {
+                GetComponent<TrapAbility>().DecrementCurrTraps();
+                Destroy(interactable.gameObject);
+            }
+            else if (currMinigame != "none" )
+            {
+                tbIHolder = true;
+            }
             exitMinigame(true);
             currMinigame = "none";
             RenderSettings.ambientIntensity = 0.85f;
@@ -159,12 +178,12 @@ public class PlayerActionController : MonoBehaviour, IDamageable
                 pv.RPC("PianoInteract", RpcTarget.All, "Piano");
                 break;
             case "Disarm trap":
-                GetComponent<TrapAbility>().DecrementCurrTraps();
-                Destroy(interactable.gameObject);
+                exitMinigame(false);
+                currMinigame = "Rhythm Trap Minigame";
+                SceneManager.LoadScene("Rhythm Trap Minigame", LoadSceneMode.Additive);
                 break;
 
             case "Lifeboat minigame":
-                Debug.Log("LIFEBOAT ENTER");
                 exitMinigame(false);
                 currMinigame = "LifeBoat Minigame";
                 SceneManager.LoadScene("LifeBoat Minigame", LoadSceneMode.Additive);
@@ -183,6 +202,12 @@ public class PlayerActionController : MonoBehaviour, IDamageable
                 RenderSettings.reflectionIntensity = 0f;
                 RenderSettings.fogColor = new Color(0.7830189f, 0.7830189f, 0.7830189f, 0.7830189f);
                 SceneManager.LoadScene("Icebergs", LoadSceneMode.Additive);
+                break;
+
+            case "Drink mixing minigame":
+                exitMinigame(false);
+                currMinigame = "DrinkMixingMinigame";
+                SceneManager.LoadScene("DrinkMixingMInigame", LoadSceneMode.Additive);
                 break;
 
             default:
@@ -213,10 +238,23 @@ public class PlayerActionController : MonoBehaviour, IDamageable
     {
         eventImage.SetActive(true);
         PlayMakerFSM.BroadcastEvent("GlobalTurnMovementOff");
+        TeleportPlayers();
         //TODO: ADD TELEPORTATION HERE
         yield return new WaitForSeconds(2);
         votingManager.SetActive(true);
         eventImage.SetActive(false);
+    }
+
+    void TeleportPlayers()
+    {
+/*        int currTeleportLocation = 0;
+        GameObject teleport = GameObject.Find("Teleport Locations");
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject player in players)
+        {
+            player.transform.position = teleport.transform.GetChild(currTeleportLocation).transform.position;
+            currTeleportLocation++;
+        }*/
     }
 
     public void TakeHit() => pv.RPC("RPC_TakeHit", RpcTarget.All);

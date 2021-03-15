@@ -11,6 +11,7 @@ public class TaskBar : MonoBehaviour {
   [SerializeField] Slider slider;
   private int count;
   PhotonView pv;
+  PlayerActionController pac;
 
   private void Awake() {
     pv = GetComponent<PhotonView>();
@@ -20,9 +21,13 @@ public class TaskBar : MonoBehaviour {
   void Start() {
     Debug.Log(taskProgress);
     taskProgress.text = "Tasks Completed: " + count.ToString() + "/" + "10";
+    
   }
 
   private void Update() {
+    if (pac == null) { 
+        pac = GameObject.Find("player2(Clone)").GetComponent<PlayerActionController>();
+    }
     if (Input.GetKeyDown(KeyCode.T)) {
       Increment();
     }
@@ -30,6 +35,7 @@ public class TaskBar : MonoBehaviour {
 
   public void Increment() {
     StartCoroutine(UpdateText());
+    pac.tbIHolder = false;
   }
 
   IEnumerator UpdateText() {
