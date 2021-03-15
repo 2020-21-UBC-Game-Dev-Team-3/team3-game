@@ -858,6 +858,7 @@ MonoBehaviour:
   sun: {fileID: 0}
   currMinigame: 
   minigameInterrupt: 0
+  tbIHolder: 0
 --- !u!114 &2777487066322967787
 MonoBehaviour:
   m_ObjectHideFlags: 0

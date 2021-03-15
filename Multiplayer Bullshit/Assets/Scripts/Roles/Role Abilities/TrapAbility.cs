@@ -19,7 +19,7 @@ public class TrapAbility : RoleAbility {
   }
 
   public override void UseAbility() {
-    if (currNumberTraps < maxNumberTraps) {
+    if (currNumberTraps < maxNumberTraps && GetComponent<PlayerActionController>().interactable == null) {
       pv.RPC("SpawnTrap", RpcTarget.All);
       currNumberTraps++;
       trapperUI.SetText("Traps active: " + currNumberTraps.ToString() + "/" + maxNumberTraps.ToString());

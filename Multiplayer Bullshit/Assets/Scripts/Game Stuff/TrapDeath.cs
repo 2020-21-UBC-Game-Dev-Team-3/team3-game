@@ -26,7 +26,9 @@ public class TrapDeath : MonoBehaviour {
   }
 
   private void OnCollisionEnter(Collision collision) {
+    if (collision.gameObject.GetComponent<Role>().currRole == Role.Roles.Imposter) return;
     collision.rigidbody.GetComponent<PlayerActionController>().TakeHit();
+    Destroy(this.gameObject);
   }
 
 }
