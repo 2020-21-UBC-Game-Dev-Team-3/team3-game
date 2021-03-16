@@ -1307,6 +1307,7 @@
      <Compile Include="Assets\Main Assets\Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\PlayMaker\Actions\Transform\SmoothFollowAction.cs" />
      <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetPlayerCustomProperty.cs" />
+     <Compile Include="Assets\Scripts\Roles\Role Abilities\ChameleonAbility.cs" />
      <None Include="Assets\GestureRecognizer\UPDATE GUIDE.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Materials\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
