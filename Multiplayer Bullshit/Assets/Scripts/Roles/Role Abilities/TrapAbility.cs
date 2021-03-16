@@ -6,10 +6,10 @@ using TMPro;
 
 public class TrapAbility : RoleAbility {
 
+  public bool isTouchingTrap = false;
   [SerializeField] GameObject trapPrefab; // the trap - what gets instantiated
   TrapperUI trapperUI; // the UI which displays how many traps are active
 
-  private float timeBeforeTrapDeploy = 2f;
   private int maxNumberTraps = 3;
   private int currNumberTraps = 0;
 
@@ -19,7 +19,7 @@ public class TrapAbility : RoleAbility {
   }
 
   public override void UseAbility() {
-    if (currNumberTraps < maxNumberTraps && GetComponent<PlayerActionController>().interactable == null) {
+    if (currNumberTraps < maxNumberTraps && !isTouchingTrap) {
       pv.RPC("SpawnTrap", RpcTarget.All);
       currNumberTraps++;
       trapperUI.SetText("Traps active: " + currNumberTraps.ToString() + "/" + maxNumberTraps.ToString());

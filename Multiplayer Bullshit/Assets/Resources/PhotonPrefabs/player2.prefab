@@ -6093,6 +6093,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldownTimer: 0
   pv: {fileID: 0}
+  isTouchingTrap: 0
   trapPrefab: {fileID: 68780631399019579, guid: b401f83e598602342a7e77403d3195ee, type: 3}
 --- !u!1 &3464390445804641302
 GameObject:

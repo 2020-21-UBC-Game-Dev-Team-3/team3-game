@@ -167,7 +167,7 @@
     <Compile Include="Assets\PlayMaker\Actions\GameObject\SetName.cs" />
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\SetFsmFloat.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiInputFieldGetWasCanceled.cs" />
-    <Compile Include="Assets\Scripts\Game Stuff\TrapDisarm.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\Trap.cs" />
     <Compile Include="Assets\PlayMaker\Actions\VideoPlayer\VideoPlayerSetRenderMode.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Logic\GameObjectIsNull.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Device\GetLocationInfo.cs" />
@@ -619,6 +619,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Animator\GetAnimatorIsParameterControlledByCurve.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Math\FloatDeltaAngle.cs" />
     <Compile Include="Assets\PlayMaker\Actions\SpriteRenderer\SetSpriteMaskInteraction.cs" />
+    <Compile Include="Assets\PlayMaker Custom Actions\Input\GetAxisRaw.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Vector3\Vector3Operator.cs" />
     <Compile Include="Assets\PlayMaker\Actions\String\StringAppend.cs" />
     <Compile Include="Assets\Scripts\cameraOffset.cs" />
@@ -1003,7 +1004,6 @@
     <Compile Include="Assets\PlayMaker\Actions\Animator\AnimatorStopPlayback.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GameObject\FindGameObject.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Tween\BaseActions\TweenComponentBase.cs" />
-    <Compile Include="Assets\Scripts\Game Stuff\TrapDeath.cs" />
     <Compile Include="Assets\Main Assets\Assets\Trap Chance Minigame\HighlightScript.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Camera\CameraFadeIn.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Audio\PlayRandomSound.cs" />
@@ -1304,7 +1304,7 @@
     <Compile Include="Assets\Main Assets\Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\SmoothFollowAction.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetPlayerCustomProperty.cs" />
-    <Compile Include="Assets\PlayMaker Custom Actions\Input\GetAxisRaw.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\TrapPlacement.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\GestureRecognizer\UPDATE GUIDE.txt" />

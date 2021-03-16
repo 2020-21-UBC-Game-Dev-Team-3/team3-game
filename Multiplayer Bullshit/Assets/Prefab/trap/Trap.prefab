@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 846548302760996481}
   - component: {fileID: 1273062644090073704}
-  - component: {fileID: 1244880526090411693}
   - component: {fileID: 68780631399019576}
+  - component: {fileID: 3472233767058362122}
+  - component: {fileID: -4628447521987250238}
   m_Layer: 0
   m_Name: Trap
   m_TagString: Interactable
@@ -30,7 +31,9 @@ Transform:
   m_LocalPosition: {x: 8.052, y: 4.1269093, z: 0.864}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1762150391088338189}
+  - {fileID: 4038847470078829460}
+  - {fileID: 4195883643662035878}
+  - {fileID: 2629829835878991018}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -45,22 +48,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5, y: 0.28146458, z: 5}
-  m_Center: {x: 0, y: 0.054676056, z: 0}
---- !u!114 &1244880526090411693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 68780631399019579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4223a6a1ef3ad0f46ab5c8ce77f2d6d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactableName: Disarm trap
-  outline: {fileID: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &68780631399019576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,7 +68,47 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!1 &1810720256635951228
+--- !u!114 &3472233767058362122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68780631399019579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4223a6a1ef3ad0f46ab5c8ce77f2d6d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableName: Disarm trap
+  outline: {fileID: 0}
+  needle: {fileID: 7502460350011353216}
+  needleBase: {fileID: 6731610827462774133}
+  normal: {fileID: 2100000, guid: c31938330139d2d42876f7993371276c, type: 2}
+  transparent: {fileID: 7209514650377959485, guid: 133a0ba5cb4523e4fbc0a45eca4916d5, type: 3}
+--- !u!114 &-4628447521987250238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68780631399019579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  observableSearch: 2
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents: []
+  viewIdField: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!1 &359651121396489082
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,61 +116,55 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1762150391088338189}
-  - component: {fileID: 1810720256635951227}
-  - component: {fileID: 1810720256635951226}
+  - component: {fileID: 2629829835878991018}
+  - component: {fileID: 1939160565489727636}
+  - component: {fileID: 290224931676360049}
   m_Layer: 0
-  m_Name: Trap Death Collider
-  m_TagString: Interactable
+  m_Name: TrapPlacement
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1762150391088338189
+--- !u!4 &2629829835878991018
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1810720256635951228}
+  m_GameObject: {fileID: 359651121396489082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4038847470078829460}
-  - {fileID: 4195883643662035878}
+  m_Children: []
   m_Father: {fileID: 846548302760996481}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1810720256635951227
+--- !u!65 &1939160565489727636
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1810720256635951228}
+  m_GameObject: {fileID: 359651121396489082}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.6394677, z: 1}
-  m_Center: {x: 0, y: 0.18026614, z: 0}
---- !u!114 &1810720256635951226
+  m_Size: {x: 10, y: 1, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &290224931676360049
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1810720256635951228}
+  m_GameObject: {fileID: 359651121396489082}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aea7354c2c4cece4297094d211dd6ac4, type: 3}
+  m_Script: {fileID: 11500000, guid: 8dffe7d19eeca5443ad4a321bba57782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  needle: {fileID: 7502460350011353216}
-  needleBase: {fileID: 6731610827462774133}
-  normal: {fileID: 2100000, guid: c31938330139d2d42876f7993371276c, type: 2}
-  transparent: {fileID: 7209514650377959485, guid: 133a0ba5cb4523e4fbc0a45eca4916d5, type: 3}
 --- !u!1 &4666044491949289790
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,7 +194,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1762150391088338189}
+  m_Father: {fileID: 846548302760996481}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7725723532446812474
@@ -252,7 +275,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1762150391088338189}
+  m_Father: {fileID: 846548302760996481}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8342063470057628874

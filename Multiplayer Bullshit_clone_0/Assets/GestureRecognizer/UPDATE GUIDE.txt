@@ -1,6 +1,0 @@
-
-If you are updating from version 1.0 to 2.0 (and getting some compiler errors):
-
-1. Delete the script GestureRecognizer/Example/DragDetector
-2. Select the GestureAssets you created, click on the "Convert..." button that appears at Inspector.
-3. If something goes wrong, delete old GestureRecognition files and reimport the asset form Asset Store. But take care of files you created inside the folder.
