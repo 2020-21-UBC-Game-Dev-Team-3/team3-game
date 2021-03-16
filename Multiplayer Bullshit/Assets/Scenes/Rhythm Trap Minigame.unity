@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 7589317}
   - component: {fileID: 7589316}
   - component: {fileID: 7589318}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -779,7 +779,7 @@ GameObject:
   m_Component:
   - component: {fileID: 116996912}
   - component: {fileID: 116996911}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -871,7 +871,7 @@ GameObject:
   m_Component:
   - component: {fileID: 146755287}
   - component: {fileID: 146755288}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: lane0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -953,7 +953,7 @@ GameObject:
   m_Component:
   - component: {fileID: 181138731}
   - component: {fileID: 181138732}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -997,7 +997,7 @@ GameObject:
   m_Component:
   - component: {fileID: 253286919}
   - component: {fileID: 253286918}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: RedRect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1082,7 +1082,7 @@ GameObject:
   - component: {fileID: 270278090}
   - component: {fileID: 270278089}
   - component: {fileID: 270278088}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: note0(Clone) (1)
   m_TagString: Note
   m_Icon: {fileID: 0}
@@ -1225,7 +1225,7 @@ GameObject:
   - component: {fileID: 338369228}
   - component: {fileID: 338369230}
   - component: {fileID: 338369229}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1304,7 +1304,7 @@ GameObject:
   - component: {fileID: 481622105}
   - component: {fileID: 481622107}
   - component: {fileID: 481622106}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1383,7 +1383,7 @@ GameObject:
   - component: {fileID: 490140828}
   - component: {fileID: 490140830}
   - component: {fileID: 490140829}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1464,7 +1464,7 @@ GameObject:
   - component: {fileID: 498410213}
   - component: {fileID: 498410212}
   - component: {fileID: 498410211}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: note0(Clone) (6)
   m_TagString: Note
   m_Icon: {fileID: 0}
@@ -1608,7 +1608,7 @@ GameObject:
   - component: {fileID: 603329665}
   - component: {fileID: 603329664}
   - component: {fileID: 603329663}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: key3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1732,7 +1732,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 662865166}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: FurEliseNotes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1775,7 +1775,7 @@ GameObject:
   - component: {fileID: 696043018}
   - component: {fileID: 696043017}
   - component: {fileID: 696043016}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: note0(Clone) (5)
   m_TagString: Note
   m_Icon: {fileID: 0}
@@ -1917,7 +1917,7 @@ GameObject:
   m_Component:
   - component: {fileID: 852271736}
   - component: {fileID: 852271737}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: lane2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2002,7 +2002,7 @@ GameObject:
   - component: {fileID: 916943887}
   - component: {fileID: 916943886}
   - component: {fileID: 916943885}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: note0(Clone) (4)
   m_TagString: Note
   m_Icon: {fileID: 0}
@@ -2146,7 +2146,7 @@ GameObject:
   - component: {fileID: 926804814}
   - component: {fileID: 926804813}
   - component: {fileID: 926804812}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: key1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2272,7 +2272,7 @@ GameObject:
   - component: {fileID: 1028028128}
   - component: {fileID: 1028028127}
   - component: {fileID: 1028028126}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2340,7 +2340,7 @@ GameObject:
   - component: {fileID: 1108818174}
   - component: {fileID: 1108818173}
   - component: {fileID: 1108818172}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: note0(Clone) (2)
   m_TagString: Note
   m_Icon: {fileID: 0}
@@ -2485,7 +2485,7 @@ GameObject:
   - component: {fileID: 1111825344}
   - component: {fileID: 1111825343}
   - component: {fileID: 1111825342}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: note0(Clone) (3)
   m_TagString: Note
   m_Icon: {fileID: 0}
@@ -2630,7 +2630,7 @@ GameObject:
   - component: {fileID: 1121840420}
   - component: {fileID: 1121840419}
   - component: {fileID: 1121840422}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: key0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2763,7 +2763,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1133518830}
   - component: {fileID: 1133518829}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: PlayMakerGUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2818,7 +2818,7 @@ GameObject:
   - component: {fileID: 1134854231}
   - component: {fileID: 1134854230}
   - component: {fileID: 1134854229}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: key5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2943,7 +2943,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1184661606}
   - component: {fileID: 1184661607}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: lane4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3027,7 +3027,7 @@ GameObject:
   - component: {fileID: 1200464764}
   - component: {fileID: 1200464763}
   - component: {fileID: 1200464762}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3127,7 +3127,7 @@ GameObject:
   - component: {fileID: 1281103729}
   - component: {fileID: 1281103728}
   - component: {fileID: 1281103727}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: note0(Clone)
   m_TagString: Note
   m_Icon: {fileID: 0}
@@ -3270,7 +3270,7 @@ GameObject:
   - component: {fileID: 1378661967}
   - component: {fileID: 1378661969}
   - component: {fileID: 1378661968}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3349,7 +3349,7 @@ GameObject:
   - component: {fileID: 1490774973}
   - component: {fileID: 1490774975}
   - component: {fileID: 1490774974}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3427,7 +3427,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1513352352}
   - component: {fileID: 1513352351}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Fur Elise - Beethoven _ SLOW EASY PIANO TUTORIAL + SHEET MUSIC by Betacustic
     (mp3cut.net)
   m_TagString: Untagged
@@ -3557,7 +3557,7 @@ GameObject:
   - component: {fileID: 1584121552}
   - component: {fileID: 1584121551}
   - component: {fileID: 1584121550}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3656,7 +3656,7 @@ GameObject:
   - component: {fileID: 1623788747}
   - component: {fileID: 1623788746}
   - component: {fileID: 1623788745}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3755,7 +3755,7 @@ GameObject:
   - component: {fileID: 1645486649}
   - component: {fileID: 1645486648}
   - component: {fileID: 1645486647}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3854,7 +3854,7 @@ GameObject:
   - component: {fileID: 1706051864}
   - component: {fileID: 1706051863}
   - component: {fileID: 1706051862}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: hand and motherboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3954,7 +3954,7 @@ GameObject:
   - component: {fileID: 1762909585}
   - component: {fileID: 1762909584}
   - component: {fileID: 1762909583}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: key4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4080,7 +4080,7 @@ GameObject:
   - component: {fileID: 1784288738}
   - component: {fileID: 1784288740}
   - component: {fileID: 1784288739}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: motherboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4156,7 +4156,7 @@ GameObject:
   - component: {fileID: 1803350899}
   - component: {fileID: 1803350898}
   - component: {fileID: 1803350897}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4256,7 +4256,7 @@ GameObject:
   - component: {fileID: 1833882186}
   - component: {fileID: 1833882189}
   - component: {fileID: 1833882190}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -4302,7 +4302,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 16384
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -4395,7 +4395,7 @@ GameObject:
   - component: {fileID: 1925168569}
   - component: {fileID: 1925168568}
   - component: {fileID: 1925168567}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4494,7 +4494,7 @@ GameObject:
   - component: {fileID: 1960952633}
   - component: {fileID: 1960952635}
   - component: {fileID: 1960952636}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4613,7 +4613,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1995156166}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Keys
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4653,7 +4653,7 @@ GameObject:
   - component: {fileID: 2016857089}
   - component: {fileID: 2016857088}
   - component: {fileID: 2016857087}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: note0(Clone) (7)
   m_TagString: Note
   m_Icon: {fileID: 0}
@@ -4798,7 +4798,7 @@ GameObject:
   - component: {fileID: 2029003428}
   - component: {fileID: 2029003427}
   - component: {fileID: 2029003426}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: note0(Clone) (8)
   m_TagString: Note
   m_Icon: {fileID: 0}
@@ -4941,7 +4941,7 @@ GameObject:
   - component: {fileID: 2040079003}
   - component: {fileID: 2040079005}
   - component: {fileID: 2040079004}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5021,7 +5021,7 @@ GameObject:
   - component: {fileID: 2097758321}
   - component: {fileID: 2097758320}
   - component: {fileID: 2097758319}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: key2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5145,7 +5145,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2128955054}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Lanes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
