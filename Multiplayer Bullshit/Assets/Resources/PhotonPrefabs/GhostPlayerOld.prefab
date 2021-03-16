@@ -228,7 +228,7 @@ GameObject:
   m_Component:
   - component: {fileID: 564857485888553540}
   m_Layer: 10
-  m_Name: Target
+  m_Name: target2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 2777487066322967787}
   - component: {fileID: 1247730232906625669}
   m_Layer: 10
-  m_Name: GhostPlayer
+  m_Name: GhostPlayerOld
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -581,6 +581,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900a138fcf423a44b84839ddc982afe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanceToClient: 0
+  clientPlayer: {fileID: 0}
   text: {fileID: 4467708181678733126}
 --- !u!114 &2932352188953572542
 MonoBehaviour:
@@ -705,10 +707,18 @@ MonoBehaviour:
   emergencyMeetingImage: {fileID: 0}
   bodyReportedImage: {fileID: 0}
   votingManager: {fileID: 0}
+  interactable: {fileID: 0}
   pv: {fileID: 0}
   Vent1Pos: {fileID: 0}
   Vent2Pos: {fileID: 0}
   Vent3Pos: {fileID: 0}
+  minimap: {fileID: 0}
+  cam: {fileID: 0}
+  reticle: {fileID: 0}
+  sun: {fileID: 0}
+  currMinigame: 
+  minigameInterrupt: 0
+  tbIHolder: 0
 --- !u!114 &2777487066322967787
 MonoBehaviour:
   m_ObjectHideFlags: 0

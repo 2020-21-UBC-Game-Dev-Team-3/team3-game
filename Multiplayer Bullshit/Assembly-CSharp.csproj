@@ -177,6 +177,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Logic\BoolOperator.cs" />
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\SetFsmInt.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetRoomProperties.cs" />
+    <Compile Include="Assets\Scripts\Game Stuff\TrapPlacement.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\GetAnimatorFeetPivotActive.cs" />
     <Compile Include="Assets\PlayMaker\Actions\StateMachine\SendEventByName.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\EventSystem\UiOnPointerClickEvent.cs" />
@@ -1304,7 +1305,6 @@
     <Compile Include="Assets\Main Assets\Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\SmoothFollowAction.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetPlayerCustomProperty.cs" />
-    <Compile Include="Assets\Scripts\Game Stuff\TrapPlacement.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\GestureRecognizer\UPDATE GUIDE.txt" />
