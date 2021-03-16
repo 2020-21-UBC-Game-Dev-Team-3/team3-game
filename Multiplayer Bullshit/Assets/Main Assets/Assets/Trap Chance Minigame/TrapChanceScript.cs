@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TrapChanceScript : MonoBehaviour
 {
     //Transform[] gears;
     int safe;
     RaycastHit2D hit;
+    DeathTrackScript dts;
 
     // Start is called before the first frame update
     void Start()
@@ -14,6 +16,7 @@ public class TrapChanceScript : MonoBehaviour
         //gears = GetComponentsInChildren<Transform>();
         System.Random rnd = new System.Random();
         safe = rnd.Next(0, 5);
+        dts = GameObject.Find("DeathTrack").GetComponent<DeathTrackScript>();
     }
 
     // Update is called once per frame
@@ -28,11 +31,13 @@ public class TrapChanceScript : MonoBehaviour
             {
                 if (hit.transform.GetSiblingIndex() == safe)
                 {
-                    print("you lived");
+                    dts.dead = false;
+                    SceneManager.UnloadSceneAsync("Trap Chance Minigame");
                 }
                 else
                 {
-                    print("ded");
+                    dts.dead = true;
+                    SceneManager.UnloadSceneAsync("Trap Chance Minigame");
                 }
             }
         }

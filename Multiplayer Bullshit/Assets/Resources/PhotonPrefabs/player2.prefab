@@ -1346,6 +1346,7 @@ MonoBehaviour:
   currMinigameObjectName: 
   minigameInterrupt: 0
   tbIHolder: 0
+  dts: {fileID: 0}
 --- !u!114 &207398781907947271
 MonoBehaviour:
   m_ObjectHideFlags: 0

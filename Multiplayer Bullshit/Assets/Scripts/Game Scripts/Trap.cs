@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.SceneManagement;
 
 public class Trap : Interactable {
 
@@ -13,13 +14,15 @@ public class Trap : Interactable {
   [SerializeField] Material transparent;
 
   [SerializeField] PhotonView pv;
-
+  [SerializeField] PlayerActionController pac;
+  
   private void Start() {
     pv = GetComponent<PhotonView>();
     needle.material = transparent;
     needleBase.material = transparent;
     GetComponent<Collider>().enabled = false; // disables the collider
     StartCoroutine(CountdownBeforeActive());
+    pac = GameObject.Find("player2(Clone)").GetComponent<PlayerActionController>();
   }
 
   IEnumerator CountdownBeforeActive() {
@@ -38,7 +41,13 @@ public class Trap : Interactable {
     }
     
     if (other.GetComponent<Role>().currRole == Role.Roles.Crewmate) {
-      other.GetComponent<PlayerActionController>().TakeHit();
+      //other.GetComponent<PlayerActionController>().TakeHit();
+      //Destroy();
+      if (SceneManager.sceneCount == 1) { 
+        pac.currMinigameSceneName = "Trap Chance Minigame"; 
+        pac.exitMinigame(false);
+        SceneManager.LoadScene("Trap Chance Minigame", LoadSceneMode.Additive);
+      }
       Destroy();
     }
   }

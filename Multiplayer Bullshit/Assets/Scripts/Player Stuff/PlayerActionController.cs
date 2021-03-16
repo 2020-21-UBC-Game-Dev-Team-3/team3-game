@@ -39,6 +39,8 @@ public class PlayerActionController : MonoBehaviour, IDamageable
     TaskBar tb;
     public bool tbIHolder = false;
 
+    public DeathTrackScript dts;
+
     void Awake()
     {
         mapMan = GetComponent<MapManager>();
@@ -65,6 +67,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable
         minigameInterrupt = false;
 
         tb = GameObject.Find("Main Camera/TaskbarCanvas/Taskbar").GetComponent<TaskBar>();
+        dts = GameObject.Find("DeathTrack").GetComponent<DeathTrackScript>();
     }
 
     // Update is called once per frame
@@ -72,6 +75,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable
     {
         if (!pv.IsMine) return;
 
+        
         if (tbIHolder)
         {
             tb.IncrementTaskBar();
@@ -113,6 +117,12 @@ public class PlayerActionController : MonoBehaviour, IDamageable
             currMinigameObjectName = "none";
             RenderSettings.ambientIntensity = 0.85f;
         }
+
+        if (dts.dead)
+        {
+            TakeHit();
+        }
+
 
         Interact();
 
@@ -347,7 +357,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable
         transform.GetChild(4).gameObject.SetActive(true);
     }
 
-    void exitMinigame(bool exiting)
+    public void exitMinigame(bool exiting)
     {
         cam.SetActive(exiting);
         minimap.SetActive(exiting);

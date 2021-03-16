@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 102251427}
   - component: {fileID: 102251428}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,7 +193,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1796263235
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5edfd139879c7674db204bd18d6c4d2d, type: 3}
   m_Color: {r: 0, g: 0.7019608, b: 0.08627451, a: 1}
   m_FlipX: 0
@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 107424809}
   - component: {fileID: 107424810}
   - component: {fileID: 107424811}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: gear3
   m_TagString: Gear
   m_Icon: {fileID: 0}
@@ -338,7 +338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 331386040}
   - component: {fileID: 331386041}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -398,7 +398,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1796263235
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5edfd139879c7674db204bd18d6c4d2d, type: 3}
   m_Color: {r: 0, g: 0.7019608, b: 0.08627451, a: 1}
   m_FlipX: 0
@@ -420,7 +420,7 @@ GameObject:
   m_Component:
   - component: {fileID: 431409548}
   - component: {fileID: 431409549}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -480,7 +480,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1796263235
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5edfd139879c7674db204bd18d6c4d2d, type: 3}
   m_Color: {r: 0, g: 0.6981132, b: 0.08509173, a: 1}
   m_FlipX: 0
@@ -502,7 +502,7 @@ GameObject:
   m_Component:
   - component: {fileID: 512629946}
   - component: {fileID: 512629947}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Gears
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -552,7 +552,7 @@ GameObject:
   - component: {fileID: 870408737}
   - component: {fileID: 870408738}
   - component: {fileID: 870408739}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: gear5
   m_TagString: Gear
   m_Icon: {fileID: 0}
@@ -675,7 +675,7 @@ GameObject:
   - component: {fileID: 919878918}
   - component: {fileID: 919878919}
   - component: {fileID: 919878920}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: gear1
   m_TagString: Gear
   m_Icon: {fileID: 0}
@@ -798,7 +798,7 @@ GameObject:
   - component: {fileID: 951401579}
   - component: {fileID: 951401580}
   - component: {fileID: 951401581}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: gear4
   m_TagString: Gear
   m_Icon: {fileID: 0}
@@ -921,7 +921,7 @@ GameObject:
   - component: {fileID: 1158443814}
   - component: {fileID: 1158443815}
   - component: {fileID: 1158443816}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: gear2
   m_TagString: Gear
   m_Icon: {fileID: 0}
@@ -1042,7 +1042,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1333117225}
   - component: {fileID: 1333117226}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1102,7 +1102,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1796263235
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5edfd139879c7674db204bd18d6c4d2d, type: 3}
   m_Color: {r: 0, g: 0.7019608, b: 0.08627451, a: 1}
   m_FlipX: 0
@@ -1124,7 +1124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1347153113}
   - component: {fileID: 1347153114}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1184,7 +1184,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1796263235
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5edfd139879c7674db204bd18d6c4d2d, type: 3}
   m_Color: {r: 0, g: 0.7019608, b: 0.08627451, a: 1}
   m_FlipX: 0
@@ -1206,7 +1206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1605427723}
   - component: {fileID: 1605427722}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1298,7 +1298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1629116361}
   - component: {fileID: 1629116360}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: PlayMakerGUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1319,7 +1319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previewOnGUI: 1
   enableGUILayout: 1
-  drawStateLabels: 0
+  drawStateLabels: 1
   enableStateLabelsInBuilds: 0
   GUITextureStateLabels: 0
   GUITextStateLabels: 0
@@ -1351,7 +1351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1764281923}
   - component: {fileID: 1764281922}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: mouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1546,7 +1546,7 @@ GameObject:
   - component: {fileID: 1779071597}
   - component: {fileID: 1779071596}
   - component: {fileID: 1779071599}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -1592,7 +1592,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 16384
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
