@@ -84,7 +84,8 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
     } else {
       if (currMinigame == "Rhythm Trap Minigame") {
         GetComponent<TrapAbility>().DecrementCurrTraps();
-        interactable.gameObject.GetComponent<Trap>().Destroy();
+        /*       interactable.gameObject.GetComponent<Trap>().Destroy();*/
+        FindObjectOfType<TrapManager>().DestroyTrap(interactable.gameObject);
       } else if (currMinigame != "none") {
         tbIHolder = true;
       }

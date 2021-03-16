@@ -21,21 +21,12 @@ public class TrapAbility : RoleAbility {
 
   public override void UseAbility() {
     if (currNumberTraps < maxNumberTraps && !isTouchingTrap) {
-      pv.RPC("SpawnTrap", RpcTarget.All);
+      Vector3 tempPos = transform.position;
+      /*      BroadcastMessage("InstantiateTrap", tempPos);*/
+      FindObjectOfType<TrapManager>().InstantiateTrap(tempPos);
       currNumberTraps++;
       trapperUI.SetText("Traps active: " + currNumberTraps.ToString() + "/" + maxNumberTraps.ToString());
     }
-  }
-
-  [PunRPC]
-  public void SpawnTrap() {
-    StartCoroutine(SpawnTrapCoroutine());
-  }
-
-  IEnumerator SpawnTrapCoroutine() {
-    Vector3 tempPos = transform.position;
-    yield return new WaitForSeconds(0);
-    PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Trap"), tempPos, Quaternion.identity);
   }
 
   public void DecrementCurrTraps() {
