@@ -17,18 +17,22 @@ public class Options : MonoBehaviour {
   [SerializeField] Dropdown resolutionDropdown;
   [SerializeField] Toggle fullscreenToggle;
   [SerializeField] Slider fovSlider;
+  [SerializeField] Toggle xToggle;
+  [SerializeField] Toggle yToggle;
+  [SerializeField] Toggle vsyncToggle;
   Resolution[] resolutions;
-
+  bool saved = false;
   
   public Volume volume;
   public Camera mainCam;
+  int currentResolutionIndex = 0;
 
   private void Start() {
     resolutions = Screen.resolutions;
     resolutionDropdown.ClearOptions();
     List<string> options = new List<string>();
         
-    int currentResolutionIndex = 0;
+    
     for(int i = 0; i < resolutions.Length; i++){
         string option = resolutions[i].width + "x" + resolutions[i].height;
         options.Add(option);
@@ -42,10 +46,7 @@ public class Options : MonoBehaviour {
     
    
     
-    bloomSlider.value = OptionsPP.bloomValue;
-    brightnessSlider.value = OptionsPP.brightnessValue;
-    shadowsSlider.value = OptionsPP.shadowsValue;
-    fovSlider.value = OptionsPP.fovValue;
+    setOriginalValues();
     
 
     
@@ -54,10 +55,7 @@ public class Options : MonoBehaviour {
   }
 
   private void Update() {
-    OptionsPP.bloomValue = bloomSlider.value;
-    OptionsPP.brightnessValue = brightnessSlider.value;
-    OptionsPP.shadowsValue = shadowsSlider.value;
-    OptionsPP.fovValue = fovSlider.value;
+      
     AdjustBloom(bloomSlider.value);
     AdjustBrightness(brightnessSlider.value);
     AdjustShadows(shadowsSlider.value);
@@ -177,144 +175,44 @@ public class Options : MonoBehaviour {
             float invertedAxis = -Input.GetAxis("Horizontal");
         }
     }
+
+    public void SaveChanges(){
+        OptionsPP.bloomValue = bloomSlider.value;
+        OptionsPP.brightnessValue = brightnessSlider.value;
+        OptionsPP.shadowsValue = shadowsSlider.value;
+        OptionsPP.fovValue = fovSlider.value;
+        OptionsPP.qualityValue = qualityDropdown.value;
+        OptionsPP.fullScreen = fullscreenToggle.isOn;
+        OptionsPP.textureValue = textureDropdown.value;
+        OptionsPP.aaValue = aaDropdown.value;
+        OptionsPP.xValue = xToggle.isOn;
+        OptionsPP.yValue = yToggle.isOn;
+        OptionsPP.vsyncVal = vsyncToggle.isOn;
+        
+        saved = true; 
+    }
+
+    public void CheckSaved(){
+        if(saved == false){
+          setOriginalValues();
+      }
+      saved = false;
+
+    }
+
+    private void setOriginalValues(){
+        bloomSlider.value = OptionsPP.bloomValue;
+        brightnessSlider.value = OptionsPP.brightnessValue;
+        shadowsSlider.value = OptionsPP.shadowsValue;
+        fovSlider.value = OptionsPP.fovValue;
+        resolutionDropdown.value = currentResolutionIndex;
+        qualityDropdown.value = OptionsPP.qualityValue;
+        textureDropdown.value = OptionsPP.textureValue;
+        aaDropdown.value = OptionsPP.aaValue;
+        fullscreenToggle.isOn = OptionsPP.fullScreen;
+        xToggle.isOn = OptionsPP.xValue;
+        yToggle.isOn = OptionsPP.yValue;
+        vsyncToggle.isOn = OptionsPP.vsyncVal;
+    }
    
 }
-   //public Dropdown resolutionDropdown;
-//     public Dropdown qualityDropdown;
-//     public Dropdown textureDropdown;
-//     public Dropdown aaDropdown;
-//    // public Slider volumeSlider;
-
-//     //float currentVolume;
-
-//     // Start is called before the first frame update
-//     void Start()
-//     {
-//         // resolutionDropdown.ClearOptions();
-//         // List<string> options = new List<string>();
-//         // resolutions = Screen.resolutions;
-//         // int currentResolutionIndex = 0;
-
-//         // for (int i = 0; i < resolutions.Length; i++)
-//         // {
-//         //     string option = resolutions[i].width + " x " + resolutions[i].height;
-//         //     options.Add(option);
-
-//         //     if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
-//         //         currentResolutionIndex = i;
-//         // }
-
-//         // resolutionDropdown.AddOptions(options);
-//         // resolutionDropdown.RefreshShownValue();
-//         // LoadSettings(currentResolutionIndex);
-//     }
-
-
-
-//     // public void SetFullscreen(bool isFullscreen)
-//     // {
-//     //     Screen.fullScreen = isFullscreen;
-//     // }
-
-//     // public void SetResolution(int resolutionIndex)
-//     // {
-//     //     Resolution resolution = resolutions[resolutionIndex];
-//     //     Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
-//     // }
-
-//     public void SetTextureQuality(int textureIndex)
-//     {
-//         QualitySettings.masterTextureLimit = textureIndex;
-//         qualityDropdown.value = 6;
-//     }
-
-//     public void SetAntiAliasing(int aaIndex)
-//     {
-//         QualitySettings.antiAliasing = aaIndex;
-//         qualityDropdown.value = 6;
-//     }
-
-//     public void SetQuality(int qualityIndex)
-//     {
-//         if (qualityIndex != 6) // if the user is not using any of the presets
-//             QualitySettings.SetQualityLevel(qualityIndex);
-
-//         switch (qualityIndex)
-//         {
-//             case 0: // quality level - very low
-//                 textureDropdown.value = 3;
-//                 aaDropdown.value = 0;
-//                 break;
-//             case 1: // quality level - low
-//                 textureDropdown.value = 2;
-//                 aaDropdown.value = 0;
-//                 break;
-//             case 2: // quality level - medium
-//                 textureDropdown.value = 1;
-//                 aaDropdown.value = 0;
-//                 break;
-//             case 3: // quality level - high
-//                 textureDropdown.value = 0;
-//                 aaDropdown.value = 0;
-//                 break;
-//             case 4: // quality level - very high
-//                 textureDropdown.value = 0;
-//                 aaDropdown.value = 1;
-//                 break;
-//             case 5: // quality level - ultra
-//                 textureDropdown.value = 0;
-//                 aaDropdown.value = 2;
-//                 break;
-//         }
-        
-//         qualityDropdown.value = qualityIndex;
-//     }
-
-//     public void ExitGame()
-//     {
-//         Application.Quit();
-//     }
-
-//     public void SaveSettings()
-//     {
-//         PlayerPrefs.SetInt("QualitySettingPreference", qualityDropdown.value);
-//     //     PlayerPrefs.SetInt("ResolutionPreference", resolutionDropdown.value);
-//         PlayerPrefs.SetInt("TextureQualityPreference", textureDropdown.value);
-//         PlayerPrefs.SetInt("AntiAliasingPreference", aaDropdown.value);
-//     //     PlayerPrefs.SetInt("FullscreenPreference", Convert.ToInt32(Screen.fullScreen));
-//     }
-
-//     public void LoadSettings(int currentResolutionIndex)
-//     {
-//         if (PlayerPrefs.HasKey("QualitySettingPreference"))
-//             qualityDropdown.value = PlayerPrefs.GetInt("QualitySettingPreference");
-//         else
-//             qualityDropdown.value = 3;
-
-//     //     if (PlayerPrefs.HasKey("ResolutionPreference"))
-//     //         resolutionDropdown.value = PlayerPrefs.GetInt("ResolutionPreference");
-//     //     else
-//     //         resolutionDropdown.value = currentResolutionIndex;
-
-//     //     if (PlayerPrefs.HasKey("TextureQualityPreference"))
-//     //         textureDropdown.value = PlayerPrefs.GetInt("TextureQualityPreference");
-//     //     else
-//     //         textureDropdown.value = 0;
-
-//     //     if (PlayerPrefs.HasKey("AntiAliasingPreference"))
-//     //         aaDropdown.value = PlayerPrefs.GetInt("AntiAliasingPreference");
-//     //     else
-//     //         aaDropdown.value = 0;
-
-//     //     if (PlayerPrefs.HasKey("FullscreenPreference"))
-//     //         Screen.fullScreen = Convert.ToBoolean(PlayerPrefs.GetInt("FullscreenPreference"));
-//     //     else
-//     //         Screen.fullScreen = true;
-
-//     //     if (PlayerPrefs.HasKey("VolumePreference"))
-//     //         volumeSlider.value = PlayerPrefs.GetFloat("VolumePreference");
-//     //     else
-//     //         volumeSlider.value = PlayerPrefs.GetFloat("VolumePreference");
-//     }
-
-// }
