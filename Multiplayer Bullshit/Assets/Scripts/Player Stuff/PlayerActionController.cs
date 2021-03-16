@@ -53,7 +53,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable
     // Start is called before the first frame update
     void Start()
     {
-        ability = GetComponent<ChameleonAbility>();
+        ability = GetComponent<TrapAbility>();
 
         Vent1Pos = GameObject.Find("Vent1Pos").transform;
         Vent2Pos = GameObject.Find("Vent2Pos").transform;
