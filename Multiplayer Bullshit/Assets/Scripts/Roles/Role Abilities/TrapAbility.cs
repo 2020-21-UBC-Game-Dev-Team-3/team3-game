@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using TMPro;
+using System.IO;
 
 public class TrapAbility : RoleAbility {
 
@@ -34,7 +35,7 @@ public class TrapAbility : RoleAbility {
   IEnumerator SpawnTrapCoroutine() {
     Vector3 tempPos = transform.position;
     yield return new WaitForSeconds(0);
-    Instantiate(trapPrefab, tempPos, Quaternion.identity);
+    PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Trap"), tempPos, Quaternion.identity);
   }
 
   public void DecrementCurrTraps() {

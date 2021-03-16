@@ -86,6 +86,7 @@ MonoBehaviour:
   needleBase: {fileID: 6731610827462774133}
   normal: {fileID: 2100000, guid: c31938330139d2d42876f7993371276c, type: 2}
   transparent: {fileID: 7209514650377959485, guid: 133a0ba5cb4523e4fbc0a45eca4916d5, type: 3}
+  pv: {fileID: 0}
 --- !u!114 &-4628447521987250238
 MonoBehaviour:
   m_ObjectHideFlags: 0
