@@ -1210,7 +1210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 735e6adaec59067409997561713c776a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 0}
+  playerCamera: {fileID: 7246344428345413178}
   minimapCamera: {fileID: 8134409677106726469}
   playerIndicator: {fileID: 3716913751683165206}
   interactables: []
@@ -8131,6 +8131,10 @@ PrefabInstance:
     - target: {fileID: 4103009042635643067, guid: dbf6af28bf03b6d4e8eb798c89604c0e, type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4139487682052387769, guid: dbf6af28bf03b6d4e8eb798c89604c0e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.49987793
       objectReference: {fileID: 0}
     - target: {fileID: 4139487682052387769, guid: dbf6af28bf03b6d4e8eb798c89604c0e, type: 3}
       propertyPath: m_AnchoredPosition.y
