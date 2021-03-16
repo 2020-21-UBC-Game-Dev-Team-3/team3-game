@@ -8,6 +8,7 @@ public class ScavengerHuntStarter : Interactable {
   [SerializeField] ScavengerProgressUI scavengerProgressUI;
   List<int> intList = new List<int>();
   private int itemsFound;
+  private int imposterFloorNumber;
 
   public void CollectItem() {
     IncrementItemsFound();
@@ -34,6 +35,9 @@ public class ScavengerHuntStarter : Interactable {
     FindObjectOfType<TaskBar>().IncrementTaskBar();
     scavengerProgressUI.DisplayComplete();
     yield return new WaitForSeconds(2);
+    FindImposterFloorNumber();
+    scavengerProgressUI.DisplayImposterFloorNumber(imposterFloorNumber);
+    yield return new WaitForSeconds(2);
     scavengerProgressUI.gameObject.SetActive(false);
   }
 
@@ -59,6 +63,38 @@ public class ScavengerHuntStarter : Interactable {
     for (int i = 0; i < intList.Count; i++) {
       transforms[intList[i]].gameObject.SetActive(true);
     }
-
   }
+
+    void FindImposterFloorNumber()
+    {
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+
+        for (int i = 0; i < players.Length; i++)
+        {
+            if (players[i].GetComponent<Role>().currRole == Role.Roles.Imposter)
+            {
+                switch (Mathf.Round(players[i].transform.position.y))
+                {
+                    case 7f:
+                        imposterFloorNumber = 3;
+                        break;
+
+                    case 4f:
+                        imposterFloorNumber = 2;
+                        break;
+
+                    case 0f:
+                        imposterFloorNumber = 1;
+                        break;
+
+                    default:
+                        Debug.Log("false");
+                        break;
+                }
+
+            }
+        }
+    }
+
+
 }

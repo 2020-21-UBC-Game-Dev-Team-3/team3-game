@@ -22,4 +22,9 @@ public class ScavengerProgressUI : MonoBehaviour {
   public void DisplayComplete() {
     scavengerTextProgress.text = "TASK COMPLETE";
   }
+
+    public void DisplayImposterFloorNumber(int x)
+    {
+        scavengerTextProgress.text = "Killer on floor " + x;
+    }
 }
