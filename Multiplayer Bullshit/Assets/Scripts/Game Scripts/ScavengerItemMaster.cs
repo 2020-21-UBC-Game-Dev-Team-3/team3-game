@@ -27,7 +27,7 @@ public class ScavengerItemMaster : MonoBehaviour {
     if (itemsFound < 3) {
       itemsFound++;
     } else {
-      FindObjectOfType<TaskBar>().Increment();
+      FindObjectOfType<TaskBar>().IncrementTaskBar();
     }
   }
 }

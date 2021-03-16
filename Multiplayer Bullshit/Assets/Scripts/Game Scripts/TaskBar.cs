@@ -28,12 +28,12 @@ public class TaskBar : MonoBehaviour {
     if (pac == null) { 
         pac = GameObject.Find("player2(Clone)").GetComponent<PlayerActionController>();
     }
-    if (Input.GetKeyDown(KeyCode.T)) {
-      Increment();
-    }
+    //if (Input.GetKeyDown(KeyCode.T)) {
+    //  Increment();
+    //}
   }
 
-  public void Increment() {
+  public void IncrementTaskBar() {
     StartCoroutine(UpdateText());
     pac.tbIHolder = false;
   }

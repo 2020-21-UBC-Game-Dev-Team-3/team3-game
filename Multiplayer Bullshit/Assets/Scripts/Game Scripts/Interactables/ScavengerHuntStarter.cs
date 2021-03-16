@@ -10,8 +10,8 @@ public class ScavengerHuntStarter : Interactable {
   private int itemsFound;
 
   public void CollectItem() {
-    Increment();
-    scavengerProgressUI.Increment();
+    IncrementItemsFound();
+    scavengerProgressUI.IncrementItemsFoundText();
     if (itemsFound == 3) {
       CompleteTask();
     }
@@ -31,13 +31,13 @@ public class ScavengerHuntStarter : Interactable {
 
   IEnumerator CompleteTaskCoroutine() {
     itemsFound = 0;
-    FindObjectOfType<TaskBar>().Increment();
+    FindObjectOfType<TaskBar>().IncrementTaskBar();
     scavengerProgressUI.DisplayComplete();
     yield return new WaitForSeconds(2);
     scavengerProgressUI.gameObject.SetActive(false);
   }
 
-  void Increment() {
+  void IncrementItemsFound() {
     itemsFound++;
   }
 

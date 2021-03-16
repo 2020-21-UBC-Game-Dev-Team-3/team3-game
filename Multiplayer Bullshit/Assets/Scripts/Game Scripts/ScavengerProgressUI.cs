@@ -14,7 +14,7 @@ public class ScavengerProgressUI : MonoBehaviour {
     scavengerTextProgress.text = "Items Found: " + itemsFoundText.ToString() + "/3";
   }
 
-  public void Increment() {
+  public void IncrementItemsFoundText() {
     itemsFoundText++;
     scavengerTextProgress.text = "Items Found: " + itemsFoundText.ToString() + "/3";
   }
