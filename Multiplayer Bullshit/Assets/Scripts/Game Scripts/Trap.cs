@@ -48,17 +48,18 @@ public class Trap : Interactable {
         pac.exitMinigame(false);
         SceneManager.LoadScene("Trap Chance Minigame", LoadSceneMode.Additive);
       }
-      Destroy();
+            
+            Destroy();
     }
   }
 
   public void Destroy() {
-    pv.RPC("DestroyObject", RpcTarget.All);
+        pv.RPC("DestroyObject", RpcTarget.All);
   }
 
   [PunRPC]
   private void DestroyObject() {
     Debug.Log("DESTROYING OBJECT");
-    Destroy(this.gameObject);
+        Destroy(this.gameObject);
   }
 }

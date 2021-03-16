@@ -92,7 +92,6 @@ public class PlayerActionController : MonoBehaviour, IDamageable
                 RenderSettings.ambientIntensity = 0.85f;
                 RenderSettings.reflectionIntensity = 1f;
                 RenderSettings.fogColor = new Color(177f, 161f, 185f, 255f);
-
             }
             else
             {

@@ -108,9 +108,10 @@ GameObject:
   - component: {fileID: -4393190189347252887}
   - component: {fileID: 8277722571173227059}
   - component: {fileID: 3715922773460204070}
-  m_Layer: 0
+  - component: {fileID: 3178373435303945846}
+  m_Layer: 12
   m_Name: DeadBody
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,6 +206,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.9884076, y: 3.9112115, z: 4.099289}
   m_Center: {x: 1.1118947, y: 1.8241947, z: 0.0010085106}
+--- !u!114 &3178373435303945846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051634017902913106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75a1627b4f71c34a97ca28c582252de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableName: Dead body
+  outline: {fileID: 0}
+  indicator: {fileID: 3707966354875870027}
 --- !u!1 &2510499093913516487
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,7 +456,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6429030264374862672
 Transform:
   m_ObjectHideFlags: 0

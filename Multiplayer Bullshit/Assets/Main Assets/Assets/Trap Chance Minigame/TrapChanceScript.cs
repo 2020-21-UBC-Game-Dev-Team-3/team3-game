@@ -32,17 +32,24 @@ public class TrapChanceScript : MonoBehaviour
                 if (hit.transform.GetSiblingIndex() == safe)
                 {
                     dts.dead = false;
+
+                    FindObjectOfType<wincon>().Win();
                     SceneManager.UnloadSceneAsync("Trap Chance Minigame");
+                    
                 }
                 else
                 {
                     dts.dead = true;
+                    
+                    Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+                    Cursor.visible = true;
                     SceneManager.UnloadSceneAsync("Trap Chance Minigame");
+                   
                 }
             }
         }
 
     }
 
-    
+
 }
