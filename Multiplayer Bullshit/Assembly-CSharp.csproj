@@ -870,6 +870,7 @@
      <Compile Include="Assets\PlayMaker PUN 2\Scripts\UnitySerializer.cs" />
      <Compile Include="Assets\PlayMaker Utils\PropertyDrawers\PlayMakerFsmTarget\PlayMakerFsmTarget.cs" />
      <Compile Include="Assets\PlayMaker\Actions\UI\EventSystem\UiOnInitializePotentialDragEvent.cs" />
+     <Compile Include="Assets\Scenes\Trap Chance Minigame\DeathTrackScript.cs" />
      <Compile Include="Assets\PlayMaker\Actions\UI\EventSystem\UiOnBeginDragEvent.cs" />
      <Compile Include="Assets\PlayMaker\Actions\PlayerPrefs\PlayerPrefsSetFloat.cs" />
      <Compile Include="Assets\PlayMaker PUN 2\Actions\PunLoadLevel.cs" />
@@ -1306,7 +1307,6 @@
      <Compile Include="Assets\Main Assets\Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\PlayMaker\Actions\Transform\SmoothFollowAction.cs" />
      <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetPlayerCustomProperty.cs" />
-     <Compile Include="Assets\Scenes\Trap Chance Minigame\DeathTrackScript.cs" />
      <None Include="Assets\GestureRecognizer\UPDATE GUIDE.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Materials\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
