@@ -10,13 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4171673715148964509}
   - component: {fileID: 4171673715148964506}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Vent2Indicator
   m_TagString: Indicator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4171673715148964509
 Transform:
   m_ObjectHideFlags: 0
@@ -95,9 +95,10 @@ GameObject:
   - component: {fileID: 4171673715509042798}
   - component: {fileID: 4171673715509042799}
   - component: {fileID: 4171673715509042787}
-  m_Layer: 0
+  - component: {fileID: 675085803}
+  m_Layer: 12
   m_Name: Vent2
-  m_TagString: BadInteractable
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,7 +146,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7ab2124270c19ac478a102c5091bdadb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -192,7 +193,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed711b062db2ce846a90835c36f999b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  badInteractableName: 
+  interactableName: Vent
+  outline: {fileID: 0}
+--- !u!114 &675085803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4171673715509042796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
+  outlineWidth: 4
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &4171673715619388471
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,9 +222,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4171673715619388470}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Vent2Pos
-  m_TagString: Vent2Pos
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
