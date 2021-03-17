@@ -362,7 +362,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable
         minimap.SetActive(exiting);
         reticle.SetActive(exiting);
         sun.SetActive(exiting);
-        GetComponents<PlayMakerFSM>()[2].enabled = exiting;
+        GetComponents<PlayMakerFSM>()[0].enabled = exiting;
         GetComponent<PlayMakerFixedUpdate>().enabled = exiting;
         GetComponent<PlayMakerLateUpdate>().enabled = exiting;
     }

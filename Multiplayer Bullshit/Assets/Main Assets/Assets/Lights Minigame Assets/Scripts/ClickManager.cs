@@ -40,7 +40,8 @@ public class ClickManager : MonoBehaviour {
   private void CheckWin() {
     if (AllOn()) {
       Debug.Log("You win!");
-      textManager.Win();
+            PlayMakerFSM.BroadcastEvent("LightsFixed");
+            textManager.Win();
     }
   }
 

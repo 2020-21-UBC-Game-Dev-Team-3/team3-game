@@ -3380,7 +3380,7 @@ MonoBehaviour:
   fsm:
     dataVersion: 2
     usedInTemplate: {fileID: 0}
-    name: Light Sabotage
+    name: Light Sabotage1
     startState: waiting for sabotage
     states:
     - name: waiting for sabotage
@@ -6149,8 +6149,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3464390445804641302}
-  m_LocalRotation: {x: -0.113758415, y: -0.64854044, z: -0.09888243, w: 0.74610764}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.116078794, y: -0.6427574, z: -0.09939149, w: 0.750673}
+  m_LocalPosition: {x: 0, y: -0.00000023841858, z: 0}
   m_LocalScale: {x: 1.5624995, y: 1.5624996, z: 1.5624996}
   m_Children:
   - {fileID: 425726525121565379}
@@ -6224,7 +6224,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3588007284757267199}
   m_LocalRotation: {x: -0.08658103, y: -0.6517044, z: -0.075258985, w: 0.7497475}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 3.3333335, z: -1.111111}
   m_LocalScale: {x: 1.5624995, y: 1.5624996, z: 1.5624996}
   m_Children:
   - {fileID: 6540701464570828565}
@@ -6582,8 +6582,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4350257086163800055}
-  m_LocalRotation: {x: -0.10020423, y: -0.6502276, z: -0.0871007, w: 0.7480486}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.10244139, y: -0.6444547, z: -0.08771458, w: 0.7526553}
+  m_LocalPosition: {x: 0, y: -0.00000023841858, z: 0}
   m_LocalScale: {x: 1.5624995, y: 1.5624996, z: 1.5624996}
   m_Children:
   - {fileID: 8627551931674067895}
@@ -7706,7 +7706,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7909981271565913725}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.730372, y: 1.3007263, z: -2.3157094}
+  m_LocalPosition: {x: 7.730372, y: -2.0326073, z: -1.2045983}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2597244033600126602}

@@ -1685,6 +1685,7 @@ GameObject:
   - component: {fileID: 194336055}
   - component: {fileID: 194336054}
   - component: {fileID: 194336053}
+  - component: {fileID: 194336057}
   m_Layer: 0
   m_Name: post processing
   m_TagString: Untagged
@@ -1818,8 +1819,8 @@ MonoBehaviour:
       colorIndex: 6
       position:
         serializedVersion: 2
-        x: 50
-        y: 212
+        x: 64
+        y: 223.03125
         width: 180
         height: 32
       isBreakpoint: 0
@@ -2164,8 +2165,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 114
-        y: 108.99219
+        x: 193
+        y: 104.984375
         width: 234
         height: 16
       isBreakpoint: 0
@@ -2271,36 +2272,25 @@ MonoBehaviour:
       colorIndex: 4
       position:
         serializedVersion: 2
-        x: 425
-        y: 104.984375
+        x: 483.8828
+        y: 104.91406
         width: 156
-        height: 32
+        height: 16
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: LightsFixed
-          isSystemEvent: 0
-          isGlobal: 0
-        toState: turn lights back on RPC
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
+      transitions: []
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetProperty
         - HutongGames.PlayMaker.Actions.SetMaterialHDRColor
-        - HutongGames.PlayMaker.Actions.GetKeyDown
         customNames:
         - 
         - 
-        - 
-        actionEnabled: 010101
-        actionIsOpen: 000001
-        actionStartIndex: 000000000200000009000000
-        actionHashCodes: 5ac85204d5280b03ff77a904
+        actionEnabled: 0101
+        actionIsOpen: 0000
+        actionStartIndex: 0000000002000000
+        actionHashCodes: 5ac85204d5280b03
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -2482,13 +2472,7 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        fsmBoolParams:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
+        fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams:
@@ -2500,14 +2484,13 @@ MonoBehaviour:
           value: {r: 0, g: 0, b: 0, a: 1}
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams:
-        - LightsFixed
-        byteData: 000005010000
+        stringParams: []
+        byteData: 0000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 240000000100000014000000100000002000000012000000190000000f00000001000000070000001700000011000000
+        paramDataType: 240000000100000014000000100000002000000012000000190000000f00000001000000
         paramName:
         - targetProperty
         - everyFrame
@@ -2518,17 +2501,14 @@ MonoBehaviour:
         - color
         - brightness
         - everyFrame
-        - key
-        - sendEvent
-        - storeResult
-        paramDataPos: 000000000000000000000000000000000000000000000000000000000000000001000000020000000000000000000000
-        paramByteDataSize: 000000000100000000000000000000000000000000000000000000000000000001000000040000000000000000000000
+        paramDataPos: 000000000000000000000000000000000000000000000000000000000000000001000000
+        paramByteDataSize: 000000000100000000000000000000000000000000000000000000000000000001000000
     - name: turn lights back on RPC
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 630
+        x: 694
         y: 105.984375
         width: 167
         height: 16
@@ -2538,13 +2518,15 @@ MonoBehaviour:
       transitions: []
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.Wait
         - HutongGames.PlayMaker.Pun2.Actions.PhotonViewRpcBroadcastFsmEvent
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 04d1d501
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000003000000
+        actionHashCodes: 48c0110104d1d501
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -2604,7 +2586,13 @@ MonoBehaviour:
           networkSync: 0
           enumName: Photon.Pun.RpcTarget
           intValue: 0
-        fsmFloatParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
         fsmIntParams: []
         fsmBoolParams: []
         fsmVector2Params: []
@@ -2613,30 +2601,34 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
+        - 
         - GlobalLightsFixed
-        byteData: 00
+        byteData: 0000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 01000000
         customTypeNames:
         - HutongGames.PlayMaker.Pun2.Actions.PunActionHeader
-        paramDataType: 2a0000001f00000017000000120000002800000001000000
+        paramDataType: 0f00000017000000010000002a0000001f00000017000000120000002800000001000000
         paramName:
+        - time
+        - finishEvent
+        - realTime
         - rpcTargets
         - eventTarget
         - remoteEvent
         - stringData
         - header
         - NetworkOperationPending
-        paramDataPos: 000000000000000000000000000000000000000000000000
-        paramByteDataSize: 000000000000000000000000000000000000000001000000
+        paramDataPos: 000000000000000000000000000000000000000001000000000000000000000001000000
+        paramByteDataSize: 000000000000000001000000000000000000000000000000000000000000000001000000
     - name: State 3
       description: 
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 687
-        y: 231
+        x: 756
+        y: 211.01562
         width: 206
         height: 32
       isBreakpoint: 0
@@ -3204,6 +3196,15 @@ MonoBehaviour:
       linkConstraint: 0
       linkTarget: 0
       colorIndex: 0
+    - fsmEvent:
+        name: LightsFixed
+        isSystemEvent: 0
+        isGlobal: 0
+      toState: turn lights back on RPC
+      linkStyle: 0
+      linkConstraint: 0
+      linkTarget: 0
+      colorIndex: 0
     variables:
       floatVariables: []
       intVariables: []
@@ -3270,6 +3271,28 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 0
+--- !u!114 &194336057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194336050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  observableSearch: 2
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents: []
+  viewIdField: 5
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1001 &195183600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10416,8 +10439,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.0150373215, y: -0.29801258, z: 0.0046952646, w: 0.95443195}
-  m_LocalPosition: {x: -1.0004628, y: 4.1148686, z: -3.8504794}
+  m_LocalRotation: {x: -0.12288953, y: -0.6530576, z: -0.1085473, w: 0.7393453}
+  m_LocalPosition: {x: 3.9183564, y: 0.42239687, z: -0.9875165}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 142640233}
