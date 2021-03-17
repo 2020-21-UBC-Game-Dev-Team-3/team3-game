@@ -9,8 +9,8 @@ public class RoleRandomizer : MonoBehaviour
 {
     private bool hasLoadedGame;
 
-    private int maxImposterNum = 1;
-    private int maxCrewmateNum = 1;
+    private int maxImposterNum = 3;
+    private int maxCrewmateNum = 0;
     private int currImposterNum;
     private int currCrewmateNum;
     private List<int> playersLeftWithRole = new List<int>();
@@ -21,10 +21,14 @@ public class RoleRandomizer : MonoBehaviour
     [HideInInspector] public int numberOfPlayersAddedSoFar;
     [HideInInspector] public List<Player> playerList;
 
+    List<string> availableImposterRoles = new List<string>();
+    List<string> availableCrewmateRoles = new List<string>();
+
     void Start()
     {
         roomManager = FindObjectOfType<RoomManager>().GetComponent<RoomManager>();
         pv = GetComponent<PhotonView>();
+        availableImposterRoles.AddRange(new string[] { "Assassin", "Chameleon", "Trapper" });
     }
 
     void Update()
@@ -76,6 +80,40 @@ public class RoleRandomizer : MonoBehaviour
         Debug.Log("Player imposter percentage with imposter: " + roomManager.currPercentForImposter);
         pv.RPC("IncrementRoleNumbers", RpcTarget.All, true);
         pv.RPC("AdjustRoleText", PhotonNetwork.PlayerList[index], true);
+
+        switch (availableImposterRoles[Random.Range(0, availableImposterRoles.Count - 1)])
+        {
+            case "Assassin":
+                if (!availableImposterRoles.Contains("Assassin")) return;
+                role.subRole = Role.Roles.Assassin;
+                Debug.Log("You're an assassin");
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerActionController>().InitiateRoleAbilityAssignment();
+                pv.RPC("RemoveImposterRoleFromList", RpcTarget.All, "Assassin");
+                Debug.Log(availableImposterRoles.Contains("Assassin"));
+                break;
+
+            case "Chameleon":
+                if (!availableImposterRoles.Contains("Chameleon")) return;
+                role.subRole = Role.Roles.Chameleon;
+                Debug.Log("You're a chameleon");
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerActionController>().InitiateRoleAbilityAssignment();
+                pv.RPC("RemoveImposterRoleFromList", RpcTarget.All, "Chameleon");
+                Debug.Log(availableImposterRoles.Contains("Chameleon"));
+                break;            
+            
+            case "Trapper":
+                if (!availableImposterRoles.Contains("Trapper")) return;
+                role.subRole = Role.Roles.Trapper;
+                Debug.Log("You're a trapper");
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerActionController>().InitiateRoleAbilityAssignment();
+                pv.RPC("RemoveImposterRoleFromList", RpcTarget.All, "Trapper");
+                Debug.Log(availableImposterRoles.Contains("Trapper"));
+                break;
+
+            default:
+                Debug.Log("You're a dingus bingus");
+                break;
+        }
     }
 
     [PunRPC]
@@ -88,6 +126,13 @@ public class RoleRandomizer : MonoBehaviour
         Debug.Log("Player imposter percentage with crewmate: " + roomManager.currPercentForImposter);
         pv.RPC("IncrementRoleNumbers", RpcTarget.All, false);
         pv.RPC("AdjustRoleText", PhotonNetwork.PlayerList[index], false);
+    }
+
+    [PunRPC]
+    void RemoveImposterRoleFromList(string imposterRole)
+    {
+        availableImposterRoles.Remove(imposterRole);
+        foreach (var x in availableImposterRoles) Debug.Log(x);
     }
 
     [PunRPC]
@@ -111,5 +156,10 @@ public class RoleRandomizer : MonoBehaviour
     {
         if (isImposter) currImposterNum++;
         else currCrewmateNum++;
+
+        if ((currCrewmateNum + currImposterNum) == (maxCrewmateNum + maxImposterNum))
+        {
+            FindObjectOfType<GameManager>().InitiateRoleAbilityAssignment();
+        }
     }
 }

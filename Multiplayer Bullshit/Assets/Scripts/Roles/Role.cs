@@ -7,10 +7,11 @@ public class Role : MonoBehaviour, IPunInstantiateMagicCallback
 {
     public enum Roles
     {
-        Imposter, Crewmate
+        Imposter, Crewmate, Assassin, Chameleon, Trapper
     }
 
     [HideInInspector] public Roles currRole;
+    [HideInInspector] public Roles subRole;
 
     public void OnPhotonInstantiate(PhotonMessageInfo info)
     {

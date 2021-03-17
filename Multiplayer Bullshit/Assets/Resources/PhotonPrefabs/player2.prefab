@@ -997,7 +997,6 @@ GameObject:
   - component: {fileID: 7950447345789731161}
   - component: {fileID: 2946986204825983791}
   - component: {fileID: 3132913033137958833}
-  - component: {fileID: 207398781907947271}
   - component: {fileID: 1965030280839596255}
   - component: {fileID: 1301723284596085724}
   - component: {fileID: 344153202752933812}
@@ -1012,8 +1011,9 @@ GameObject:
   - component: {fileID: 1421552905554903987}
   - component: {fileID: 6567255690875583993}
   - component: {fileID: 1781557099834916349}
-  - component: {fileID: 2721574029854987529}
   - component: {fileID: 7084481003701131250}
+  - component: {fileID: 207398781907947271}
+  - component: {fileID: 2721574029854987529}
   - component: {fileID: 9108326663090611151}
   m_Layer: 9
   m_Name: player2
@@ -1224,6 +1224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currRole: 0
+  subRole: 0
 --- !u!114 &1067776956037398654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1348,23 +1349,6 @@ MonoBehaviour:
   minigameInterrupt: 0
   tbIHolder: 0
   dts: {fileID: 0}
---- !u!114 &207398781907947271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3266545680786733594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74afaa10dc6336c49a39ba2d93b062e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldownTimer: 10
-  pv: {fileID: 0}
-  assassinRange: 20
-  shurikenPrefab: {fileID: 1245360488091752, guid: 05222e7ebee9c2741b376b8859ce6d39, type: 3}
-  shurikenTransform: {fileID: 2189087810573607889}
 --- !u!114 &1965030280839596255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6083,22 +6067,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visionRadius: 13
   sphereCollider: {fileID: 2301426527611573042}
---- !u!114 &2721574029854987529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3266545680786733594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3a34795b2ebc504db023ae4531e47a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldownTimer: 0
-  pv: {fileID: 0}
-  isTouchingTrap: 0
-  trapPrefab: {fileID: 68780631399019579, guid: b401f83e598602342a7e77403d3195ee, type: 3}
 --- !u!114 &7084481003701131250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6111,6 +6079,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d0b03fa620c1a74da8245d780bf9bd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &207398781907947271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3266545680786733594}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74afaa10dc6336c49a39ba2d93b062e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownTimer: 10
+  pv: {fileID: 0}
+  assassinRange: 20
+  shurikenPrefab: {fileID: 1245360488091752, guid: 05222e7ebee9c2741b376b8859ce6d39, type: 3}
+  shurikenTransform: {fileID: 2189087810573607889}
+--- !u!114 &2721574029854987529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3266545680786733594}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3a34795b2ebc504db023ae4531e47a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownTimer: 0
+  pv: {fileID: 0}
+  isTouchingTrap: 0
+  trapPrefab: {fileID: 68780631399019579, guid: b401f83e598602342a7e77403d3195ee, type: 3}
 --- !u!114 &9108326663090611151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6118,7 +6119,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3266545680786733594}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c68dfe33a344c4418c2c9822357eb4e, type: 3}
   m_Name: 

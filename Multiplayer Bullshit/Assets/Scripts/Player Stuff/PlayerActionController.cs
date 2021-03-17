@@ -14,14 +14,15 @@ public class PlayerActionController : MonoBehaviour, IDamageable
 
     MinigameManager miniMan;
 
+    PlayerManager playerMan;
+
     public Interactable interactable = null;
 
     public PhotonView pv;
 
-    PlayerManager playerMan;
-
     RoleAbility ability;
 
+    bool subRoleAssigned;
     private bool inVent = false;
     public Transform Vent1Pos;
     public Transform Vent2Pos;
@@ -68,6 +69,48 @@ public class PlayerActionController : MonoBehaviour, IDamageable
 
         tb = GameObject.Find("Main Camera/TaskbarCanvas/Taskbar").GetComponent<TaskBar>();
         dts = GameObject.Find("DeathTrack").GetComponent<DeathTrackScript>();
+    }
+
+    public void InitiateRoleAbilityAssignment()
+    {
+        pv.RPC("SetUpRoleAbility", RpcTarget.All);
+    }
+
+    [PunRPC]
+    void SetUpRoleAbility()
+    {
+        if (!pv.IsMine && subRoleAssigned) return;
+        Role playerRole = GetComponent<Role>();
+
+        switch (playerRole.subRole)
+        {
+            case Role.Roles.Assassin:
+                ability = GetComponent<AssassinAbility>();
+                Debug.Log(ability.isActiveAndEnabled);
+                ability.enabled = true;
+                Debug.Log(ability.isActiveAndEnabled);
+                break;
+
+            case Role.Roles.Chameleon:
+                ability = GetComponent<ChameleonAbility>();
+                Debug.Log(ability.isActiveAndEnabled);
+                ability.enabled = true;
+                Debug.Log(ability.isActiveAndEnabled);
+                break;            
+            
+            case Role.Roles.Trapper:
+                ability = GetComponent<TrapAbility>();
+                Debug.Log(ability.isActiveAndEnabled);
+                ability.enabled = true;
+                Debug.Log(ability.isActiveAndEnabled);
+                break;
+
+            default:
+                Debug.Log("no ability to give");
+                break;
+        }
+
+        subRoleAssigned = true;
     }
 
     // Update is called once per frame
