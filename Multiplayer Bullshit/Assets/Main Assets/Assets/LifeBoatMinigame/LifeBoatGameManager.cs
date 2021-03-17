@@ -24,7 +24,7 @@ public class LifeBoatGameManager : MonoBehaviour
 
     public bool isWin;
 
-    
+    public bool token = true;
 
 
 
@@ -49,12 +49,19 @@ public class LifeBoatGameManager : MonoBehaviour
         ScoreText.text = "Passengers Saved:"+score+"/"+Passengers;
 
 
-        if (score == Passengers){
-            TaskComplete.gameObject.SetActive(true);
-            SceneManager.UnloadSceneAsync("Lifeboat Minigame");
+        if (score == Passengers && token == true){
+            token = false;
+            StartCoroutine(EndGame(2));
         }
 
 
         
+    }
+
+    IEnumerator EndGame(int time)
+    {
+        TaskComplete.gameObject.SetActive(true);
+        yield return new WaitForSeconds(time);
+        SceneManager.UnloadSceneAsync("Lifeboat Minigame");
     }
 }

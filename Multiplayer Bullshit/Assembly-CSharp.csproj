@@ -937,6 +937,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Physics\RaycastAll.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GameObject\FindClosest.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiInputFieldSetSelectionColor.cs" />
+    <Compile Include="Assets\wincon.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Device\TouchEvent.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Vector3\SetVector3XYZ.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Convert\ConvertSecondsToString.cs" />
@@ -1309,7 +1310,10 @@
     <Compile Include="Assets\Main Assets\Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\SmoothFollowAction.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetPlayerCustomProperty.cs" />
-    <Compile Include="Assets\wincon.cs" />
+    <Compile Include="Assets\Main Assets\DartsMinigame\DartsMinigame\Targets\scripts\RandomNumberGenerator.cs" />
+    <Compile Include="Assets\Main Assets\DartsMinigame\DartsMinigame\Targets\scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Main Assets\DartsMinigame\DartsMinigame\Targets\scripts\DartsPointSystem.cs" />
+    <Compile Include="Assets\Main Assets\DartsMinigame\DartsMinigame\Targets\scripts\TargetMovement.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\GestureRecognizer\UPDATE GUIDE.txt" />
