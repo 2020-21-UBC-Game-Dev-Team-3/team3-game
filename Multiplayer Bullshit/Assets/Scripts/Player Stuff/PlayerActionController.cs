@@ -274,6 +274,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable
         eventImage.SetActive(true);
         PlayMakerFSM.BroadcastEvent("GlobalTurnMovementOff");
         TeleportPlayers();
+        FindObjectOfType<GameManager>().TeleportPlayers();
         //TODO: ADD TELEPORTATION HERE
         yield return new WaitForSeconds(2);
         votingManager.SetActive(true);
