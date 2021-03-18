@@ -14,4 +14,18 @@ public static class OptionsPP {
 
   public static float fovValue = 40;
 
+  public static int qualityValue = QualitySettings.GetQualityLevel();
+
+  public static bool fullScreen = false;
+
+  public static int textureValue = 1;
+
+  public static int aaValue = 0;
+
+  public static bool xValue = false;
+
+  public static bool yValue = false;
+
+  public static bool vsyncVal = false;
+
 }
