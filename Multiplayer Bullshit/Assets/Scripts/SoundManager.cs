@@ -10,6 +10,7 @@ public class SoundManager : MonoBehaviour
     public Slider MainVolumeSlider;
     public Slider MusicSlider;
     public Slider SFXslider;
+    public AudioSource ClickSound;
     void Start()
     {
         if(!PlayerPrefs.HasKey("main volume"))
@@ -55,5 +56,9 @@ public class SoundManager : MonoBehaviour
             a.volume = PlayerPrefs.GetFloat("main volume");
         }
         PlayerPrefs.Save();
+    }
+    public void PlayClickSound()
+    {
+        ClickSound.Play();
     }
 }
