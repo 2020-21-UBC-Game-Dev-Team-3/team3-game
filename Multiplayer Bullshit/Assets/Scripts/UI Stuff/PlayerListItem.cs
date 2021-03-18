@@ -9,6 +9,7 @@ public class PlayerListItem : MonoBehaviourPunCallbacks
 {
     [SerializeField] TMP_Text text;
     [SerializeField ]Player playerItem;
+    Player[] players;
     
     public void SetUp(Player player)
     {
@@ -30,6 +31,29 @@ public class PlayerListItem : MonoBehaviourPunCallbacks
     }
     public void Update()
     {
-
+        switch ((string)playerItem.CustomProperties["color"])
+        {
+            case "red":
+                text.color = Color.red;
+                break;
+            case "orange":
+                text.color = new Color(1.0f, 0.64f, 0.0f);
+                break;
+            case "yellow":
+                text.color = Color.yellow;
+                break;
+            case "green":
+                text.color = Color.green;
+                break;
+            case "blue":
+                text.color = Color.blue;
+                break;
+            case "indigo":
+                text.color = Color.cyan;
+                break;
+            case "purple":
+                text.color = Color.magenta;
+                break;
+        }
     }
 }

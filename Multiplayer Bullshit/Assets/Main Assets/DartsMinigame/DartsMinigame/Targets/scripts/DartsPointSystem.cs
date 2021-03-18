@@ -52,6 +52,6 @@ public class DartsPointSystem : MonoBehaviour
     IEnumerator EndGame(int time)
     {
         yield return new WaitForSeconds(time);
-        SceneManager.UnloadSceneAsync("Darts");
+        SceneManager.UnloadSceneAsync("Darts Minigame");
     }
 }

@@ -18,6 +18,7 @@ TagManager:
   - MusicZone
   - Passenger
   - LifeBoat
+  - Bar
   layers:
   - Default
   - TransparentFX

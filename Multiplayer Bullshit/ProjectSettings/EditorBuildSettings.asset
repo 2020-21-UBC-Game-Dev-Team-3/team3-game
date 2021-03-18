@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Trap Chance Minigame.unity
     guid: 19fd461a9af59574db2019b056446b8c
+  - enabled: 1
+    path: Assets/Scenes/Darts Minigame.unity
+    guid: e9805e3df606344c2a5c51a747e25b96
   m_configObjects: {}

@@ -8,8 +8,10 @@ public class PlayerAudio : MonoBehaviour
     public AudioListener audioListener;
     public AudioSource Footsteps;
     public AudioSource Music;
+    public AudioSource BarMusic;
     private PhotonView pv;
     private float threshold;
+    private bool inBar;
     private void Awake()
     {
         pv = GetComponent<PhotonView>();
@@ -26,12 +28,25 @@ public class PlayerAudio : MonoBehaviour
             Music.mute = true;
             threshold = 0;
         }
+        if (other.gameObject.name == "BarMusicCollider")
+        {
+            BarMusic.mute = false;
+            inBar = true;
+            threshold = 0;
+        }
     }
     void OnCollisionStay(Collision other)
     {
         if (other.gameObject.CompareTag("MusicZone"))
         {
             threshold = 0;
+        }
+    }
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.name == "BarMusicCollider")
+        {
+            inBar = false;
         }
     }
     private void Update()
@@ -51,6 +66,10 @@ public class PlayerAudio : MonoBehaviour
         if(threshold > 20)
         {
             Music.mute = false;
+        }
+        if (!inBar && threshold > 20)
+        {
+            BarMusic.mute = true;
         }
     }
     [PunRPC]

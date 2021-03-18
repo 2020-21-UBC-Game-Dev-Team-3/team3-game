@@ -256,6 +256,16 @@ public class PlayerActionController : MonoBehaviour, IDamageable
                 }
                 break;
 
+            case "Darts minigame":
+                if (miniMan.IsAssignedMinigame(interactable.interactableName))
+                {
+                    exitMinigame(false);
+                    currMinigameSceneName = "Darts Minigame";
+                    currMinigameObjectName = "Darts minigame";
+                    SceneManager.LoadScene("Darts Minigame", LoadSceneMode.Additive);
+                }
+                break;
+
             case "Lights minigame":
                 exitMinigame(false);
                 currMinigameSceneName = "Lights Minigame";
