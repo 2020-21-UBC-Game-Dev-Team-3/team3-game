@@ -81,7 +81,7 @@ public class RoleRandomizer : MonoBehaviour
         pv.RPC("IncrementRoleNumbers", RpcTarget.All, true);
         pv.RPC("AdjustRoleText", PhotonNetwork.PlayerList[index], true);
 
-        switch (availableImposterRoles[Random.Range(0, availableImposterRoles.Count - 1)])
+        switch (availableImposterRoles[Random.Range(0, availableImposterRoles.Count)])
         {
             case "Assassin":
                 if (!availableImposterRoles.Contains("Assassin")) return;
