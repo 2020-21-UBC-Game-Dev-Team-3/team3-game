@@ -8,28 +8,14 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviourPunCallbacks {
 
   [SerializeField] Transform[] teleportLocations = new Transform[10]; // assuming this is the max players in a game
+  [SerializeField] GameObject crewmateWinScreen;
+  [SerializeField] GameObject imposterWinScreen;
 
   List<string> availableImposterRoles = new List<string>();
   List<string> availableCrewmateRoles = new List<string>();
 
   public int crewmates;
   public int imposters;
-/*
-  public void AddPlayers() {
-    GameObject[] players = GameObject.FindGameObjectsWithTag("player");
-    for (int i = 0; i < players.Length; i++) {
-      AddPlayer(players[i]);
-    }
-  }
-
-  public void AddPlayer(GameObject player) {
-    if (player.GetComponent<Role>().currRole == Role.Roles.Crewmate) {
-      crewmates++;
-    } else {
-      imposters++;
-    }
-  }*/
-
 
   PhotonView pv;
 
@@ -37,6 +23,40 @@ public class GameManager : MonoBehaviourPunCallbacks {
     pv = GetComponent<PhotonView>();
     availableImposterRoles.AddRange(new string[] { "Assassin", "Chameleon" });
   }
+
+  public void RemovePlayer(GameObject player) {
+    if (player.GetComponent<Role>().currRole == Role.Roles.Crewmate) {
+      DecrementCrewmates();
+    } else
+      DecrementImposters();
+  }
+
+  public void DecrementCrewmates() {
+    crewmates--;
+    if (crewmates == 0) {
+      Debug.Log("IMPOSTER WIN");
+      pv.RPC("SetImposterWinScreen", RpcTarget.All);
+    }
+  }
+
+  public void DecrementImposters() {
+    imposters--;
+    if (imposters == 0) {
+      Debug.Log("CREWMATE WIN");
+      pv.RPC("SetCrewmateWinScreen", RpcTarget.All);
+    }
+  }
+
+  [PunRPC]
+  private void SetCrewmateWinScreen() {
+    crewmateWinScreen.SetActive(true);
+  }
+
+  [PunRPC] 
+  private void SetImposterWinScreen() {
+    imposterWinScreen.SetActive(true);
+  }
+
 
   public void TeleportPlayers() {
     GameObject[] alivePlayers = GameObject.FindGameObjectsWithTag("Player");
