@@ -9,12 +9,20 @@ public class Pause : MonoBehaviour
     bool Paused = false;
  
     void Start(){
-        Canvas = GameObject.Find("Pause");
-        Canvas.gameObject.SetActive (false);
+
+        foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
+        {
+            if (go.name == "Pause")
+            {
+                Canvas = go;
+            }
+        }
+        Canvas.SetActive (false);
         //Camera = Camera.main;
      }
  
     void Update () {
+        Debug.Log(Canvas == null);
         if (Input.GetKeyDown ("escape")) {
             if(Paused){
                 ClosePauseMenu();
@@ -28,7 +36,7 @@ public class Pause : MonoBehaviour
     void OpenPauseMenu()
     {
         Time.timeScale = 0.0f;
-        Canvas.gameObject.SetActive(true);
+        Canvas.SetActive(true);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Locked;
         //Camera.audio.Pause ();
@@ -38,7 +46,7 @@ public class Pause : MonoBehaviour
     void ClosePauseMenu()
     {
         Time.timeScale = 1.0f;
-        Canvas.gameObject.SetActive(false);
+        Canvas.SetActive(false);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Confined;
         //Camera.audio.Play ();
@@ -47,7 +55,7 @@ public class Pause : MonoBehaviour
 
      public void Resume(){
         Time.timeScale = 1.0f;
-        Canvas.gameObject.SetActive (false);
+        Canvas.SetActive (false);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         // Camera.audio.Play ();

@@ -31,7 +31,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable
 
     public GameObject minimap;
     public GameObject cam;
-    //public GameObject reticle;
+    public GameObject reticle;
     public GameObject sun;
     public string currMinigameSceneName;
     public string currMinigameObjectName;
@@ -64,7 +64,11 @@ public class PlayerActionController : MonoBehaviour, IDamageable
             {
                 minimap = go;
                 minimap.SetActive(false);
-                break;
+            }
+            if (go.name == "Assassin Reticle")
+            {
+                reticle = go;
+                reticle.SetActive(false);
             }
         }
         //minimap = null;
@@ -161,7 +165,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable
         }
         else
         {
-            if (currMinigameSceneName == "Rhythm Trap Minigame")
+            if (currMinigameSceneName == "Rhythm Trap Minigame" || currMinigameSceneName == "Chance Trap Minigame")
             {
                 GetComponent<TrapAbility>().DecrementCurrTraps();
                 interactable.gameObject.GetComponent<Trap>().Destroy();

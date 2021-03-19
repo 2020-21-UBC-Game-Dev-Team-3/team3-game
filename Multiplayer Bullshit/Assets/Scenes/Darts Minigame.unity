@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 71445501}
   - component: {fileID: 71445500}
   - component: {fileID: 71445499}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 168497147}
   - component: {fileID: 168497149}
   - component: {fileID: 168497150}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 190456199}
   - component: {fileID: 190456198}
   - component: {fileID: 190456197}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 416014505}
   - component: {fileID: 416014504}
   - component: {fileID: 416014503}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -541,7 +541,7 @@ GameObject:
   - component: {fileID: 465872382}
   - component: {fileID: 465872381}
   - component: {fileID: 465872380}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -640,7 +640,7 @@ GameObject:
   - component: {fileID: 619065821}
   - component: {fileID: 619065820}
   - component: {fileID: 619065819}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Target5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -766,7 +766,7 @@ GameObject:
   - component: {fileID: 786915347}
   - component: {fileID: 786915349}
   - component: {fileID: 786915348}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -846,7 +846,7 @@ GameObject:
   - component: {fileID: 921760555}
   - component: {fileID: 921760554}
   - component: {fileID: 921760553}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -945,7 +945,7 @@ GameObject:
   - component: {fileID: 1055204204}
   - component: {fileID: 1055204203}
   - component: {fileID: 1055204202}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Target3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1072,7 +1072,7 @@ GameObject:
   - component: {fileID: 1132264092}
   - component: {fileID: 1132264091}
   - component: {fileID: 1132264090}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1171,7 +1171,7 @@ GameObject:
   - component: {fileID: 1134169102}
   - component: {fileID: 1134169101}
   - component: {fileID: 1134169100}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Target2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1298,7 +1298,7 @@ GameObject:
   - component: {fileID: 1190649646}
   - component: {fileID: 1190649645}
   - component: {fileID: 1190649644}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1429,7 +1429,7 @@ GameObject:
   - component: {fileID: 1197098208}
   - component: {fileID: 1197098210}
   - component: {fileID: 1197098209}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1509,7 +1509,7 @@ GameObject:
   - component: {fileID: 1199268089}
   - component: {fileID: 1199268088}
   - component: {fileID: 1199268087}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1608,7 +1608,7 @@ GameObject:
   - component: {fileID: 1215164727}
   - component: {fileID: 1215164726}
   - component: {fileID: 1215164725}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1739,7 +1739,7 @@ GameObject:
   - component: {fileID: 1227020537}
   - component: {fileID: 1227020539}
   - component: {fileID: 1227020538}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1818,7 +1818,7 @@ GameObject:
   - component: {fileID: 1275198090}
   - component: {fileID: 1275198092}
   - component: {fileID: 1275198091}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1894,7 +1894,7 @@ GameObject:
   - component: {fileID: 1332627350}
   - component: {fileID: 1332627349}
   - component: {fileID: 1332627348}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Target4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2021,7 +2021,7 @@ GameObject:
   - component: {fileID: 1409169490}
   - component: {fileID: 1409169489}
   - component: {fileID: 1409169488}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2153,7 +2153,7 @@ GameObject:
   - component: {fileID: 1467916618}
   - component: {fileID: 1467916617}
   - component: {fileID: 1467916616}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -2230,7 +2230,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 16384
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -2268,7 +2268,7 @@ GameObject:
   - component: {fileID: 1553127049}
   - component: {fileID: 1553127048}
   - component: {fileID: 1553127047}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2400,7 +2400,7 @@ GameObject:
   - component: {fileID: 1679440896}
   - component: {fileID: 1679440898}
   - component: {fileID: 1679440897}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Target1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2526,7 +2526,7 @@ GameObject:
   - component: {fileID: 1684484588}
   - component: {fileID: 1684484590}
   - component: {fileID: 1684484589}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2605,7 +2605,7 @@ GameObject:
   - component: {fileID: 1706990882}
   - component: {fileID: 1706990884}
   - component: {fileID: 1706990883}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2683,7 +2683,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1967972759}
   - component: {fileID: 1967972758}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2777,7 +2777,7 @@ GameObject:
   - component: {fileID: 2132236379}
   - component: {fileID: 2132236378}
   - component: {fileID: 2132236377}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
