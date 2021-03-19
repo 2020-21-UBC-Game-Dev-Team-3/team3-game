@@ -151,11 +151,10 @@ public class PlayerActionController : MonoBehaviour, IDamageable
             {
                 SceneManager.UnloadSceneAsync(currMinigameSceneName);
                 exitMinigame(true);
+                //miniMan.OnMinigameComplete(currMinigameObjectName);
                 currMinigameSceneName = "none";
                 currMinigameObjectName = "none";
                 RenderSettings.ambientIntensity = 0.85f;
-                RenderSettings.reflectionIntensity = 1f;
-                RenderSettings.fogColor = new Color(177f, 161f, 185f, 255f);
             }
             else
             {
@@ -165,6 +164,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable
         }
         else
         {
+            minigameInterrupt = false;
             if (currMinigameSceneName == "Rhythm Trap Minigame" || currMinigameSceneName == "Chance Trap Minigame")
             {
                 GetComponent<TrapAbility>().DecrementCurrTraps();
@@ -359,6 +359,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable
 
     IEnumerator ShowEmergencyPopUp(GameObject eventImage)
     {
+        minigameInterrupt = true;
         eventImage.SetActive(true);
         PlayMakerFSM.BroadcastEvent("GlobalTurnMovementOff");
         TeleportPlayers();
@@ -387,6 +388,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable
     public void RPC_TakeHit()
     {
         if (!pv.IsMine) return;
+        minigameInterrupt = true;
         mapMan.ResetMap();
         playerMan.Die();
     }
