@@ -27,6 +27,7 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
     [SerializeField] RoomManager roomManager;
     public List<string> allowedColors;
     public List<string> takenColors;
+    public List<string> defaultNames;
     public ExitGames.Client.Photon.Hashtable PlayerCustomProperties = new ExitGames.Client.Photon.Hashtable();
     public ExitGames.Client.Photon.Hashtable ColorsTaken = new ExitGames.Client.Photon.Hashtable();
     public int randomColor;
@@ -59,6 +60,7 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
     void Start()
     {
         Debug.Log("Connecting to master.");
+        defaultNames.AddRange(new string[] { "Adrienne", "Chiara", "Chris", "Kevin", "Raymond", "Nafis", "Miranda", "Mohan", "Walter", "Jay", "Nawaf" });
     }
 
     public override void OnConnectedToMaster()
@@ -72,7 +74,7 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
     {
         MenuManager.Instance.OpenMenu("title");
         Debug.Log("Joined lobby.");
-        if (PhotonNetwork.NickName == "") { PhotonNetwork.NickName = "Player " + Random.Range(0, 1000).ToString("0000"); };
+        if (PhotonNetwork.NickName == "") PhotonNetwork.NickName = defaultNames[Random.Range(0, defaultNames.Count)];
     }
 
     public void CreateRoom()
