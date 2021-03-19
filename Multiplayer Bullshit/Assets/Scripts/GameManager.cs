@@ -89,7 +89,7 @@ public class GameManager : MonoBehaviourPunCallbacks
 
         RoleRandomizer roleRan = gameObject.GetComponent<RoleRandomizer>();
         roleRan.LoadGame();
-
+        PlayMakerFSM.BroadcastEvent("LightSabotageFsmStart");
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         foreach (var player in players)
         {

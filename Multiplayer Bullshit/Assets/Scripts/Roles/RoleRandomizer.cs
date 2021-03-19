@@ -29,9 +29,11 @@ public class RoleRandomizer : MonoBehaviour {
     pv = GetComponent<PhotonView>();
     availableImposterRoles.AddRange(new string[] { "Assassin", "Chameleon", "Trapper" });
     availableCrewmateRoles.AddRange(new string[] { "Disarmer" });
-    maxImposterNum = (int)Mathf.Round(roomManager.maxNumberOfPlayers / testingNum);
-    maxCrewmateNum = roomManager.maxNumberOfPlayers - maxImposterNum;
-  }
+        // maxImposterNum = (int)Mathf.Round(roomManager.maxNumberOfPlayers / testingNum);
+        maxImposterNum = 1;
+        // maxCrewmateNum = roomManager.maxNumberOfPlayers - maxImposterNum;
+        maxCrewmateNum = 1;
+    }
 
   //void Update() {
   //  if (PhotonNetwork.IsMasterClient && SceneManager.GetActiveScene().name == "Gaming" && !hasLoadedGame && numberOfPlayersAddedSoFar == roomManager.maxNumberOfPlayers) {
