@@ -1344,7 +1344,6 @@ MonoBehaviour:
   Vent3Pos: {fileID: 0}
   minimap: {fileID: 0}
   cam: {fileID: 0}
-  reticle: {fileID: 0}
   sun: {fileID: 0}
   currMinigameSceneName: 
   currMinigameObjectName: 

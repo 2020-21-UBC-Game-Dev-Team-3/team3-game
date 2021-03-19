@@ -1147,6 +1147,7 @@ GameObject:
   - component: {fileID: 1421552905554903987}
   - component: {fileID: 6567255690875583993}
   - component: {fileID: 8273045014662810826}
+  - component: {fileID: 5372284170565275065}
   m_Layer: 10
   m_Name: GhostPlayer
   m_TagString: Ghost
@@ -1313,7 +1314,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowLayerWeightsInspector: 1
   ShowParameterInspector: 1
-  m_SynchronizeParameters: []
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 0
+    Name: isWalking
   m_SynchronizeLayers:
   - SynchronizeType: 2
     LayerIndex: 0
@@ -1463,7 +1467,6 @@ MonoBehaviour:
   Vent3Pos: {fileID: 0}
   minimap: {fileID: 0}
   cam: {fileID: 0}
-  reticle: {fileID: 0}
   sun: {fileID: 0}
   currMinigameSceneName: 
   currMinigameObjectName: 
@@ -5560,6 +5563,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 3266545680786733594}
+--- !u!114 &5372284170565275065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3266545680786733594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1269c0e7c9d26d540a4645be8ac1da26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMesh: {fileID: 3522102324110956855}
+  allPlayerSkins:
+  - {fileID: 2100000, guid: 1c616aa9a6fa168499f7e2d207c489dc, type: 2}
+  - {fileID: 2100000, guid: cfd85cd7f365b074cbb7bbf043a2228b, type: 2}
+  - {fileID: 2100000, guid: 986d35722968d0f46b6025fa7a8bdabf, type: 2}
+  - {fileID: 2100000, guid: bf0e758b0adfea94e8967433e8b8370f, type: 2}
+  - {fileID: 2100000, guid: 056310c6d15774140bbed499be0456ba, type: 2}
 --- !u!1 &3412783395799952387
 GameObject:
   m_ObjectHideFlags: 0
@@ -7854,7 +7876,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 759451250092739834, guid: dbf6af28bf03b6d4e8eb798c89604c0e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.43111134
+      value: 0.4311123
       objectReference: {fileID: 0}
     - target: {fileID: 759451250180644601, guid: dbf6af28bf03b6d4e8eb798c89604c0e, type: 3}
       propertyPath: m_Layer
@@ -7938,7 +7960,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1289078513265470683, guid: dbf6af28bf03b6d4e8eb798c89604c0e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.43110943
+      value: 0.43111038
       objectReference: {fileID: 0}
     - target: {fileID: 1363788062298524530, guid: dbf6af28bf03b6d4e8eb798c89604c0e, type: 3}
       propertyPath: m_Layer
@@ -7974,7 +7996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1888715700571112679, guid: dbf6af28bf03b6d4e8eb798c89604c0e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.43111134
+      value: 0.4311123
       objectReference: {fileID: 0}
     - target: {fileID: 1888715700571112680, guid: dbf6af28bf03b6d4e8eb798c89604c0e, type: 3}
       propertyPath: m_Layer
@@ -8394,7 +8416,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6678724863266380335, guid: dbf6af28bf03b6d4e8eb798c89604c0e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.43110943
+      value: 0.43111038
       objectReference: {fileID: 0}
     - target: {fileID: 6678724863318853676, guid: dbf6af28bf03b6d4e8eb798c89604c0e, type: 3}
       propertyPath: m_Layer

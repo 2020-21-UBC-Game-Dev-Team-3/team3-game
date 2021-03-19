@@ -31,7 +31,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable
 
     public GameObject minimap;
     public GameObject cam;
-    public GameObject reticle;
+    //public GameObject reticle;
     public GameObject sun;
     public string currMinigameSceneName;
     public string currMinigameObjectName;
@@ -58,13 +58,32 @@ public class PlayerActionController : MonoBehaviour, IDamageable
         Vent2Pos = GameObject.Find("Vent2Pos").transform;
         Vent3Pos = GameObject.Find("Vent3Pos").transform;
 
-        minimap = GameObject.Find("Minimap System");
+        foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
+        {
+            if (go.name == "Minimap System") 
+            {
+                minimap = go;
+                minimap.SetActive(false);
+                break;
+            }
+        }
+        //minimap = null;
+
+        dts = null;
         cam = GameObject.Find("Main Camera");
-        reticle = GameObject.Find("Assassin Reticle");
+        //reticle = GameObject.Find("Assassin Reticle");
         sun = GameObject.Find("sun");
         currMinigameSceneName = "none";
         minigameInterrupt = false;
 
+    }
+
+    public void OnStartGame()
+    {
+        //minimap = GameObject.Find("Minimap System");
+        minimap.SetActive(true);
+        tb = GameObject.Find("Main Camera/Taskbar Canvas/Taskbar").GetComponent<TaskBar>();
+        dts = GameObject.Find("DeathTrack").GetComponent<DeathTrackScript>();
     }
 
     public void InitiateRoleAbilityAssignment()
@@ -118,7 +137,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable
         if (tbIHolder)
         {
             //@Adrienne had to move this from start to update
-            tb = GameObject.Find("Main Camera/TaskbarCanvas/Taskbar").GetComponent<TaskBar>();
+            //tb = GameObject.Find("Main Camera/TaskbarCanvas/Taskbar").GetComponent<TaskBar>();
             tb.IncrementTaskBar();
         }
 
@@ -152,7 +171,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable
                 tbIHolder = true;
             }
             //@Adrienne this is the line I had to comment out in order for players to select character skin
-            //exitMinigame(true);
+            exitMinigame(true);
             miniMan.OnMinigameComplete(currMinigameObjectName);
             currMinigameSceneName = "none";
             currMinigameObjectName = "none";
@@ -161,7 +180,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable
 
         //@Adrienne had to move this from start to update
         dts = GameObject.Find("DeathTrack").GetComponent<DeathTrackScript>();
-        if (dts.dead)
+        if (dts != null && dts.dead)
         {
             TakeHit();
         }
@@ -265,7 +284,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable
                 {
                     exitMinigame(false);
                     currMinigameSceneName = "LifeBoat Minigame";
-                    currMinigameObjectName = "LifeBoat minigame";
+                    currMinigameObjectName = "Lifeboat minigame";
                     SceneManager.LoadScene("LifeBoat Minigame", LoadSceneMode.Additive);
                 }
                 break;
@@ -425,8 +444,8 @@ public class PlayerActionController : MonoBehaviour, IDamageable
     public void exitMinigame(bool exiting)
     {
         cam.SetActive(exiting);
-        minimap.SetActive(exiting);
-        reticle.SetActive(exiting);
+        if (minimap != null) minimap.SetActive(exiting);
+        //reticle.SetActive(exiting);
         sun.SetActive(exiting);
         GetComponents<PlayMakerFSM>()[0].enabled = exiting;
         GetComponent<PlayMakerFixedUpdate>().enabled = exiting;

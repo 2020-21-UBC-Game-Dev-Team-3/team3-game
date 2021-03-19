@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 8277722571173227059}
   - component: {fileID: 3715922773460204070}
   - component: {fileID: 3178373435303945846}
+  - component: {fileID: 4362194616052800038}
   m_Layer: 12
   m_Name: DeadBody
   m_TagString: Interactable
@@ -221,6 +222,30 @@ MonoBehaviour:
   interactableName: Dead body
   outline: {fileID: 0}
   indicator: {fileID: 3707966354875870027}
+--- !u!114 &4362194616052800038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051634017902913106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1269c0e7c9d26d540a4645be8ac1da26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMesh: {fileID: 129692750925972863}
+  allPlayerSkins:
+  - {fileID: 2100000, guid: 24bcf08af40e1c746b6744f9ca84da0c, type: 2}
+  - {fileID: 2100000, guid: 8ef0bd7a84637ed4fa402963e86c95ac, type: 2}
+  - {fileID: 2100000, guid: 4cff7139f488b9440b0565cf183dce56, type: 2}
+  - {fileID: 2100000, guid: a95104bd7df5eae469b54b8c14ab3d31, type: 2}
+  - {fileID: 2100000, guid: ce1dfee2924f2384f9ad5a450f013ffe, type: 2}
+  - {fileID: 2100000, guid: 687820bacde64ba4ea9d2296c7f70ab9, type: 2}
+  - {fileID: 2100000, guid: 10c115ffd542c544981fa2917672ba33, type: 2}
+  - {fileID: 2100000, guid: 4de3bd5e3707f7144ad5f05398cd9a9e, type: 2}
+  - {fileID: 2100000, guid: 567dff55ed5089048b60a0d7385ce96e, type: 2}
+  - {fileID: 2100000, guid: f93c8d7a9e8f38b4893901c270a0e8db, type: 2}
 --- !u!1 &2510499093913516487
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,7 +418,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ecad80cf3698b8c4fbf1b90103740649, type: 2}
+  - {fileID: 2100000, guid: a95104bd7df5eae469b54b8c14ab3d31, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
