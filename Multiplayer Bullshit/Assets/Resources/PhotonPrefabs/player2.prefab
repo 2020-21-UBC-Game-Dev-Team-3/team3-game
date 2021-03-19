@@ -6098,7 +6098,7 @@ MonoBehaviour:
             networkSync: 0
             typeName: UnityEngine.Object
             value: {fileID: 0}
-          TargetTypeName: LightsMinigame
+          TargetTypeName: 
           PropertyName: 
           BoolParameter:
             useVariable: 0
