@@ -4051,9 +4051,9 @@ MonoBehaviour:
       colorIndex: 6
       position:
         serializedVersion: 2
-        x: 291.64844
-        y: 198.86719
-        width: 172
+        x: 408.64844
+        y: 200.86719
+        width: 152
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -4287,7 +4287,7 @@ MonoBehaviour:
       colorIndex: 1
       position:
         serializedVersion: 2
-        x: 638
+        x: 750
         y: 125
         width: 169
         height: 48
@@ -4398,7 +4398,7 @@ MonoBehaviour:
       colorIndex: 1
       position:
         serializedVersion: 2
-        x: 854
+        x: 966
         y: 84
         width: 152
         height: 48
@@ -4634,7 +4634,7 @@ MonoBehaviour:
       colorIndex: 1
       position:
         serializedVersion: 2
-        x: 1093
+        x: 1205
         y: 51
         width: 142
         height: 16
@@ -4731,7 +4731,7 @@ MonoBehaviour:
       colorIndex: 4
       position:
         serializedVersion: 2
-        x: 1094
+        x: 1206
         y: 158
         width: 134
         height: 32
@@ -4940,7 +4940,7 @@ MonoBehaviour:
       colorIndex: 4
       position:
         serializedVersion: 2
-        x: 867
+        x: 979
         y: 189
         width: 100
         height: 16
@@ -4992,7 +4992,7 @@ MonoBehaviour:
       colorIndex: 1
       position:
         serializedVersion: 2
-        x: 627.9219
+        x: 739.9219
         y: 313.21875
         width: 136
         height: 48
@@ -5103,7 +5103,7 @@ MonoBehaviour:
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 871.2656
+        x: 983.2656
         y: 291.48438
         width: 100
         height: 32
@@ -5209,7 +5209,7 @@ MonoBehaviour:
       colorIndex: 4
       position:
         serializedVersion: 2
-        x: 846.6875
+        x: 958.6875
         y: 370.39062
         width: 106
         height: 16
@@ -5262,7 +5262,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 63.015625
-        y: 222.3125
+        y: 218.3125
         width: 178
         height: 16
       isBreakpoint: 0
@@ -5313,7 +5313,7 @@ MonoBehaviour:
       colorIndex: 1
       position:
         serializedVersion: 2
-        x: 514.5703
+        x: 626.5703
         y: 156.10156
         width: 100
         height: 16
@@ -5410,7 +5410,7 @@ MonoBehaviour:
       colorIndex: 4
       position:
         serializedVersion: 2
-        x: 512.9531
+        x: 624.9531
         y: 287.1328
         width: 100
         height: 16
@@ -5643,7 +5643,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 1293
+        x: 1405
         y: 164
         width: 100
         height: 16
@@ -5826,6 +5826,79 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 0000000000000000
         paramByteDataSize: 0000000001000000
+    - name: State 2
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 255
+        y: 132
+        width: 172
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Deciding your role
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Wait
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 48c01101
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 2
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - 
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0f0000001700000001000000
+        paramName:
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 000000000000000000000000
+        paramByteDataSize: 000000000000000001000000
     events:
     - name: me
       isSystemEvent: 0
@@ -5886,7 +5959,7 @@ MonoBehaviour:
         name: LightSabotageFsmStart
         isSystemEvent: 0
         isGlobal: 1
-      toState: Deciding your role
+      toState: State 2
       linkStyle: 0
       linkConstraint: 0
       linkTarget: 0
@@ -7370,7 +7443,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3266545680786733594}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b344a5140c24794bb3b4afbc4920294, type: 3}
   m_Name: 
@@ -10529,6 +10602,10 @@ PrefabInstance:
     - target: {fileID: 5668135688960570972, guid: dbf6af28bf03b6d4e8eb798c89604c0e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.099975586
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668135689568922100, guid: dbf6af28bf03b6d4e8eb798c89604c0e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.199997
       objectReference: {fileID: 0}
     - target: {fileID: 5668135689568922101, guid: dbf6af28bf03b6d4e8eb798c89604c0e, type: 3}
       propertyPath: viewIdField

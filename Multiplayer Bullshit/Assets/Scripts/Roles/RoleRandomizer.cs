@@ -30,7 +30,7 @@ public class RoleRandomizer : MonoBehaviour {
     availableImposterRoles.AddRange(new string[] { "Assassin", "Chameleon", "Trapper" });
     availableCrewmateRoles.AddRange(new string[] { "Disarmer" });
         // maxImposterNum = (int)Mathf.Round(roomManager.maxNumberOfPlayers / testingNum);
-        maxImposterNum = 1;
+        maxImposterNum = 0;
         // maxCrewmateNum = roomManager.maxNumberOfPlayers - maxImposterNum;
         maxCrewmateNum = 1;
     }
