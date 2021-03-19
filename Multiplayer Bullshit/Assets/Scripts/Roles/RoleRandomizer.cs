@@ -8,8 +8,8 @@ using UnityEngine.SceneManagement;
 public class RoleRandomizer : MonoBehaviour {
   private bool hasLoadedGame;
 
-  private int maxImposterNum = 1;
-  private int maxCrewmateNum = 9;
+  private int maxImposterNum = 2;
+  private int maxCrewmateNum = 8;
   private int currImposterNum;
   private int currCrewmateNum;
   private List<int> playersLeftWithRole = new List<int>();

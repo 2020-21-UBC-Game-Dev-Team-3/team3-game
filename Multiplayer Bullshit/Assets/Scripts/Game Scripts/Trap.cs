@@ -12,6 +12,7 @@ public class Trap : Interactable {
 
   [SerializeField] Material normal;
   [SerializeField] Material transparent;
+  [SerializeField] GameObject indicator;
 
   [SerializeField] PhotonView pv;
   [SerializeField] PlayerActionController pac;
@@ -23,6 +24,14 @@ public class Trap : Interactable {
     GetComponent<Collider>().enabled = false; // disables the collider
     StartCoroutine(CountdownBeforeActive());
     pac = GameObject.Find("player2(Clone)").GetComponent<PlayerActionController>();
+  }
+
+  void Update() {
+    if (outline.enabled) {
+      indicator.SetActive(true);
+    } else {
+      indicator.SetActive(false);
+    }
   }
 
   IEnumerator CountdownBeforeActive() {
