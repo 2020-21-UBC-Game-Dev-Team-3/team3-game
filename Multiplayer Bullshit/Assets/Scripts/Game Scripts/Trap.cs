@@ -49,7 +49,8 @@ public class Trap : Interactable {
       outline.enabled = true;
     }
     
-    if (other.GetComponent<Role>().currRole == Role.Roles.Crewmate) {
+    // if other is a crewmate and not a Disarmer
+    if (other.GetComponent<Role>().currRole == Role.Roles.Crewmate && !other.GetComponent<DisarmerAbility>().isActiveAndEnabled) {
       //other.GetComponent<PlayerActionController>().TakeHit();
       //Destroy();
       if (SceneManager.sceneCount == 1) { 
@@ -69,6 +70,6 @@ public class Trap : Interactable {
   [PunRPC]
   private void DestroyObject() {
     Debug.Log("DESTROYING OBJECT");
-        Destroy(this.gameObject);
+        Destroy(gameObject);
   }
 }

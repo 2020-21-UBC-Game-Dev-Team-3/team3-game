@@ -7,7 +7,7 @@ using System.IO;
 
 public class TrapAbility : RoleAbility {
 
-  public bool isTouchingTrap = false;
+  public bool isTouchingTrap = false; // checks if Trapper is too close to another trap
   [SerializeField] GameObject trapPrefab; // the trap - what gets instantiated
   TrapperUI trapperUI; // the UI which displays how many traps are active
 
@@ -29,7 +29,9 @@ public class TrapAbility : RoleAbility {
     }
   }
 
+  // Only Trappers will need to call this method since they are the only ones with the trapperUI
   public void DecrementCurrTraps() {
+    if (trapperUI == null) return;
     currNumberTraps--;
     trapperUI.SetText("Traps active: " + currNumberTraps.ToString() + "/" + maxNumberTraps.ToString());
   }
