@@ -105,23 +105,26 @@ public class PlayerActionController : MonoBehaviour, IDamageable
         {
             case Role.Roles.Assassin:
                 ability = GetComponent<AssassinAbility>();
-                Debug.Log(ability.isActiveAndEnabled);
                 ability.enabled = true;
-                Debug.Log(ability.isActiveAndEnabled);
                 break;
 
             case Role.Roles.Chameleon:
                 ability = GetComponent<ChameleonAbility>();
-                Debug.Log(ability.isActiveAndEnabled);
                 ability.enabled = true;
-                Debug.Log(ability.isActiveAndEnabled);
                 break;
 
             case Role.Roles.Trapper:
                 ability = GetComponent<TrapAbility>();
-                Debug.Log(ability.isActiveAndEnabled);
                 ability.enabled = true;
-                Debug.Log(ability.isActiveAndEnabled);
+                break;
+
+            case Role.Roles.Disarmer:
+                ability = null;
+                GetComponent<DisarmerAbility>().enabled = true;
+                break;
+
+            case Role.Roles.None:
+                ability = null;
                 break;
 
             default:

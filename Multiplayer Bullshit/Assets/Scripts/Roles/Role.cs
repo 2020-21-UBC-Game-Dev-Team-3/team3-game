@@ -7,7 +7,7 @@ public class Role : MonoBehaviour, IPunInstantiateMagicCallback
 {
     public enum Roles
     {
-        Imposter, Crewmate, Assassin, Chameleon, Trapper
+        Imposter, Crewmate, Assassin, Chameleon, Trapper, Disarmer, None
     }
 
     [HideInInspector] public Roles currRole;

@@ -8,8 +8,9 @@ using UnityEngine.SceneManagement;
 public class RoleRandomizer : MonoBehaviour {
   private bool hasLoadedGame;
 
-  private int maxImposterNum = 2;
-  private int maxCrewmateNum = 8;
+  private int maxImposterNum;
+  private int maxCrewmateNum;
+  private float testingNum = 5f; // this is 5f assuming there are 10 players
   private int currImposterNum;
   private int currCrewmateNum;
   private List<int> playersLeftWithRole = new List<int>();
@@ -27,6 +28,9 @@ public class RoleRandomizer : MonoBehaviour {
     roomManager = FindObjectOfType<RoomManager>().GetComponent<RoomManager>();
     pv = GetComponent<PhotonView>();
     availableImposterRoles.AddRange(new string[] { "Assassin", "Chameleon", "Trapper" });
+    availableCrewmateRoles.AddRange(new string[] { "Disarmer" });
+    maxImposterNum = (int)Mathf.Round(roomManager.maxNumberOfPlayers / testingNum);
+    maxCrewmateNum = roomManager.maxNumberOfPlayers - maxImposterNum;
   }
 
   //void Update() {
@@ -37,9 +41,11 @@ public class RoleRandomizer : MonoBehaviour {
   //}
 
   public void LoadGame() {
-    for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++) {
-      if (currCrewmateNum < maxCrewmateNum) pv.RPC("RandomizePlayerRole", PhotonNetwork.PlayerList[i], i);
-      else pv.RPC("FillInImposters", PhotonNetwork.PlayerList[i], i);
+    if (PhotonNetwork.IsMasterClient) {
+      for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++) {
+        if (currCrewmateNum < maxCrewmateNum) pv.RPC("RandomizePlayerRole", PhotonNetwork.PlayerList[i], i);
+        else pv.RPC("FillInImposters", PhotonNetwork.PlayerList[i], i);
+      }
     }
   }
 
@@ -114,12 +120,38 @@ public class RoleRandomizer : MonoBehaviour {
     Debug.Log("Player imposter percentage with crewmate: " + roomManager.currPercentForImposter);
     pv.RPC("IncrementRoleNumbers", RpcTarget.All, false);
     pv.RPC("AdjustRoleText", PhotonNetwork.PlayerList[index], false);
+
+    if (availableCrewmateRoles.Contains("Disarmer")) {
+      switch (Random.Range(0, 2)) {
+
+        case 0:
+          if (PhotonNetwork.PlayerList[index] == PhotonNetwork.PlayerList.GetValue(PhotonNetwork.PlayerList.Length - 1)) {
+            role.subRole = Role.Roles.Disarmer;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerActionController>().InitiateRoleAbilityAssignment();
+          } else {
+            role.subRole = Role.Roles.None;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerActionController>().InitiateRoleAbilityAssignment();
+          }
+          break;
+
+        case 1:
+          role.subRole = Role.Roles.Disarmer;
+          GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerActionController>().InitiateRoleAbilityAssignment();
+          pv.RPC("RemoveCrewmateRoleFromList", RpcTarget.All, "Disarmer");
+          break;
+
+      }
+    }
   }
 
   [PunRPC]
   void RemoveImposterRoleFromList(string imposterRole) {
     availableImposterRoles.Remove(imposterRole);
-    foreach (var x in availableImposterRoles) Debug.Log(x);
+  }
+
+  [PunRPC]
+  void RemoveCrewmateRoleFromList(string crewmateRole) {
+    availableImposterRoles.Remove(crewmateRole);
   }
 
   [PunRPC]
@@ -145,8 +177,8 @@ public class RoleRandomizer : MonoBehaviour {
       GetComponent<GameManager>().crewmates++;
     }
 
-/*    if ((currCrewmateNum + currImposterNum) == (maxCrewmateNum + maxImposterNum)) {
-      GetComponent<GameManager>().InitiateRoleAbilityAssignment();
-    }*/
+    /*    if ((currCrewmateNum + currImposterNum) == (maxCrewmateNum + maxImposterNum)) {
+          GetComponent<GameManager>().InitiateRoleAbilityAssignment();
+        }*/
   }
 }
