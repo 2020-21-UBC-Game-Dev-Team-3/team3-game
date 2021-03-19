@@ -5,111 +5,245 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviourPunCallbacks {
+public class GameManager : MonoBehaviourPunCallbacks
+{
+    int numOfPlayersReady;
 
-  [SerializeField] Transform[] teleportLocations = new Transform[10]; // assuming this is the max players in a game
-  [SerializeField] GameObject crewmateWinScreen;
-  [SerializeField] GameObject imposterWinScreen;
+    //Spawn room boundaries
+    [SerializeField] GameObject invisWall1;
+    [SerializeField] GameObject invisWall2;
 
-  List<string> availableImposterRoles = new List<string>();
-  List<string> availableCrewmateRoles = new List<string>();
+    //UI that needs to be turned off in beginning
+    [SerializeField] GameObject assassinReticle;
+    [SerializeField] GameObject roleTextCanvas;
+    [SerializeField] GameObject taskbarCanvas;
+    [SerializeField] GameObject minimapCanvas;
+    [SerializeField] GameObject taskListCanvas;
+    [SerializeField] GameObject readyCanvas;
 
-  public int crewmates;
-  public int imposters;
+    //Character select
+    [SerializeField] GameObject characterSelectCanvas;
+    [SerializeField] GameObject characterSelectInteractable;
+    [SerializeField] GameObject characterSelectTable;
+    public List<string> characterSkinNames;
 
-  PhotonView pv;
+    [SerializeField] Transform[] teleportLocations = new Transform[10]; // assuming this is the max players in a game
+    public List<Transform> spawnLocations;
+    [SerializeField] GameObject crewmateWinScreen;
+    [SerializeField] GameObject imposterWinScreen;
 
-  void Start() {
-    pv = GetComponent<PhotonView>();
-    availableImposterRoles.AddRange(new string[] { "Assassin", "Chameleon" });
-  }
+    //List<string> availableImposterRoles = new List<string>();
+    //List<string> availableCrewmateRoles = new List<string>();
 
-  public void RemovePlayer(GameObject player) {
-    if (player.GetComponent<Role>().currRole == Role.Roles.Crewmate) {
-      DecrementCrewmates();
-    } else
-      DecrementImposters();
-  }
+    public int crewmates;
+    public int imposters;
 
-  public void DecrementCrewmates() {
-    crewmates--;
-    if (crewmates == 0) {
-      Debug.Log("IMPOSTER WIN");
-      pv.RPC("SetImposterWinScreen", RpcTarget.All);
+    RoomManager roomMan;
+    PhotonView pv;
+
+    void Start()
+    {
+        roomMan = FindObjectOfType<RoomManager>();
+        pv = GetComponent<PhotonView>();
+
+        ToggleUI(false);
+        //availableImposterRoles.AddRange(new string[] { "Assassin", "Chameleon" });
     }
-  }
 
-  public void DecrementImposters() {
-    imposters--;
-    if (imposters == 0) {
-      Debug.Log("CREWMATE WIN");
-      pv.RPC("SetCrewmateWinScreen", RpcTarget.All);
+    public void UpdateSpawnLocationList() => pv.RPC("RemoveSpawnLocation", RpcTarget.All);
+
+    [PunRPC]
+    void RemoveSpawnLocation() => spawnLocations.RemoveAt(0);
+
+    public void OpenCharacterSelectCanvas() => characterSelectCanvas.SetActive(true);
+
+    public void CloseCharacterSelectCanvas() => characterSelectCanvas.SetActive(false);
+
+    public void AssignCharacterSkin(int index)
+    {
+        PlayerManager.instanceLocalPM.GiveCharacterSkinToController(characterSkinNames[index]);
     }
-  }
 
-  [PunRPC]
-  private void SetCrewmateWinScreen() {
-    crewmateWinScreen.SetActive(true);
-  }
-
-  [PunRPC] 
-  private void SetImposterWinScreen() {
-    imposterWinScreen.SetActive(true);
-  }
-
-
-  public void TeleportPlayers() {
-    GameObject[] alivePlayers = GameObject.FindGameObjectsWithTag("Player");
-    for (int i = 0; i < alivePlayers.Length; i++) {
-      alivePlayers[i].gameObject.transform.position = teleportLocations[i].transform.position;
+    public void AddToNumberOfPlayersReady()
+    {
+        readyCanvas.SetActive(false);
+        pv.RPC("IncrementNumberOfPlayersReady", RpcTarget.All);
     }
-  }
 
-
-  public void InitiateRoleAbilityAssignment() {
-    pv.RPC("SetUpRoleAbilityAssignment", RpcTarget.All);
-  }
-
-  [PunRPC]
-  void SetUpRoleAbilityAssignment() {
-    GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-
-    foreach (var x in players) Debug.Log(x.name + " " + x.GetComponent<PhotonView>().ViewID);
-
-    List<GameObject> crewmates = new List<GameObject>();
-    List<GameObject> imposters = new List<GameObject>();
-
-    for (int i = 0; i < players.Length; i++) {
-      if (players[i].GetComponent<Role>().currRole == Role.Roles.Crewmate) {
-        crewmates.Add(players[i]);
-      } else {
-        imposters.Add(players[i]);
-      }
+    [PunRPC]
+    void IncrementNumberOfPlayersReady()
+    {
+        numOfPlayersReady++;
+        if (numOfPlayersReady == roomMan.maxNumberOfPlayers)
+        {
+            BeginGame();
+        }
     }
-    foreach (var x in imposters) Debug.Log(x.name);
+
+    void BeginGame() => pv.RPC("StartGame", RpcTarget.All);
+
+    [PunRPC]
+    void StartGame()
+    {
+        ToggleUI(true);
+
+        RoleRandomizer roleRan = gameObject.GetComponent<RoleRandomizer>();
+        roleRan.LoadGame();
+
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        foreach (var player in players) player.GetComponent<MinigameManager>().SetUpMinigameAssignment();
+
+        invisWall1.SetActive(false);
+        invisWall2.SetActive(false);
+        characterSelectInteractable.SetActive(false);
+        characterSelectTable.SetActive(false);
+    }
+
+    void ToggleUI(bool change)
+    {
+        assassinReticle.SetActive(change);
+        roleTextCanvas.SetActive(change);
+        taskbarCanvas.SetActive(change);
+        minimapCanvas.SetActive(change);
+        taskListCanvas.SetActive(change);
+    }
+
+    public void RemovePlayer(GameObject player)
+    {
+        if (player.GetComponent<Role>().currRole == Role.Roles.Crewmate)
+        {
+            DecrementCrewmates();
+        }
+        else
+            DecrementImposters();
+    }
+
+    public void DecrementCrewmates()
+    {
+        crewmates--;
+        if (crewmates == 0)
+        {
+            Debug.Log("IMPOSTER WIN");
+            pv.RPC("SetImposterWinScreen", RpcTarget.All);
+        }
+    }
+
+    public void DecrementImposters()
+    {
+        imposters--;
+        if (imposters == 0)
+        {
+            Debug.Log("CREWMATE WIN");
+            pv.RPC("SetCrewmateWinScreen", RpcTarget.All);
+        }
+    }
+
+    [PunRPC]
+    private void SetCrewmateWinScreen()
+    {
+        crewmateWinScreen.SetActive(true);
+    }
+
+    [PunRPC]
+    private void SetImposterWinScreen()
+    {
+        imposterWinScreen.SetActive(true);
+    }
 
 
-    //RandomizeImposterSubRoles(imposters);
+    public void TeleportPlayers()
+    {
+        GameObject[] alivePlayers = GameObject.FindGameObjectsWithTag("Player");
+        for (int i = 0; i < alivePlayers.Length; i++)
+        {
+            alivePlayers[i].gameObject.transform.position = teleportLocations[i].transform.position;
+        }
+    }
 
-  }
 
-  void RandomizeImposterSubRoles(List<GameObject> imposterList) {
-    //foreach (var imposter in imposterList)
+    //public void InitiateRoleAbilityAssignment()
     //{
-    //    if(imposter.GetComponent<PhotonView>().IsMine)
+    //    pv.RPC("SetUpRoleAbilityAssignment", RpcTarget.All);
+    //}
+
+    //[PunRPC]
+    //void SetUpRoleAbilityAssignment()
+    //{
+    //    GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+
+    //    foreach (var x in players) Debug.Log(x.name + " " + x.GetComponent<PhotonView>().ViewID);
+
+    //    List<GameObject> crewmates = new List<GameObject>();
+    //    List<GameObject> imposters = new List<GameObject>();
+
+    //    for (int i = 0; i < players.Length; i++)
     //    {
-    //        switch (availableImposterRoles[0])
+    //        if (players[i].GetComponent<Role>().currRole == Role.Roles.Crewmate)
+    //        {
+    //            crewmates.Add(players[i]);
+    //        }
+    //        else
+    //        {
+    //            imposters.Add(players[i]);
+    //        }
+    //    }
+    //    foreach (var x in imposters) Debug.Log(x.name);
+
+    //    RandomizeImposterSubRoles(imposters);
+
+    //}
+
+    //void RandomizeImposterSubRoles(List<GameObject> imposterList)
+    //{
+    //    foreach (var imposter in imposterList)
+    //    {
+    //        if (imposter.GetComponent<PhotonView>().IsMine)
+    //        {
+    //            switch (availableImposterRoles[0])
+    //            {
+    //                case "Assassin":
+    //                    imposter.GetComponent<Role>().subRole = Role.Roles.Assassin;
+    //                    imposter.GetComponent<PlayerActionController>().InitiateRoleAbilityAssignment();
+    //                    pv.RPC("RemoveImposterRoleFromList", RpcTarget.All, "Assassin");
+    //                    break;
+
+    //                case "Chameleon":
+    //                    imposter.GetComponent<Role>().subRole = Role.Roles.Chameleon;
+    //                    imposter.GetComponent<PlayerActionController>().InitiateRoleAbilityAssignment();
+    //                    pv.RPC("RemoveImposterRoleFromList", RpcTarget.All, "Chameleon");
+    //                    break;
+
+    //                default:
+    //                    Debug.Log("You're a dingus bingus");
+    //                    break;
+    //            }
+    //        }
+
+    //    }
+
+
+    //    for (int i = 0; i < imposterList.Count; i++)
+    //    {
+    //        Debug.Log(imposterList[i].name + " " + imposterList[i].GetComponent<PhotonView>().ViewID);
+    //        Role imposterRole = imposterList[i].GetComponent<Role>();
+    //        switch (availableImposterRoles[Random.Range(0, availableImposterRoles.Count - 1)])
     //        {
     //            case "Assassin":
-    //                imposter.GetComponent<Role>().subRole = Role.Roles.Assassin;
-    //                imposter.GetComponent<PlayerActionController>().InitiateRoleAbilityAssignment();
+    //                if (!availableImposterRoles.Contains("Assassin")) return;
+    //                imposterRole.subRole = Role.Roles.Assassin;
+    //                Debug.Log("You're an assassin");
+    //                imposterList[i].GetComponent<PlayerActionController>().InitiateRoleAbilityAssignment();
     //                pv.RPC("RemoveImposterRoleFromList", RpcTarget.All, "Assassin");
-    //                break;                    
+    //                Debug.Log(availableImposterRoles.Contains("Assassin"));
+    //                break;
 
     //            case "Chameleon":
-    //                imposter.GetComponent<Role>().subRole = Role.Roles.Chameleon;
-    //                imposter.GetComponent<PlayerActionController>().InitiateRoleAbilityAssignment();
+    //                if (!availableImposterRoles.Contains("Chameleon")) return;
+    //                imposterRole.subRole = Role.Roles.Chameleon;
+    //                Debug.Log("You're a chameleon");
+    //                imposterList[i].GetComponent<PlayerActionController>().InitiateRoleAbilityAssignment();
     //                pv.RPC("RemoveImposterRoleFromList", RpcTarget.All, "Chameleon");
+    //                Debug.Log(availableImposterRoles.Contains("Chameleon"));
     //                break;
 
     //            default:
@@ -117,65 +251,34 @@ public class GameManager : MonoBehaviourPunCallbacks {
     //                break;
     //        }
     //    }
+    //}
 
+    //[PunRPC]
+    //void RemoveImposterRoleFromList(string imposterRole)
+    //{
+    //    availableImposterRoles.Remove(imposterRole);
+    //    foreach (var x in availableImposterRoles) Debug.Log(x);
     //}
 
 
-    for (int i = 0; i < imposterList.Count; i++) {
-      Debug.Log(imposterList[i].name + " " + imposterList[i].GetComponent<PhotonView>().ViewID);
-      Role imposterRole = imposterList[i].GetComponent<Role>();
-      switch (availableImposterRoles[Random.Range(0, availableImposterRoles.Count - 1)]) {
-        case "Assassin":
-          if (!availableImposterRoles.Contains("Assassin")) return;
-          imposterRole.subRole = Role.Roles.Assassin;
-          Debug.Log("You're an assassin");
-          imposterList[i].GetComponent<PlayerActionController>().InitiateRoleAbilityAssignment();
-          pv.RPC("RemoveImposterRoleFromList", RpcTarget.All, "Assassin");
-          Debug.Log(availableImposterRoles.Contains("Assassin"));
-          break;
 
-        case "Chameleon":
-          if (!availableImposterRoles.Contains("Chameleon")) return;
-          imposterRole.subRole = Role.Roles.Chameleon;
-          Debug.Log("You're a chameleon");
-          imposterList[i].GetComponent<PlayerActionController>().InitiateRoleAbilityAssignment();
-          pv.RPC("RemoveImposterRoleFromList", RpcTarget.All, "Chameleon");
-          Debug.Log(availableImposterRoles.Contains("Chameleon"));
-          break;
+    /*  [HideInInspector] public bool isConnectedToMaster;
+      // Start is called before the first frame update
 
-        default:
-          Debug.Log("You're a dingus bingus");
-          break;
+      public IEnumerator EndGame() {
+        yield return new WaitForSeconds(20f);
+        *//* PhotonNetwork.LeaveRoom();*//* //FOR TESTING
       }
-    }
-  }
 
-  //[PunRPC]
-  //void RemoveImposterRoleFromList(string imposterRole)
-  //{
-  //    availableImposterRoles.Remove(imposterRole);
-  //    foreach (var x in availableImposterRoles) Debug.Log(x);
-  //}
-
-
-
-  /*  [HideInInspector] public bool isConnectedToMaster;
-    // Start is called before the first frame update
-
-    public IEnumerator EndGame() {
-      yield return new WaitForSeconds(20f);
-      *//* PhotonNetwork.LeaveRoom();*//* //FOR TESTING
-    }
-
-    private void OnLevelWasLoaded(int level) {
-      if (SceneManager.GetActiveScene().name == "Gaming")
-        StartCoroutine("EndGame");
-    }
-
-    public override void OnLeftRoom() {
-      if (SceneManager.GetActiveScene().name == "Gaming") {
-        PhotonNetwork.Disconnect();
-        PhotonNetwork.LoadLevel(0);
+      private void OnLevelWasLoaded(int level) {
+        if (SceneManager.GetActiveScene().name == "Gaming")
+          StartCoroutine("EndGame");
       }
-    }*/
+
+      public override void OnLeftRoom() {
+        if (SceneManager.GetActiveScene().name == "Gaming") {
+          PhotonNetwork.Disconnect();
+          PhotonNetwork.LoadLevel(0);
+        }
+      }*/
 }

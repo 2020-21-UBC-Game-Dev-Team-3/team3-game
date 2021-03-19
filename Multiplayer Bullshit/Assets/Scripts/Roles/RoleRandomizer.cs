@@ -29,13 +29,14 @@ public class RoleRandomizer : MonoBehaviour {
     availableImposterRoles.AddRange(new string[] { "Assassin", "Chameleon", "Trapper" });
   }
 
-  void Update() {
-    if (PhotonNetwork.IsMasterClient && SceneManager.GetActiveScene().name == "Gaming" && !hasLoadedGame && numberOfPlayersAddedSoFar == roomManager.maxNumberOfPlayers) {
-      hasLoadedGame = true;
-      LoadGame();
-    }
-  }
-  private void LoadGame() {
+  //void Update() {
+  //  if (PhotonNetwork.IsMasterClient && SceneManager.GetActiveScene().name == "Gaming" && !hasLoadedGame && numberOfPlayersAddedSoFar == roomManager.maxNumberOfPlayers) {
+  //    hasLoadedGame = true;
+  //    LoadGame();
+  //  }
+  //}
+
+  public void LoadGame() {
     for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++) {
       if (currCrewmateNum < maxCrewmateNum) pv.RPC("RandomizePlayerRole", PhotonNetwork.PlayerList[i], i);
       else pv.RPC("FillInImposters", PhotonNetwork.PlayerList[i], i);

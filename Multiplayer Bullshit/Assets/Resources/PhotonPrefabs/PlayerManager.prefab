@@ -67,3 +67,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myNameObject: {fileID: 0}
+  playerSkinName: 

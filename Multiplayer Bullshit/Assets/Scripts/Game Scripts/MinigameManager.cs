@@ -22,15 +22,15 @@ public class MinigameManager : MonoBehaviour
     void Awake()
     {
         availableMinigames.AddRange(new string[] { "Darts minigame", "Drink mixing minigame", "Iceberg minigame", "Lifeboat minigame", "Scavenger hunt minigame" });
-        taskList = GameObject.Find("Task List");
-        tasksText.AddRange(taskList.GetComponentsInChildren<TextMeshProUGUI>());
+        //taskList = GameObject.Find("Task List");
+        //tasksText.AddRange(taskList.GetComponentsInChildren<TextMeshProUGUI>());
     }
 
     // Start is called before the first frame update
     void Start()
     {
         RandomizeMinigames();
-        SetTasksText();
+        //SetTasksText();
     }
 
     void RandomizeMinigames()
@@ -41,6 +41,13 @@ public class MinigameManager : MonoBehaviour
             assignedMinigames.Add(availableMinigames[rng]);
             availableMinigames.RemoveAt(rng);
         }
+    }
+
+    public void SetUpMinigameAssignment()
+    {
+        taskList = GameObject.Find("Task List");
+        tasksText.AddRange(taskList.GetComponentsInChildren<TextMeshProUGUI>());
+        SetTasksText();
     }
 
     void SetTasksText()
