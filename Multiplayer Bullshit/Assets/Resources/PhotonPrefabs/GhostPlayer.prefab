@@ -1461,6 +1461,9 @@ MonoBehaviour:
   emergencyMeetingImage: {fileID: 4163456015619971650, guid: 50d60b5bbe126974a83f4a9f62733355, type: 3}
   bodyReportedImage: {fileID: 3674460001212861253, guid: 50d60b5bbe126974a83f4a9f62733355, type: 3}
   votingManager: {fileID: 5692372800063119359}
+  reportedAudio: {fileID: 0}
+  meetingAudio: {fileID: 0}
+  bgmAudio: {fileID: 0}
   interactable: {fileID: 0}
   pv: {fileID: 0}
   Vent1Pos: {fileID: 0}
@@ -5583,7 +5586,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: cfd85cd7f365b074cbb7bbf043a2228b, type: 2}
   - {fileID: 2100000, guid: 986d35722968d0f46b6025fa7a8bdabf, type: 2}
   - {fileID: 2100000, guid: bf0e758b0adfea94e8967433e8b8370f, type: 2}
-  - {fileID: 2100000, guid: 056310c6d15774140bbed499be0456ba, type: 2}
+  - {fileID: 0}
 --- !u!1 &3412783395799952387
 GameObject:
   m_ObjectHideFlags: 0

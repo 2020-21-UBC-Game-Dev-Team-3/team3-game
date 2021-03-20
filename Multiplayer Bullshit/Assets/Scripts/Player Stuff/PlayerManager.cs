@@ -45,8 +45,11 @@ public class PlayerManager : MonoBehaviour
         Vector3 position = FindSpawnPoint();
         controller = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "player2"), position, Quaternion.identity, 0, new object[] { pv.ViewID });
         pv.RPC("IncrementPlayerNumber", RpcTarget.MasterClient);
-        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Elevator"), vec, Quaternion.identity);
-    }
+        if (PhotonNetwork.IsMasterClient)
+        {
+            PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Elevator"), vec, Quaternion.identity);
+        }    
+        }
 
     public void GiveCharacterSkinToController(string skinName)
     {

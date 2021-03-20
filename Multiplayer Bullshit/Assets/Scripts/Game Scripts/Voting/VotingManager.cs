@@ -21,7 +21,8 @@ public class VotingManager : MonoBehaviour
     [SerializeField] private GameObject skipBoxIconArea;
     [SerializeField] private GameObject playerBoxes;
     [SerializeField] private List<Player> playersAllowedToVote;
-
+    private List<AudioSource> meetingAudios;
+    private GameObject[] players;
     private void Awake()
     {
         playersAllowedToVote = new List<Player>(PhotonNetwork.PlayerList);
@@ -31,6 +32,11 @@ public class VotingManager : MonoBehaviour
     void Start()
     {
         pv = GetComponent<PhotonView>();
+        players = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject p in players)
+        {
+            meetingAudios.Add(p.transform.Find("MeetingAudio").GetComponent<AudioSource>());
+        }
     }
 
     public void SetupVoting()
@@ -189,6 +195,7 @@ public class VotingManager : MonoBehaviour
     {
         //Use the kill mechanic here to kill player while the scene plays out
         if (PhotonNetwork.LocalPlayer == playerToKill) pv.RPC("KillCurrPlayer", PhotonNetwork.LocalPlayer);
+
     }
 
     [PunRPC]
@@ -197,6 +204,10 @@ public class VotingManager : MonoBehaviour
         transform.parent.GetComponentInParent<MapManager>().ResetMap();
         PhotonView.Find((int)pv.InstantiationData[0]).GetComponent<PlayerManager>().GetVotedOff();
         playersAllowedToVote.Remove(PhotonNetwork.LocalPlayer);
+        foreach(AudioSource audio in meetingAudios)
+        {
+            audio.Stop();
+        }
     }
 
     public void OnEnable()

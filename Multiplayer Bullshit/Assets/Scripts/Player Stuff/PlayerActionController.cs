@@ -9,6 +9,9 @@ public class PlayerActionController : MonoBehaviour, IDamageable
     [SerializeField] GameObject emergencyMeetingImage;
     [SerializeField] GameObject bodyReportedImage;
     [SerializeField] GameObject votingManager;
+    [SerializeField] AudioSource reportedAudio;
+    [SerializeField] AudioSource meetingAudio;
+    [SerializeField] AudioSource bgmAudio;
 
     MapManager mapMan;
 
@@ -356,12 +359,14 @@ public class PlayerActionController : MonoBehaviour, IDamageable
         }
         else if (eventName == "Body reported")
         {
-            StartCoroutine(ShowEmergencyPopUp(bodyReportedImage));
+            StartCoroutine(ShowEmergencyPopUp(bodyReportedImage));            
         }
     }
 
     IEnumerator ShowEmergencyPopUp(GameObject eventImage)
     {
+        reportedAudio.Play();
+        bgmAudio.enabled = false;
         minigameInterrupt = true;
         eventImage.SetActive(true);
         PlayMakerFSM.BroadcastEvent("GlobalTurnMovementOff");
@@ -369,6 +374,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable
         FindObjectOfType<GameManager>().TeleportPlayers();
         //TODO: ADD TELEPORTATION HERE
         yield return new WaitForSeconds(2);
+        meetingAudio.Play();
         votingManager.SetActive(true);
         eventImage.SetActive(false);
     }

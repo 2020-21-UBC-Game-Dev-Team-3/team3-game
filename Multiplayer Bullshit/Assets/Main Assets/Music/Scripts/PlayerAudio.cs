@@ -17,7 +17,9 @@ public class PlayerAudio : MonoBehaviour
         pv = GetComponent<PhotonView>();
         if (!pv.IsMine)
         {
-            audioListener.GetComponent<AudioListener>().enabled = false;
+            Destroy(audioListener);
+            Destroy(Music);
+            Destroy(BarMusic);
         }
         StartCoroutine(LateStart(0.1f));
     }
@@ -28,10 +30,22 @@ public class PlayerAudio : MonoBehaviour
             Music.mute = true;
             threshold = 0;
         }
+
+    }
+    private void OnTriggerEnter(Collider other)
+    {
         if (other.gameObject.name == "BarMusicCollider")
         {
             BarMusic.mute = false;
             inBar = true;
+            threshold = 0;
+            Music.mute = true;
+        }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("MusicZone"))
+        {
             threshold = 0;
         }
     }
@@ -42,11 +56,12 @@ public class PlayerAudio : MonoBehaviour
             threshold = 0;
         }
     }
-    private void OnCollisionExit(Collision other)
+    private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.name == "BarMusicCollider")
         {
             inBar = false;
+            Music.mute = false;
         }
     }
     private void Update()
