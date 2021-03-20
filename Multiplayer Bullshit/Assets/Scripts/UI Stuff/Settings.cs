@@ -55,7 +55,7 @@ public class Settings : MonoBehaviour
         GameObject gameObject = GameObject.Find("Main Camera");
         Camera proj = gameObject.GetComponent<Camera>();
         proj.fieldOfView = OptionsPP.fovValue;
-        Debug.Log(OptionsPP.fovValue);
+        //Debug.Log(OptionsPP.fovValue);
 
     }
 

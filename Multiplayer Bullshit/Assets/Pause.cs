@@ -22,7 +22,7 @@ public class Pause : MonoBehaviour
      }
  
     void Update () {
-        Debug.Log(Canvas == null);
+        //Debug.Log(Canvas == null);
         if (Input.GetKeyDown ("escape")) {
             if(Paused){
                 ClosePauseMenu();

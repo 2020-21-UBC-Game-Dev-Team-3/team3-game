@@ -88,7 +88,7 @@ public class MinigameManager : MonoBehaviour
     { 
         assignedMinigames.Remove(minigame);
 
-        Debug.Log(assignedMinigames.Contains(minigame));
+        //Debug.Log(assignedMinigames.Contains(minigame));
 
         string updatedTaskText = null;
 
