@@ -83,7 +83,7 @@ public class RoleRandomizer : MonoBehaviour {
     //role.currPercentForImposter -= imposterPercentScaler;
     roomManager.currPercentForImposter -= imposterPercentScaler;
     Debug.Log("Player imposter percentage with imposter: " + roomManager.currPercentForImposter);
-    pv.RPC("IncrementRoleNumbers", RpcTarget.All, true);
+/*    pv.RPC("IncrementRoleNumbers", RpcTarget.All, true);*/
     pv.RPC("AdjustRoleText", PhotonNetwork.PlayerList[index], true);
 
     Debug.Log("this is going to be null:" + availableImposterRoles[0]);
@@ -129,10 +129,19 @@ public class RoleRandomizer : MonoBehaviour {
     //role.currPercentForImposter += imposterPercentScaler;
     roomManager.currPercentForImposter += imposterPercentScaler;
     Debug.Log("Player imposter percentage with crewmate: " + roomManager.currPercentForImposter);
-    pv.RPC("IncrementRoleNumbers", RpcTarget.All, false);
+ /*   pv.RPC("IncrementRoleNumbers", RpcTarget.All, false);*/
     pv.RPC("AdjustRoleText", PhotonNetwork.PlayerList[index], false);
 
     if (availableCrewmateRoles.Contains("Disarmer")) {
+      role.subRole = Role.Roles.Disarmer;
+      GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerActionController>().InitiateRoleAbilityAssignment();
+      pv.RPC("RemoveCrewmateRoleFromList", RpcTarget.All, "Disarmer");
+    } else {
+      role.subRole = Role.Roles.None;
+      GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerActionController>().InitiateRoleAbilityAssignment();
+    }
+
+/*    if (availableCrewmateRoles.Contains("Disarmer")) {
       switch (Random.Range(0, 2)) {
 
         case 0:
@@ -152,7 +161,7 @@ public class RoleRandomizer : MonoBehaviour {
           break;
 
       }
-    }
+    }*/
   }
 
   [PunRPC]
