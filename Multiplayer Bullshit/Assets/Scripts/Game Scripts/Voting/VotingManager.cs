@@ -21,7 +21,7 @@ public class VotingManager : MonoBehaviour
     [SerializeField] private GameObject skipBoxIconArea;
     [SerializeField] private GameObject playerBoxes;
     [SerializeField] private List<Player> playersAllowedToVote;
-    private List<AudioSource> meetingAudios;
+    public List<AudioSource> meetingAudios;
     private GameObject[] players;
     private void Awake()
     {

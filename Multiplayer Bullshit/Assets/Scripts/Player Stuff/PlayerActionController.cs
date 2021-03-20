@@ -9,9 +9,9 @@ public class PlayerActionController : MonoBehaviour, IDamageable
     [SerializeField] GameObject emergencyMeetingImage;
     [SerializeField] GameObject bodyReportedImage;
     [SerializeField] GameObject votingManager;
-    [SerializeField] AudioSource reportedAudio;
-    [SerializeField] AudioSource meetingAudio;
-    [SerializeField] AudioSource bgmAudio;
+    [SerializeField] public AudioSource reportedAudio;
+    [SerializeField] public AudioSource meetingAudio;
+    [SerializeField] public AudioSource bgmAudio;
 
     MapManager mapMan;
 
