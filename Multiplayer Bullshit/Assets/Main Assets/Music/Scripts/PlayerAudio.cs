@@ -95,6 +95,9 @@ public class PlayerAudio : MonoBehaviour
     IEnumerator LateStart(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
+        Music.volume = PlayerPrefs.GetFloat("main volume");
+        BarMusic.volume = PlayerPrefs.GetFloat("main volume");
         Music.Play();
+       
     }
 }

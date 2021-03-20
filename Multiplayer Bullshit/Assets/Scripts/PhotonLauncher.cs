@@ -12,7 +12,7 @@ using Hashtable = ExitGames.Client.Photon.Hashtable;
 public class PhotonLauncher : MonoBehaviourPunCallbacks
 {
     public static PhotonLauncher Instance;
-    [SerializeField] Button red, orange, yellow, green, blue, indigo, purple;
+    [SerializeField] Button red, orange, yellow, green, blue, indigo, purple, white, black, dgreen, maroon;
     public Menu roomMenu;
     [SerializeField] TMP_InputField roomNameInputField;
     [SerializeField] TMP_InputField playerNameInputField;
@@ -53,6 +53,10 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
         allowedColors.Add("blue");
         allowedColors.Add("indigo");
         allowedColors.Add("purple");
+        allowedColors.Add("white");
+        allowedColors.Add("black");
+        allowedColors.Add("dgreen");
+        allowedColors.Add("maroon");
         takenColors.Clear();
     }
 
@@ -369,6 +373,10 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
         blue.gameObject.SetActive(true);
         indigo.gameObject.SetActive(true);
         purple.gameObject.SetActive(true);
+        white.gameObject.SetActive(true);
+        black.gameObject.SetActive(true);
+        dgreen.gameObject.SetActive(true);
+        maroon.gameObject.SetActive(true);
     }
     public void TurnOffColorButtons()
     {
@@ -379,6 +387,10 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
         blue.gameObject.SetActive(false);
         indigo.gameObject.SetActive(false);
         purple.gameObject.SetActive(false);
+        white.gameObject.SetActive(false);
+        black.gameObject.SetActive(false);
+        dgreen.gameObject.SetActive(false);
+        maroon.gameObject.SetActive(false);
     }
     [PunRPC]
     public void ButtonInUse(bool cond)

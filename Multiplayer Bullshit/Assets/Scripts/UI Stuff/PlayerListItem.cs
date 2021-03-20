@@ -37,7 +37,7 @@ public class PlayerListItem : MonoBehaviourPunCallbacks
                 text.color = Color.red;
                 break;
             case "orange":
-                text.color = new Color(1.0f, 0.64f, 0.0f);
+                text.color = new Color(1f, 163f/255, 0.0f);
                 break;
             case "yellow":
                 text.color = Color.yellow;
@@ -53,6 +53,18 @@ public class PlayerListItem : MonoBehaviourPunCallbacks
                 break;
             case "purple":
                 text.color = Color.magenta;
+                break;
+            case "white":
+                text.color = Color.white;
+                break;
+            case "black":
+                text.color = Color.black;
+                break;
+            case "dgreen":
+                text.color = new Color(0f, 77f/255f, 5f/255f);
+                break;
+            case "maroon":
+                text.color = new Color(99f/255f, 6f/255f, 24f/255f);
                 break;
         }
     }
