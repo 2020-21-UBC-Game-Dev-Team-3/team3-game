@@ -9,9 +9,10 @@ public class PlayerMovementController : MonoBehaviour {
   [SerializeField] GameObject playerCamera;
   [SerializeField] GameObject minimapCamera;
   [SerializeField] GameObject playerIndicator;
-  //[SerializeField] GameObject emergencyMeetingEvent;
-  // minigame interaction stuff
-  public GameObject[] interactables;
+    [SerializeField] GameObject TargetCamera;
+    //[SerializeField] GameObject emergencyMeetingEvent;
+    // minigame interaction stuff
+    public GameObject[] interactables;
   static bool switched;
 
 
@@ -26,6 +27,8 @@ public class PlayerMovementController : MonoBehaviour {
   Rigidbody rb;
 
   Camera cam;
+
+  
 
   void Awake() {
     animator = GetComponent<Animator>();
@@ -45,6 +48,7 @@ public class PlayerMovementController : MonoBehaviour {
     if (!pv.IsMine) {
       Destroy(playerCamera);
       Destroy(minimapCamera);
+      Destroy(TargetCamera);
       Destroy(playerIndicator);
     }
   }

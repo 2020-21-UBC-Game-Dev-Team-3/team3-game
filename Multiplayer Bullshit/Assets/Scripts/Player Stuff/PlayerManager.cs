@@ -80,14 +80,14 @@ public class PlayerManager : MonoBehaviour
     {
         Vector3 position = oldController.transform.position;
         GameObject deadBodyObject = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "DeadBody"), position, Quaternion.identity);
-        deadBodyObject.GetComponent<SkinSelect>().SetCharacterSkin();
+      //  deadBodyObject.GetComponent<SkinSelect>().SetCharacterSkin();
     }
 
     void CreateGhostPlayer(GameObject oldController)
     {
         Vector3 position = new Vector3(oldController.transform.position.x, oldController.transform.position.y + 1f, oldController.transform.position.z);
         controller = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "GhostPlayer"), position, Quaternion.identity, 0, new object[] { pv.ViewID });
-        controller.GetComponent<SkinSelect>().SetCharacterSkin();
+      //  controller.GetComponent<SkinSelect>().SetCharacterSkin();
     }
 
 

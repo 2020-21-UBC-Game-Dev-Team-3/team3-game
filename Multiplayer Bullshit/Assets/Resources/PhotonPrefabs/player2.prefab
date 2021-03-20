@@ -1317,7 +1317,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 1
+  m_Priority: -10
   m_StandbyUpdate: 1
   m_LookAt: {fileID: 2746854176688529568}
   m_Follow: {fileID: 2746854176688529568}
@@ -1762,6 +1762,7 @@ MonoBehaviour:
   playerCamera: {fileID: 7909981271565913725}
   minimapCamera: {fileID: 8134409677106726469}
   playerIndicator: {fileID: 3716913751683165206}
+  TargetCamera: {fileID: 1992721517104082884}
   interactables: []
   moveSpeed: 6
 --- !u!114 &5830643829904755601
@@ -11096,6 +11097,10 @@ PrefabInstance:
     - target: {fileID: 759451250092739834, guid: dbf6af28bf03b6d4e8eb798c89604c0e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.43111038
+      objectReference: {fileID: 0}
+    - target: {fileID: 928252400154734409, guid: dbf6af28bf03b6d4e8eb798c89604c0e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.1929321
       objectReference: {fileID: 0}
     - target: {fileID: 1020221009785434058, guid: dbf6af28bf03b6d4e8eb798c89604c0e, type: 3}
       propertyPath: m_AnchoredPosition.y
