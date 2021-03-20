@@ -15,13 +15,7 @@ MonoBehaviour:
   variables:
     floatVariables: []
     intVariables: []
-    boolVariables:
-    - useVariable: 1
-      name: timerUp
-      tooltip: 
-      showInInspector: 0
-      networkSync: 0
-      value: 0
+    boolVariables: []
     stringVariables: []
     vector2Variables: []
     vector3Variables: []
@@ -36,7 +30,7 @@ MonoBehaviour:
     enumVariables: []
     categories:
     - 
-    variableCategoryIDs: 00000000
+    variableCategoryIDs: 
   events:
   - PHOTON / CLIENT STATE / AUTHENTICATED
   - PHOTON / CLIENT STATE / AUTHENTICATING
@@ -81,14 +75,7 @@ MonoBehaviour:
   - PHOTON / ON REGION LIST RECEIVED
   - PHOTON / ON WEBRPC RESPONSE
   - PHOTON / ON PHOTON INSTANTIATE
+  - GlobalLightsFixed
   - CrewmateSabotaged
   - crewmate confirmed fix lights
   - GlobalLightsSabotaged
-  - GlobalLightsFixed
-  - GlobalSetCrewmate
-  - GlobalTurnMovementOff
-  - GlobalTurnMovementOn
-  - GlobalLightsFixed2
-  - GlobalSetImposter
-  - LightSabotageFsmStart
-  - LightSaboTimer

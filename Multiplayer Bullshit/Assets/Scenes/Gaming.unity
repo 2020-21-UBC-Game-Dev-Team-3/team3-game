@@ -1946,7 +1946,7 @@ MonoBehaviour:
             typeName: UnityEngine.Object
             value: {fileID: 2183613176765644095}
           TargetTypeName: LightsMinigame
-          PropertyName: enabled
+          PropertyName: lightsOff
           BoolParameter:
             useVariable: 0
             name: 
@@ -2052,7 +2052,7 @@ MonoBehaviour:
             tooltip: 
             showInInspector: 0
             networkSync: 0
-            enumName: HutongGames.PlayMaker.None
+            enumName: 
             intValue: 0
           ArrayParameter:
             useVariable: 0
@@ -2061,7 +2061,7 @@ MonoBehaviour:
             showInInspector: 0
             networkSync: 0
             type: -1
-            objectTypeName: UnityEngine.Object
+            objectTypeName: 
             floatValues: []
             intValues: 
             boolValues: 
