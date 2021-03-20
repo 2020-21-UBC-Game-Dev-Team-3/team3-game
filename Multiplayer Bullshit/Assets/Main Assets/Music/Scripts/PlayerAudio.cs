@@ -18,8 +18,8 @@ public class PlayerAudio : MonoBehaviour
         if (!pv.IsMine)
         {
             Destroy(audioListener);
-            Destroy(Music);
-            Destroy(BarMusic);
+            Music.enabled = false;
+            BarMusic.enabled = false;
         }
         StartCoroutine(LateStart(0.1f));
     }

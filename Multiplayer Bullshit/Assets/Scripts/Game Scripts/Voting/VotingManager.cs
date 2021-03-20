@@ -22,6 +22,7 @@ public class VotingManager : MonoBehaviour
     [SerializeField] private GameObject playerBoxes;
     [SerializeField] private List<Player> playersAllowedToVote;
     public List<AudioSource> meetingAudios;
+    public List<AudioSource> bgmAudios;
     private GameObject[] players;
     private void Awake()
     {
@@ -36,6 +37,10 @@ public class VotingManager : MonoBehaviour
         foreach (GameObject p in players)
         {
             meetingAudios.Add(p.transform.Find("MeetingAudio").GetComponent<AudioSource>());
+        }
+        foreach (GameObject p in players)
+        {
+            bgmAudios.Add(p.transform.Find("PlayerMusic").GetComponent<AudioSource>());
         }
     }
 
@@ -170,6 +175,14 @@ public class VotingManager : MonoBehaviour
         yield return new WaitForSeconds(4f);
         PlayMakerFSM.BroadcastEvent("GlobalTurnMovementOn");
         yield return new WaitForSeconds(1f);
+        foreach (AudioSource audio in meetingAudios)
+        {
+            audio.Stop();
+        }
+        foreach (AudioSource audio in bgmAudios)
+        {
+            audio.Play();
+        }
         if (!isTiedInVotes && currNumOfHighestVotes > numOfSkipVotes)
             pv.RPC("KillPlayerWithHighestVotes", RpcTarget.All, playerWithHighestVotes);
         this.gameObject.SetActive(false);
@@ -204,10 +217,7 @@ public class VotingManager : MonoBehaviour
         transform.parent.GetComponentInParent<MapManager>().ResetMap();
         PhotonView.Find((int)pv.InstantiationData[0]).GetComponent<PlayerManager>().GetVotedOff();
         playersAllowedToVote.Remove(PhotonNetwork.LocalPlayer);
-        foreach(AudioSource audio in meetingAudios)
-        {
-            audio.Stop();
-        }
+
     }
 
     public void OnEnable()

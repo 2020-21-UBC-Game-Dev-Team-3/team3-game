@@ -9,10 +9,10 @@ public class PlayerActionController : MonoBehaviour, IDamageable
     [SerializeField] GameObject emergencyMeetingImage;
     [SerializeField] GameObject bodyReportedImage;
     [SerializeField] GameObject votingManager;
-    [SerializeField] public AudioSource reportedAudio;
-    [SerializeField] public AudioSource meetingAudio;
-    [SerializeField] public AudioSource bgmAudio;
-
+    [SerializeField]List<AudioSource> reportedAudios;
+    [SerializeField]List<AudioSource> meetingAudios;
+    [SerializeField] List<AudioSource> bgmAudios;
+    [SerializeField] GameObject[] players;
     MapManager mapMan;
 
     MinigameManager miniMan;
@@ -244,6 +244,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable
 
             case "Emergency button":
                 pv.RPC("TurnOnEmergencyPopUp", RpcTarget.All, "Emergency meeting");
+
                 break;
 
             case "Dead body":
@@ -365,8 +366,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable
 
     IEnumerator ShowEmergencyPopUp(GameObject eventImage)
     {
-        reportedAudio.Play();
-        bgmAudio.enabled = false;
+        pv.RPC("MeetingAudioRPC", RpcTarget.All);
         minigameInterrupt = true;
         eventImage.SetActive(true);
         PlayMakerFSM.BroadcastEvent("GlobalTurnMovementOff");
@@ -374,9 +374,38 @@ public class PlayerActionController : MonoBehaviour, IDamageable
         FindObjectOfType<GameManager>().TeleportPlayers();
         //TODO: ADD TELEPORTATION HERE
         yield return new WaitForSeconds(2);
-        meetingAudio.Play();
         votingManager.SetActive(true);
         eventImage.SetActive(false);
+    }
+    [PunRPC]
+    public void MeetingAudioRPC()
+    {
+        players = GameObject.FindGameObjectsWithTag("Player");
+        foreach(GameObject p in players)
+        {
+            reportedAudios.Add(p.transform.Find("ReportAudio").GetComponent<AudioSource>());
+        }
+        foreach(AudioSource audio in reportedAudios)
+        {
+            audio.Play();
+        }
+        foreach (GameObject p in players)
+        {
+            meetingAudios.Add(p.transform.Find("MeetingAudio").GetComponent<AudioSource>());
+        }
+        foreach (AudioSource audio in meetingAudios)
+        {
+            audio.Play();
+        }
+        foreach (GameObject p in players)
+        {
+            bgmAudios.Add(p.transform.Find("PlayerMusic").GetComponent<AudioSource>());
+        }
+        foreach (AudioSource audio in bgmAudios)
+        {
+            audio.Stop();
+        }
+        Debug.Log("Hello my name jay");
     }
 
     void TeleportPlayers()
