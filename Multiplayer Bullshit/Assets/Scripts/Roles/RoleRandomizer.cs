@@ -27,8 +27,9 @@ public class RoleRandomizer : MonoBehaviour {
   void Start() {
     roomManager = FindObjectOfType<RoomManager>().GetComponent<RoomManager>();
     pv = GetComponent<PhotonView>();
-    availableImposterRoles.AddRange(new string[] { "Assassin", "Chameleon", "Trapper" });
-    availableCrewmateRoles.AddRange(new string[] { "Disarmer" });
+    /*    availableImposterRoles.AddRange(new string[] { "Assassin", "Chameleon", "Trapper" });*/
+    availableImposterRoles.AddRange(new string[] {"Trapper"});
+    availableCrewmateRoles.AddRange(new string[] {"Disarmer"});
 /*    maxImposterNum = (int)Mathf.Round(roomManager.maxNumberOfPlayers / testingNum);
     maxCrewmateNum = roomManager.maxNumberOfPlayers - maxImposterNum;*/
   }
@@ -171,7 +172,8 @@ public class RoleRandomizer : MonoBehaviour {
 
   [PunRPC]
   void RemoveCrewmateRoleFromList(string crewmateRole) {
-    availableImposterRoles.Remove(crewmateRole);
+    Debug.Log("SDFLKSDJFLKDSD FKLSDKJLF REMOVING DISARMER LLALALALLALALALA");
+    availableCrewmateRoles.Remove(crewmateRole);
   }
 
   [PunRPC]
