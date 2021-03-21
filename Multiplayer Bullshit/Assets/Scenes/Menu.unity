@@ -1969,7 +1969,7 @@ MonoBehaviour:
   bllueBool: 0
   indigoBool: 0
   purpleBool: 0
-  MaxPlayerCount: 6
+  MaxPlayerCount: 10
 --- !u!114 &152756772
 MonoBehaviour:
   m_ObjectHideFlags: 0
