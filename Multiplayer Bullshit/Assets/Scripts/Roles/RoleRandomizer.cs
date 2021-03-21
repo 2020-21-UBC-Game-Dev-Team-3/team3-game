@@ -59,14 +59,16 @@ public class RoleRandomizer : MonoBehaviour {
   private void AssignRoles(List<int> randomIntList) {
     if (PhotonNetwork.PlayerList.Length <= 6) {
       pv.RPC("FillInImposters", PhotonNetwork.PlayerList[randomIntList[0]], randomIntList[0]); // 1st imposter
-      for (int i = 1; i < PhotonNetwork.PlayerList.Length; i++) { // the rest of crewmates
-        pv.RPC("FillInCrewmates", PhotonNetwork.PlayerList[randomIntList[i]], randomIntList[i]);
+      pv.RPC("FillInDisarmers", PhotonNetwork.PlayerList[randomIntList[1]], randomIntList[1]); // 1st disarmer
+      for (int i = 2; i < PhotonNetwork.PlayerList.Length; i++) {
+        pv.RPC("FillInCrewmates", PhotonNetwork.PlayerList[randomIntList[i]], randomIntList[i]); // the rest of crewmates
       }
     } else {
       pv.RPC("FillInImposters", PhotonNetwork.PlayerList[randomIntList[0]], randomIntList[0]); // 1st imposter
       pv.RPC("FillInImposters", PhotonNetwork.PlayerList[randomIntList[1]], randomIntList[1]); // 2nd imposter
-      for (int i = 2; i < PhotonNetwork.PlayerList.Length; i++) { // the rest of crewmates
-        pv.RPC("FillInCrewmates", PhotonNetwork.PlayerList[randomIntList[i]], randomIntList[i]);
+      pv.RPC("FillInDisarmers", PhotonNetwork.PlayerList[randomIntList[2]], randomIntList[2]); // 1st disarmer
+      for (int i = 3; i < PhotonNetwork.PlayerList.Length; i++) {
+        pv.RPC("FillInCrewmates", PhotonNetwork.PlayerList[randomIntList[i]], randomIntList[i]); // the rest of crewmates
       }
     }
   }
@@ -86,8 +88,6 @@ public class RoleRandomizer : MonoBehaviour {
     Debug.Log("Player imposter percentage with imposter: " + roomManager.currPercentForImposter);
 /*    pv.RPC("IncrementRoleNumbers", RpcTarget.All, true);*/
     pv.RPC("AdjustRoleText", PhotonNetwork.PlayerList[index], true);
-
-    Debug.Log("this is going to be null:" + availableImposterRoles[0]);
 
     switch (availableImposterRoles[Random.Range(0, availableImposterRoles.Count)]) {
       case "Assassin":
@@ -127,42 +127,20 @@ public class RoleRandomizer : MonoBehaviour {
   private void FillInCrewmates(int index) {
     Role role = GameObject.FindGameObjectWithTag("Player").GetComponent<Role>();
     role.currRole = Role.Roles.Crewmate;
-    //role.currPercentForImposter += imposterPercentScaler;
-    roomManager.currPercentForImposter += imposterPercentScaler;
-    Debug.Log("Player imposter percentage with crewmate: " + roomManager.currPercentForImposter);
- /*   pv.RPC("IncrementRoleNumbers", RpcTarget.All, false);*/
     pv.RPC("AdjustRoleText", PhotonNetwork.PlayerList[index], false);
 
-    if (availableCrewmateRoles.Contains("Disarmer")) {
-      role.subRole = Role.Roles.Disarmer;
-      GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerActionController>().InitiateRoleAbilityAssignment();
-      pv.RPC("RemoveCrewmateRoleFromList", RpcTarget.All, "Disarmer");
-    } else {
-      role.subRole = Role.Roles.None;
-      GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerActionController>().InitiateRoleAbilityAssignment();
-    }
+    role.subRole = Role.Roles.None;
+    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerActionController>().InitiateRoleAbilityAssignment();
+  }
 
-/*    if (availableCrewmateRoles.Contains("Disarmer")) {
-      switch (Random.Range(0, 2)) {
+  [PunRPC]
+  private void FillInDisarmers(int index) {
+    Role role = GameObject.FindGameObjectWithTag("Player").GetComponent<Role>();
+    role.currRole = Role.Roles.Crewmate;
+    pv.RPC("AdjustRoleText", PhotonNetwork.PlayerList[index], false);
 
-        case 0:
-          if (PhotonNetwork.PlayerList[index] == PhotonNetwork.PlayerList.GetValue(PhotonNetwork.PlayerList.Length - 1)) {
-            role.subRole = Role.Roles.Disarmer;
-            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerActionController>().InitiateRoleAbilityAssignment();
-          } else {
-            role.subRole = Role.Roles.None;
-            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerActionController>().InitiateRoleAbilityAssignment();
-          }
-          break;
-
-        case 1:
-          role.subRole = Role.Roles.Disarmer;
-          GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerActionController>().InitiateRoleAbilityAssignment();
-          pv.RPC("RemoveCrewmateRoleFromList", RpcTarget.All, "Disarmer");
-          break;
-
-      }
-    }*/
+    role.subRole = Role.Roles.Disarmer;
+    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerActionController>().InitiateRoleAbilityAssignment();
   }
 
   [PunRPC]
