@@ -57,6 +57,12 @@ public class RoleRandomizer : MonoBehaviour {
   }
 
   private void AssignRoles(List<int> randomIntList) {
+
+    if (PhotonNetwork.PlayerList.Length == 1) {
+      pv.RPC("FillInImposters", PhotonNetwork.PlayerList[randomIntList[0]], randomIntList[0]);
+      return;
+    }
+
     if (PhotonNetwork.PlayerList.Length <= 6) {
       pv.RPC("FillInImposters", PhotonNetwork.PlayerList[randomIntList[0]], randomIntList[0]); // 1st imposter
       pv.RPC("FillInDisarmers", PhotonNetwork.PlayerList[randomIntList[1]], randomIntList[1]); // 1st disarmer

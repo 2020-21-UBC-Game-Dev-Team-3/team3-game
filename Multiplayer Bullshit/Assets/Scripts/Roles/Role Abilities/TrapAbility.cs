@@ -29,10 +29,18 @@ public class TrapAbility : RoleAbility {
     }
   }
 
-  // Only Trappers will need to call this method since they are the only ones with the trapperUI
-  public void DecrementCurrTraps() {
+  public void DecrementTraps() {
+    Debug.Log("DecrementTraps");
+    GetComponent<PhotonView>().RPC("RPC_DecrementTraps", RpcTarget.All);
+  }
+
+  [PunRPC]
+  public void RPC_DecrementTraps() {
     if (trapperUI == null) return;
     currNumberTraps--;
     trapperUI.SetText("Traps active: " + currNumberTraps.ToString() + "/" + maxNumberTraps.ToString());
+    if (isTouchingTrap) {
+      isTouchingTrap = false;
+    }
   }
 }
