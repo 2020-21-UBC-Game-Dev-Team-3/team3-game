@@ -13,14 +13,40 @@ public class MapManager : MonoBehaviour
     GameObject bottomFloorPlane;
 
     PhotonView pv;
+    void Awake() => pv = GetComponent<PhotonView>();
 
     void Start()
     {
-        topFloorPlane = GameObject.Find("Top Floor Plane");
-        middleFloorPlane = GameObject.Find("Middle Floor Plane");
-        bottomFloorPlane = GameObject.Find("Bottom Floor Plane");
+        if (gameObject.CompareTag("Player"))
+        {
+            topFloorPlane = GameObject.Find("Top Floor Plane");
+            middleFloorPlane = GameObject.Find("Middle Floor Plane");
+            bottomFloorPlane = GameObject.Find("Bottom Floor Plane");
 
-        pv = player.GetComponent<PhotonView>();
+            PhotonView.Find((int)pv.InstantiationData[0]).GetComponent<PlayerManager>().mapFloorPlanes.AddRange(new GameObject[] { topFloorPlane, middleFloorPlane, bottomFloorPlane });
+
+        }
+        else
+        {
+            List<GameObject> mapFloorPlanes = PhotonView.Find((int)pv.InstantiationData[0]).GetComponent<PlayerManager>().mapFloorPlanes;
+            foreach (var floorPlane in mapFloorPlanes)
+            {
+                switch (floorPlane.name)
+                {
+                    case "Top Floor Plane":
+                        topFloorPlane = floorPlane;
+                        break;
+
+                    case "Middle Floor Plane":
+                        middleFloorPlane = floorPlane;
+                        break;
+
+                    case "Bottom Floor Plane":
+                        bottomFloorPlane = floorPlane;
+                        break;
+                }
+            }
+        }
     }
 
 
@@ -35,8 +61,14 @@ public class MapManager : MonoBehaviour
         bottomFloorPlane.SetActive((Mathf.Round(bottomFloorPlane.transform.position.y)) == playerPlanePos);
     }
 
-    public void ResetMap()
+    public void InitiateMapReset()
     {
+        StartCoroutine(ResetMap());
+    }
+
+    IEnumerator ResetMap()
+    {
+        yield return new WaitForSeconds(1f);
         topFloorPlane.SetActive(true);
         middleFloorPlane.SetActive(true);
         bottomFloorPlane.SetActive(true);

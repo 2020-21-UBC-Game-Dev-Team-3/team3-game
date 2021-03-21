@@ -16,7 +16,18 @@ public class NameTextScript : MonoBehaviour
     private float distanceToClient;
     public GameObject clientPlayer;
     [SerializeField] TMP_Text text;
-    // Start is called before the first frame update
+    public void SetClientGhost(GameObject go)
+    {
+        List<GameObject> gos = new List<GameObject>();
+        gos.AddRange(GameObject.FindGameObjectsWithTag("Ghost"));
+        gos.AddRange(GameObject.FindGameObjectsWithTag("Player"));
+        foreach (GameObject gameo in gos)
+        {
+            NameTextScript nameScript = gameo.GetComponent<NameTextScript>();
+            nameScript.clientPlayer = go;
+        }
+    }
+
     void Start()
     {
         mainCamera = Camera.main;
@@ -24,13 +35,21 @@ public class NameTextScript : MonoBehaviour
         if (pv.IsMine)
         {
             SetName();
-            SetClientPlayer(this.gameObject);
+            if (gameObject.CompareTag("Player"))
+            {
+                SetClientPlayer(gameObject);
+            }
+            else
+            {
+                SetClientGhost(gameObject);
+            }
         }
         else
         {
             SetOwnerName();
         }
     }
+
     public void Update()
     {
         if (pv.IsMine)

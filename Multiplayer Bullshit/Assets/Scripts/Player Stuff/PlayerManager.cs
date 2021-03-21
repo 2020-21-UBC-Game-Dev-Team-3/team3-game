@@ -8,8 +8,12 @@ using UnityEngine.UI;
 public class PlayerManager : MonoBehaviour
 {
     private Vector3 vec = new Vector3(-43.24f, 0f, -0.17f);
+    public List<GameObject> mapFloorPlanes = new List<GameObject>();
     PhotonView pv;
     public GameObject myNameObject;
+
+    public List<string> playerTasksRemaining = new List<string>();
+    public List<string> playerTasksCompleted = new List<string>();
 
     public string playerSkinName;
 
@@ -48,8 +52,8 @@ public class PlayerManager : MonoBehaviour
         if (PhotonNetwork.IsMasterClient)
         {
             PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Elevator"), vec, Quaternion.identity);
-        }    
         }
+    }
 
     public void GiveCharacterSkinToController(string skinName)
     {
@@ -67,30 +71,32 @@ public class PlayerManager : MonoBehaviour
     public void Die()
     {
         FindObjectOfType<GameManager>().RemovePlayer(controller);
+        Vector3 oldPosition = controller.transform.position;
         PhotonNetwork.Destroy(controller);
-        CreateDeadBody(controller);
-        CreateGhostPlayer(controller);
+        CreateDeadBody(oldPosition);
+        CreateGhostPlayer(oldPosition);
     }
 
     public void GetVotedOff()
     {
-        FindObjectOfType<GameManager>().RemovePlayer(controller);
+        //FindObjectOfType<GameManager>().RemovePlayer(controller);
+        Vector3 oldPosition = controller.transform.position;
         PhotonNetwork.Destroy(controller);
-        CreateGhostPlayer(controller);
+        CreateGhostPlayer(oldPosition);
     }
 
-    void CreateDeadBody(GameObject oldController)
+    void CreateDeadBody(Vector3 position)
     {
-        Vector3 position = oldController.transform.position;
+        //Vector3 position = oldController.transform.position;
         GameObject deadBodyObject = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "DeadBody"), position, Quaternion.identity);
-      //  deadBodyObject.GetComponent<SkinSelect>().SetCharacterSkin();
+        //  deadBodyObject.GetComponent<SkinSelect>().SetCharacterSkin();
     }
 
-    void CreateGhostPlayer(GameObject oldController)
+    void CreateGhostPlayer(Vector3 position)
     {
-        Vector3 position = new Vector3(oldController.transform.position.x, oldController.transform.position.y + 1f, oldController.transform.position.z);
+        // position = new Vector3(oldController.transform.position.x, oldController.transform.position.y + 1f, oldController.transform.position.z);
         controller = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "GhostPlayer"), position, Quaternion.identity, 0, new object[] { pv.ViewID });
-      //  controller.GetComponent<SkinSelect>().SetCharacterSkin();
+        //  controller.GetComponent<SkinSelect>().SetCharacterSkin();
     }
 
 

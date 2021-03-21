@@ -427,7 +427,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable
     {
         if (!pv.IsMine) return;
         minigameInterrupt = true;
-        mapMan.ResetMap();
+        mapMan.InitiateMapReset();
         playerMan.Die();
     }
 
