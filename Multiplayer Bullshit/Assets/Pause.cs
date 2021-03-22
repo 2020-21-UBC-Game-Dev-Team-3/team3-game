@@ -35,7 +35,7 @@ public class Pause : MonoBehaviour
 
     void OpenPauseMenu()
     {
-        Time.timeScale = 0.0f;
+        //Time.timeScale = 0.0f;
         Canvas.SetActive(true);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Locked;
@@ -45,7 +45,7 @@ public class Pause : MonoBehaviour
     
     void ClosePauseMenu()
     {
-        Time.timeScale = 1.0f;
+       // Time.timeScale = 1.0f;
         Canvas.SetActive(false);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Confined;
@@ -54,7 +54,7 @@ public class Pause : MonoBehaviour
     }
 
      public void Resume(){
-        Time.timeScale = 1.0f;
+        //Time.timeScale = 1.0f;
         Canvas.SetActive (false);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;

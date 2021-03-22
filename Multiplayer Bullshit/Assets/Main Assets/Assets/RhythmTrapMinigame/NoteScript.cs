@@ -7,6 +7,7 @@ public class NoteScript : MonoBehaviour
     Rigidbody2D rb;
     public float speed;
     
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
