@@ -230,7 +230,7 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
     {
         RemoveColorsTakenMaster();
         LoopForLeaveRoomColor(leavingColor);
-        PhotonNetwork.MasterClient.SetCustomProperties(ColorsTaken);
+       PhotonNetwork.MasterClient.SetCustomProperties(ColorsTaken);
     }
     public void LoopForLeaveRoomColor(string leavingColor)
     {
@@ -349,7 +349,10 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
                 Debug.Log(PhotonNetwork.MasterClient.CustomProperties["takenColor3"]);
                 Debug.Log(PhotonNetwork.MasterClient.CustomProperties["takenColor4"]);
                 Debug.Log(PhotonNetwork.MasterClient.CustomProperties["takenColor5"]);
-                Debug.Log(PhotonNetwork.MasterClient.CustomProperties["takenColor6"]);
+                Debug.Log(PhotonNetwork.MasterClient.CustomProperties["takenColor7"]);
+                Debug.Log(PhotonNetwork.MasterClient.CustomProperties["takenColor8"]);
+                Debug.Log(PhotonNetwork.MasterClient.CustomProperties["takenColor9"]);
+                Debug.Log(PhotonNetwork.MasterClient.CustomProperties["takenColor10"]);
                 Debug.Log("TakenColorList");
                 for (int x = 0; x < takenColors.Count; x++)
                 {
@@ -491,10 +494,10 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
         ColorsTaken.Add("takenColor4", PhotonNetwork.MasterClient.CustomProperties["takenColor4"]);
         ColorsTaken.Add("takenColor5", PhotonNetwork.MasterClient.CustomProperties["takenColor5"]);
         ColorsTaken.Add("takenColor6", PhotonNetwork.MasterClient.CustomProperties["takenColor6"]);
-        ColorsTaken.Add("takenColor6", PhotonNetwork.MasterClient.CustomProperties["takenColor7"]);
-        ColorsTaken.Add("takenColor6", PhotonNetwork.MasterClient.CustomProperties["takenColor8"]);
-        ColorsTaken.Add("takenColor6", PhotonNetwork.MasterClient.CustomProperties["takenColor9"]);
-        ColorsTaken.Add("takenColor6", PhotonNetwork.MasterClient.CustomProperties["takenColor10"]);
+        ColorsTaken.Add("takenColor7", PhotonNetwork.MasterClient.CustomProperties["takenColor7"]);
+        ColorsTaken.Add("takenColor8", PhotonNetwork.MasterClient.CustomProperties["takenColor8"]);
+        ColorsTaken.Add("takenColor9", PhotonNetwork.MasterClient.CustomProperties["takenColor9"]);
+        ColorsTaken.Add("takenColor10", PhotonNetwork.MasterClient.CustomProperties["takenColor10"]);
     }
     public void RemoveDupes()
     {
