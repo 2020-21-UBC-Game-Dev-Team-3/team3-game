@@ -251,11 +251,6 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
         exitMinigame(false);
         currMinigameSceneName = "Rhythm Trap Minigame";
         SceneManager.LoadScene("Rhythm Trap Minigame", LoadSceneMode.Additive);
-        if (GetComponent<Role>().currRole == Role.Roles.Imposter) {
-          GetComponent<TrapAbility>().DecrementTraps();
-        }/* else {
-          FindObjectOfType<TrapAbility>().DecrementTraps(); // ASSUMES THERE IS ONLY 1 TRAPPER IN THE GAME
-        }*/
         break;
 
       case "Lifeboat minigame":

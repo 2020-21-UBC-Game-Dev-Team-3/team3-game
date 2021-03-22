@@ -65,7 +65,6 @@ public class Trap : Interactable {
 
   IEnumerator Despawn() {
     yield return new WaitForSeconds(timeBeforeDespawn);
-    FindObjectOfType<TrapAbility>().isTouchingTrap = false;
     Destroy();
   }
   // Destroys the trap
@@ -75,7 +74,8 @@ public class Trap : Interactable {
 
   [PunRPC]
   private void DestroyObject() {
-    FindObjectOfType<TrapAbility>().DecrementTraps(); // ASSUMES THERE IS ONLY 1 TRAPPER IN THE GAME
+    FindObjectOfType<TrapAbility>().isTouchingTrap = false;  // ASSUMES THERE IS ONLY 1 TRAPPER IN THE GAME
+    FindObjectOfType<TrapAbility>().DecrementTraps();  // ASSUMES THERE IS ONLY 1 TRAPPER IN THE GAME
     Destroy(gameObject);
   }
 }
