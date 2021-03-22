@@ -18,7 +18,7 @@ public class Trap : Interactable {
   [SerializeField] PlayerActionController pac;
 
   public float timeBeforeDespawn = 1f;
-  
+
   private void Start() {
     pv = GetComponent<PhotonView>();
     needle.material = transparent;
@@ -51,32 +51,25 @@ public class Trap : Interactable {
       //indicator.SetActive(true);
       outline.enabled = true;
     }
-    
+
     // if other is a crewmate and not a Disarmer
     if (other.GetComponent<Role>().currRole == Role.Roles.Crewmate && !other.GetComponent<DisarmerAbility>().isActiveAndEnabled) {
       //other.GetComponent<PlayerActionController>().TakeHit();
       //Destroy();
-      if (SceneManager.sceneCount == 1) { 
-        pac.currMinigameSceneName = "Trap Chance Minigame"; 
+      if (SceneManager.sceneCount == 1) {
+        pac.currMinigameSceneName = "Trap Chance Minigame";
         pac.exitMinigame(false);
         SceneManager.LoadScene("Trap Chance Minigame", LoadSceneMode.Additive);
       }
-            
-            Destroy();
+      Destroy();
     }
   }
 
   IEnumerator Despawn() {
     yield return new WaitForSeconds(timeBeforeDespawn);
-    pv.RPC("RPC_Despawn", RpcTarget.All);
-  }
-
-  [PunRPC]
-  public void RPC_Despawn() {
+    FindObjectOfType<TrapAbility>().isTouchingTrap = false;
     Destroy();
-    FindObjectOfType<TrapAbility>().DecrementTraps(); // ASSUMES THERE IS ONLY 1 TRAPPER IN THE GAME
   }
-
   // Destroys the trap
   public void Destroy() {
     pv.RPC("DestroyObject", RpcTarget.All);
@@ -84,7 +77,7 @@ public class Trap : Interactable {
 
   [PunRPC]
   private void DestroyObject() {
-    Debug.Log("DESTROYING OBJECT");
-        Destroy(gameObject);
+    FindObjectOfType<TrapAbility>().DecrementTraps(); // ASSUMES THERE IS ONLY 1 TRAPPER IN THE GAME
+    Destroy(gameObject);
   }
 }
