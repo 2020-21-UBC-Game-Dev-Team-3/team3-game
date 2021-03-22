@@ -265,7 +265,7 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
         PlayerCustomProperties.Remove("color");
         if (PhotonNetwork.IsMasterClient)
         {
-            pv.RPC("KickAll", RpcTarget.Others);
+            //pv.RPC("KickAll", RpcTarget.Others);
             pv.RPC("HostLeftLog", RpcTarget.Others);
             LoopForLeaveRoomButton();
         }
