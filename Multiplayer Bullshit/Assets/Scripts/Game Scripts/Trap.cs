@@ -16,6 +16,8 @@ public class Trap : Interactable {
 
   [SerializeField] PhotonView pv;
   [SerializeField] PlayerActionController pac;
+
+  public float timeBeforeDespawn = 1f;
   
   private void Start() {
     pv = GetComponent<PhotonView>();
@@ -24,6 +26,7 @@ public class Trap : Interactable {
     GetComponent<Collider>().enabled = false; // disables the collider
     StartCoroutine(CountdownBeforeActive());
     pac = GameObject.Find("player2(Clone)").GetComponent<PlayerActionController>();
+    StartCoroutine(Despawn());
   }
 
   void Update() {
@@ -63,8 +66,20 @@ public class Trap : Interactable {
     }
   }
 
+  IEnumerator Despawn() {
+    yield return new WaitForSeconds(timeBeforeDespawn);
+    pv.RPC("RPC_Despawn", RpcTarget.All);
+  }
+
+  [PunRPC]
+  public void RPC_Despawn() {
+    Destroy();
+    FindObjectOfType<TrapAbility>().DecrementTraps(); // ASSUMES THERE IS ONLY 1 TRAPPER IN THE GAME
+  }
+
+  // Destroys the trap
   public void Destroy() {
-        pv.RPC("DestroyObject", RpcTarget.All);
+    pv.RPC("DestroyObject", RpcTarget.All);
   }
 
   [PunRPC]

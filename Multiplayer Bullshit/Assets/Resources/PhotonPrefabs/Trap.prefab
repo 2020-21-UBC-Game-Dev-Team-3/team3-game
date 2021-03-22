@@ -90,6 +90,7 @@ MonoBehaviour:
   indicator: {fileID: 5604103059048159887}
   pv: {fileID: 0}
   pac: {fileID: 0}
+  timeBeforeDespawn: 40
 --- !u!114 &-4628447521987250238
 MonoBehaviour:
   m_ObjectHideFlags: 0
