@@ -20,6 +20,12 @@ public class ElevatorInteraction : MonoBehaviour
     }
     void Start()
     {
+
+        StartCoroutine(LateStart());
+    }
+    public IEnumerator LateStart()
+    {
+        yield return new WaitForSeconds(15);
         Elevator = GameObject.FindGameObjectWithTag("Elevator");
         floor1Button = GameObject.Find("Floor1Button");
         floor2Button = GameObject.Find("Floor2Button");

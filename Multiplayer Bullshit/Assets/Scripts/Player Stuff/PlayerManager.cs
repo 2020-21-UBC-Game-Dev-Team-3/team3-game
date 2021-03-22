@@ -51,7 +51,7 @@ public class PlayerManager : MonoBehaviour
         pv.RPC("IncrementPlayerNumber", RpcTarget.MasterClient);
         if (PhotonNetwork.IsMasterClient)
         {
-            PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Elevator"), vec, Quaternion.identity);
+            PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "Elevator"), vec, Quaternion.identity);
         }
     }
 

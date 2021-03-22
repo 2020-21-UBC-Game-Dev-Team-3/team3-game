@@ -6,8 +6,7 @@ using Photon.Pun;
 using Photon.Chat;
 using Photon.Realtime;
 using UnityEngine.UI;
-
-public class ElevatorScript : MonoBehaviour
+public class ElevatorScript : MonoBehaviourPunCallbacks
 {
     PhotonView pv;
     public GameObject door;
@@ -157,7 +156,7 @@ public class ElevatorScript : MonoBehaviour
         }
         if (bigDoorNumClose)
         {
-            if (bigDoorScale <= 1.2) { bigDoorScale += 0.05f; }
+            if (bigDoorScale <= 1.2f) { bigDoorScale += 0.05f; }
             if (bigDoor3.transform.localScale.y <= 1.2f) { bigDoor3.transform.localScale = new Vector3(1f, bigDoorScale, 1.2f); };
             if (bigDoor2.transform.localScale.y <= 1.2f) { bigDoor2.transform.localScale = new Vector3(1f, bigDoorScale, 1.2f); };
             if (bigDoor1.transform.localScale.y <= 1.2f) { bigDoor1.transform.localScale = new Vector3(1f, bigDoorScale, 1.2f); };
@@ -352,6 +351,23 @@ public class ElevatorScript : MonoBehaviour
     void OpenBigDoor(int i)
     {
         bigDoorNumOpen = i;
+    }
+    public void ChangeMasterClientifAvailble()
+    {
+        if (!PhotonNetwork.IsMasterClient)
+        {
+            return;
+        }
+        if (PhotonNetwork.PlayerList.Length <= 1)
+        {
+            return;
+        }
+
+        PhotonNetwork.SetMasterClient(PhotonNetwork.MasterClient.GetNext());
+    }
+    public override void OnDisconnected(DisconnectCause cause)
+    {
+
     }
 }
 
