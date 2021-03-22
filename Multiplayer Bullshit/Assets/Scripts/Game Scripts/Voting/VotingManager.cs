@@ -222,7 +222,7 @@ public class VotingManager : MonoBehaviour
     }
 
     [PunRPC]
-    void RemovePlayerFromVoting(Player player)
+    public void RemovePlayerFromVoting(Player player)
     {
         Debug.Log("Before removing player: " + playersAllowedToVote.Count);
         playersAllowedToVote.Remove(player);

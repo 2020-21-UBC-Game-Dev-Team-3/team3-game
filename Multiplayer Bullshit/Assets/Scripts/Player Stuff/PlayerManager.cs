@@ -71,6 +71,7 @@ public class PlayerManager : MonoBehaviour
     public void Die()
     {
         FindObjectOfType<GameManager>().RemovePlayer(controller);
+        controller.GetComponentInChildren<VotingManager>().GetComponent<PhotonView>().RPC("RemovePlayerFromVoting", RpcTarget.All, PhotonNetwork.LocalPlayer);
         Vector3 oldPosition = controller.transform.position;
         PhotonNetwork.Destroy(controller);
         CreateDeadBody(oldPosition);
