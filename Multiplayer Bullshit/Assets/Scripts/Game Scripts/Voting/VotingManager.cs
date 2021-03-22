@@ -27,7 +27,6 @@ public class VotingManager : MonoBehaviour
     private GameObject[] players;
     private void Awake()
     {
-        playersAllowedToVote = new List<Player>(PhotonNetwork.PlayerList);
         Debug.Log("Vote count: " + playersAllowedToVote.Count);
     }
 

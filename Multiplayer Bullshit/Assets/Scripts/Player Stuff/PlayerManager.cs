@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using System.IO;
-using UnityEngine.UI;
 using Photon.Realtime;
 
 public class PlayerManager : MonoBehaviour
@@ -49,11 +47,9 @@ public class PlayerManager : MonoBehaviour
     {
         Vector3 position = FindSpawnPoint();
         controller = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "player2"), position, Quaternion.identity, 0, new object[] { pv.ViewID });
+        controller.GetComponentInChildren<VotingManager>().playersAllowedToVote = new List<Player>(PhotonNetwork.PlayerList);
         pv.RPC("IncrementPlayerNumber", RpcTarget.MasterClient);
-        if (PhotonNetwork.IsMasterClient)
-        {
-            PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "Elevator"), vec, Quaternion.identity);
-        }
+        if (PhotonNetwork.IsMasterClient) PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "Elevator"), vec, Quaternion.identity);
     }
 
     public void GiveCharacterSkinToController(string skinName)
@@ -109,8 +105,8 @@ public class PlayerManager : MonoBehaviour
     }
 
     [PunRPC]
-    public void RemovedDeadPlayerFromVoting(Player player)
+    public void RemovedDeadPlayerFromVoting()
     {
-        controller.GetComponentInChildren<VotingManager>().playersAllowedToVote.Remove(player);
+        controller.GetComponentInChildren<VotingManager>().playersAllowedToVote.Remove(PhotonNetwork.LocalPlayer);
     }
 }
