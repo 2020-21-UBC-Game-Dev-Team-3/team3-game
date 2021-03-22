@@ -20,7 +20,7 @@ public class VotingManager : MonoBehaviour
     //[SerializeField] private PlayerMovementController playerMovementController;
     [SerializeField] private GameObject skipBoxIconArea;
     [SerializeField] private GameObject playerBoxes;
-    private List<Player> playersAllowedToVote;
+    [HideInInspector] public List<Player> playersAllowedToVote;
     //  private List<Player> playersNotAllowedToVote;
     public List<AudioSource> meetingAudios;
     public List<AudioSource> bgmAudios;

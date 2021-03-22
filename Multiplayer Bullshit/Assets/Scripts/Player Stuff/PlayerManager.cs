@@ -4,6 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using System.IO;
 using UnityEngine.UI;
+using Photon.Realtime;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -71,7 +72,7 @@ public class PlayerManager : MonoBehaviour
     public void Die()
     {
         FindObjectOfType<GameManager>().RemovePlayer(controller);
-        controller.GetComponentInChildren<VotingManager>().GetComponent<PhotonView>().RPC("RemovePlayerFromVoting", RpcTarget.All, PhotonNetwork.LocalPlayer);
+        pv.RPC("RemovedDeadPlayerFromVoting", RpcTarget.All);
         Vector3 oldPosition = controller.transform.position;
         PhotonNetwork.Destroy(controller);
         CreateDeadBody(oldPosition);
@@ -105,5 +106,11 @@ public class PlayerManager : MonoBehaviour
     void IncrementPlayerNumber()
     {
         GameObject.FindObjectOfType<RoleRandomizer>().numberOfPlayersAddedSoFar++;
+    }
+
+    [PunRPC]
+    public void RemovedDeadPlayerFromVoting(Player player)
+    {
+        controller.GetComponentInChildren<VotingManager>().playersAllowedToVote.Remove(player);
     }
 }
