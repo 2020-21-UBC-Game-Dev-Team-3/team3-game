@@ -36,11 +36,9 @@ public class TrapAbility : RoleAbility {
 
   [PunRPC]
   public void RPC_DecrementTraps() {
-    if (trapperUI == null) return;
+    if (!isActiveAndEnabled) return;
     currNumberTraps--;
     trapperUI.SetText("Traps active: " + currNumberTraps.ToString() + "/" + maxNumberTraps.ToString());
-    if (isTouchingTrap) {
-      isTouchingTrap = false;
-    }
+    isTouchingTrap = false;
   }
 }

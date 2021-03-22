@@ -54,12 +54,12 @@ public class Trap : Interactable {
 
     // if other is a crewmate and not a Disarmer
     if (other.GetComponent<Role>().currRole == Role.Roles.Crewmate && !other.GetComponent<DisarmerAbility>().isActiveAndEnabled) {
-      Destroy();
       if (SceneManager.sceneCount == 1) {
         pac.currMinigameSceneName = "Trap Chance Minigame";
         pac.exitMinigame(false);
         SceneManager.LoadScene("Trap Chance Minigame", LoadSceneMode.Additive);
       }
+      Destroy();
     }
   }
 
@@ -74,8 +74,7 @@ public class Trap : Interactable {
 
   [PunRPC]
   private void DestroyObject() {
-    FindObjectOfType<TrapAbility>().isTouchingTrap = false;  // ASSUMES THERE IS ONLY 1 TRAPPER IN THE GAME
-    FindObjectOfType<TrapAbility>().DecrementTraps();  // ASSUMES THERE IS ONLY 1 TRAPPER IN THE GAME
+    FindObjectOfType<TrapAbility>().DecrementTraps();
     Destroy(gameObject);
   }
 }
