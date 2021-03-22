@@ -47,7 +47,6 @@ public class PlayerManager : MonoBehaviour
     {
         Vector3 position = FindSpawnPoint();
         controller = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "player2"), position, Quaternion.identity, 0, new object[] { pv.ViewID });
-        controller.GetComponentInChildren<VotingManager>().playersAllowedToVote = new List<Player>(PhotonNetwork.PlayerList);
         pv.RPC("IncrementPlayerNumber", RpcTarget.MasterClient);
         if (PhotonNetwork.IsMasterClient) PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "Elevator"), vec, Quaternion.identity);
     }
@@ -107,6 +106,8 @@ public class PlayerManager : MonoBehaviour
     [PunRPC]
     public void RemovedDeadPlayerFromVoting()
     {
+        Debug.Log("Begin removing player now");
+        Debug.Log("Voting manager is null? " + controller.GetComponentInChildren<VotingManager>() != null);
         controller.GetComponentInChildren<VotingManager>().playersAllowedToVote.Remove(PhotonNetwork.LocalPlayer);
     }
 }

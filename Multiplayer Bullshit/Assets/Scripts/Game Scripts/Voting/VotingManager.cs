@@ -25,8 +25,14 @@ public class VotingManager : MonoBehaviour
     public List<AudioSource> meetingAudios;
     public List<AudioSource> bgmAudios;
     private GameObject[] players;
+
+    public VotingManager()
+    {
+        if (playersAllowedToVote == null) playersAllowedToVote = new List<Player>(PhotonNetwork.PlayerList);
+    }
     private void Awake()
     {
+       // playersAllowedToVote = new List<Player>(PhotonNetwork.PlayerList);
         Debug.Log("Vote count: " + playersAllowedToVote.Count);
     }
 
