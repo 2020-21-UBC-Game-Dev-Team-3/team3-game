@@ -67,7 +67,7 @@ public class PlayerManager : MonoBehaviour
     public void Die()
     {
         FindObjectOfType<GameManager>().RemovePlayer(controller);
-        pv.RPC("RemovedDeadPlayerFromVoting", RpcTarget.All);
+        pv.RPC("RemovedDeadPlayerFromVoting", RpcTarget.All, PhotonNetwork.LocalPlayer);
         Vector3 oldPosition = controller.transform.position;
         PhotonNetwork.Destroy(controller);
         CreateDeadBody(oldPosition);
@@ -104,10 +104,10 @@ public class PlayerManager : MonoBehaviour
     }
 
     [PunRPC]
-    public void RemovedDeadPlayerFromVoting()
+    public void RemovedDeadPlayerFromVoting(Player player)
     {
         Debug.Log("Begin removing player now");
-        Debug.Log("Voting manager is null? " + controller.GetComponentInChildren<VotingManager>() != null);
-        controller.GetComponentInChildren<VotingManager>().playersAllowedToVote.Remove(PhotonNetwork.LocalPlayer);
+        Debug.Log("Player allowed to vote is null? " + controller.GetComponentInChildren<VotingManager>().playersAllowedToVote != null);
+        controller.GetComponentInChildren<VotingManager>().playersAllowedToVote.Remove(player);
     }
 }
