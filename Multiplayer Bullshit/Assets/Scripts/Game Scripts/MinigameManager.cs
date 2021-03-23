@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Photon.Pun;
 
 public class MinigameManager : MonoBehaviour
 {
     bool taskListOpen = true;
     GameObject taskList;
     int minigameMax = 3;
+
+    PhotonView pv;
+    PlayerManager localPM;
 
     string dartsText = "Take a break and play some darts (Arcade 3F)";
     string drinksText = "Mix yourself a cold and refreshing drink (Bar 2F)";
@@ -17,20 +21,33 @@ public class MinigameManager : MonoBehaviour
 
     public List<string> assignedMinigames = new List<string>();
     public List<string> availableMinigames = new List<string>();
-    public List<TextMeshProUGUI> tasksText = new List<TextMeshProUGUI>();
+    public List<string> completedMinigames = new List<string>();
+    List<TextMeshProUGUI> tasksText = new List<TextMeshProUGUI>();
 
     void Awake()
     {
         availableMinigames.AddRange(new string[] { "Darts minigame", "Drink mixing minigame", "Iceberg minigame", "Lifeboat minigame", "Scavenger hunt minigame" });
-        //taskList = GameObject.Find("Task List");
-        //tasksText.AddRange(taskList.GetComponentsInChildren<TextMeshProUGUI>());
+        pv = GetComponent<PhotonView>();
+        localPM = PhotonView.Find((int)pv.InstantiationData[0]).GetComponent<PlayerManager>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        RandomizeMinigames();
-        //SetTasksText();
+        if (gameObject.tag == "Ghost")
+        {
+            RetrieveTasks();
+            assignedMinigames.AddRange(completedMinigames);
+            SetUpTaskList();
+            foreach (string minigame in completedMinigames) UpdateTaskComplete(minigame);
+        }
+        else RandomizeMinigames();
+    }
+
+    void RetrieveTasks()
+    {
+        assignedMinigames = localPM.playerTasksRemaining;
+        completedMinigames = localPM.playerTasksCompleted;
     }
 
     void RandomizeMinigames()
@@ -41,41 +58,43 @@ public class MinigameManager : MonoBehaviour
             assignedMinigames.Add(availableMinigames[rng]);
             availableMinigames.RemoveAt(rng);
         }
+
+        localPM.playerTasksRemaining = assignedMinigames;
     }
 
     public void SetUpMinigameAssignment()
     {
         taskList = GameObject.Find("Task List");
         tasksText.AddRange(taskList.GetComponentsInChildren<TextMeshProUGUI>());
-        SetTasksText();
+        SetUpTaskList();
     }
 
-    void SetTasksText()
+    void SetUpTaskList()
     {
         for (int i = 0; i < tasksText.Count; i++)
         {
-            switch(assignedMinigames[i])
+            switch (assignedMinigames[i])
             {
                 case "Darts minigame":
                     tasksText[i].text = dartsText;
-                    break;                
-                
+                    break;
+
                 case "Drink mixing minigame":
                     tasksText[i].text = drinksText;
-                    break;                
-                
+                    break;
+
                 case "Iceberg minigame":
                     tasksText[i].text = icebergsText;
-                    break;                
-                
+                    break;
+
                 case "Lifeboat minigame":
                     tasksText[i].text = lifeboatText;
-                    break;                
-                
+                    break;
+
                 case "Scavenger hunt minigame":
                     tasksText[i].text = scavengerText;
                     break;
-                                
+
                 default:
                     break;
             }
@@ -84,14 +103,19 @@ public class MinigameManager : MonoBehaviour
 
     public bool IsAssignedMinigame(string minigame) => assignedMinigames.Contains(minigame);
 
-    public void OnMinigameComplete(string minigame) 
-    { 
+    public void OnMinigameComplete(string minigame)
+    {
         assignedMinigames.Remove(minigame);
 
-        //Debug.Log(assignedMinigames.Contains(minigame));
+        localPM.UpdateTasksOnPlayerManager(minigame);
 
-        string updatedTaskText = null;
+        UpdateTaskComplete(minigame);
+    }
 
+
+    void UpdateTaskComplete(string minigame)
+    {
+        string updatedTaskText;
         switch (minigame)
         {
             case "Darts minigame":

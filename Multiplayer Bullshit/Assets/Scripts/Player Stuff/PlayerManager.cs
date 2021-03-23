@@ -14,7 +14,7 @@ public class PlayerManager : MonoBehaviour
     public List<string> playerTasksRemaining = new List<string>();
     public List<string> playerTasksCompleted = new List<string>();
 
-    public string playerSkinName;
+    public string playerSkinName = "SChef";
 
     //singleton instance of player manager
     public static PlayerManager instanceLocalPM;
@@ -63,6 +63,11 @@ public class PlayerManager : MonoBehaviour
         controller.GetComponent<SkinSelect>().SetCharacterSkin();
     }
 
+    public void UpdateTasksOnPlayerManager(string minigame)
+    {
+        playerTasksRemaining.Remove(minigame);
+        playerTasksCompleted.Add(minigame);
+    }
 
     public void Die()
     {

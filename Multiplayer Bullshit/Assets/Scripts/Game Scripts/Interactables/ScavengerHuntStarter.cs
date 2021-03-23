@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScavengerHuntStarter : Interactable {
+public class ScavengerHuntStarter : TaskInteractable {
 
   [SerializeField] Transform[] transforms = new Transform[7];
   [SerializeField] ScavengerProgressUI scavengerProgressUI;
