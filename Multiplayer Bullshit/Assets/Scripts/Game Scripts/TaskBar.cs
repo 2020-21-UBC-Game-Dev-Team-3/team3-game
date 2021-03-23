@@ -45,10 +45,14 @@ public class TaskBar : MonoBehaviour {
 
   [PunRPC] 
   void UpdateTextBox() {
+    count++;
     if (count < 10) {
-      count++;
       slider.value = count;
       taskProgress.text = "Tasks Completed: " + count.ToString() + "/" + "10";
+    } else {
+      slider.value = count;
+      taskProgress.text = "Tasks Completed: " + count.ToString() + "/" + "10";
+      FindObjectOfType<GameManager>().CrewmateWin();
     }
   }
 }
