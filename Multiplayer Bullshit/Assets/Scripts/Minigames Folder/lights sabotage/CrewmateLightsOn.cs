@@ -10,7 +10,7 @@ public class CrewmateLightsOn : MonoBehaviour
     public Volume volume;
     //public double exposureValue = -1.5;
     public double vignettevalue = 0.8;
-    public Vector4 gainvalue = new Vector4(.2f, .2f, .2f, .2f);
+    public Vector4 gainvalue = new Vector4(.3f, .3f, .3f, .3f);
     public double chromaticaberrationvalue = .99;
     //ColorAdjustments coloradjustments;
     public Vignette vignette;
@@ -21,7 +21,9 @@ public class CrewmateLightsOn : MonoBehaviour
     void Start()
     {
         //exposureValue = -1.5;
-        vignettevalue = 0.55;
+        vignettevalue = 0.8;
+        chromaticaberrationvalue = .99;
+        liftgammagain.gain.value = gainvalue;
         //volume.profile.TryGet<ColorAdjustments>(out coloradjustments);
         volume.profile.TryGet<Vignette>(out vignette);
 
@@ -33,7 +35,7 @@ public class CrewmateLightsOn : MonoBehaviour
 
         vignettevalue = 0.8;
         chromaticaberrationvalue = .99;
-        gainvalue = new Vector4(.2f, .2f, .2f, .2f);
+        liftgammagain.gain.value = gainvalue;
     }
 
     void Update()
