@@ -10,7 +10,7 @@ public class CrewmateLightsOn : MonoBehaviour
     public Volume volume;
     public double vignettevalue = 0.8;
     public double chromaticaberrationvalue = .99;
-    public double gainvalue = 1;
+    public float gainvalue = 1f;
     public Vignette vignette;
     public ChromaticAberration chromaticaberration;
     public LiftGammaGain liftgammagain;
@@ -31,18 +31,18 @@ public class CrewmateLightsOn : MonoBehaviour
     {
         vignettevalue = 0.8;
         chromaticaberrationvalue = .99;
-        gainvalue = 1;
+        gainvalue = 1f;
     }
 
     void Update()
     {
-        liftgammagain.gain.value = new Vector3((float)gainvalue, (float)gainvalue, (float)gainvalue);
+        liftgammagain.gain.value = new Vector3(gainvalue, gainvalue, gainvalue);
 
-        chromaticaberration.intensity.value = (float)(chromaticaberrationvalue -= .20 * Time.deltaTime);
+        chromaticaberration.intensity.value = (float)(chromaticaberrationvalue -= .40 * Time.deltaTime);
 
         if (chromaticaberrationvalue <= .1)
         {
-            chromaticaberrationvalue = .0;
+            chromaticaberrationvalue = 0;
         }
 
         vignette.intensity.value = (float)(vignettevalue -= .20 * Time.deltaTime);

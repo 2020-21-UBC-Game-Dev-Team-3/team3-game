@@ -11,7 +11,7 @@ public class crewmateLightsOut : MonoBehaviour
     public Volume volume;
     public double vignettevalue = 0.2;
     public double chromaticaberrationvalue = 0;
-    public double gainvalue = .2;
+    public float gainvalue = .2f;
     public Vignette vignette;
     public ChromaticAberration chromaticaberration;
     public PlayMakerFSM myFSM;
@@ -30,13 +30,13 @@ public class crewmateLightsOut : MonoBehaviour
     {
         vignettevalue = 0.2;
         chromaticaberrationvalue = 0;
-        gainvalue = .2;
+        gainvalue = .2f;
     }
 
 
     void Update()
     {
-        liftgammagain.gain.value = new Vector3((float)gainvalue, (float)gainvalue, (float)gainvalue);
+        liftgammagain.gain.value = new Vector3(gainvalue, gainvalue, gainvalue);
 
      
         vignette.intensity.value = (float)(vignettevalue += .20 * Time.deltaTime);
