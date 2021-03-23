@@ -25,7 +25,7 @@ public class VotingManager : MonoBehaviour
     public List<AudioSource> meetingAudios;
     public List<AudioSource> bgmAudios;
     private GameObject[] players;
-
+    private PlayerManager playerManager;
 
     private void Awake()
     {
@@ -55,7 +55,7 @@ public class VotingManager : MonoBehaviour
         }
         foreach (Player player in PhotonNetwork.PlayerList)
         {
-            bool isPlayerAllowedToVote = PhotonView.Find((int)pv.InstantiationData[0]).GetComponent<PlayerManager>().IsPlayerAllowedToVote(player);
+            bool isPlayerAllowedToVote = playerManager.IsPlayerAllowedToVote(player);
             Debug.Log(player.NickName + " is allowed to vote: " + isPlayerAllowedToVote);
             foreach (KeyValuePair<GameObject, bool> section in playerVotingSections)
             {
@@ -154,7 +154,7 @@ public class VotingManager : MonoBehaviour
     private void IsVotingFinished()
     {
         numOfPlayersVotedSoFar++;
-        if (numOfPlayersVotedSoFar >= PhotonView.Find((int)pv.InstantiationData[0]).GetComponent<PlayerManager>().playersAllowedToVote.Count)
+        if (numOfPlayersVotedSoFar >= playerManager.playersAllowedToVote.Count)
         {
             Debug.Log("Compare votes");
             pv.RPC("CompareVotes", RpcTarget.MasterClient);
@@ -220,7 +220,7 @@ public class VotingManager : MonoBehaviour
     {
       //  pv.RPC("RemovePlayerFromVoting", RpcTarget.All, PhotonNetwork.LocalPlayer);
         transform.parent.GetComponentInParent<MapManager>().InitiateMapReset();
-        PhotonView.Find((int)pv.InstantiationData[0]).GetComponent<PlayerManager>().GetVotedOff();
+        playerManager.GetVotedOff();
     }
 
     [PunRPC]
@@ -235,6 +235,7 @@ public class VotingManager : MonoBehaviour
     public void OnEnable()
     {
         //numOfPlayersNeededToVote = playersAllowedToVote.Count;
+        playerManager = PhotonView.Find((int)pv.InstantiationData[0]).GetComponent<PlayerManager>();
         SetupVoting();
     }
 
