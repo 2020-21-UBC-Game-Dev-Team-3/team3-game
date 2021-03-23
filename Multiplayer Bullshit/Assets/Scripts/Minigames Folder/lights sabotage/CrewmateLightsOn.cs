@@ -26,6 +26,8 @@ public class CrewmateLightsOn : MonoBehaviour
         liftgammagain.gain.value = gainvalue;
         //volume.profile.TryGet<ColorAdjustments>(out coloradjustments);
         volume.profile.TryGet<Vignette>(out vignette);
+        volume.profile.TryGet<ChromaticAberration>(out chromaticaberration);
+        volume.profile.TryGet<LiftGammaGain>(out liftgammagain);
 
     }
 
