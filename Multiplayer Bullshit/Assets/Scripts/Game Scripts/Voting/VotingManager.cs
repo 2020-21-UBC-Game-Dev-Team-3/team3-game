@@ -55,7 +55,7 @@ public class VotingManager : MonoBehaviour
         }
         foreach (Player player in PhotonNetwork.PlayerList)
         {
-            bool isPlayerAllowedToVote = PhotonView.Find((int)pv.InstantiationData[0]).GetComponent<PlayerManager>().playersAllowedToVote.Contains(player);
+            bool isPlayerAllowedToVote = PhotonView.Find((int)pv.InstantiationData[0]).GetComponent<PlayerManager>().IsPlayerAllowedToVote(player);
             Debug.Log(player.NickName + " is allowed to vote: " + isPlayerAllowedToVote);
             foreach (KeyValuePair<GameObject, bool> section in playerVotingSections)
             {

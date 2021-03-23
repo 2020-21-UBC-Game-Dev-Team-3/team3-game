@@ -99,6 +99,11 @@ public class PlayerManager : MonoBehaviour
         //  controller.GetComponent<SkinSelect>().SetCharacterSkin();
     }
 
+    public bool IsPlayerAllowedToVote(Player player)
+    {
+        return playersAllowedToVote.Contains(player);
+    }
+
 
     [PunRPC]
     void IncrementPlayerNumber()
