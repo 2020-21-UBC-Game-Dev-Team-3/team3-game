@@ -9,7 +9,7 @@ public class CrewmateLightsOn : MonoBehaviour
 {
     public Volume volume;
     //public double exposureValue = -1.5;
-    public double vignettevalue = 0.55;
+    public double vignettevalue = 0.8;
     public Vector4 gainvalue = new Vector4(.2f, .2f, .2f, .2f);
     public double chromaticaberrationvalue = .99;
     //ColorAdjustments coloradjustments;
@@ -31,7 +31,7 @@ public class CrewmateLightsOn : MonoBehaviour
     {
         //exposureValue = -1.5;
 
-        vignettevalue = 0.55;
+        vignettevalue = 0.8;
         chromaticaberrationvalue = .99;
         gainvalue = new Vector4(.2f, .2f, .2f, .2f);
     }
@@ -50,7 +50,7 @@ public class CrewmateLightsOn : MonoBehaviour
 
         if (chromaticaberrationvalue <= .1)
         {
-            vignettevalue = .0;
+            chromaticaberrationvalue = .0;
         }
 
         vignette.intensity.value = (float)(vignettevalue -= .20 * Time.deltaTime);
@@ -64,4 +64,4 @@ public class CrewmateLightsOn : MonoBehaviour
 
 
     }
-}
+

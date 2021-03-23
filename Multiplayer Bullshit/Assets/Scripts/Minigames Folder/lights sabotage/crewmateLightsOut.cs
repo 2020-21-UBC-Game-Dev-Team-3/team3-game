@@ -10,7 +10,7 @@ public class crewmateLightsOut : MonoBehaviour
 {
     public Volume volume;
     //public double exposureValue = .05;
-    public double vignettevalue = 0.15;
+    public double vignettevalue = 0.2;
     public Vector4 gainvalue = new Vector4(1,1,1,1);
     public double chromaticaberrationvalue = 0;
     //ColorAdjustments coloradjustments;
@@ -35,7 +35,7 @@ public class crewmateLightsOut : MonoBehaviour
     {
 
         liftgammagain.gain.value = gainvalue; 
-        vignettevalue = 0.15;
+        vignettevalue = 0.2;
         chromaticaberrationvalue = 0;
 
     }
@@ -44,25 +44,25 @@ public class crewmateLightsOut : MonoBehaviour
     void Update()
     {
 
-        liftgammagain.gain.value -= new Vector4(0.3f, 0.3f, 0.3f, 0.3f) * Time.deltaTime;
+        liftgammagain.gain.value -= new Vector4(0.1f, 0.1f, 0.1f, 0.1f) * Time.deltaTime;
 
-        if (liftgammagain.gain.value.magnitude <= new Vector4(0.2f, 0.2f, 0.2f, 0.2f).magnitude)
+        if (liftgammagain.gain.value.magnitude <= new Vector4(0.3f, 0.3f, 0.3f, 0.3f).magnitude)
         {
-            liftgammagain.gain.value = new Vector4(0.2f, 0.2f, 0.2f, 0.2f);
+            liftgammagain.gain.value = new Vector4(0.3f, 0.3f, 0.3f, 0.3f);
         }
 
        vignette.intensity.value = (float)(vignettevalue += .20 * Time.deltaTime);
 
-        if (vignettevalue >= .55)
+        if (vignettevalue >= .8)
         {
-            vignettevalue = .55;
+            vignettevalue = .8;
         }
 
        chromaticaberration.intensity.value = (float)(chromaticaberrationvalue += .20 * Time.deltaTime);
 
         if (chromaticaberrationvalue >= .99)
         {
-            vignettevalue = .99;
+            chromaticaberrationvalue = .99;
         }
 
 
