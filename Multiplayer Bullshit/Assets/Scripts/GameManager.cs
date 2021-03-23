@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviourPunCallbacks {
   public List<Transform> spawnLocations;
   [SerializeField] GameObject crewmateWinScreen;
   [SerializeField] GameObject imposterWinScreen;
-  [HideInInspector] public List<Player> playersAllowedToVote;
+  public List<Player> playersAllowedToVote;
 
     //List<string> availableImposterRoles = new List<string>();
     //List<string> availableCrewmateRoles = new List<string>();
@@ -41,7 +41,12 @@ public class GameManager : MonoBehaviourPunCallbacks {
   RoomManager roomMan;
   PhotonView pv;
 
-  void Start() {
+    private void Awake()
+    {
+        playersAllowedToVote = new List<Player>(PhotonNetwork.PlayerList);
+    }
+
+    void Start() {
     roomMan = FindObjectOfType<RoomManager>();
     pv = GetComponent<PhotonView>();
 

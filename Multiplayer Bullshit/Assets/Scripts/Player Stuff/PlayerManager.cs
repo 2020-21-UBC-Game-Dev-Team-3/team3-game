@@ -108,6 +108,6 @@ public class PlayerManager : MonoBehaviour
     public void RemovedDeadPlayerFromVoting(Player player)
     {
         Debug.Log("Begin removing player now");
-        GameObject.Find("Game Manager").GetComponent<GameManager>().playersAllowedToVote.Remove(player);
+        GameObject.Find("GameManager").GetComponent<GameManager>().playersAllowedToVote.Remove(player);
     }
 }

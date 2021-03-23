@@ -31,13 +31,13 @@ public class VotingManager : MonoBehaviour
     {
         // playersAllowedToVote = new List<Player>(PhotonNetwork.PlayerList);
         //Debug.Log("Vote count: " + playersAllowedToVote.Count);
-        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        pv = GetComponent<PhotonView>();
 
     }
 
     void Start()
     {
-        pv = GetComponent<PhotonView>();
         players = GameObject.FindGameObjectsWithTag("Player");
         foreach (GameObject p in players)
         {
