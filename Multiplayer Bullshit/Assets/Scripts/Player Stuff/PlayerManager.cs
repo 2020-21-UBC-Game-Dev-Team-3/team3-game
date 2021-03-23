@@ -18,14 +18,12 @@ public class PlayerManager : MonoBehaviour
 
     //singleton instance of player manager
     public static PlayerManager instanceLocalPM;
-    [HideInInspector] public List<Player> playersAllowedToVote;
 
     GameObject controller;
 
     void Awake()
     {
         pv = GetComponent<PhotonView>();
-        playersAllowedToVote = new List<Player>(PhotonNetwork.PlayerList);
         if (pv.IsMine) instanceLocalPM = this;
     }
 
@@ -99,11 +97,6 @@ public class PlayerManager : MonoBehaviour
         //  controller.GetComponent<SkinSelect>().SetCharacterSkin();
     }
 
-    public bool IsPlayerAllowedToVote(Player player)
-    {
-        return playersAllowedToVote.Contains(player);
-    }
-
 
     [PunRPC]
     void IncrementPlayerNumber()
@@ -115,7 +108,6 @@ public class PlayerManager : MonoBehaviour
     public void RemovedDeadPlayerFromVoting(Player player)
     {
         Debug.Log("Begin removing player now");
-        Debug.Log("Player allowed to vote is null? " + playersAllowedToVote != null);
-        playersAllowedToVote.Remove(player);
+        GameObject.Find("Game Manager").GetComponent<GameManager>().playersAllowedToVote.Remove(player);
     }
 }

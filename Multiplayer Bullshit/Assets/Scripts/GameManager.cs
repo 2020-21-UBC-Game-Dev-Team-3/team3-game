@@ -30,11 +30,12 @@ public class GameManager : MonoBehaviourPunCallbacks {
   public List<Transform> spawnLocations;
   [SerializeField] GameObject crewmateWinScreen;
   [SerializeField] GameObject imposterWinScreen;
+  [HideInInspector] public List<Player> playersAllowedToVote;
 
-  //List<string> availableImposterRoles = new List<string>();
-  //List<string> availableCrewmateRoles = new List<string>();
+    //List<string> availableImposterRoles = new List<string>();
+    //List<string> availableCrewmateRoles = new List<string>();
 
-  public int crewmates;
+    public int crewmates;
   public int imposters;
 
   RoomManager roomMan;
