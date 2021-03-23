@@ -5,7 +5,7 @@ using TMPro;
 
 public class MinigameManager : MonoBehaviour
 {
-    bool taskListOpen;
+    bool taskListOpen = true;
     GameObject taskList;
     int minigameMax = 3;
 
@@ -15,9 +15,9 @@ public class MinigameManager : MonoBehaviour
     string lifeboatText = "Help survivors onto the lifeboat (Lifeboats 1F)";
     string scavengerText = "Search for clues on the ship (Magnifying Glass 2F)";
 
-    List<string> assignedMinigames = new List<string>();
-    List<string> availableMinigames = new List<string>();
-    List<TextMeshProUGUI> tasksText = new List<TextMeshProUGUI>();
+    public List<string> assignedMinigames = new List<string>();
+    public List<string> availableMinigames = new List<string>();
+    public List<TextMeshProUGUI> tasksText = new List<TextMeshProUGUI>();
 
     void Awake()
     {

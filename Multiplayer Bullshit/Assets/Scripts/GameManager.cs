@@ -93,8 +93,11 @@ public class GameManager : MonoBehaviourPunCallbacks
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         foreach (var player in players)
         {
-            player.GetComponent<MinigameManager>().SetUpMinigameAssignment();
-            player.GetComponent<PlayerActionController>().OnStartGame();
+            if (player.GetComponent<PhotonView>().IsMine)
+            {
+                player.GetComponent<MinigameManager>().SetUpMinigameAssignment();
+                player.GetComponent<PlayerActionController>().OnStartGame();
+            }
         }
 
         invisWall1.SetActive(false);

@@ -593,6 +593,7 @@ MonoBehaviour:
   playerCamera: {fileID: 1976684064029000036}
   minimapCamera: {fileID: 6979622759835090274}
   playerIndicator: {fileID: 5364972399607504284}
+  TargetCamera: {fileID: 0}
   interactables: []
   moveSpeed: 6
 --- !u!114 &-1002286812453700745
@@ -737,6 +738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currRole: 0
+  subRole: 0
 --- !u!114 &8116951676583067669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -847,6 +849,10 @@ MonoBehaviour:
   emergencyMeetingImage: {fileID: 4163456015619971650}
   bodyReportedImage: {fileID: 3674460001212861253}
   votingManager: {fileID: 0}
+  reportedAudios: []
+  meetingAudios: []
+  bgmAudios: []
+  players: []
   interactable: {fileID: 0}
   pv: {fileID: 0}
   Vent1Pos: {fileID: 0}
@@ -856,9 +862,11 @@ MonoBehaviour:
   cam: {fileID: 0}
   reticle: {fileID: 0}
   sun: {fileID: 0}
-  currMinigame: 
+  currMinigameSceneName: 
+  currMinigameObjectName: 
   minigameInterrupt: 0
   tbIHolder: 0
+  dts: {fileID: 0}
 --- !u!114 &2777487066322967787
 MonoBehaviour:
   m_ObjectHideFlags: 0
