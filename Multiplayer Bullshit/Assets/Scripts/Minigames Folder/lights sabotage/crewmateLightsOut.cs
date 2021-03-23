@@ -9,10 +9,14 @@ using HutongGames.PlayMaker;
 public class crewmateLightsOut : MonoBehaviour
 {
     public Volume volume;
-    public double exposureValue = .05;
+    //public double exposureValue = .05;
     public double vignettevalue = 0.15;
-    ColorAdjustments coloradjustments;
-    Vignette vignette;
+    public Vector4 gainvalue = new Vector4(1,1,1,1);
+    public double chromaticaberrationvalue = 0;
+    //ColorAdjustments coloradjustments;
+    public Vignette vignette;
+    public ChromaticAberration chromaticaberration;
+    public LiftGammaGain liftgammagain;
     public PlayMakerFSM myFSM;
     
    
@@ -20,15 +24,19 @@ public class crewmateLightsOut : MonoBehaviour
     void Start()
     {
 
-        volume.profile.TryGet<ColorAdjustments>(out coloradjustments);
+        //volume.profile.TryGet<ColorAdjustments>(out coloradjustments);
         volume.profile.TryGet<Vignette>(out vignette);
+        volume.profile.TryGet<ChromaticAberration>(out chromaticaberration);
+        volume.profile.TryGet<LiftGammaGain>(out liftgammagain);
 
     }
 
     void ResetLights()
     {
-        exposureValue = .05;
+
+        liftgammagain.gain.value = gainvalue; 
         vignettevalue = 0.15;
+        chromaticaberrationvalue = 0;
 
     }
 
@@ -36,11 +44,11 @@ public class crewmateLightsOut : MonoBehaviour
     void Update()
     {
 
-        coloradjustments.postExposure.value = (float)(exposureValue -= 2.00 * Time.deltaTime);
+        liftgammagain.gain.value -= new Vector4(0.3f, 0.3f, 0.3f, 0.3f) * Time.deltaTime;
 
-        if (exposureValue <= -1.5)
+        if (liftgammagain.gain.value.magnitude <= new Vector4(0.2f, 0.2f, 0.2f, 0.2f).magnitude)
         {
-            exposureValue = -1.5;
+            liftgammagain.gain.value = new Vector4(0.2f, 0.2f, 0.2f, 0.2f);
         }
 
        vignette.intensity.value = (float)(vignettevalue += .20 * Time.deltaTime);
@@ -50,6 +58,12 @@ public class crewmateLightsOut : MonoBehaviour
             vignettevalue = .55;
         }
 
+       chromaticaberration.intensity.value = (float)(chromaticaberrationvalue += .20 * Time.deltaTime);
+
+        if (chromaticaberrationvalue >= .99)
+        {
+            vignettevalue = .99;
+        }
 
 
 

@@ -8,35 +8,49 @@ using HutongGames.PlayMaker;
 public class CrewmateLightsOn : MonoBehaviour
 {
     public Volume volume;
-    public double exposureValue = -1.5;
+    //public double exposureValue = -1.5;
     public double vignettevalue = 0.55;
-    ColorAdjustments coloradjustments;
-    Vignette vignette;
+    public Vector4 gainvalue = new Vector4(.2f, .2f, .2f, .2f);
+    public double chromaticaberrationvalue = .99;
+    //ColorAdjustments coloradjustments;
+    public Vignette vignette;
+    public ChromaticAberration chromaticaberration;
+    public LiftGammaGain liftgammagain;
 
     // Start is called before the first frame update
     void Start()
     {
-        exposureValue = -1.5;
+        //exposureValue = -1.5;
         vignettevalue = 0.55;
-        volume.profile.TryGet<ColorAdjustments>(out coloradjustments);
+        //volume.profile.TryGet<ColorAdjustments>(out coloradjustments);
         volume.profile.TryGet<Vignette>(out vignette);
 
     }
 
     void ResetLights2()
     {
-        exposureValue = -1.5;
+        //exposureValue = -1.5;
+
         vignettevalue = 0.55;
+        chromaticaberrationvalue = .99;
+        gainvalue = new Vector4(.2f, .2f, .2f, .2f);
     }
 
     void Update()
     {
 
-        coloradjustments.postExposure.value = (float)(exposureValue += 2.00 * Time.deltaTime);
+        liftgammagain.gain.value += new Vector4(0.3f, 0.3f, 0.3f, 0.3f) * Time.deltaTime;
 
-        if (exposureValue >= .05)
+        if (liftgammagain.gain.value.magnitude >= new Vector4(1f, 1f, 1f, 1f).magnitude)
         {
-            exposureValue = .05;
+            liftgammagain.gain.value = new Vector4(1f, 1f, 1f, 1f);
+        }
+
+        chromaticaberration.intensity.value = (float)(chromaticaberrationvalue -= .20 * Time.deltaTime);
+
+        if (chromaticaberrationvalue <= .1)
+        {
+            vignettevalue = .0;
         }
 
         vignette.intensity.value = (float)(vignettevalue -= .20 * Time.deltaTime);
@@ -45,7 +59,7 @@ public class CrewmateLightsOn : MonoBehaviour
         {
             vignettevalue = .2;
         }
-
+    }
 
 
 

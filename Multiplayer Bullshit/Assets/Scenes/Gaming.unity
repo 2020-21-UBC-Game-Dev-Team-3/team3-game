@@ -356,7 +356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previewOnGUI: 1
   enableGUILayout: 1
-  drawStateLabels: 1
+  drawStateLabels: 0
   enableStateLabelsInBuilds: 0
   GUITextureStateLabels: 0
   GUITextStateLabels: 0
@@ -2288,8 +2288,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volume: {fileID: 194336051}
-  exposureValue: 0.05
   vignettevalue: 0.15
+  gainvalue: {x: 1, y: 1, z: 1, w: 1}
+  chromaticaberrationvalue: 0
   myFSM: {fileID: 0}
 --- !u!114 &194336056
 MonoBehaviour:
