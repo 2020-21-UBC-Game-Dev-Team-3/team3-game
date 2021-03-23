@@ -12,10 +12,13 @@ public class ChameleonAbility : RoleAbility
     GameObject reticle;
     Vector3 reticlePosition;
 
+    public PhotonView photonView;
+
     private void Awake()
     {
-        cooldownTimer = 15;
+        cooldownTimer = 0;
         StartCoroutine(InitiateCooldown());
+        photonView = GetComponent<PhotonView>();
     }
 
     private void Start()
@@ -38,7 +41,8 @@ public class ChameleonAbility : RoleAbility
 
             if (hit.collider.CompareTag("Player") && !hit.collider.gameObject.GetComponent<PhotonView>().IsMine)
             {
-                pv.RPC("KillTarget", RpcTarget.All, hit.collider.gameObject.GetComponent<PhotonView>().ViewID);
+                Debug.Log(hit.collider.gameObject.GetComponent<PhotonView>().ViewID);
+                photonView.RPC("KillTarget", RpcTarget.All, hit.collider.gameObject.GetComponent<PhotonView>().ViewID);
                 yield return StartCoroutine(StartChameleon());
                 yield return StartCoroutine(InitiateCooldown());
             }
@@ -56,9 +60,9 @@ public class ChameleonAbility : RoleAbility
     {
 
         cam.cullingMask |= 1 << LayerMask.NameToLayer("Chameleon");
-        pv.RPC("OnChameleon", RpcTarget.All);
+        photonView.RPC("OnChameleon", RpcTarget.All);
         yield return new WaitForSeconds(8);
-        pv.RPC("OffChameleon", RpcTarget.All);
+        photonView.RPC("OffChameleon", RpcTarget.All);
 
     }
 

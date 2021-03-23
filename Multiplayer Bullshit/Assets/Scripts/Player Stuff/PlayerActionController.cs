@@ -104,6 +104,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
 
       case Role.Roles.Chameleon:
         ability = GetComponent<ChameleonAbility>();
+        reticle.SetActive(true);
         ability.enabled = true;
         break;
 
@@ -423,7 +424,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
   public void exitMinigame(bool exiting) {
     cam.SetActive(exiting);
     if (minimap != null) minimap.SetActive(exiting);
-    //reticle.SetActive(exiting);
+    if (GetComponent<Role>().subRole == Role.Roles.Assassin || GetComponent<Role>().subRole == Role.Roles.Chameleon) reticle.SetActive(exiting);
     sun.SetActive(exiting);
     GetComponents<PlayMakerFSM>()[0].enabled = exiting;
     GetComponent<PlayMakerFixedUpdate>().enabled = exiting;

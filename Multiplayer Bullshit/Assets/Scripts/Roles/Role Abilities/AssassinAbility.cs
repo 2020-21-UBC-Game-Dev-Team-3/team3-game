@@ -16,9 +16,12 @@ public class AssassinAbility : RoleAbility
     GameObject reticle;
     Vector3 reticlePosition;
 
+    PhotonView photonView;
+
     private void Awake()
     {
         StartCoroutine(InitiateCooldown());
+        photonView = GetComponent<PhotonView>();
     }
 
     private void Start()
@@ -39,20 +42,21 @@ public class AssassinAbility : RoleAbility
         {
             Debug.Log(hit.collider.gameObject.name);
             
-            if(hit.collider.CompareTag("Player") && !hit.collider.gameObject.GetComponent<PhotonView>().IsMine 
-                && hit.collider.gameObject.GetComponent<Role>().currRole == Role.Roles.Crewmate)
+            if(hit.collider.CompareTag("Player") && !hit.collider.gameObject.GetComponent<PhotonView>().IsMine) 
+                //&& hit.collider.gameObject.GetComponent<Role>().currRole == Role.Roles.Crewmate)
             {
-                pv.RPC("ShurikenTravel", RpcTarget.All, hit.collider.gameObject);
+                photonView.RPC("ShurikenTravel", RpcTarget.All, hit.collider.gameObject.GetComponent<PhotonView>().ViewID);
                 yield return StartCoroutine(InitiateCooldown());
             }
         }
     }
 
     [PunRPC]
-    public void ShurikenTravel(GameObject targetPlayer)
+    public void ShurikenTravel(int targetID)
     {
+        if (!photonView.IsMine) return;
         shurikenObject = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Assassin Shuriken"), shurikenTransform.position, Quaternion.identity);
-        shurikenObject.GetComponent<Shuriken>().target = targetPlayer;
+        shurikenObject.GetComponent<Shuriken>().target = PhotonView.Find(targetID).transform;
     }
 
 }

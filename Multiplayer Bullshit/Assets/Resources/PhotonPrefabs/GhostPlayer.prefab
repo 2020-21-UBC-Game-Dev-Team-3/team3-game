@@ -5634,6 +5634,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d0b03fa620c1a74da8245d780bf9bd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  assignedMinigames: []
+  availableMinigames: []
+  tasksText: []
 --- !u!1 &3412783395799952387
 GameObject:
   m_ObjectHideFlags: 0
