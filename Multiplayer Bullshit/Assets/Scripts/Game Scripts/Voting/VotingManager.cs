@@ -20,7 +20,7 @@ public class VotingManager : MonoBehaviour
     //[SerializeField] private PlayerMovementController playerMovementController;
     [SerializeField] private GameObject skipBoxIconArea;
     [SerializeField] private GameObject playerBoxes;
-    [HideInInspector] public List<Player> playersAllowedToVote = new List<Player>(PhotonNetwork.PlayerList);
+//    [HideInInspector] public List<Player> playersAllowedToVote;
     //  private List<Player> playersNotAllowedToVote;
     public List<AudioSource> meetingAudios;
     public List<AudioSource> bgmAudios;
@@ -29,8 +29,8 @@ public class VotingManager : MonoBehaviour
 
     private void Awake()
     {
-        playersAllowedToVote = new List<Player>(PhotonNetwork.PlayerList);
-        Debug.Log("Vote count: " + playersAllowedToVote.Count);
+       // playersAllowedToVote = new List<Player>(PhotonNetwork.PlayerList);
+        //Debug.Log("Vote count: " + playersAllowedToVote.Count);
     }
 
     void Start()
@@ -55,7 +55,7 @@ public class VotingManager : MonoBehaviour
         }
         foreach (Player player in PhotonNetwork.PlayerList)
         {
-            bool isPlayerAllowedToVote = playersAllowedToVote.Contains(player);
+            bool isPlayerAllowedToVote = PhotonView.Find((int)pv.InstantiationData[0]).GetComponent<PlayerManager>().playersAllowedToVote.Contains(player);
             Debug.Log(player.NickName + " is allowed to vote: " + isPlayerAllowedToVote);
             foreach (KeyValuePair<GameObject, bool> section in playerVotingSections)
             {
@@ -154,7 +154,7 @@ public class VotingManager : MonoBehaviour
     private void IsVotingFinished()
     {
         numOfPlayersVotedSoFar++;
-        if (numOfPlayersVotedSoFar >= playersAllowedToVote.Count)
+        if (numOfPlayersVotedSoFar >= PhotonView.Find((int)pv.InstantiationData[0]).GetComponent<PlayerManager>().playersAllowedToVote.Count)
         {
             Debug.Log("Compare votes");
             pv.RPC("CompareVotes", RpcTarget.MasterClient);
@@ -218,7 +218,7 @@ public class VotingManager : MonoBehaviour
     [PunRPC]
     private void KillCurrPlayer()
     {
-        pv.RPC("RemovePlayerFromVoting", RpcTarget.All, PhotonNetwork.LocalPlayer);
+      //  pv.RPC("RemovePlayerFromVoting", RpcTarget.All, PhotonNetwork.LocalPlayer);
         transform.parent.GetComponentInParent<MapManager>().InitiateMapReset();
         PhotonView.Find((int)pv.InstantiationData[0]).GetComponent<PlayerManager>().GetVotedOff();
     }
@@ -226,9 +226,9 @@ public class VotingManager : MonoBehaviour
     [PunRPC]
     public void RemovePlayerFromVoting(Player player)
     {
-        Debug.Log("Before removing player: " + playersAllowedToVote.Count);
-        playersAllowedToVote.Remove(player);
-        Debug.Log("After removing player: " + playersAllowedToVote.Count);
+       // Debug.Log("Before removing player: " + playersAllowedToVote.Count);
+       // PhotonView.Find((int)pv.InstantiationData[0]).GetComponent<PlayerManager>().playersAllowedToVote.Remove(player);
+      //  Debug.Log("After removing player: " + playersAllowedToVote.Count);
         // playersNotAllowedToVote.Add(PhotonNetwork.LocalPlayer);
     }
 

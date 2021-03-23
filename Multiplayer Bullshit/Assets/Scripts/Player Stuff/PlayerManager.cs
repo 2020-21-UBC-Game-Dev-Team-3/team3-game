@@ -18,12 +18,14 @@ public class PlayerManager : MonoBehaviour
 
     //singleton instance of player manager
     public static PlayerManager instanceLocalPM;
+    [HideInInspector] public List<Player> playersAllowedToVote;
 
     GameObject controller;
 
     void Awake()
     {
         pv = GetComponent<PhotonView>();
+        playersAllowedToVote = new List<Player>(PhotonNetwork.PlayerList);
         if (pv.IsMine) instanceLocalPM = this;
     }
 
@@ -66,7 +68,7 @@ public class PlayerManager : MonoBehaviour
 
     public void Die()
     {
-        FindObjectOfType<GameManager>().RemovePlayer(controller);
+        //FindObjectOfType<GameManager>().RemovePlayer(controller);
         pv.RPC("RemovedDeadPlayerFromVoting", RpcTarget.All, PhotonNetwork.LocalPlayer);
         Vector3 oldPosition = controller.transform.position;
         PhotonNetwork.Destroy(controller);
@@ -77,6 +79,7 @@ public class PlayerManager : MonoBehaviour
     public void GetVotedOff()
     {
         //FindObjectOfType<GameManager>().RemovePlayer(controller);
+        pv.RPC("RemovedDeadPlayerFromVoting", RpcTarget.All, PhotonNetwork.LocalPlayer);
         Vector3 oldPosition = controller.transform.position;
         PhotonNetwork.Destroy(controller);
         CreateGhostPlayer(oldPosition);
@@ -107,7 +110,7 @@ public class PlayerManager : MonoBehaviour
     public void RemovedDeadPlayerFromVoting(Player player)
     {
         Debug.Log("Begin removing player now");
-        Debug.Log("Player allowed to vote is null? " + controller.GetComponentInChildren<VotingManager>().playersAllowedToVote != null);
-        controller.GetComponentInChildren<VotingManager>().playersAllowedToVote.Remove(player);
+        Debug.Log("Player allowed to vote is null? " + playersAllowedToVote != null);
+        playersAllowedToVote.Remove(player);
     }
 }
