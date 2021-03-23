@@ -355,7 +355,6 @@
     <Compile Include="Assets\PlayMaker\Actions\UI\UiSliderSetValue.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UnityObject\SetProperty.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetUseAlternativeUdpPorts.cs" />
-    <Compile Include="Assets\Scripts\Roles\Role Abilities\ChameleonAbility.cs" />
     <Compile Include="Assets\Scripts\Player Stuff\ElevatorScript.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\ClampPosition.cs" />
     <Compile Include="Assets\PlayMaker\Actions\VideoPlayer\VideoPlayerSetTime.cs" />
@@ -948,7 +947,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Physics\RaycastAll.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GameObject\FindClosest.cs" />
     <Compile Include="Assets\PlayMaker\Actions\UI\UiInputFieldSetSelectionColor.cs" />
-    <Compile Include="Assets\wincon.cs" />
+    <Compile Include="Assets\Scripts\wincon.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Device\TouchEvent.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Vector3\SetVector3XYZ.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Convert\ConvertSecondsToString.cs" />
@@ -1049,7 +1048,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Effects\ParticleSystemPlay.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetIsMasterClient.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Vector3\Vector3LowPassFilter.cs" />
-    <Compile Include="Assets\Pause.cs" />
+    <Compile Include="Assets\Scripts\Pause.cs" />
     <Compile Include="Assets\PlayMaker\Actions\VideoPlayer\VideoPlayerSetUrl.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Convert\ConvertMaterialToObject.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Quaternion\QuaternionAngleAxis.cs" />
@@ -1324,6 +1323,7 @@
     <Compile Include="Assets\Main Assets\Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\SmoothFollowAction.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetPlayerCustomProperty.cs" />
+    <Compile Include="Assets\Scripts\Roles\Role Abilities\ChameleonAbility.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\GestureRecognizer\UPDATE GUIDE.txt" />

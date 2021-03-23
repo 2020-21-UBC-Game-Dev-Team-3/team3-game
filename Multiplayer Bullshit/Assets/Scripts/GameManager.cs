@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviourPunCallbacks {
   [SerializeField] GameObject invisWall2;
 
   //UI that needs to be turned off in beginning
-  [SerializeField] GameObject assassinReticle;
   [SerializeField] GameObject roleTextCanvas;
   [SerializeField] GameObject taskbarCanvas;
   [SerializeField] GameObject minimapCanvas;
@@ -32,9 +31,6 @@ public class GameManager : MonoBehaviourPunCallbacks {
   [SerializeField] GameObject imposterWinScreen;
   public List<Player> playersAllowedToVote;
 
-    //List<string> availableImposterRoles = new List<string>();
-    //List<string> availableCrewmateRoles = new List<string>();
-
     public int crewmates;
   public int imposters;
 
@@ -51,7 +47,6 @@ public class GameManager : MonoBehaviourPunCallbacks {
     pv = GetComponent<PhotonView>();
 
     ToggleUI(false);
-    //availableImposterRoles.AddRange(new string[] { "Assassin", "Chameleon" });
   }
 
   public void UpdateSpawnLocationList() => pv.RPC("RemoveSpawnLocation", RpcTarget.All);
@@ -104,7 +99,6 @@ public class GameManager : MonoBehaviourPunCallbacks {
   }
 
   void ToggleUI(bool change) {
-    assassinReticle.SetActive(change);
     roleTextCanvas.SetActive(change);
     taskbarCanvas.SetActive(change);
     minimapCanvas.SetActive(change);

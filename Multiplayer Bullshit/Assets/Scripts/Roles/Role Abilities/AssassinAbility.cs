@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 using Photon.Pun;
 
 public class AssassinAbility : RoleAbility
@@ -14,6 +15,11 @@ public class AssassinAbility : RoleAbility
     Camera cam;
     GameObject reticle;
     Vector3 reticlePosition;
+
+    private void Awake()
+    {
+        StartCoroutine(InitiateCooldown());
+    }
 
     private void Start()
     {
@@ -33,20 +39,20 @@ public class AssassinAbility : RoleAbility
         {
             Debug.Log(hit.collider.gameObject.name);
             
-            if(hit.collider.CompareTag("Player") && !hit.collider.gameObject.GetComponent<PhotonView>().IsMine)
+            if(hit.collider.CompareTag("Player") && !hit.collider.gameObject.GetComponent<PhotonView>().IsMine 
+                && hit.collider.gameObject.GetComponent<Role>().currRole == Role.Roles.Crewmate)
             {
-                pv.RPC("KnifeTravel", RpcTarget.All, hit.point);
+                pv.RPC("ShurikenTravel", RpcTarget.All, hit.collider.gameObject);
                 yield return StartCoroutine(InitiateCooldown());
             }
         }
     }
 
     [PunRPC]
-    public void KnifeTravel(Vector3 position)
+    public void ShurikenTravel(GameObject targetPlayer)
     {
-        shurikenObject = Instantiate(shurikenPrefab, shurikenTransform.position, shurikenPrefab.transform.rotation);
-        shurikenObject.GetComponent<Shuriken>().shurikenLaunched = true;
-        shurikenObject.GetComponent<Shuriken>().target = position;
+        shurikenObject = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Assassin Shuriken"), shurikenTransform.position, Quaternion.identity);
+        shurikenObject.GetComponent<Shuriken>().target = targetPlayer;
     }
 
 }

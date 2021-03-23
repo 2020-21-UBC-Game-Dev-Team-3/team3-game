@@ -5,28 +5,59 @@ using Photon.Pun;
 
 public class ChameleonAbility : RoleAbility
 {
-    Camera cam;
+    float chamRange = 4;
 
-    // Start is called before the first frame update
-    void Start()
+
+    Camera cam;
+    GameObject reticle;
+    Vector3 reticlePosition;
+
+    private void Awake()
+    {
+        cooldownTimer = 15;
+        StartCoroutine(InitiateCooldown());
+    }
+
+    private void Start()
     {
         cam = Camera.main;
+        reticle = GameObject.Find("Assassin Reticle");
+        reticlePosition = reticle.GetComponent<RectTransform>().transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void UseAbility() => StartCoroutine(ChamKill());
+
+    IEnumerator ChamKill()
     {
-        
+        Ray ray = cam.ScreenPointToRay(reticlePosition);
+        ray.origin = cam.transform.position;
+
+        if (Physics.Raycast(ray, out RaycastHit hit, chamRange))
+        {
+            Debug.Log(hit.collider.gameObject.name);
+
+            if (hit.collider.CompareTag("Player") && !hit.collider.gameObject.GetComponent<PhotonView>().IsMine)
+            {
+                pv.RPC("KillTarget", RpcTarget.All, hit.collider.gameObject.GetComponent<PhotonView>().ViewID);
+                yield return StartCoroutine(StartChameleon());
+                yield return StartCoroutine(InitiateCooldown());
+            }
+        }
     }
 
-    public override void UseAbility() => StartCoroutine(StartChameleon());
+    [PunRPC]
+    public void KillTarget(int targetID)
+    {
+        Transform target = PhotonView.Find(targetID).transform;
+        target.GetComponent<IDamageable>()?.TakeHit();
+    }
 
     IEnumerator StartChameleon()
     {
 
         cam.cullingMask |= 1 << LayerMask.NameToLayer("Chameleon");
         pv.RPC("OnChameleon", RpcTarget.All);
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(8);
         pv.RPC("OffChameleon", RpcTarget.All);
 
     }
@@ -52,4 +83,7 @@ public class ChameleonAbility : RoleAbility
         }
     }
 
+
+
 }
+

@@ -14,7 +14,12 @@ public class TrapAbility : RoleAbility {
   private int maxNumberTraps = 3;
   private int currNumberTraps = 0;
 
-  private void Start() {
+    private void Awake()
+    {
+        StartCoroutine(InitiateCooldown());
+    }
+
+    private void Start() {
     trapperUI = FindObjectOfType<TrapperUI>();
     trapperUI.SetText("Traps active: " + currNumberTraps.ToString() + "/" + maxNumberTraps.ToString());
   }

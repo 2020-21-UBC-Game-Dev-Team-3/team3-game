@@ -99,6 +99,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
       case Role.Roles.Assassin:
         ability = GetComponent<AssassinAbility>();
         ability.enabled = true;
+        reticle.SetActive(true);
         break;
 
       case Role.Roles.Chameleon:
