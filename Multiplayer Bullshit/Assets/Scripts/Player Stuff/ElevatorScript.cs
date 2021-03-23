@@ -101,35 +101,37 @@ public class ElevatorScript : MonoBehaviourPunCallbacks
         //door Logic
         if (door.transform.localScale.y >= 1f)
         {
+            closingDoor = false;
             pv.RPC("DoorClosedTrue", RpcTarget.All);
         }
         else if (door.transform.localScale.y <= 0)
         {
+            openingDoor = false;
             pv.RPC("DoorClosedFalse", RpcTarget.All);
         }
         //this moves the elevator
         switch (destination)
         {
             case 1:
-                transform.position = Vector3.MoveTowards(transform.position, floor1.transform.position, 0.5f * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, floor1.transform.position, 1f * Time.deltaTime);
                 break;
             case 2:
-                transform.position = Vector3.MoveTowards(transform.position, floor2.transform.position, 0.5f * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, floor2.transform.position, 1f * Time.deltaTime);
                 break;
             case 3:
-                transform.position = Vector3.MoveTowards(transform.position, floor3.transform.position, 0.5f * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, floor3.transform.position, 1f * Time.deltaTime);
                 break;
             default:
                 break;
 
         }
         //door movement
-        if (closingDoor && !isDoorClosed)
+        if (closingDoor)
         {
             scale += 0.05f;
             door.transform.localScale = new Vector3(1f, scale, 1f);
         }
-        if (openingDoor && isDoorClosed && destination == 0 && !moving)
+        if (openingDoor)
         {
             scale -= 0.05f;
             door.transform.localScale = new Vector3(1f, scale, 1f);
@@ -337,7 +339,7 @@ public class ElevatorScript : MonoBehaviourPunCallbacks
     {
         pv.RPC("Destination0", RpcTarget.All);
         pv.RPC("OpeningTrue", RpcTarget.All);
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(3);
         pv.RPC("UnPressButton", RpcTarget.All);
         pv.RPC("CooldownFalse", RpcTarget.All);
 
