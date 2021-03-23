@@ -10,8 +10,10 @@ public class CrewmateLightsOn : MonoBehaviour
     public Volume volume;
     public double vignettevalue = 0.8;
     public double chromaticaberrationvalue = .99;
+    public double gainvalue = 1;
     public Vignette vignette;
     public ChromaticAberration chromaticaberration;
+    public LiftGammaGain liftgammagain;
 
 
     // Start is called before the first frame update
@@ -19,19 +21,22 @@ public class CrewmateLightsOn : MonoBehaviour
     {
         vignettevalue = 0.8;
         chromaticaberrationvalue = .99;
+        gainvalue = 1;
         volume.profile.TryGet<Vignette>(out vignette);
         volume.profile.TryGet<ChromaticAberration>(out chromaticaberration);
+        volume.profile.TryGet<LiftGammaGain>(out liftgammagain);
     }
 
     void ResetLights2()
     {
         vignettevalue = 0.8;
         chromaticaberrationvalue = .99;
+        gainvalue = 1;
     }
 
     void Update()
     {
-
+        liftgammagain.gain.value = new Vector3((float)gainvalue, (float)gainvalue, (float)gainvalue);
 
         chromaticaberration.intensity.value = (float)(chromaticaberrationvalue -= .20 * Time.deltaTime);
 
