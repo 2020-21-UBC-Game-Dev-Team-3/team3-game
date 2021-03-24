@@ -16,6 +16,8 @@ public class NameTextScript : MonoBehaviour
     private float distanceToClient;
     public GameObject clientPlayer;
     [SerializeField] TMP_Text text;
+    public Role myRole;
+    public bool started = false;
     public void SetClientGhost(GameObject go)
     {
         List<GameObject> gos = new List<GameObject>();
@@ -66,6 +68,12 @@ public class NameTextScript : MonoBehaviour
                     text.enabled = false;
                 }
                 else text.enabled = true;
+        }
+        if (started)
+        {
+            myRole = GetComponent<Role>();
+            SetNameGameStart();
+            started = false;
         }
 
     }
@@ -160,6 +168,16 @@ public class NameTextScript : MonoBehaviour
     private void SetOwnerName() => text.text = pv.Owner.NickName;
     [PunRPC]
     private void SetName() => text.text = PhotonNetwork.NickName;
+    private void SetNameGameStart() {
+        if (myRole.currRole == Role.Roles.Imposter && clientPlayer.GetComponent<Role>().currRole == Role.Roles.Imposter)
+        {
+            text.text = PhotonNetwork.NickName+ " (Imposter)";
+        }
+        else
+        {
+            text.text = PhotonNetwork.NickName;
+        }
+    }
 
     public void SetClientPlayer(GameObject go)
     {

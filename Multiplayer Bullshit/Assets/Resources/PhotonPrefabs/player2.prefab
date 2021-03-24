@@ -2148,6 +2148,8 @@ MonoBehaviour:
   distanceToClient: 0
   clientPlayer: {fileID: 0}
   text: {fileID: 3359744501543821062}
+  myRole: {fileID: 0}
+  started: 0
 --- !u!114 &5053801866619700791
 MonoBehaviour:
   m_ObjectHideFlags: 0
