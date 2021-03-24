@@ -69,12 +69,12 @@ public class NameTextScript : MonoBehaviour
                 }
                 else text.enabled = true;
         }
-        if (started)
+/*        if (started)
         {
             myRole = GetComponent<Role>();
-            SetNameGameStart();
-            started = false;
-        }
+      SetNameGameStart();
+      started = false;
+        }*/
 
     }
 
@@ -168,7 +168,7 @@ public class NameTextScript : MonoBehaviour
     private void SetOwnerName() => text.text = pv.Owner.NickName;
     [PunRPC]
     private void SetName() => text.text = PhotonNetwork.NickName;
-    private void SetNameGameStart() {
+/*    private void SetNameGameStart() {
         if (myRole.currRole == Role.Roles.Imposter && clientPlayer.GetComponent<Role>().currRole == Role.Roles.Imposter)
         {
             text.text = PhotonNetwork.NickName+ " (Imposter)";
@@ -177,7 +177,7 @@ public class NameTextScript : MonoBehaviour
         {
             text.text = PhotonNetwork.NickName;
         }
-    }
+    }*/
 
     public void SetClientPlayer(GameObject go)
     {
