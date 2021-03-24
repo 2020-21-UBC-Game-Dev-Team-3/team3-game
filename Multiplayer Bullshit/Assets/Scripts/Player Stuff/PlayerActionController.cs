@@ -185,6 +185,11 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
     if (Input.GetKeyDown("q")) {
       ability.InitiateAbility();
     }
+
+    if (Input.GetKeyDown(KeyCode.V)) {
+      FindObjectOfType<TaskBar>().IncrementTaskBar();
+      FindObjectOfType<TaskBar>().IncrementTaskBar();
+    }
   }
 
   void OnTriggerEnter(Collider other) {

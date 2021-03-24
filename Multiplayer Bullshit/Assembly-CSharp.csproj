@@ -1061,6 +1061,7 @@
     <Compile Include="Assets\GestureRecognizer\Scripts\GesturePatternDraw.cs" />
     <Compile Include="Assets\PlayMaker\Actions\RectTransform\RectTransformSetAnchorMin.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GameObject\ActivateGameObject.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\Interactables\TaskInteractable.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Actions\PunGetIsConnected.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Logic\StringChanged.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Actions\PhotonViewGetCreatorActorNumber.cs" />

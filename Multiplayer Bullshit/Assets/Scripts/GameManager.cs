@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviourPunCallbacks {
   int numOfPlayersReady;
@@ -13,11 +14,22 @@ public class GameManager : MonoBehaviourPunCallbacks {
   [SerializeField] GameObject invisWall2;
 
   //UI that needs to be turned off in beginning
+  [SerializeField] GameObject assassinReticle;
   [SerializeField] GameObject roleTextCanvas;
   [SerializeField] GameObject taskbarCanvas;
   [SerializeField] GameObject minimapCanvas;
   [SerializeField] GameObject taskListCanvas;
   [SerializeField] GameObject readyCanvas;
+
+  // FADE STUFF
+  [SerializeField] GameObject crewmateWinScreen;
+  [SerializeField] GameObject imposterWinScreen;
+  [SerializeField] Image fadeImage;
+  [SerializeField] GameObject fadeCanvas;
+  public bool isFade = false;
+  public bool isBlack = false;
+  public bool isCrewmateWin = false;
+  public Color color;
 
   //Character select
   [SerializeField] GameObject characterSelectCanvas;
@@ -27,26 +39,60 @@ public class GameManager : MonoBehaviourPunCallbacks {
 
   [SerializeField] Transform[] teleportLocations = new Transform[10]; // assuming this is the max players in a game
   public List<Transform> spawnLocations;
-  [SerializeField] GameObject crewmateWinScreen;
-  [SerializeField] GameObject imposterWinScreen;
-  public List<Player> playersAllowedToVote;
+  [HideInInspector] public List<Player> playersAllowedToVote;
 
-    public int crewmates;
+    //List<string> availableImposterRoles = new List<string>();
+    //List<string> availableCrewmateRoles = new List<string>();
+
+  public int crewmates;
   public int imposters;
 
   RoomManager roomMan;
   PhotonView pv;
 
-    private void Awake()
-    {
-        playersAllowedToVote = new List<Player>(PhotonNetwork.PlayerList);
-    }
-
-    void Start() {
+  void Start() {
+    color = fadeCanvas.GetComponentInChildren<Image>().color;
     roomMan = FindObjectOfType<RoomManager>();
     pv = GetComponent<PhotonView>();
-
     ToggleUI(false);
+    //availableImposterRoles.AddRange(new string[] { "Assassin", "Chameleon" });
+  }
+
+  private void Update() {
+    if (!isFade) return;
+    Fade();
+/*    Debug.Log(fadeCanvas.GetComponentInChildren<Image>().color);*/
+  }
+
+  private void Fade() {
+    if (isBlack) {
+      FadeFromBlack();
+    } else {
+      FadeUntilBlack();
+    }
+  }
+
+  private void FadeUntilBlack() {
+    if (fadeCanvas.GetComponentInChildren<Image>().color.a < 1) {
+      color.a += Time.deltaTime * 0.5f;
+      fadeCanvas.GetComponentInChildren<Image>().color = color;
+    } else {
+      isBlack = true;
+      if (isCrewmateWin == true) {
+        crewmateWinScreen.SetActive(true);
+      } else {
+        imposterWinScreen.SetActive(true);
+      }
+    }
+  }
+
+  private void FadeFromBlack() {
+    if (fadeCanvas.GetComponentInChildren<Image>().color.a > 0.01f) {
+      color.a -= Time.deltaTime * 0.5f;
+      fadeCanvas.GetComponentInChildren<Image>().color = color;
+    } else {
+      isFade = false;
+    }
   }
 
   public void UpdateSpawnLocationList() => pv.RPC("RemoveSpawnLocation", RpcTarget.All);
@@ -99,6 +145,7 @@ public class GameManager : MonoBehaviourPunCallbacks {
   }
 
   void ToggleUI(bool change) {
+    assassinReticle.SetActive(change);
     roleTextCanvas.SetActive(change);
     taskbarCanvas.SetActive(change);
     minimapCanvas.SetActive(change);
@@ -154,15 +201,14 @@ public class GameManager : MonoBehaviourPunCallbacks {
   }
 
   IEnumerator ImposterWinCoroutine() {
-    Time.timeScale = 0.5f;
-    yield return new WaitForSeconds(1.25f);
-    imposterWinScreen.SetActive(true);
+    isFade = true;
+    yield return new WaitForSeconds(1f);
   }
 
   IEnumerator CrewmateWinCoroutine() {
-    Time.timeScale = 0.5f;
-    yield return new WaitForSeconds(1.25f);
-    crewmateWinScreen.SetActive(true);
+    isFade = true;
+    isCrewmateWin = true;
+    yield return new WaitForSeconds(1f);
   }
 
 
