@@ -6,9 +6,9 @@ using UnityEngine.Rendering.Universal;
 public static class OptionsPP {
   public static Volume volume;
 
-  public static float bloomValue = 1;
+  public static float bloomValue = 0;
 
-  public static float brightnessValue = 1; // [0, 0.95]
+  public static float brightnessValue = .5f; // [0, 0.95]
 
   public static float shadowsValue = 1;
 
