@@ -5,8 +5,6 @@ using Photon.Pun;
 
 public class Shuriken : MonoBehaviour
 {
-    public bool shurikenLaunched;
-
     public Transform target;
 
     PhotonView pv;
@@ -16,7 +14,7 @@ public class Shuriken : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target.position, Time.deltaTime * 3f);
+        transform.position = Vector3.MoveTowards(transform.position, target.position, Time.deltaTime * 5f);
     }
 
     void OnTriggerEnter(Collider other)
@@ -24,6 +22,8 @@ public class Shuriken : MonoBehaviour
         if (other.CompareTag("Player") && other.GetComponent<Role>().currRole == Role.Roles.Crewmate)
         {
             other.gameObject.GetComponent<IDamageable>()?.TakeHit();
+            Debug.Log("what the actual fuck shuriken should be destroyed");
+            Debug.Log("is the pv there?: " + pv != null);
             pv.RPC("DestroyShuriken", RpcTarget.All);
         }
     }

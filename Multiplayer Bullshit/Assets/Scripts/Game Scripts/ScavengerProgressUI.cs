@@ -6,6 +6,8 @@ using UnityEngine;
 public class ScavengerProgressUI : MonoBehaviour {
 
   [SerializeField] TextMeshProUGUI scavengerTextProgress;
+    [SerializeField] TextMeshProUGUI scavengerRewardText;
+    [SerializeField] GameObject scavengerRewardImage;
 
   public int itemsFoundText;
 
@@ -25,6 +27,9 @@ public class ScavengerProgressUI : MonoBehaviour {
 
     public void DisplayImposterFloorNumber(int x)
     {
-        scavengerTextProgress.text = "Killer on floor " + x;
+        scavengerRewardImage.SetActive(true);
+        scavengerRewardText.text = x.ToString();
     }
+
+    public void TurnOffScavengerRewardImage() => scavengerRewardImage.SetActive(false);
 }

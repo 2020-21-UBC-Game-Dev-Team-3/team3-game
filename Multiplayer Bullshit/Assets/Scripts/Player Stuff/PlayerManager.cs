@@ -16,6 +16,8 @@ public class PlayerManager : MonoBehaviour
 
     public string playerSkinName = "SChef";
 
+    public Role.Roles assignedRole;
+
     //singleton instance of player manager
     public static PlayerManager instanceLocalPM;
 
@@ -90,16 +92,16 @@ public class PlayerManager : MonoBehaviour
 
     void CreateDeadBody(Vector3 position)
     {
-        //Vector3 position = oldController.transform.position;
         GameObject deadBodyObject = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "DeadBody"), position, Quaternion.identity);
         //  deadBodyObject.GetComponent<SkinSelect>().SetCharacterSkin();
     }
 
     void CreateGhostPlayer(Vector3 position)
     {
-        // position = new Vector3(oldController.transform.position.x, oldController.transform.position.y + 1f, oldController.transform.position.z);
         controller = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "GhostPlayer"), position, Quaternion.identity, 0, new object[] { pv.ViewID });
         //  controller.GetComponent<SkinSelect>().SetCharacterSkin();
+        controller.GetComponent<Role>().currRole = assignedRole;
+        controller.GetComponent<PlayerActionController>().OnStartGame();
     }
 
 

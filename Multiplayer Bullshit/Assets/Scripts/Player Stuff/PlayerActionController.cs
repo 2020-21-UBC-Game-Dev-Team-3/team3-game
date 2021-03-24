@@ -49,6 +49,8 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
     miniMan = GetComponent<MinigameManager>();
     pv = GetComponent<PhotonView>();
     playerMan = PhotonView.Find((int)pv.InstantiationData[0]).GetComponent<PlayerManager>();
+
+        //if (gameObject.CompareTag("Ghost")) OnStartGame();
   }
 
 
@@ -81,8 +83,10 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
 
   public void OnStartGame() {
     //minimap = GameObject.Find("Minimap System");
-    minimap.SetActive(true);
+    //minimap.SetActive(true);
+        Debug.Log("going to get taskbar");
     tb = GameObject.Find("Main Camera/Taskbar Canvas/Taskbar").GetComponent<TaskBar>();
+        Debug.Log("is task bar there?: " + tb != null);
     dts = GameObject.Find("DeathTrack").GetComponent<DeathTrackScript>();
   }
 
@@ -101,6 +105,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
         ability.enabled = true;
         ability.SetAbilityText();
         reticle.SetActive(true);
+        playerMan.assignedRole = Role.Roles.Imposter;
         break;
 
       case Role.Roles.Chameleon:
@@ -108,22 +113,26 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
         reticle.SetActive(true);
         ability.enabled = true;
         ability.SetAbilityText();
+        playerMan.assignedRole = Role.Roles.Imposter;
         break;
 
       case Role.Roles.Trapper:
         ability = GetComponent<TrapAbility>();
         ability.enabled = true;
         ability.SetAbilityText();
+        playerMan.assignedRole = Role.Roles.Imposter;
         break;
 
       case Role.Roles.Disarmer:
         ability = GetComponent<DisarmerAbility>();
         ability.enabled = true;
         ability.SetAbilityText();
+        playerMan.assignedRole = Role.Roles.Crewmate;
         break;
 
       case Role.Roles.None:
         ability = null;
+        playerMan.assignedRole = Role.Roles.Crewmate;
         break;
 
       default:

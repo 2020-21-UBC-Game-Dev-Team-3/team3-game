@@ -1736,7 +1736,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 21.120289, y: -535}
+  m_AnchoredPosition: {x: 21.120289, y: -536.28546}
   m_SizeDelta: {x: 42.240578, y: 42.240578}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &146083158
@@ -3403,7 +3403,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 21.120289, y: -592}
+  m_AnchoredPosition: {x: 21.120289, y: -593.52606}
   m_SizeDelta: {x: 42.240578, y: 42.240578}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &243861057
@@ -5887,7 +5887,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 21.120289, y: -478}
+  m_AnchoredPosition: {x: 21.120289, y: -479.0449}
   m_SizeDelta: {x: 42.240578, y: 42.240578}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &525606484
@@ -7347,7 +7347,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 730.05817, y: -460.03378}
+  m_AnchoredPosition: {x: 730.05817, y: -460.0338}
   m_SizeDelta: {x: -1319.8799, y: -1010.0676}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &657540656
@@ -8617,7 +8617,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 21.120289, y: -421}
+  m_AnchoredPosition: {x: 21.120289, y: -421.80432}
   m_SizeDelta: {x: 42.240578, y: 42.240578}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &788817565
@@ -15595,6 +15595,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 152756776}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: OpenMenu
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 431672586}
+          m_ObjectArgumentAssemblyTypeName: Menu, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

@@ -98,7 +98,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2cc60477751ca946a97ea92f6a21846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shurikenLaunched: 0
   target: {fileID: 0}
 --- !u!95 &7839313321431858098
 Animator:

@@ -35,10 +35,11 @@ public class ScavengerHuntStarter : TaskInteractable {
     FindObjectOfType<TaskBar>().IncrementTaskBar();
     scavengerProgressUI.DisplayComplete();
     yield return new WaitForSeconds(2);
+    scavengerProgressUI.gameObject.SetActive(false);
     FindImposterFloorNumber();
     scavengerProgressUI.DisplayImposterFloorNumber(imposterFloorNumber);
     yield return new WaitForSeconds(2);
-    scavengerProgressUI.gameObject.SetActive(false);
+    scavengerProgressUI.TurnOffScavengerRewardImage();
   }
 
   void IncrementItemsFound() {
@@ -53,7 +54,7 @@ public class ScavengerHuntStarter : TaskInteractable {
     int tempInt;
     for (int i = 0; i < 3; i++) {
       do {
-        tempInt = Random.Range(1, 7);
+        tempInt = Random.Range(0, 7);
       } while (intList.Contains(tempInt));
       intList.Add(tempInt);
     }
