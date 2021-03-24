@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using Photon.Pun;
+using TMPro;
 
 public class AssassinAbility : RoleAbility
 {
@@ -31,7 +32,12 @@ public class AssassinAbility : RoleAbility
         reticlePosition = reticle.GetComponent<RectTransform>().transform.position;
     }
 
-    public override void UseAbility() => StartCoroutine(ThrowShuriken());
+  public override void SetAbilityText() {
+    abilityText = GameObject.Find("Main Camera/Ability Text Canvas/AbilityText").GetComponent<TextMeshProUGUI>();
+    abilityText.text = "Assassin";
+  }
+
+  public override void UseAbility() => StartCoroutine(ThrowShuriken());
 
     IEnumerator ThrowShuriken()
     {

@@ -8235,6 +8235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownTimer: 10
+  abilityText: {fileID: 0}
   pv: {fileID: 0}
   assassinRange: 20
   shurikenPrefab: {fileID: 1245360488091752, guid: 05222e7ebee9c2741b376b8859ce6d39, type: 3}
@@ -8252,6 +8253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownTimer: 0
+  abilityText: {fileID: 0}
   pv: {fileID: 0}
   isTouchingTrap: 0
   trapPrefab: {fileID: 68780631399019579, guid: b401f83e598602342a7e77403d3195ee, type: 3}
@@ -8268,6 +8270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownTimer: 0
+  abilityText: {fileID: 0}
   pv: {fileID: 0}
   photonView: {fileID: 0}
 --- !u!114 &276545088388975431
@@ -8282,6 +8285,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b344a5140c24794bb3b4afbc4920294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldownTimer: 0
+  abilityText: {fileID: 0}
+  pv: {fileID: 0}
 --- !u!114 &381084715580157887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8331,6 +8337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownTimer: 0
+  abilityText: {fileID: 0}
   pv: {fileID: 0}
   photonView: {fileID: 0}
 --- !u!1 &3464390445804641302

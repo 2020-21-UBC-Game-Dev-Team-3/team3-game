@@ -24,6 +24,11 @@ public class TrapAbility : RoleAbility {
     trapperUI.SetText("Traps active: " + currNumberTraps.ToString() + "/" + maxNumberTraps.ToString());
   }
 
+  public override void SetAbilityText() {
+    abilityText = GameObject.Find("Main Camera/Ability Text Canvas/AbilityText").GetComponent<TextMeshProUGUI>();
+    abilityText.text = "Trapper";
+  }
+
   public override void UseAbility() {
     if (currNumberTraps < maxNumberTraps && !isTouchingTrap) {
       Vector3 tempPos = transform.position;

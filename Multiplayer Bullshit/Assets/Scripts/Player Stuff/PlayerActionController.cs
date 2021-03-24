@@ -99,6 +99,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
       case Role.Roles.Assassin:
         ability = GetComponent<AssassinAbility>();
         ability.enabled = true;
+        ability.SetAbilityText();
         reticle.SetActive(true);
         break;
 
@@ -106,16 +107,19 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
         ability = GetComponent<ChameleonAbility>();
         reticle.SetActive(true);
         ability.enabled = true;
+        ability.SetAbilityText();
         break;
 
       case Role.Roles.Trapper:
         ability = GetComponent<TrapAbility>();
         ability.enabled = true;
+        ability.SetAbilityText();
         break;
 
       case Role.Roles.Disarmer:
-        ability = null;
-        GetComponent<DisarmerAbility>().enabled = true;
+        ability = GetComponent<DisarmerAbility>();
+        ability.enabled = true;
+        ability.SetAbilityText();
         break;
 
       case Role.Roles.None:
@@ -153,8 +157,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
         return;
       }
       return;
-    } else 
-      {
+    } else {
       minigameInterrupt = false;
       if (currMinigameSceneName == "Rhythm Trap Minigame" || currMinigameSceneName == "Chance Trap Minigame") {
         interactable.gameObject.GetComponent<Trap>().Destroy();
@@ -343,28 +346,25 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
       reportedAudios.Add(p.transform.Find("ReportAudio").GetComponent<AudioSource>());
     }
     foreach (AudioSource audio in reportedAudios) {
-            if (audio != null)
-            {
-                audio.Play();
-            }
+      if (audio != null) {
+        audio.Play();
+      }
     }
     foreach (GameObject p in players) {
       meetingAudios.Add(p.transform.Find("MeetingAudio").GetComponent<AudioSource>());
     }
     foreach (AudioSource audio in meetingAudios) {
-            if (audio != null)
-            {
-                audio.Play();
-            }
+      if (audio != null) {
+        audio.Play();
+      }
     }
     foreach (GameObject p in players) {
       bgmAudios.Add(p.transform.Find("PlayerMusic").GetComponent<AudioSource>());
     }
     foreach (AudioSource audio in bgmAudios) {
-            if (audio != null)
-            {
-                audio.Stop();
-            }
+      if (audio != null) {
+        audio.Stop();
+      }
     }
     Debug.Log("Hello my name jay");
   }

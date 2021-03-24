@@ -2,31 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using TMPro;
 
-public abstract class RoleAbility : MonoBehaviour
-{
-    bool onCooldown;
+public abstract class RoleAbility : MonoBehaviour {
+  bool onCooldown;
 
-    public float cooldownTimer;
+  public float cooldownTimer;
 
-    [HideInInspector] public PhotonView pv;
+  public TextMeshProUGUI abilityText;
 
-    void Awake()
-    {
-        pv = GetComponent<PhotonView>();
-    }
+  [HideInInspector] public PhotonView pv;
 
-    public void InitiateAbility()
-    {
-        if (!onCooldown) UseAbility(); 
-    }
+  void Awake() {
+    pv = GetComponent<PhotonView>();
+  }
 
-    public abstract void UseAbility();
+  private void Start() {
+    SetAbilityText();
+  }
 
-    public virtual IEnumerator InitiateCooldown()
-    {
-        onCooldown = true;
-        yield return new WaitForSeconds(cooldownTimer);
-        onCooldown = false;
-    }
+  public void InitiateAbility() {
+    if (!onCooldown) UseAbility();
+  }
+
+  public abstract void UseAbility();
+
+  public abstract void SetAbilityText();
+
+  public virtual IEnumerator InitiateCooldown() {
+    onCooldown = true;
+    yield return new WaitForSeconds(cooldownTimer);
+    onCooldown = false;
+  }
 }
