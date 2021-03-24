@@ -32,4 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Darts Minigame.unity
     guid: e9805e3df606344c2a5c51a747e25b96
+  - enabled: 1
+    path: Assets/Scenes/team logo scene.unity
+    guid: 7b450d729601c554989e3500b099b463
+  - enabled: 1
+    path: Assets/Scenes/Hit Start menu.unity
+    guid: 73a0b302485a7df4292fb2ed140c383b
   m_configObjects: {}
