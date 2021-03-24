@@ -49,6 +49,10 @@ public class GameManager : MonoBehaviourPunCallbacks {
   RoomManager roomMan;
   PhotonView pv;
 
+  private void Awake() {
+    playersAllowedToVote = new List<Player>(PhotonNetwork.PlayerList);
+  }
+
   void Start() {
     color = fadeCanvas.GetComponentInChildren<Image>().color;
     roomMan = FindObjectOfType<RoomManager>();

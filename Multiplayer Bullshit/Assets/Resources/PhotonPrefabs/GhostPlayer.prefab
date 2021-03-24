@@ -5636,7 +5636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   assignedMinigames: []
   availableMinigames: []
-  tasksText: []
+  completedMinigames: []
 --- !u!1 &3412783395799952387
 GameObject:
   m_ObjectHideFlags: 0

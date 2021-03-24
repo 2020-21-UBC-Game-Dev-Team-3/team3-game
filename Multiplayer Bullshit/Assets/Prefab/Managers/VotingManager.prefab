@@ -74,9 +74,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8670f7493510e0d46a50a1cf48bb29fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMovementController: {fileID: 0}
+  skipBoxInteractButton: {fileID: 1167421085842018465}
   skipBoxIconArea: {fileID: 8887421991527980451}
   playerBoxes: {fileID: 8719520835140483477}
+  meetingAudios: []
+  bgmAudios: []
 --- !u!1 &8719520835105082672
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,6 +1127,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1640729866366304997, guid: 80a36a6bbc5eae44eb7e4f3f18e6b79c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 80a36a6bbc5eae44eb7e4f3f18e6b79c, type: 3}
+--- !u!1 &1167421085842018465 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8981267237970733147, guid: 80a36a6bbc5eae44eb7e4f3f18e6b79c, type: 3}
+  m_PrefabInstance: {fileID: 7822855619290036474}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8887421991527980451 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1713103487886583129, guid: 80a36a6bbc5eae44eb7e4f3f18e6b79c, type: 3}
