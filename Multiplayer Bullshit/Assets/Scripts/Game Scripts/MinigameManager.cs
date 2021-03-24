@@ -106,10 +106,13 @@ public class MinigameManager : MonoBehaviour
 
     public void OnMinigameComplete(string minigame)
     {
-        assignedMinigames.Remove(minigame);
-        localPM.UpdateTasksOnPlayerManager(minigame);
+        if (minigame != "none")
+        {
+            assignedMinigames.Remove(minigame);
+            localPM.UpdateTasksOnPlayerManager(minigame);
 
-        UpdateTaskComplete(minigame);
+            UpdateTaskComplete(minigame);
+        }
     }
 
 

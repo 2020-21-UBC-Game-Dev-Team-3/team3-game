@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviourPunCallbacks {
   [SerializeField] GameObject invisWall2;
 
   //UI that needs to be turned off in beginning
-  [SerializeField] GameObject assassinReticle;
   [SerializeField] GameObject roleTextCanvas;
   [SerializeField] GameObject taskbarCanvas;
   [SerializeField] GameObject minimapCanvas;
@@ -146,7 +145,6 @@ public class GameManager : MonoBehaviourPunCallbacks {
   }
 
   void ToggleUI(bool change) {
-    assassinReticle.SetActive(change);
     roleTextCanvas.SetActive(change);
     taskbarCanvas.SetActive(change);
     minimapCanvas.SetActive(change);

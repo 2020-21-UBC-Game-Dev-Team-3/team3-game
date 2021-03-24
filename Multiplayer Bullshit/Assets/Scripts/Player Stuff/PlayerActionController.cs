@@ -153,7 +153,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
         return;
       }
       return;
-    } else if (currMinigameObjectName != "none")
+    } else 
       {
       minigameInterrupt = false;
       if (currMinigameSceneName == "Rhythm Trap Minigame" || currMinigameSceneName == "Chance Trap Minigame") {
