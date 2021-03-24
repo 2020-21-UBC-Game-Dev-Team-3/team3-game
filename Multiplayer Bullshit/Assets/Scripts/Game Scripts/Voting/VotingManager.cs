@@ -46,7 +46,6 @@ public class VotingManager : MonoBehaviour {
   }
 
   public void SetupVoting() {
-    ClearBodies();
     for (int i = 0; i < playerBoxes.transform.childCount; i++) {
       playerVotingSections.Add(playerBoxes.transform.GetChild(i).gameObject, false);
     }
@@ -165,16 +164,14 @@ public class VotingManager : MonoBehaviour {
     PlayMakerFSM.BroadcastEvent("GlobalTurnMovementOn");
     yield return new WaitForSeconds(1f);
     foreach (AudioSource audio in meetingAudios) {
-            if (audio != null)
-            {
-                audio.Stop();
-            }
+      if (audio != null) {
+        audio.Stop();
+      }
     }
     foreach (AudioSource audio in bgmAudios) {
-            if (audio != null)
-            {
-                audio.Play();
-            }
+      if (audio != null) {
+        audio.Play();
+      }
     }
     if (!isTiedInVotes && currNumOfHighestVotes > numOfSkipVotes)
       pv.RPC("KillPlayerWithHighestVotes", RpcTarget.All, playerWithHighestVotes);
@@ -203,35 +200,28 @@ public class VotingManager : MonoBehaviour {
 
   [PunRPC]
   private void KillCurrPlayer() {
-    //  pv.RPC("RemovePlayerFromVoting", RpcTarget.All, PhotonNetwork.LocalPlayer);
     transform.parent.GetComponentInParent<MapManager>().InitiateMapReset();
     foreach (PlayerManager playerManager in FindObjectsOfType<PlayerManager>())
       if (playerManager.GetComponent<PhotonView>().IsMine) playerManager.GetVotedOff();
-    /*PhotonView.Find((int)pv.InstantiationData[0]).GetComponent<PlayerManager>().GetVotedOff();*/
-  }
-
-  [PunRPC]
-  public void RemovePlayerFromVoting(Player player) {
-    // Debug.Log("Before removing player: " + playersAllowedToVote.Count);
-    // PhotonView.Find((int)pv.InstantiationData[0]).GetComponent<PlayerManager>().playersAllowedToVote.Remove(player);
-    //  Debug.Log("After removing player: " + playersAllowedToVote.Count);
-    // playersNotAllowedToVote.Add(PhotonNetwork.LocalPlayer);
   }
 
   public void OnEnable() {
-    //numOfPlayersNeededToVote = playersAllowedToVote.Count;
+    transform.parent.GetComponentInParent<PlayerActionController>().enabled = false;
+    transform.parent.GetComponentsInParent<PlayMakerFSM>()[2].enabled = false;
+    ClearBodies();
     SetupVoting();
   }
 
   public void OnDisable() {
     pv.RPC("ShowSkipResults", RpcTarget.All, numOfSkipVotes, false);
     pv.RPC("ShowVotingResults", RpcTarget.All, numOfPlayersVotingForYou, System.Array.IndexOf(PhotonNetwork.PlayerList, PhotonNetwork.LocalPlayer), false);
+    transform.parent.GetComponentInParent<PlayerActionController>().enabled = true;
+    transform.parent.GetComponentsInParent<PlayMakerFSM>()[2].enabled = true;
     for (int i = 0; i < playerBoxes.transform.childCount; i++)
       playerBoxes.transform.GetChild(i).Find("InteractButton").gameObject.SetActive(true);
     skipBoxInteractButton.SetActive(true);
     playerVotingSections.Clear();
     isTiedInVotes = false;
-    //numOfPlayersNeededToVote = 0;
     numOfPlayersVotedSoFar = 0;
     numOfPlayersVotingForYou = 0;
     currNumOfHighestVotes = 0;
