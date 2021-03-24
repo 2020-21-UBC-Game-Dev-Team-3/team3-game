@@ -71,3 +71,4 @@ MonoBehaviour:
   playerTasksRemaining: []
   playerTasksCompleted: []
   playerSkinName: 
+  assignedRole: 0
