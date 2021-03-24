@@ -48,6 +48,7 @@ public class MinigameManager : MonoBehaviour
     {
         assignedMinigames = localPM.playerTasksRemaining;
         completedMinigames = localPM.playerTasksCompleted;
+        if (completedMinigames.Contains("")) completedMinigames.Remove("");
     }
 
     void RandomizeMinigames()
@@ -106,7 +107,6 @@ public class MinigameManager : MonoBehaviour
     public void OnMinigameComplete(string minigame)
     {
         assignedMinigames.Remove(minigame);
-
         localPM.UpdateTasksOnPlayerManager(minigame);
 
         UpdateTaskComplete(minigame);

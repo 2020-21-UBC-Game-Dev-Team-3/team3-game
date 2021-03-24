@@ -36,7 +36,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
   public GameObject reticle;
   public GameObject sun;
   public string currMinigameSceneName;
-  public string currMinigameObjectName;
+  public string currMinigameObjectName = "none";
   public bool minigameInterrupt;
 
   TaskBar tb;
@@ -153,7 +153,8 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
         return;
       }
       return;
-    } else {
+    } else if (currMinigameObjectName != "none")
+      {
       minigameInterrupt = false;
       if (currMinigameSceneName == "Rhythm Trap Minigame" || currMinigameSceneName == "Chance Trap Minigame") {
         interactable.gameObject.GetComponent<Trap>().Destroy();
