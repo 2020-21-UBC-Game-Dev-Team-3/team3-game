@@ -327,7 +327,7 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
     public void StartGame()
     {
         roomManager.maxNumberOfPlayers = PhotonNetwork.PlayerList.Length;
-        PhotonNetwork.LoadLevel(1);
+        PhotonNetwork.LoadLevel(3);
     }
 
     public void Update()
