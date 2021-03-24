@@ -187,9 +187,15 @@ public class GameManager : MonoBehaviourPunCallbacks {
   }
 
   public void TeleportPlayers() {
+    int count = 0;
     GameObject[] alivePlayers = GameObject.FindGameObjectsWithTag("Player");
     for (int i = 0; i < alivePlayers.Length; i++) {
       alivePlayers[i].gameObject.transform.position = teleportLocations[i].transform.position;
+      count++;
+    }
+    GameObject[] ghosts = GameObject.FindGameObjectsWithTag("Ghost");
+    for (int i = count; i < ghosts.Length; i++) {
+      ghosts[i].gameObject.transform.position = teleportLocations[i].transform.position;
     }
   }
 

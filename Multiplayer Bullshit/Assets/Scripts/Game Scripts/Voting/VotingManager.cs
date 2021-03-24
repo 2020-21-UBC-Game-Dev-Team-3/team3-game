@@ -46,6 +46,9 @@ public class VotingManager : MonoBehaviour {
   }
 
   public void SetupVoting() {
+
+    ClearBodies();
+
     for (int i = 0; i < playerBoxes.transform.childCount; i++) {
       playerVotingSections.Add(playerBoxes.transform.GetChild(i).gameObject, false);
     }
@@ -66,6 +69,13 @@ public class VotingManager : MonoBehaviour {
           break;
         } else Debug.Log("COULD NOT SETUP SECTION FOR: " + player.NickName);
       }
+    }
+  }
+
+  public void ClearBodies() {
+    DeadBody[] bodies = FindObjectsOfType<DeadBody>();
+    foreach (var body in bodies) {
+      PhotonNetwork.Destroy(body.gameObject);
     }
   }
 
