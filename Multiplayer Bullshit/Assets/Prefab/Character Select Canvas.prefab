@@ -1,5 +1,141 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1885340224832741315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1670644257489685645}
+  - component: {fileID: 4781361637865983008}
+  m_Layer: 12
+  m_Name: Skin Images
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1670644257489685645
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885340224832741315}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2243029496628696265}
+  m_Father: {fileID: 6023427407771267101}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4781361637865983008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885340224832741315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b4fca8961c318547981997151dcf99b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skinImages:
+  - {fileID: 21300000, guid: 8bc16ec155e244f488fa93e32552f7ce, type: 3}
+  - {fileID: 21300000, guid: 2e867b6934778a4438e64056b9ab9041, type: 3}
+  - {fileID: 21300000, guid: 0abbd15d0b8a092449ad5067356b3230, type: 3}
+  - {fileID: 21300000, guid: 491835fd292e4594bb744a85cab8b665, type: 3}
+  - {fileID: 21300000, guid: 7dec5fb963c808a4aa7c3ac00a456582, type: 3}
+  - {fileID: 21300000, guid: cbdc516fbe73009428dc1394b045035e, type: 3}
+  - {fileID: 21300000, guid: 4c07e2ffd06d650449908fe8a0af1831, type: 3}
+  - {fileID: 21300000, guid: 80fb283e0f0667642a2f410e1241796a, type: 3}
+  - {fileID: 21300000, guid: 55994fc9daf8cbe469c92795b7458252, type: 3}
+  - {fileID: 21300000, guid: 0deb3a2a27335f54f9e0670e939e77ce, type: 3}
+  uiSkinImage: {fileID: 5752664746859555017}
+--- !u!1 &5752664746859555017
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2243029496628696265}
+  - component: {fileID: 891948504877648021}
+  - component: {fileID: 7362966883761906638}
+  m_Layer: 12
+  m_Name: UI Skin Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2243029496628696265
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5752664746859555017}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1670644257489685645}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 272, y: 400}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &891948504877648021
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5752664746859555017}
+  m_CullTransparentMesh: 0
+--- !u!114 &7362966883761906638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5752664746859555017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 7dec5fb963c808a4aa7c3ac00a456582, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &6023427406287155943
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,7 +1032,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Skin 9
+  m_Text: Lifeguard
 --- !u!1 &6023427406457652563
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,7 +1111,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Skin 1
+  m_Text: Betty
 --- !u!1 &6023427406644559139
 GameObject:
   m_ObjectHideFlags: 0
@@ -1582,7 +1718,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Skin 2
+  m_Text: Betty 2
 --- !u!1 &6023427407084468866
 GameObject:
   m_ObjectHideFlags: 0
@@ -1868,7 +2004,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Skin 7
+  m_Text: Jacob
 --- !u!1 &6023427407499799512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1947,7 +2083,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Skin 5
+  m_Text: Chef
 --- !u!1 &6023427407564447852
 GameObject:
   m_ObjectHideFlags: 0
@@ -2026,7 +2162,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Skin 6
+  m_Text: Chef 2
 --- !u!1 &6023427407644713685
 GameObject:
   m_ObjectHideFlags: 0
@@ -2237,7 +2373,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Skin 10
+  m_Text: Lifeguard 2
 --- !u!1 &6023427407771267097
 GameObject:
   m_ObjectHideFlags: 0
@@ -2272,6 +2408,7 @@ RectTransform:
   - {fileID: 6023427406413625404}
   - {fileID: 6023427406987658969}
   - {fileID: 6635202541852564200}
+  - {fileID: 1670644257489685645}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2418,7 +2555,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Skin 4
+  m_Text: Captain 2
 --- !u!1 &6023427408065594342
 GameObject:
   m_ObjectHideFlags: 0
@@ -2497,7 +2634,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Skin 8
+  m_Text: Jacob 2
 --- !u!1 &6023427408122633558
 GameObject:
   m_ObjectHideFlags: 0
@@ -2576,7 +2713,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Skin 3
+  m_Text: Captain
 --- !u!1 &8589788331139085075
 GameObject:
   m_ObjectHideFlags: 0
