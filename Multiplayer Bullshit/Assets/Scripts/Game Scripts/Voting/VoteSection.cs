@@ -23,6 +23,42 @@ public class VoteSection : MonoBehaviour
     {
         playerInSectionIndex = System.Array.IndexOf(PhotonNetwork.PlayerList, player);
         playerName.text = player.NickName;
+        switch ((string)player.CustomProperties["color"])
+        {
+            case "red":
+                playerName.color = Color.red;
+                break;
+            case "orange":
+                playerName.color = new Color(1f, 163f / 255, 0.0f);
+                break;
+            case "yellow":
+                playerName.color = Color.yellow;
+                break;
+            case "green":
+                playerName.color = Color.green;
+                break;
+            case "blue":
+                playerName.color = Color.blue;
+                break;
+            case "indigo":
+                playerName.color = Color.cyan;
+                break;
+            case "purple":
+                playerName.color = Color.magenta;
+                break;
+            case "white":
+                playerName.color = Color.white;
+                break;
+            case "black":
+                playerName.color = Color.black;
+                break;
+            case "dgreen":
+                playerName.color = new Color(0f, 77f / 255f, 5f / 255f);
+                break;
+            case "maroon":
+                playerName.color = new Color(99f / 255f, 6f / 255f, 24f / 255f);
+                break;
+        }
 
         /*        Player localPlayer = PhotonNetwork.LocalPlayer;
                 RaiseEventOptions raiseEventOptions = new RaiseEventOptions { TargetActors = new int[] { player.ActorNumber } };
