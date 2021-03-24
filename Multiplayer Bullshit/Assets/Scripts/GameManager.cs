@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviourPunCallbacks {
   }
 
   private void Fade() {
+    fadeCanvas.SetActive(true);
     if (isBlack) {
       FadeFromBlack();
     } else {
