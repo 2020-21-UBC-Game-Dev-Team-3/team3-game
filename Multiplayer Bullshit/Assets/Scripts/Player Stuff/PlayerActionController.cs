@@ -160,7 +160,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
     } else {
       minigameInterrupt = false;
       if (currMinigameSceneName == "Rhythm Trap Minigame" || currMinigameSceneName == "Chance Trap Minigame") {
-        interactable.gameObject.GetComponent<Trap>().Destroy();
+/*        interactable.gameObject.GetComponent<Trap>().Destroy();*/
       } else if (currMinigameSceneName != "none") {
         tbIHolder = true;
       }
@@ -259,6 +259,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
         break;
 
       case "Disarm trap":
+        interactable.GetComponent<Trap>().Destroy();
         exitMinigame(false);
         currMinigameSceneName = "Rhythm Trap Minigame";
         SceneManager.LoadScene("Rhythm Trap Minigame", LoadSceneMode.Additive);

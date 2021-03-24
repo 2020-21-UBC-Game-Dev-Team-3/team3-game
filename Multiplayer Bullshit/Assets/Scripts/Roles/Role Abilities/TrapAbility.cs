@@ -46,7 +46,7 @@ public class TrapAbility : RoleAbility {
 
   [PunRPC]
   public void RPC_DecrementTraps() {
-    if (!isActiveAndEnabled) return;
+    if (!(GetComponent<Role>().subRole == Role.Roles.Trapper)) return;
     currNumberTraps--;
     trapperUI.SetText("Traps active: " + currNumberTraps.ToString() + "/" + maxNumberTraps.ToString());
     isTouchingTrap = false;

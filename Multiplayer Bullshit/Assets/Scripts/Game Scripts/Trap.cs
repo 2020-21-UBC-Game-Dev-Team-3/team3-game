@@ -54,12 +54,12 @@ public class Trap : Interactable {
 
     // if other is a crewmate and not a Disarmer
     if (other.GetComponent<Role>().currRole == Role.Roles.Crewmate && !other.GetComponent<DisarmerAbility>().isActiveAndEnabled) {
+      Destroy(); // needs to be here so other people don't step on it
       if (SceneManager.sceneCount == 1) {
         pac.currMinigameSceneName = "Trap Chance Minigame";
         pac.exitMinigame(false);
         SceneManager.LoadScene("Trap Chance Minigame", LoadSceneMode.Additive);
       }
-      Destroy();
     }
   }
 
