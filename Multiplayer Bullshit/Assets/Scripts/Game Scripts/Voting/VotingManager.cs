@@ -165,10 +165,16 @@ public class VotingManager : MonoBehaviour {
     PlayMakerFSM.BroadcastEvent("GlobalTurnMovementOn");
     yield return new WaitForSeconds(1f);
     foreach (AudioSource audio in meetingAudios) {
-      audio.Stop();
+            if (audio != null)
+            {
+                audio.Stop();
+            }
     }
     foreach (AudioSource audio in bgmAudios) {
-      audio.Play();
+            if (audio != null)
+            {
+                audio.Play();
+            }
     }
     if (!isTiedInVotes && currNumOfHighestVotes > numOfSkipVotes)
       pv.RPC("KillPlayerWithHighestVotes", RpcTarget.All, playerWithHighestVotes);

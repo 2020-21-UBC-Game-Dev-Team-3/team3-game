@@ -343,19 +343,28 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
       reportedAudios.Add(p.transform.Find("ReportAudio").GetComponent<AudioSource>());
     }
     foreach (AudioSource audio in reportedAudios) {
-      audio.Play();
+            if (audio != null)
+            {
+                audio.Play();
+            }
     }
     foreach (GameObject p in players) {
       meetingAudios.Add(p.transform.Find("MeetingAudio").GetComponent<AudioSource>());
     }
     foreach (AudioSource audio in meetingAudios) {
-      audio.Play();
+            if (audio != null)
+            {
+                audio.Play();
+            }
     }
     foreach (GameObject p in players) {
       bgmAudios.Add(p.transform.Find("PlayerMusic").GetComponent<AudioSource>());
     }
     foreach (AudioSource audio in bgmAudios) {
-      audio.Stop();
+            if (audio != null)
+            {
+                audio.Stop();
+            }
     }
     Debug.Log("Hello my name jay");
   }
