@@ -26,7 +26,8 @@ public class VotingManager : MonoBehaviour {
   public List<AudioSource> bgmAudios;
   private GameObject[] players;
   private GameManager gameManager;
-
+    public AudioClip[] randomSounds;
+    public AudioSource thisSource;
   private void Awake() {
     // playersAllowedToVote = new List<Player>(PhotonNetwork.PlayerList);
     //Debug.Log("Vote count: " + playersAllowedToVote.Count);
@@ -36,7 +37,7 @@ public class VotingManager : MonoBehaviour {
   }
 
   void Start() {
-    players = GameObject.FindGameObjectsWithTag("Player");
+        players = GameObject.FindGameObjectsWithTag("Player");
     foreach (GameObject p in players) {
       meetingAudios.Add(p.transform.Find("MeetingAudio").GetComponent<AudioSource>());
     }
@@ -206,7 +207,10 @@ public class VotingManager : MonoBehaviour {
   }
 
   public void OnEnable() {
-    transform.parent.GetComponentInParent<PlayerActionController>().enabled = false;
+        thisSource.volume = PlayerPrefs.GetFloat("main volume");
+        thisSource.clip = randomSounds[Random.Range(0, 2)];
+        thisSource.Play();
+        transform.parent.GetComponentInParent<PlayerActionController>().enabled = false;
 /*    transform.parent.GetComponentsInParent<PlayMakerFSM>()[2].enabled = false;*/
     ClearBodies();
     SetupVoting();

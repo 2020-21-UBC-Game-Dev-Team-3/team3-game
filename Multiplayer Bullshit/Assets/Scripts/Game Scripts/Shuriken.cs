@@ -6,10 +6,14 @@ using Photon.Pun;
 public class Shuriken : MonoBehaviour
 {
     public Transform target;
-
     PhotonView pv;
+    public AudioSource audioSource;
 
-    private void Awake() => pv = GetComponent<PhotonView>();
+    private void Awake() { 
+        pv = GetComponent<PhotonView>();
+        audioSource.volume = PlayerPrefs.GetFloat("main volume");
+        audioSource.Play();
+    }
 
     // Update is called once per frame
     void Update()

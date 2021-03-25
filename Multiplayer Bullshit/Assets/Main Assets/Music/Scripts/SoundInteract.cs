@@ -5,6 +5,10 @@ using UnityEngine;
 public class SoundInteract : Interactable
 {
     public AudioSource audioSource;
+    private void Awake()
+    {
+        audioSource.volume = PlayerPrefs.GetFloat("main volume");
+    }
 
     public virtual void PlaySound()
     {

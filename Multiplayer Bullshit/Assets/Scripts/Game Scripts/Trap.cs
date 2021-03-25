@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Trap : Interactable {
 
   private float timeBeforeActive = 2f;
+    public AudioSource audioSource;
   [SerializeField] MeshRenderer needle;
   [SerializeField] MeshRenderer needleBase;
 
@@ -19,7 +20,12 @@ public class Trap : Interactable {
 
   public float timeBeforeDespawn = 1f;
 
-  private void Start() {
+    private void Awake()
+    {
+        audioSource.volume = PlayerPrefs.GetFloat("main volume");
+        audioSource.Play();
+    }
+    private void Start() {
     pv = GetComponent<PhotonView>();
     needle.material = transparent;
     needleBase.material = transparent;
@@ -43,6 +49,11 @@ public class Trap : Interactable {
     needle.material = normal;
     needleBase.material = normal;
   }
+    [PunRPC]
+    void PlaytheAudio()
+    {
+        audioSource.Play();
+    }
 
   private void OnTriggerEnter(Collider other) {
 
@@ -54,7 +65,8 @@ public class Trap : Interactable {
 
     // if other is a crewmate and not a Disarmer
     if (other.GetComponent<Role>().currRole == Role.Roles.Crewmate && !other.GetComponent<DisarmerAbility>().isActiveAndEnabled) {
-      Destroy(); // needs to be here so other people don't step on it
+            pv.RPC("PlaytheAudio", RpcTarget.All);
+            Destroy(); // needs to be here so other people don't step on it
       if (SceneManager.sceneCount == 1) {
         pac.currMinigameSceneName = "Trap Chance Minigame";
         pac.exitMinigame(false);

@@ -8,6 +8,7 @@ using Photon.Realtime;
 using UnityEngine.UI;
 public class ElevatorScript : MonoBehaviourPunCallbacks
 {
+    public AudioSource ding;
     PhotonView pv;
     public GameObject door;
     public GameObject bigDoor1, bigDoor2, bigDoor3;
@@ -337,7 +338,7 @@ public class ElevatorScript : MonoBehaviourPunCallbacks
     }
     IEnumerator OpenDoor()
     {
-        pv.RPC("Destination0", RpcTarget.All);
+        pv.RPC("PlayDing", RpcTarget.All);
         pv.RPC("OpeningTrue", RpcTarget.All);
         yield return new WaitForSeconds(3);
         pv.RPC("UnPressButton", RpcTarget.All);
@@ -348,6 +349,11 @@ public class ElevatorScript : MonoBehaviourPunCallbacks
     void CloseBigDoors(bool b)
     {
         bigDoorNumClose = b;
+    }
+    [PunRPC]
+    void PlayDing()
+    {
+        ding.Play();
     }
     [PunRPC]
     void OpenBigDoor(int i)

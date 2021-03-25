@@ -1326,6 +1326,7 @@
     <Compile Include="Assets\Main Assets\Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\SmoothFollowAction.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetPlayerCustomProperty.cs" />
+    <Compile Include="Assets\menuSoundFiasco.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\GestureRecognizer\UPDATE GUIDE.txt" />
