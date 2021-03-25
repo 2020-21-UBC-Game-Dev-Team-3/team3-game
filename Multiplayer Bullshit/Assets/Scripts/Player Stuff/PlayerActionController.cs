@@ -397,9 +397,9 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
 
     IEnumerator HitPlayerCoRoutine()
     {
-        yield return new WaitForSeconds(0.1f);
         mapMan.ResetMap();
         miniMan.ResetTaskList();
+        yield return new WaitForSeconds(0.1f);
         playerMan.Die();
     }
 
