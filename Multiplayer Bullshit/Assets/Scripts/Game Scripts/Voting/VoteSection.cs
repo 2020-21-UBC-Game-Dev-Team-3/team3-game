@@ -18,11 +18,38 @@ public class VoteSection : MonoBehaviour
 /*    private const byte SetColors = 0;
     private const byte SetRBGColors = 1;*/
     public TextMeshProUGUI playerName;
-
+    public Role myRole;
+   // public GameObject clientPlayer;
+   // public PhotonView pv;
+  //  public int id = -1000;
+/*    private void Awake()
+    {
+        pv = gameObject.GetComponent<PhotonView>();
+        
+    }*/
     public void SetupVoteSection(Player player)
     {
-        playerInSectionIndex = System.Array.IndexOf(PhotonNetwork.PlayerList, player);
+        /*if (pv.IsMine)
+        {
+            id = pv.ViewID;
+        }
+        myRole = GameObject.FindGameObjectWithTag("Player").GetComponent<Role>();
+        
+        
+        SetClientPlayer(id);*/
         playerName.text = player.NickName;
+        playerInSectionIndex = System.Array.IndexOf(PhotonNetwork.PlayerList, player);
+/*        if (clientPlayer.GetComponentInParent<Role>().currRole == Role.Roles.Imposter && myRole.updatedRole == "Imposter")
+        {
+            Debug.Log("Success");
+            playerName.text += " (Imposter)";
+        }
+        else
+        {
+            Debug.Log("Test failed");
+        }*/
+       // Debug.Log(myRole.updatedRole);
+       // Debug.Log(clientPlayer.GetComponent<Role>().currRole);
         switch ((string)player.CustomProperties["color"])
         {
             case "red":
@@ -64,67 +91,106 @@ public class VoteSection : MonoBehaviour
                 RaiseEventOptions raiseEventOptions = new RaiseEventOptions { TargetActors = new int[] { player.ActorNumber } };
                 PhotonNetwork.RaiseEvent(SetColors, localPlayer, raiseEventOptions, SendOptions.SendReliable);*/
     }
-
-/*    public void SetColor(Player localPlayer)
+/*    public void SetClientPlayer(int n)
     {
-        Color voteSectionPlayerColor = GetComponentInParent<Canvas>().transform.Find("Name Text (TMP)").GetComponent<TextMeshProUGUI>().color;
-        Debug.Log("Player's color: " + voteSectionPlayerColor);
-        Debug.Log("LOCAL PLAYER NAME: " + PhotonNetwork.LocalPlayer.NickName);
-        Debug.Log("Is other player a local player? " + (localPlayer == PhotonNetwork.LocalPlayer) + " Here is their name: " + localPlayer.NickName);
-        StartSetupOfRBGColors(localPlayer, voteSectionPlayerColor.r, "red");
-        StartSetupOfRBGColors(localPlayer, voteSectionPlayerColor.b, "blue");
-        StartSetupOfRBGColors(localPlayer, voteSectionPlayerColor.g, "green");
-    }
-
-    private void StartSetupOfRBGColors(Player localPlayer, float colorTint, string rbgColor)
-    {
-        Debug.Log(rbgColor + " Color tint: " + colorTint);
-        Debug.Log("Check Player name: " + localPlayer.NickName);
-        RaiseEventOptions raiseEventOptions = new RaiseEventOptions { TargetActors = new int[] { localPlayer.ActorNumber } };
-        object[] content = new object[] { colorTint, rbgColor };
-        PhotonNetwork.RaiseEvent(SetRBGColors, content, raiseEventOptions, SendOptions.SendReliable);
-
-    }
-    public void SetRBGColor(float colorTint, string rbgColor)
-    {
-        switch(rbgColor)
+        GameObject[] gos;
+        gos = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject gameo in gos)
         {
-            case "red": redTint = colorTint;
-                break;
-            case "blue": blueTint = colorTint;
-                break;
-            case "green": greenTint = colorTint;
-                break;
-        }
-        currNumOfTints++;
-        if (currNumOfTints >= maxNumOfTints)
-        {
-            currNumOfTints = 0;
-            playerProfile.color = new Color(redTint, blueTint, greenTint);
-        }
-    }
-
-    private void OnEnable()
-    {
-        PhotonNetwork.AddCallbackTarget(this);
-    }
-
-    private void OnDisable()
-    {
-        PhotonNetwork.RemoveCallbackTarget(this);
-    }
-
-    public void OnEvent(EventData photonData)
-    {
-        switch(photonData.Code)
-        {
-            case SetColors: SetColor((Player) photonData.CustomData);
-                break;
-            case SetRBGColors:
-                object[] data = (object[])photonData.CustomData;
-                SetRBGColor((float)data[0], (string)data[1]);
-                break;
+            Debug.Log("D");
+            Canvas[] canvas = gameo.GetComponentsInChildren<Canvas>();
+            foreach (Canvas c in canvas) {
+                if (c.name == "VoteCanvas")
+                {
+                    Debug.Log("E");
+                    VotingManager[] abc = c.GetComponentsInChildren<VotingManager>();
+                    foreach (var d in abc) {
+                        if (d.name == "VotingManager")
+                        {
+                            Debug.Log("F");
+                            Transform[] def = d.GetComponentsInChildren<Transform>();
+                            foreach (var e in def)
+                            {
+                                if (e.name == "PlayerBoxes")
+                                {
+                                    Debug.Log("G");
+                                    VoteSection[] children = e.GetComponentsInChildren<VoteSection>();
+                                    Debug.Log(children.Length);
+                                    foreach (VoteSection v in children)
+                                    {
+                                        Debug.Log("H");
+                                        v.clientPlayer = PhotonView.Find(id);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }*/
+
+
+    /*    public void SetColor(Player localPlayer)
+        {
+            Color voteSectionPlayerColor = GetComponentInParent<Canvas>().transform.Find("Name Text (TMP)").GetComponent<TextMeshProUGUI>().color;
+            Debug.Log("Player's color: " + voteSectionPlayerColor);
+            Debug.Log("LOCAL PLAYER NAME: " + PhotonNetwork.LocalPlayer.NickName);
+            Debug.Log("Is other player a local player? " + (localPlayer == PhotonNetwork.LocalPlayer) + " Here is their name: " + localPlayer.NickName);
+            StartSetupOfRBGColors(localPlayer, voteSectionPlayerColor.r, "red");
+            StartSetupOfRBGColors(localPlayer, voteSectionPlayerColor.b, "blue");
+            StartSetupOfRBGColors(localPlayer, voteSectionPlayerColor.g, "green");
+        }
+
+        private void StartSetupOfRBGColors(Player localPlayer, float colorTint, string rbgColor)
+        {
+            Debug.Log(rbgColor + " Color tint: " + colorTint);
+            Debug.Log("Check Player name: " + localPlayer.NickName);
+            RaiseEventOptions raiseEventOptions = new RaiseEventOptions { TargetActors = new int[] { localPlayer.ActorNumber } };
+            object[] content = new object[] { colorTint, rbgColor };
+            PhotonNetwork.RaiseEvent(SetRBGColors, content, raiseEventOptions, SendOptions.SendReliable);
+
+        }
+        public void SetRBGColor(float colorTint, string rbgColor)
+        {
+            switch(rbgColor)
+            {
+                case "red": redTint = colorTint;
+                    break;
+                case "blue": blueTint = colorTint;
+                    break;
+                case "green": greenTint = colorTint;
+                    break;
+            }
+            currNumOfTints++;
+            if (currNumOfTints >= maxNumOfTints)
+            {
+                currNumOfTints = 0;
+                playerProfile.color = new Color(redTint, blueTint, greenTint);
+            }
+        }
+
+        private void OnEnable()
+        {
+            PhotonNetwork.AddCallbackTarget(this);
+        }
+
+        private void OnDisable()
+        {
+            PhotonNetwork.RemoveCallbackTarget(this);
+        }
+
+        public void OnEvent(EventData photonData)
+        {
+            switch(photonData.Code)
+            {
+                case SetColors: SetColor((Player) photonData.CustomData);
+                    break;
+                case SetRBGColors:
+                    object[] data = (object[])photonData.CustomData;
+                    SetRBGColor((float)data[0], (string)data[1]);
+                    break;
+            }
+        }*/
 
 }

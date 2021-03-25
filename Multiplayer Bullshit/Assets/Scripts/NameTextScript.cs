@@ -71,6 +71,7 @@ public class NameTextScript : MonoBehaviour
         }
         if (started)
         {
+            started = false;
             StartCoroutine(UpdateNames());
         }
 
@@ -174,16 +175,17 @@ public class NameTextScript : MonoBehaviour
     [PunRPC]
     private void SetName() => text.text = PhotonNetwork.NickName;
     private void SetNameGameStart() {
-        if (myRole.currRole == Role.Roles.Imposter && clientPlayer.GetComponent<Role>().updatedRole == "Imposter")
+        if (clientPlayer.GetComponent<Role>().currRole == Role.Roles.Imposter && myRole.updatedRole == "Imposter")
         {
             Debug.Log("Success");
-            text.text = PhotonNetwork.NickName+ " (Imposter)";
+            text.text += " (Imposter)";
         }
         else
         {
-            text.text = PhotonNetwork.NickName;
             Debug.Log("Test failed");
         }
+        Debug.Log(myRole.updatedRole);
+        Debug.Log(clientPlayer.GetComponent<Role>().currRole);
     }
 
     public void SetClientPlayer(GameObject go)

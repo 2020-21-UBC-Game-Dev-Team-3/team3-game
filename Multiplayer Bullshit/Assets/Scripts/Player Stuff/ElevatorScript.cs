@@ -24,6 +24,7 @@ public class ElevatorScript : MonoBehaviourPunCallbacks
     private int bigDoorNumOpen = 1;
     private bool bigDoorNumClose = false;
     private float bigDoorScale = 0.0f;
+    private bool ring;
     void Start()
     {
 
@@ -239,6 +240,7 @@ public class ElevatorScript : MonoBehaviourPunCallbacks
             pv.RPC("Destination3", RpcTarget.All);
         }
         yield return new WaitForSeconds(1);
+        ring = true;
         pv.RPC("OverrideFalse", RpcTarget.All);
     }
     [PunRPC]
@@ -353,7 +355,11 @@ public class ElevatorScript : MonoBehaviourPunCallbacks
     [PunRPC]
     void PlayDing()
     {
-        ding.Play();
+        if (ring == true)
+        {
+            ring = false;
+            ding.Play();
+        }
     }
     [PunRPC]
     void OpenBigDoor(int i)
