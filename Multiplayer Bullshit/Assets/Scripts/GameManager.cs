@@ -83,9 +83,11 @@ public class GameManager : MonoBehaviourPunCallbacks {
     } else {
       isBlack = true;
       if (isCrewmateWin == true) {
-        crewmateWinScreen.SetActive(true);
+        //crewmateWinScreen.SetActive(true);
+        SceneManager.LoadScene("Crewmate Victory Screen", LoadSceneMode.Single);
       } else {
-        imposterWinScreen.SetActive(true);
+        //imposterWinScreen.SetActive(true);
+        SceneManager.LoadScene("Imposter Victory Screen", LoadSceneMode.Single);
       }
     }
   }
@@ -147,17 +149,8 @@ public class GameManager : MonoBehaviourPunCallbacks {
         player.GetComponent<MinigameManager>().SetUpMinigameAssignment();
         player.GetComponent<PlayerActionController>().OnStartGame();
       }
-      //if (player.GetComponent<Role>().updatedRole == "Crewmate" || player.GetComponent<Role>().currRole == Role.Roles.Crewmate)
-      //{
-      //    crewmates++;
-      //} else
-      //{
-      //    imposters++;
-      //}
       StartCoroutine(IncrementNumberOfCrewmatesAndImposters(player));
     }
-
-    //FindObjectOfType<TaskBar>().totalNumOfTasks = crewmates * 3;
   }
 
   IEnumerator IncrementNumberOfCrewmatesAndImposters(GameObject player)
