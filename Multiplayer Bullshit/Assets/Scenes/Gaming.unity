@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.31985432, g: 0.2581995, b: 0.367262, a: 1}
+  m_IndirectSpecularColor: {r: 0.31988475, g: 0.2581039, b: 0.36732426, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -25613,6 +25613,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8354254252923431307, guid: bee8e4b30c2a27a4c8b469328a3be3bf, type: 3}
+      propertyPath: m_Name
+      value: 'Piano '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8354254252923431307, guid: bee8e4b30c2a27a4c8b469328a3be3bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6806434838453348363, guid: bee8e4b30c2a27a4c8b469328a3be3bf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bee8e4b30c2a27a4c8b469328a3be3bf, type: 3}
@@ -36535,6 +36543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskProgress: {fileID: 6340473931619336562}
   slider: {fileID: 6340473932514965920}
+  totalNumOfTasks: 0
 --- !u!1 &6340473932514965933
 GameObject:
   m_ObjectHideFlags: 0

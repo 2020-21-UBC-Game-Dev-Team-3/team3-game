@@ -1629,6 +1629,7 @@ MonoBehaviour:
   assassinRange: 20
   shurikenPrefab: {fileID: 1245360488091752, guid: 05222e7ebee9c2741b376b8859ce6d39, type: 3}
   shurikenTransform: {fileID: 0}
+  assassinButton: {fileID: 0}
 --- !u!114 &1965030280839596255
 MonoBehaviour:
   m_ObjectHideFlags: 0

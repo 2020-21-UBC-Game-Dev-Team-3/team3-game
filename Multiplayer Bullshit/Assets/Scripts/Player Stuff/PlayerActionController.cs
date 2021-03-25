@@ -387,16 +387,23 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
 
   public void TakeHit() => pv.RPC("RPC_TakeHit", RpcTarget.All);
 
-  [PunRPC]
-  public void RPC_TakeHit() {
-    if (!pv.IsMine) return;
-    minigameInterrupt = true;
-    mapMan.ResetMap();
-    miniMan.ResetTaskList();
-    playerMan.Die();
-  }
+    [PunRPC]
+    public void RPC_TakeHit()
+    {
+        if (!pv.IsMine) return;
+        minigameInterrupt = true;
+        StartCoroutine("HitPlayerCoRoutine");
+    }
 
-  void CurrentlyInVent() {
+    IEnumerator HitPlayerCoRoutine()
+    {
+        yield return new WaitForSeconds(0.1f);
+        mapMan.ResetMap();
+        miniMan.ResetTaskList();
+        playerMan.Die();
+    }
+
+    void CurrentlyInVent() {
     if (Input.GetKeyDown("space")) {
       if ((transform.position - Vent1Pos.transform.position).sqrMagnitude < threshold) {
         transform.position = Vent2Pos.transform.position;

@@ -11,11 +11,11 @@ public class ChameleonAbility : RoleAbility {
   Camera cam;
   GameObject reticle;
   Vector3 reticlePosition;
+    public GameObject chameleonButton;
 
   public PhotonView photonView;
     public AudioSource killaudio;
   private void Awake() {
-    cooldownTimer = 0;
     StartCoroutine(InitiateCooldown());
     photonView = GetComponent<PhotonView>();
         killaudio.volume = PlayerPrefs.GetFloat("main volume");
@@ -25,6 +25,7 @@ public class ChameleonAbility : RoleAbility {
     cam = Camera.main;
     reticle = GameObject.Find("Assassin Reticle");
     reticlePosition = reticle.GetComponent<RectTransform>().transform.position;
+        chameleonButton.SetActive(true);
   }
 
   public override void SetAbilityText() {
@@ -45,7 +46,8 @@ public class ChameleonAbility : RoleAbility {
         Debug.Log(hit.collider.gameObject.GetComponent<PhotonView>().ViewID);
         photonView.RPC("KillTarget", RpcTarget.All, hit.collider.gameObject.GetComponent<PhotonView>().ViewID);
                 photonView.RPC("PlayKillAudio", RpcTarget.All);
-        yield return StartCoroutine(StartChameleon());
+                PlayMakerFSM.BroadcastEvent("visualCooldownStart");
+                yield return StartCoroutine(StartChameleon());
         yield return StartCoroutine(InitiateCooldown());
       }
     }

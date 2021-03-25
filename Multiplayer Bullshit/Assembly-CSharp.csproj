@@ -501,6 +501,7 @@
     <Compile Include="Assets\PlayMaker\Actions\VideoPlayer\VideoPlayerSetTargetMaterialProperty.cs" />
     <Compile Include="Assets\PlayMaker\Actions\RectTransform\RectTransformGetAnchoredPosition.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Vector2\Vector2Invert.cs" />
+    <Compile Include="Assets\Scripts\UI Stuff\ScreenManager.cs" />
     <Compile Include="Assets\PlayMaker\Actions\SceneManager\SendSceneLoadedEvent.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Time\PerSecond.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\GetAnimatorCurrentTransitionInfoIsName.cs" />

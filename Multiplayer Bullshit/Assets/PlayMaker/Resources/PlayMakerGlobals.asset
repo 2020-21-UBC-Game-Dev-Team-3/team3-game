@@ -78,3 +78,12 @@ MonoBehaviour:
   - CrewmateSabotaged
   - crewmate confirmed fix lights
   - GlobalLightsSabotaged
+  - visualCooldownStart
+  - GlobalLightsFixed
+  - GlobalLightsFixed2
+  - GlobalSetImposter
+  - GlobalSetCrewmate
+  - Transfer
+  - LightSabotageFsmStart
+  - GlobalTurnMovementOff
+  - GlobalTurnMovementOn

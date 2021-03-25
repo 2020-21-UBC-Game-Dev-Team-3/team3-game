@@ -16,6 +16,7 @@ public class AssassinAbility : RoleAbility
     Camera cam;
     GameObject reticle;
     Vector3 reticlePosition;
+    public GameObject assassinButton;
 
     PhotonView photonView;
 
@@ -30,6 +31,7 @@ public class AssassinAbility : RoleAbility
         cam = Camera.main;
         reticle = GameObject.Find("Assassin Reticle");
         reticlePosition = reticle.GetComponent<RectTransform>().transform.position;
+        assassinButton.SetActive(true);
     }
 
   public override void SetAbilityText() {
@@ -52,7 +54,9 @@ public class AssassinAbility : RoleAbility
                 //&& hit.collider.gameObject.GetComponent<Role>().currRole == Role.Roles.Crewmate)
             {
                 photonView.RPC("ShurikenTravel", RpcTarget.All, hit.collider.gameObject.GetComponent<PhotonView>().ViewID);
+                PlayMakerFSM.BroadcastEvent("visualCooldownStart");
                 yield return StartCoroutine(InitiateCooldown());
+               
             }
         }
     }
