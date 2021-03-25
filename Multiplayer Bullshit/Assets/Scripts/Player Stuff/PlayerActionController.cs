@@ -222,6 +222,11 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
       ChooseInteractionEvent(interactable);
     }
   }
+    [PunRPC]
+    void VentSound(string ventName)
+    {
+        GameObject.Find(ventName).GetComponent<AudioSource>().Play();
+    }
 
   void ChooseInteractionEvent(Interactable interactable) {
     switch (interactable.interactableName) {
@@ -240,6 +245,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
 
       case "Vent":
         if (GetComponent<Role>().currRole == Role.Roles.Imposter) {
+                    pv.RPC("VentSound", RpcTarget.All, interactable.name);
           EnterVent(interactable);
         } else {
           Debug.Log("You're not an imposter!");
@@ -401,7 +407,9 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
 
     } else if (Input.GetKeyDown("a") || Input.GetKeyDown("w") || Input.GetKeyDown("d") || Input.GetKeyDown("s")) {
       pv.RPC("stopInvis", RpcTarget.All);
-      inVent = false;
+            //     pv.RPC("VentSound", RpcTarget.All, interactable.name);
+
+            inVent = false;
     }
   }
 
