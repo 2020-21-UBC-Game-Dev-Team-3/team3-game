@@ -207,7 +207,7 @@ public class VotingManager : MonoBehaviour {
 
   public void OnEnable() {
     transform.parent.GetComponentInParent<PlayerActionController>().enabled = false;
-    transform.parent.GetComponentsInParent<PlayMakerFSM>()[2].enabled = false;
+/*    transform.parent.GetComponentsInParent<PlayMakerFSM>()[2].enabled = false;*/
     ClearBodies();
     SetupVoting();
   }
@@ -216,7 +216,7 @@ public class VotingManager : MonoBehaviour {
     pv.RPC("ShowSkipResults", RpcTarget.All, numOfSkipVotes, false);
     pv.RPC("ShowVotingResults", RpcTarget.All, numOfPlayersVotingForYou, System.Array.IndexOf(PhotonNetwork.PlayerList, PhotonNetwork.LocalPlayer), false);
     transform.parent.GetComponentInParent<PlayerActionController>().enabled = true;
-    transform.parent.GetComponentsInParent<PlayMakerFSM>()[2].enabled = true;
+/*    transform.parent.GetComponentsInParent<PlayMakerFSM>()[2].enabled = true;*/
     for (int i = 0; i < playerBoxes.transform.childCount; i++)
       playerBoxes.transform.GetChild(i).Find("InteractButton").gameObject.SetActive(true);
     skipBoxInteractButton.SetActive(true);
