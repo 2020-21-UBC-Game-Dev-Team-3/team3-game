@@ -10,6 +10,7 @@ public class TaskBar : MonoBehaviour {
   [SerializeField] TextMeshProUGUI taskProgress;
   [SerializeField] Slider slider;
   private int count;
+  public int totalNumOfTasks;
   PhotonView pv;
   PlayerActionController pac;
 
@@ -21,16 +22,19 @@ public class TaskBar : MonoBehaviour {
   void Start() {
     Debug.Log(taskProgress);
     taskProgress.text = "Tasks Completed: " + count.ToString() + "/" + "10";
-    
   }
 
   private void Update() {
-    if (pac == null) { 
-        pac = GameObject.Find("player2(Clone)").GetComponent<PlayerActionController>();
-    }
-    //if (Input.GetKeyDown(KeyCode.T)) {
-    //  Increment();
-    //}
+
+        if (GameObject.Find("GhostPlayer(Clone)") != null)
+        {
+            pac = GameObject.Find("GhostPlayer(Clone)").GetComponent<PlayerActionController>();
+        } else
+        {
+            pac = GameObject.Find("player2(Clone)").GetComponent<PlayerActionController>();
+        }
+
+        slider.maxValue = totalNumOfTasks;
   }
 
   public void IncrementTaskBar() {
@@ -46,12 +50,12 @@ public class TaskBar : MonoBehaviour {
   [PunRPC] 
   void UpdateTextBox() {
     count++;
-    if (count < 10) {
+    if (count < totalNumOfTasks) {
       slider.value = count;
-      taskProgress.text = "Tasks Completed: " + count.ToString() + "/" + "10";
+      taskProgress.text = "Tasks Completed: " + count.ToString() + "/" + totalNumOfTasks.ToString();
     } else {
       slider.value = count;
-      taskProgress.text = "Tasks Completed: " + count.ToString() + "/" + "10";
+      taskProgress.text = "Tasks Completed: " + count.ToString() + "/" + totalNumOfTasks.ToString();
       FindObjectOfType<GameManager>().CrewmateWin();
     }
   }

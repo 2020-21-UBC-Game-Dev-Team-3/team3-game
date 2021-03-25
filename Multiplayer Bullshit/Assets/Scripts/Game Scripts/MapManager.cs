@@ -61,14 +61,13 @@ public class MapManager : MonoBehaviour
         bottomFloorPlane.SetActive((Mathf.Round(bottomFloorPlane.transform.position.y)) == playerPlanePos);
     }
 
-    public void InitiateMapReset()
-    {
-        StartCoroutine(ResetMap());
-    }
+    //public void InitiateMapReset()
+    //{
+    //    StartCoroutine(ResetMap());
+    //}
 
-    IEnumerator ResetMap()
+    public void ResetMap()
     {
-        yield return new WaitForSeconds(1f);
         topFloorPlane.SetActive(true);
         middleFloorPlane.SetActive(true);
         bottomFloorPlane.SetActive(true);

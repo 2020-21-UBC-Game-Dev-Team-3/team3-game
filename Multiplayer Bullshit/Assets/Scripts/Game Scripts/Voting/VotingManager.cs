@@ -202,7 +202,7 @@ public class VotingManager : MonoBehaviour {
 
   [PunRPC]
   private void KillCurrPlayer() {
-    transform.parent.GetComponentInParent<MapManager>().InitiateMapReset();
+    transform.parent.GetComponentInParent<MapManager>().ResetMap();
     foreach (PlayerManager playerManager in FindObjectsOfType<PlayerManager>())
       if (playerManager.GetComponent<PhotonView>().IsMine) playerManager.GetVotedOff();
   }

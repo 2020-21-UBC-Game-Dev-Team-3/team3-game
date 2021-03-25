@@ -13,10 +13,10 @@ public class MinigameManager : MonoBehaviour
     PhotonView pv;
     PlayerManager localPM;
 
-    string dartsText = "Take a break and play some darts (Arcade 3F)";
+    string dartsText = "Take a break and play some darts (Arcade 1F)";
     string drinksText = "Mix yourself a cold and refreshing drink (Bar 2F)";
-    string icebergsText = "Steer the ship away from icebergs (Navigation 3F)";
-    string lifeboatText = "Help survivors onto the lifeboat (Lifeboats 1F)";
+    string icebergsText = "Steer the ship away from icebergs (Navigation 1F)";
+    string lifeboatText = "Help survivors onto the lifeboat (Lifeboats 3F)";
     string scavengerText = "Search for clues on the ship (Magnifying Glass 2F)";
 
     public List<string> assignedMinigames = new List<string>();
@@ -38,7 +38,7 @@ public class MinigameManager : MonoBehaviour
         {
             RetrieveTasks();
             assignedMinigames.AddRange(completedMinigames);
-            SetUpTaskList();
+            SetUpMinigameAssignment();
             foreach (string minigame in completedMinigames) UpdateTaskComplete(minigame);
         }
         else RandomizeMinigames();
@@ -115,7 +115,6 @@ public class MinigameManager : MonoBehaviour
         }
     }
 
-
     void UpdateTaskComplete(string minigame)
     {
         string updatedTaskText;
@@ -183,4 +182,6 @@ public class MinigameManager : MonoBehaviour
         taskList.SetActive(false);
         taskListOpen = false;
     }
+
+    public void ResetTaskList() => taskList.SetActive(true);
 }

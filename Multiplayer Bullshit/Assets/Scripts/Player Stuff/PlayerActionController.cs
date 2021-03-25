@@ -391,7 +391,8 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
   public void RPC_TakeHit() {
     if (!pv.IsMine) return;
     minigameInterrupt = true;
-    mapMan.InitiateMapReset();
+    mapMan.ResetMap();
+    miniMan.ResetTaskList();
     playerMan.Die();
   }
 
