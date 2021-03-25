@@ -21,6 +21,11 @@ TagManager:
   - Bar
   - Note
   - collide
+  - Floor1Button
+  - Floor3Button
+  - Floor2Button
+  - MinigameCloseButton
+  - MinigameCanvas
   layers:
   - Default
   - TransparentFX
@@ -38,7 +43,7 @@ TagManager:
   - Shuriken
   - Minigame
   - Chameleon
-  - 
+  - Imposter
   - 
   - 
   - 

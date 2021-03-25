@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class RoleRandomizer : MonoBehaviour {
   private bool hasLoadedGame;
@@ -16,6 +17,7 @@ public class RoleRandomizer : MonoBehaviour {
   private List<int> playersLeftWithRole = new List<int>();
   private PhotonView pv;
   private RoomManager roomManager;
+    Camera mainCamera;
 
   public float imposterPercentScaler;
   [HideInInspector] public int numberOfPlayersAddedSoFar;
@@ -25,6 +27,7 @@ public class RoleRandomizer : MonoBehaviour {
   List<string> availableCrewmateRoles = new List<string>();
 
   void Start() {
+        mainCamera = Camera.main;
     roomManager = FindObjectOfType<RoomManager>().GetComponent<RoomManager>();
     pv = GetComponent<PhotonView>();
     /*    availableImposterRoles.AddRange(new string[] { "Assassin", "Chameleon", "Trapper" });*/
@@ -59,7 +62,7 @@ public class RoleRandomizer : MonoBehaviour {
   private void AssignRoles(List<int> randomIntList) {
 
     if (PhotonNetwork.PlayerList.Length == 1) {
-      pv.RPC("FillInCrewmates", PhotonNetwork.PlayerList[randomIntList[0]], randomIntList[0]);
+      pv.RPC("FillInImposters", PhotonNetwork.PlayerList[randomIntList[0]], randomIntList[0]);
       return;
     }
 
@@ -89,8 +92,24 @@ public class RoleRandomizer : MonoBehaviour {
   private void FillInImposters(int index) {
     Role role = GameObject.FindGameObjectWithTag("Player").GetComponent<Role>();
     role.currRole = Role.Roles.Imposter;
-    //role.currPercentForImposter -= imposterPercentScaler;
-    roomManager.currPercentForImposter -= imposterPercentScaler;
+        mainCamera.cullingMask |= 1 << LayerMask.NameToLayer("Imposter");
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        Canvas canvas = player.GetComponentInChildren<Canvas>();
+        Debug.Log(canvas.name);;
+        for (int i = 0; i < canvas.transform.childCount; i++)
+        {
+            Debug.Log("Looking in canvas");
+            GameObject child = canvas.transform.GetChild(i).gameObject;
+            if (child.name == "Imposter Text")
+            {
+                Debug.Log("Checking and setting text name");
+                TextMeshProUGUI targetText = child.GetComponent<TextMeshProUGUI>();
+                Debug.Log(targetText.name);
+                targetText.text = "(Imposter)";
+            }
+        }
+            //role.currPercentForImposter -= imposterPercentScaler;
+            roomManager.currPercentForImposter -= imposterPercentScaler;
     Debug.Log("Player imposter percentage with imposter: " + roomManager.currPercentForImposter);
     /*    pv.RPC("IncrementRoleNumbers", RpcTarget.All, true);*/
     pv.RPC("AdjustRoleText", PhotonNetwork.PlayerList[index], true);
