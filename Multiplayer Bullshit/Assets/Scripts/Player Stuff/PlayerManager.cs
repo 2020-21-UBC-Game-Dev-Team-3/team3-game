@@ -73,7 +73,7 @@ public class PlayerManager : MonoBehaviour
 
     public void Die()
     {
-        //FindObjectOfType<GameManager>().RemovePlayer(controller);
+        FindObjectOfType<GameManager>().RemovePlayer(controller);
         pv.RPC("RemovedDeadPlayerFromVoting", RpcTarget.All, PhotonNetwork.LocalPlayer);
         Vector3 oldPosition = controller.transform.position;
         PhotonNetwork.Destroy(controller);
@@ -83,7 +83,7 @@ public class PlayerManager : MonoBehaviour
 
     public void GetVotedOff()
     {
-        //FindObjectOfType<GameManager>().RemovePlayer(controller);
+        FindObjectOfType<GameManager>().RemovePlayer(controller);
         pv.RPC("RemovedDeadPlayerFromVoting", RpcTarget.All, PhotonNetwork.LocalPlayer);
         Vector3 oldPosition = controller.transform.position;
         PhotonNetwork.Destroy(controller);
@@ -99,7 +99,7 @@ public class PlayerManager : MonoBehaviour
     void CreateGhostPlayer(Vector3 position)
     {
         controller = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "GhostPlayer"), position, Quaternion.identity, 0, new object[] { pv.ViewID });
-        //  controller.GetComponent<SkinSelect>().SetCharacterSkin();
+        //controller.GetComponent<SkinSelect>().SetCharacterSkin();
         controller.GetComponent<Role>().currRole = assignedRole;
         controller.GetComponent<PlayerActionController>().OnStartGame();
     }

@@ -725,6 +725,8 @@ MonoBehaviour:
   distanceToClient: 0
   clientPlayer: {fileID: 0}
   text: {fileID: 4467708181678733126}
+  myRole: {fileID: 0}
+  started: 0
 --- !u!114 &2932352188953572542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -737,6 +739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8e0310bac7063f46bcc2a82ae89204b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  updatedRole: 
   currRole: 0
   subRole: 0
 --- !u!114 &8116951676583067669
@@ -752,6 +755,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2268599413859011575}
+  topFloorPlane: {fileID: 0}
+  middleFloorPlane: {fileID: 0}
+  bottomFloorPlane: {fileID: 0}
 --- !u!114 &429324167825830125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -880,10 +886,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownTimer: 10
+  abilityText: {fileID: 0}
   pv: {fileID: 0}
   assassinRange: 20
   shurikenPrefab: {fileID: 1245360488091752, guid: 05222e7ebee9c2741b376b8859ce6d39, type: 3}
   shurikenTransform: {fileID: 6753214186814695581}
+  assassinButton: {fileID: 0}
 --- !u!114 &-3004459473416961289
 MonoBehaviour:
   m_ObjectHideFlags: 0

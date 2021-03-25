@@ -1496,6 +1496,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 3266545680786733594}
+  topFloorPlane: {fileID: 0}
+  middleFloorPlane: {fileID: 0}
+  bottomFloorPlane: {fileID: 0}
 --- !u!114 &2320500168002132948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5557,7 +5560,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1

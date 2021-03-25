@@ -168,7 +168,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
       return;
     } else {
       minigameInterrupt = false;
-      if (currMinigameSceneName == "Rhythm Trap Minigame" || currMinigameSceneName == "Chance Trap Minigame" || currMinigameSceneName == "Lights minigame") {
+      if (currMinigameSceneName == "Rhythm Trap Minigame" || currMinigameSceneName == "Chance Trap Minigame" || currMinigameSceneName == "Lights Minigame") {
 /*        interactable.gameObject.GetComponent<Trap>().Destroy();*/
       } else if (currMinigameSceneName != "none") {
         tbIHolder = true;

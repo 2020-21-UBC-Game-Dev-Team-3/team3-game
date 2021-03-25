@@ -277,6 +277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInSectionIndex: 0
   playerName: {fileID: 2811847436679739597}
+  myRole: {fileID: 0}
 --- !u!1 &289732827109854560
 GameObject:
   m_ObjectHideFlags: 0
@@ -9006,6 +9007,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInSectionIndex: 0
   playerName: {fileID: 561273604248250344}
+  myRole: {fileID: 0}
 --- !u!1 &4589352109624442076
 GameObject:
   m_ObjectHideFlags: 0
@@ -9568,6 +9570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInSectionIndex: 0
   playerName: {fileID: 4836020654775723148}
+  myRole: {fileID: 0}
 --- !u!1 &4776158249812061758
 GameObject:
   m_ObjectHideFlags: 0
@@ -10066,6 +10069,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInSectionIndex: 0
   playerName: {fileID: 3403422243993174281}
+  myRole: {fileID: 0}
 --- !u!1 &4897385649274890222
 GameObject:
   m_ObjectHideFlags: 0
@@ -11098,6 +11102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInSectionIndex: 0
   playerName: {fileID: 3842114208352116948}
+  myRole: {fileID: 0}
 --- !u!1 &5189359016389113888
 GameObject:
   m_ObjectHideFlags: 0
@@ -12716,6 +12721,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInSectionIndex: 0
   playerName: {fileID: 8417598559445192201}
+  myRole: {fileID: 0}
 --- !u!1 &5686132867411097592
 GameObject:
   m_ObjectHideFlags: 0
@@ -13080,6 +13086,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInSectionIndex: 0
   playerName: {fileID: 1444128094773847868}
+  myRole: {fileID: 0}
 --- !u!1 &6057248811825452988
 GameObject:
   m_ObjectHideFlags: 0
@@ -14443,6 +14450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInSectionIndex: 0
   playerName: {fileID: 1088989639592375452}
+  myRole: {fileID: 0}
 --- !u!1 &7095230829201046720
 GameObject:
   m_ObjectHideFlags: 0
@@ -15915,6 +15923,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInSectionIndex: 0
   playerName: {fileID: 8392946750399197578}
+  myRole: {fileID: 0}
 --- !u!1 &7709437168129198550
 GameObject:
   m_ObjectHideFlags: 0
@@ -19049,6 +19058,8 @@ MonoBehaviour:
   playerBoxes: {fileID: 8959122233566413368}
   meetingAudios: []
   bgmAudios: []
+  randomSounds: []
+  thisSource: {fileID: 0}
 --- !u!1 &8980898012493671923
 GameObject:
   m_ObjectHideFlags: 0

@@ -197,7 +197,7 @@ public class GameManager : MonoBehaviourPunCallbacks {
 
   public void DecrementCrewmates() {
     crewmates--;
-    if (crewmates == 0) {
+    if (crewmates == 0 || crewmates == imposters) {
       Debug.Log("IMPOSTER WIN");
       ImposterWin();
     }
