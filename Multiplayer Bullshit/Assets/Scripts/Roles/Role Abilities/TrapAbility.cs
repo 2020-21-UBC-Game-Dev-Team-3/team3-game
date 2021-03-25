@@ -23,7 +23,7 @@ public class TrapAbility : RoleAbility {
     private void Start() {
     trapperButton.SetActive(true);
     trapperUI = FindObjectOfType<TrapperUI>();
-    trapperUI.SetText("Traps active: " + currNumberTraps.ToString() + "/" + maxNumberTraps.ToString());
+    trapperUI.SetText(currNumberTraps.ToString() + "/" + maxNumberTraps.ToString());
   }
 
   public override void SetAbilityText() {
@@ -39,7 +39,7 @@ public class TrapAbility : RoleAbility {
       Vector3 tempPos = transform.position;
       FindObjectOfType<TrapManager>().InstantiateTrap(tempPos);
       currNumberTraps++;
-      trapperUI.SetText("Traps active: " + currNumberTraps.ToString() + "/" + maxNumberTraps.ToString());
+      trapperUI.SetText(currNumberTraps.ToString() + "/" + maxNumberTraps.ToString());
       PlayMakerFSM.BroadcastEvent("visualCooldownStart");
       yield return StartCoroutine(InitiateCooldown());
     }
@@ -54,7 +54,7 @@ public class TrapAbility : RoleAbility {
   public void RPC_DecrementTraps() {
     if (!(GetComponent<Role>().subRole == Role.Roles.Trapper)) return;
     currNumberTraps--;
-    trapperUI.SetText("Traps active: " + currNumberTraps.ToString() + "/" + maxNumberTraps.ToString());
+    trapperUI.SetText(currNumberTraps.ToString() + "/" + maxNumberTraps.ToString());
     isTouchingTrap = false;
   }
 }
