@@ -5,6 +5,7 @@ using Photon.Pun;
 
 public class Role : MonoBehaviour, IPunInstantiateMagicCallback
 {
+    public string updatedRoleString;
     public enum Roles
     {
         Imposter, Crewmate, Assassin, Chameleon, Trapper, Disarmer, None
