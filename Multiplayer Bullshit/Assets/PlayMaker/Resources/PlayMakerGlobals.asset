@@ -75,3 +75,13 @@ MonoBehaviour:
   - PHOTON / ON REGION LIST RECEIVED
   - PHOTON / ON WEBRPC RESPONSE
   - PHOTON / ON PHOTON INSTANTIATE
+  - CrewmateSabotaged
+  - crewmate confirmed fix lights
+  - GlobalLightsSabotaged
+  - Transfer
+  - GlobalLightsFixed
+  - LightSabotageFsmStart
+  - GlobalSetCrewmate
+  - GlobalSetImposter
+  - GlobalTurnMovementOff
+  - GlobalTurnMovementOn
