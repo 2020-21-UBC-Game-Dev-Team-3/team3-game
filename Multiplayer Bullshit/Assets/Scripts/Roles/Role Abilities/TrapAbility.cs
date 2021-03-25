@@ -9,6 +9,7 @@ public class TrapAbility : RoleAbility {
 
   public bool isTouchingTrap = false; // checks if Trapper is too close to another trap
   [SerializeField] GameObject trapPrefab; // the trap - what gets instantiated
+  [SerializeField] GameObject trapperButton; 
   TrapperUI trapperUI; // the UI which displays how many traps are active
 
   private int maxNumberTraps = 3;
@@ -20,6 +21,7 @@ public class TrapAbility : RoleAbility {
     }
 
     private void Start() {
+    trapperButton.SetActive(true);
     trapperUI = FindObjectOfType<TrapperUI>();
     trapperUI.SetText("Traps active: " + currNumberTraps.ToString() + "/" + maxNumberTraps.ToString());
   }
@@ -29,13 +31,17 @@ public class TrapAbility : RoleAbility {
     abilityText.text = "Trapper";
   }
 
-  public override void UseAbility() {
+
+  public override void UseAbility() => StartCoroutine(DeployTrap());
+
+  IEnumerator DeployTrap() {
     if (currNumberTraps < maxNumberTraps && !isTouchingTrap) {
       Vector3 tempPos = transform.position;
-      /*      BroadcastMessage("InstantiateTrap", tempPos);*/
       FindObjectOfType<TrapManager>().InstantiateTrap(tempPos);
       currNumberTraps++;
       trapperUI.SetText("Traps active: " + currNumberTraps.ToString() + "/" + maxNumberTraps.ToString());
+      PlayMakerFSM.BroadcastEvent("visualCooldownStart");
+      yield return StartCoroutine(InitiateCooldown());
     }
   }
 

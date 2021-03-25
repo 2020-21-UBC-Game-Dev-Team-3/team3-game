@@ -20,12 +20,15 @@ public class Trap : Interactable {
 
   public float timeBeforeDespawn = 1f;
 
-    private void Awake()
+/*    private void Awake()
     {
-        audioSource.volume = PlayerPrefs.GetFloat("main volume");
-        audioSource.Play();
-    }
+    audioSource.volume = PlayerPrefs.GetFloat("main volume");
+    audioSource.Play();
+  }*/
+
     private void Start() {
+    audioSource.volume = PlayerPrefs.GetFloat("main volume");
+    audioSource.Play();
     pv = GetComponent<PhotonView>();
     needle.material = transparent;
     needleBase.material = transparent;

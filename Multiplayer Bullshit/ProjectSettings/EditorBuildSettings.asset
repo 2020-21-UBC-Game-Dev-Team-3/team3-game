@@ -38,4 +38,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Darts Minigame.unity
     guid: e9805e3df606344c2a5c51a747e25b96
+  - enabled: 1
+    path: Assets/Scenes/Imposter Victory Screen.unity
+    guid: 62514f47acc79f247ab97f521f27163f
+  - enabled: 1
+    path: Assets/Scenes/Crewmate Victory Screen.unity
+    guid: d1aeb9a8dfe98e84f817a4140095c3f1
   m_configObjects: {}
