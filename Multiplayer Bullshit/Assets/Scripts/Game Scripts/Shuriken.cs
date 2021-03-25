@@ -21,17 +21,11 @@ public class Shuriken : MonoBehaviour
     {
         if (other.CompareTag("Player") && other.GetComponent<Role>().currRole == Role.Roles.Crewmate)
         {
-            other.gameObject.GetComponent<IDamageable>()?.TakeHit();
-            Debug.Log("what the actual fuck shuriken should be destroyed");
-            Debug.Log("is the pv there?: " + pv != null);
             pv.RPC("DestroyShuriken", RpcTarget.All);
+            other.gameObject.GetComponent<IDamageable>()?.TakeHit();
         }
     }
 
     [PunRPC]
-    void DestroyShuriken()
-    {
-        Debug.Log("nani the fuck");
-        Destroy(gameObject);
-    }
+    void DestroyShuriken() => Destroy(gameObject);
 }
