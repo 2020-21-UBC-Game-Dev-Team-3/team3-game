@@ -23,7 +23,7 @@ public class VotingManager : MonoBehaviour {
   //    [HideInInspector] public List<Player> playersAllowedToVote;
   //  private List<Player> playersNotAllowedToVote;
   public List<AudioSource> meetingAudios;
-  public List<AudioSource> bgmAudios;
+    public List<AudioSource> bgmAudios;
   private GameObject[] players;
   private GameManager gameManager;
     public AudioClip[] randomSounds;
@@ -51,7 +51,8 @@ public class VotingManager : MonoBehaviour {
       playerVotingSections.Add(playerBoxes.transform.GetChild(i).gameObject, false);
     }
     foreach (Player player in PhotonNetwork.PlayerList) {
-      bool isPlayerAllowedToVote = gameManager.playersAllowedToVote.Contains(player);
+            pv.RPC("PlayTheStupidSounds", RpcTarget.All);
+            bool isPlayerAllowedToVote = gameManager.playersAllowedToVote.Contains(player);
       Debug.Log(player.NickName + " is allowed to vote: " + isPlayerAllowedToVote);
       foreach (KeyValuePair<GameObject, bool> section in playerVotingSections) {
         if (!section.Value) {
@@ -207,15 +208,18 @@ public class VotingManager : MonoBehaviour {
   }
 
   public void OnEnable() {
-        thisSource.volume = PlayerPrefs.GetFloat("main volume");
-        thisSource.clip = randomSounds[Random.Range(0, 2)];
-        thisSource.Play();
         transform.parent.GetComponentInParent<PlayerActionController>().enabled = false;
 /*    transform.parent.GetComponentsInParent<PlayMakerFSM>()[2].enabled = false;*/
     ClearBodies();
     SetupVoting();
   }
-
+    [PunRPC]
+    void PlayTheStupidSounds()
+    {
+        thisSource.volume = PlayerPrefs.GetFloat("main volume");
+        thisSource.clip = randomSounds[Random.Range(0, 3)];
+        thisSource.Play();
+    }
   public void OnDisable() {
     pv.RPC("ShowSkipResults", RpcTarget.All, numOfSkipVotes, false);
     pv.RPC("ShowVotingResults", RpcTarget.All, numOfPlayersVotingForYou, System.Array.IndexOf(PhotonNetwork.PlayerList, PhotonNetwork.LocalPlayer), false);

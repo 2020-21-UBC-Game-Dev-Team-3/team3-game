@@ -2758,7 +2758,7 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           typeName: UnityEngine.AudioClip
-          value: {fileID: 8300000, guid: 05fc3c5e88c62694ba2a402a0811a82b, type: 3}
+          value: {fileID: 0}
         - useVariable: 0
           name: 
           tooltip: 
@@ -2777,7 +2777,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: volume
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
