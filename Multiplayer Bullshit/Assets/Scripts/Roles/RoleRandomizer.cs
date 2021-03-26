@@ -29,8 +29,8 @@ public class RoleRandomizer : MonoBehaviour
     {
         roomManager = FindObjectOfType<RoomManager>().GetComponent<RoomManager>();
         pv = GetComponent<PhotonView>();
-        /*    availableImposterRoles.AddRange(new string[] { "Assassin", "Chameleon", "Trapper" });*/
-        availableImposterRoles.AddRange(new string[] { "Assassin", "Chameleon" });
+        availableImposterRoles.AddRange(new string[] { "Assassin", "Chameleon", "Trapper" });
+        //availableImposterRoles.AddRange(new string[] { "Assassin", "Chameleon" });
         availableCrewmateRoles.AddRange(new string[] { "Disarmer" });
         /*    maxImposterNum = (int)Mathf.Round(roomManager.maxNumberOfPlayers / testingNum);
             maxCrewmateNum = roomManager.maxNumberOfPlayers - maxImposterNum;*/
@@ -71,20 +71,20 @@ public class RoleRandomizer : MonoBehaviour
             return;
         }
 
-        if (PhotonNetwork.PlayerList.Length == 2)
-        {
-            pv.RPC("FillInCrewmates", PhotonNetwork.PlayerList[randomIntList[0]], randomIntList[0]);
-            pv.RPC("FillInImposters", PhotonNetwork.PlayerList[randomIntList[1]], randomIntList[1]);
-            return;
-        }
+        //if (PhotonNetwork.PlayerList.Length == 2)
+        //{
+        //    pv.RPC("FillInCrewmates", PhotonNetwork.PlayerList[randomIntList[0]], randomIntList[0]);
+        //    pv.RPC("FillInImposters", PhotonNetwork.PlayerList[randomIntList[1]], randomIntList[1]);
+        //    return;
+        //}
 
-        if (PhotonNetwork.PlayerList.Length == 3)
-        {
-            pv.RPC("FillInImposters", PhotonNetwork.PlayerList[randomIntList[0]], randomIntList[0]);
-            pv.RPC("FillInImposters", PhotonNetwork.PlayerList[randomIntList[1]], randomIntList[1]);
-            pv.RPC("FillInDisarmers", PhotonNetwork.PlayerList[randomIntList[2]], randomIntList[2]);
-            return;
-        }
+        //if (PhotonNetwork.PlayerList.Length == 3)
+        //{
+        //    pv.RPC("FillInImposters", PhotonNetwork.PlayerList[randomIntList[0]], randomIntList[0]);
+        //    pv.RPC("FillInImposters", PhotonNetwork.PlayerList[randomIntList[1]], randomIntList[1]);
+        //    pv.RPC("FillInDisarmers", PhotonNetwork.PlayerList[randomIntList[2]], randomIntList[2]);
+        //    return;
+        //}
 
         if (PhotonNetwork.PlayerList.Length <= 6)
         {

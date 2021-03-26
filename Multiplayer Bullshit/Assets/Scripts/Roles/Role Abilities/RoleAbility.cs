@@ -34,4 +34,6 @@ public abstract class RoleAbility : MonoBehaviour {
     yield return new WaitForSeconds(cooldownTimer);
     onCooldown = false;
   }
+
+    public void RestartCooldown() => StartCoroutine(InitiateCooldown());
 }

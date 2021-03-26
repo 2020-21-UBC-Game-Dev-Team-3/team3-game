@@ -161,9 +161,8 @@ public class PlayerActionController : MonoBehaviour, IDamageable
 
     // Update is called once per frame
     void Update()
-    {
+    { 
         if (!pv.IsMine) return;
-
 
         if (tbIHolder)
         {
@@ -234,11 +233,11 @@ public class PlayerActionController : MonoBehaviour, IDamageable
             ability.InitiateAbility();
         }
 
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            FindObjectOfType<TaskBar>().IncrementTaskBar();
-            FindObjectOfType<TaskBar>().IncrementTaskBar();
-        }
+        //if (Input.GetKeyDown(KeyCode.V))
+        //{
+        //    FindObjectOfType<TaskBar>().IncrementTaskBar();
+        //    FindObjectOfType<TaskBar>().IncrementTaskBar();
+        //}
     }
 
 
@@ -278,6 +277,9 @@ public class PlayerActionController : MonoBehaviour, IDamageable
             ChooseInteractionEvent(interactable);
         }
     }
+
+    public void OnUseButtonPressed() => Interact();
+
     [PunRPC]
     void VentSound(string ventName)
     {

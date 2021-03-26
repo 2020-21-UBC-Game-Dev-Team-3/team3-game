@@ -59,6 +59,7 @@ public class MapManager : MonoBehaviour {
   //}
 
   public void ResetMap() {
+    if (!pv.IsMine) return;
     topFloorPlane.SetActive(true);
     middleFloorPlane.SetActive(true);
     bottomFloorPlane.SetActive(true);

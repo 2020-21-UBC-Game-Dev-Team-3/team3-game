@@ -10,6 +10,7 @@ public class PlayerMovementController : MonoBehaviour {
   [SerializeField] GameObject minimapCamera;
   [SerializeField] GameObject playerIndicator;
     [SerializeField] GameObject TargetCamera;
+    [SerializeField] GameObject meetingIndicator;
     //[SerializeField] GameObject emergencyMeetingEvent;
     // minigame interaction stuff
     public GameObject[] interactables;
@@ -50,6 +51,7 @@ public class PlayerMovementController : MonoBehaviour {
       Destroy(minimapCamera);
       Destroy(TargetCamera);
       Destroy(playerIndicator);
+      Destroy(meetingIndicator);
     }
   }
 

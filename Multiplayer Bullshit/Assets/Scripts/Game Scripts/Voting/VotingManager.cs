@@ -239,6 +239,7 @@ public class VotingManager : MonoBehaviour
     private void KillCurrPlayer()
     {
         transform.parent.GetComponentInParent<MapManager>().ResetMap();
+        transform.parent.GetComponentInParent<MinigameManager>().ResetTaskList();
         foreach (PlayerManager playerManager in FindObjectsOfType<PlayerManager>())
             if (playerManager.GetComponent<PhotonView>().IsMine) playerManager.GetVotedOff();
     }
@@ -274,8 +275,29 @@ public class VotingManager : MonoBehaviour
         numOfPlayersVotingForYou = 0;
         currNumOfHighestVotes = 0;
         numOfSkipVotes = 0;
-        transform.parent.GetComponentInParent<PlayerActionController>().hasVotingCooldownRunning = true;
-        transform.parent.GetComponentInParent<PlayerActionController>().votingCooldownTimer = transform.parent.GetComponentInParent<PlayerActionController>().votingCooldown;
+        PlayerActionController pac = transform.parent.GetComponentInParent<PlayerActionController>();
+        pac.hasVotingCooldownRunning = true;
+        pac.votingCooldownTimer = pac.votingCooldown;
+        RestartAbilityCooldown();
+    }
 
+    void RestartAbilityCooldown()
+    {
+        Role.Roles playerSubRole = transform.parent.GetComponentInParent<Role>().subRole;
+        Debug.Log("before cooldown is restarted");
+        switch (playerSubRole)
+        {
+            case Role.Roles.Assassin:
+                transform.parent.GetComponentInParent<AssassinAbility>().RestartCooldown();
+                break;
+
+            case Role.Roles.Chameleon:
+                transform.parent.GetComponentInParent<ChameleonAbility>().RestartCooldown();
+                break;
+
+            case Role.Roles.Trapper:
+                transform.parent.GetComponentInParent<TrapAbility>().RestartCooldown();
+                break;
+        }
     }
 }

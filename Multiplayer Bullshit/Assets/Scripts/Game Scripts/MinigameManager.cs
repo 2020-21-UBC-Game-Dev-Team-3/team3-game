@@ -65,7 +65,12 @@ public class MinigameManager : MonoBehaviour
 
     public void SetUpMinigameAssignment()
     {
-        taskList = GameObject.Find("Task List");
+        taskList = GameObject.Find("Main Camera/Task List");
+        if (gameObject.GetComponent<Role>().currRole == Role.Roles.Imposter)
+        {
+            taskList.SetActive(false);
+            return;
+        }
         tasksText.AddRange(taskList.GetComponentsInChildren<TextMeshProUGUI>());
         SetUpTaskList();
     }
@@ -167,6 +172,7 @@ public class MinigameManager : MonoBehaviour
 
     void Update()
     {
+        if (gameObject.GetComponent<Role>().currRole == Role.Roles.Imposter) return;
         if (Input.GetKeyDown("t") && !taskListOpen) OpenTaskList();
         else if (Input.GetKeyDown("t") && taskListOpen) CloseTaskList();
     }
