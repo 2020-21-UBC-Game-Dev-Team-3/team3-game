@@ -273,7 +273,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable
     {
         if (Input.GetKeyDown("e"))
         {
-            if (!interactable.outline.enabled) return;
+            if (interactable == null ||!interactable.outline.enabled) return;
             ChooseInteractionEvent(interactable);
         }
     }

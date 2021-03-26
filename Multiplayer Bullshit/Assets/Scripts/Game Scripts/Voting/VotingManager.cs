@@ -239,11 +239,18 @@ public class VotingManager : MonoBehaviour
     [PunRPC]
     private void KillCurrPlayer()
     {
-        //isDead = true;
+        Debug.Log("only one of the clients should see this");
         transform.parent.GetComponentInParent<MapManager>().ResetMap();
         transform.parent.GetComponentInParent<MinigameManager>().ResetTaskList();
-        foreach (PlayerManager playerManager in FindObjectsOfType<PlayerManager>())
-            if (playerManager.GetComponent<PhotonView>().IsMine) playerManager.GetVotedOff();
+        PlayerManager[] playerManagers = FindObjectsOfType<PlayerManager>();
+        for (int i = 0; i < playerManagers.Length; i++)
+        {
+            if (playerManagers[i].GetComponent<PhotonView>().IsMine)
+            {
+                playerManagers[i].GetVotedOff();
+                return;
+            }
+        }
     }
 
     [PunRPC]

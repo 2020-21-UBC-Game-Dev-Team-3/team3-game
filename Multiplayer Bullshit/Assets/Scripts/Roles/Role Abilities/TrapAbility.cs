@@ -15,6 +15,8 @@ public class TrapAbility : RoleAbility {
   private int maxNumberTraps = 3;
   private int currNumberTraps = 0;
 
+    public bool isInVotingRoom = false;
+
     private void Awake()
     {
         StartCoroutine(InitiateCooldown());
@@ -35,7 +37,7 @@ public class TrapAbility : RoleAbility {
   public override void UseAbility() => StartCoroutine(DeployTrap());
 
   IEnumerator DeployTrap() {
-    if (currNumberTraps < maxNumberTraps && !isTouchingTrap) {
+    if (currNumberTraps < maxNumberTraps && !isTouchingTrap && !isInVotingRoom) {
       Vector3 tempPos = transform.position;
       FindObjectOfType<TrapManager>().InstantiateTrap(tempPos);
       currNumberTraps++;

@@ -86,6 +86,7 @@ public class PlayerManager : MonoBehaviour
 
     public void GetVotedOff()
     {
+        Debug.Log("Call get voted off");
         FindObjectOfType<GameManager>().RemovePlayer(controller);
         pv.RPC("RemovedDeadPlayerFromVoting", RpcTarget.All, PhotonNetwork.LocalPlayer);
         Vector3 oldPosition = controller.transform.position;

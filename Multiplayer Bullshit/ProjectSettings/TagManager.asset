@@ -21,6 +21,11 @@ TagManager:
   - Bar
   - Note
   - collide
+  - Gear
+  - Black
+  - DirLight
+  - Switch
+  - PianoInteract
   layers:
   - Default
   - TransparentFX
