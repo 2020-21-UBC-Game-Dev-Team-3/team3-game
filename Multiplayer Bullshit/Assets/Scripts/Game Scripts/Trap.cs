@@ -67,7 +67,7 @@ public class Trap : Interactable {
     }
 
     // if other is a crewmate and not a Disarmer
-    if (other.GetComponent<Role>().currRole == Role.Roles.Crewmate && !other.GetComponent<DisarmerAbility>().isActiveAndEnabled) {
+    if (other.GetComponent<Role>().currRole == Role.Roles.Crewmate && !(other.GetComponent<Role>().subRole == Role.Roles.Disarmer)) {
             pv.RPC("PlaytheAudio", RpcTarget.All);
             Destroy(); // needs to be here so other people don't step on it
       if (SceneManager.sceneCount == 1) {

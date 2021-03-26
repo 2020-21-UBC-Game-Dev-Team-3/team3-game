@@ -132,8 +132,7 @@ public class GameManager : MonoBehaviourPunCallbacks {
   [PunRPC]
   void StartGame() {
     ToggleUI(true);
-
-    RoleRandomizer roleRan = gameObject.GetComponent<RoleRandomizer>();
+        RoleRandomizer roleRan = gameObject.GetComponent<RoleRandomizer>();
     roleRan.LoadGame();
     PlayMakerFSM.BroadcastEvent("LightSabotageFsmStart");
 
