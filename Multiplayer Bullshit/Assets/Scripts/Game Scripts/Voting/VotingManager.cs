@@ -47,11 +47,11 @@ public class VotingManager : MonoBehaviour {
   }
 
   public void SetupVoting() {
-    for (int i = 0; i < playerBoxes.transform.childCount; i++) {
+        pv.RPC("PlayTheStupidSounds", RpcTarget.All);
+        for (int i = 0; i < playerBoxes.transform.childCount; i++) {
       playerVotingSections.Add(playerBoxes.transform.GetChild(i).gameObject, false);
     }
     foreach (Player player in PhotonNetwork.PlayerList) {
-            pv.RPC("PlayTheStupidSounds", RpcTarget.All);
             bool isPlayerAllowedToVote = gameManager.playersAllowedToVote.Contains(player);
       Debug.Log(player.NickName + " is allowed to vote: " + isPlayerAllowedToVote);
       foreach (KeyValuePair<GameObject, bool> section in playerVotingSections) {
@@ -62,7 +62,6 @@ public class VotingManager : MonoBehaviour {
             section.Key.transform.Find("InteractButton").gameObject.SetActive(false);
             section.Key.transform.Find("DeadMan").gameObject.SetActive(true);
             pv.RPC("UserHasVoted", player);
-
           }
           section.Key.SetActive(true);
           break;
@@ -207,12 +206,6 @@ public class VotingManager : MonoBehaviour {
       if (playerManager.GetComponent<PhotonView>().IsMine) playerManager.GetVotedOff();
   }
 
-  public void OnEnable() {
-        transform.parent.GetComponentInParent<PlayerActionController>().enabled = false;
-/*    transform.parent.GetComponentsInParent<PlayMakerFSM>()[2].enabled = false;*/
-    ClearBodies();
-    SetupVoting();
-  }
     [PunRPC]
     void PlayTheStupidSounds()
     {
@@ -220,10 +213,18 @@ public class VotingManager : MonoBehaviour {
         thisSource.clip = randomSounds[Random.Range(0, 3)];
         thisSource.Play();
     }
+
+    public void OnEnable() {
+/*    transform.parent.GetComponentsInParent<PlayMakerFSM>()[2].enabled = false;*/
+    ClearBodies();
+    SetupVoting();
+    Debug.Log("Is minigame interrupt true NOW: " + transform.parent.GetComponentInParent<PlayerActionController>().minigameInterrupt);
+    }
+
   public void OnDisable() {
     pv.RPC("ShowSkipResults", RpcTarget.All, numOfSkipVotes, false);
     pv.RPC("ShowVotingResults", RpcTarget.All, numOfPlayersVotingForYou, System.Array.IndexOf(PhotonNetwork.PlayerList, PhotonNetwork.LocalPlayer), false);
-    transform.parent.GetComponentInParent<PlayerActionController>().enabled = true;
+    transform.parent.GetComponentInParent<PlayerActionController>().isCurrentlyVoting = false;
 /*    transform.parent.GetComponentsInParent<PlayMakerFSM>()[2].enabled = true;*/
     for (int i = 0; i < playerBoxes.transform.childCount; i++)
       playerBoxes.transform.GetChild(i).Find("InteractButton").gameObject.SetActive(true);

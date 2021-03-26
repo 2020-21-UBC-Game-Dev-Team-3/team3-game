@@ -25,7 +25,8 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
   RoleAbility ability;
 
   bool subRoleAssigned;
-  private bool inVent = false;
+  private bool inVent;
+  [HideInInspector] public bool isCurrentlyVoting;
   public Transform Vent1Pos;
   public Transform Vent2Pos;
   public Transform Vent3Pos;
@@ -154,6 +155,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
       tb.IncrementTaskBar();
     }
 
+
     if (SceneManager.sceneCount > 1) {
       if (minigameInterrupt) {
         SceneManager.UnloadSceneAsync(currMinigameSceneName);
@@ -168,7 +170,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
       return;
     } else {
       minigameInterrupt = false;
-      if (currMinigameSceneName == "Rhythm Trap Minigame" || currMinigameSceneName == "Chance Trap Minigame" || currMinigameSceneName == "Lights Minigame") {
+      if (currMinigameSceneName == "Rhythm Trap Minigame" || currMinigameSceneName == "Chance Trap Minigame" || currMinigameSceneName == "Lights minigame") {
 /*        interactable.gameObject.GetComponent<Trap>().Destroy();*/
       } else if (currMinigameSceneName != "none") {
         tbIHolder = true;
@@ -187,14 +189,14 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
       TakeHit();
     }
 
-
+    if (!isCurrentlyVoting)
     Interact();
 
     if (inVent) {
       CurrentlyInVent();
     }
 
-    if (Input.GetKeyDown("q")) {
+    if (Input.GetKeyDown("q") && !isCurrentlyVoting) {
       ability.InitiateAbility();
     }
 
@@ -346,16 +348,27 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
   }
 
   IEnumerator ShowEmergencyPopUp(GameObject eventImage) {
+    isCurrentlyVoting = true;
+    pv.RPC("SetInterruptTrue", PhotonNetwork.LocalPlayer);
+    yield return new WaitForSeconds(0.1f);
     pv.RPC("MeetingAudioRPC", RpcTarget.All);
-    minigameInterrupt = true;
     eventImage.SetActive(true);
     PlayMakerFSM.BroadcastEvent("GlobalTurnMovementOff");
     FindObjectOfType<GameManager>().TeleportPlayers();
     yield return new WaitForSeconds(2);
     votingManager.SetActive(true);
     eventImage.SetActive(false);
-  }
-  [PunRPC]
+    minigameInterrupt = true;
+    }
+
+    [PunRPC]
+    void SetInterruptTrue()
+    {
+        GameObject.Find("player2(Clone)").GetComponent<PlayerActionController>().minigameInterrupt = true;
+        PlayMakerFSM.BroadcastEvent("GlobalTurnMovementOff");
+    }
+
+    [PunRPC]
   public void MeetingAudioRPC() {
     players = GameObject.FindGameObjectsWithTag("Player");
     foreach (GameObject p in players) {
@@ -392,10 +405,11 @@ public class PlayerActionController : MonoBehaviour, IDamageable {
     {
         if (!pv.IsMine) return;
         minigameInterrupt = true;
-        StartCoroutine("HitPlayerCoRoutine");
+
+        StartCoroutine("HitPlayerCoroutine");
     }
 
-    IEnumerator HitPlayerCoRoutine()
+    IEnumerator HitPlayerCoroutine()
     {
         mapMan.ResetMap();
         miniMan.ResetTaskList();
