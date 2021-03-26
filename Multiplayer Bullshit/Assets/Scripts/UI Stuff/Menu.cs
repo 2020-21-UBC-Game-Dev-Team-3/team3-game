@@ -18,5 +18,9 @@ public class Menu : MonoBehaviour
         open = false;
         gameObject.SetActive(false);
     }
+    public void QuitButton()
+    {
+        Application.Quit();
+    }
 
 }

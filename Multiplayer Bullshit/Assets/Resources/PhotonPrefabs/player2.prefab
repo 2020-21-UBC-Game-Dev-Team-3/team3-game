@@ -2751,6 +2751,9 @@ MonoBehaviour:
   meetingAudios: []
   bgmAudios: []
   players: []
+  playerUIButtons:
+  - {fileID: 7275498227468934054}
+  - {fileID: 6139810343075418616}
   interactable: {fileID: 0}
   pv: {fileID: 0}
   hasVotingCooldownRunning: 0
@@ -9192,6 +9195,7 @@ MonoBehaviour:
   isTouchingTrap: 0
   trapPrefab: {fileID: 68780631399019579, guid: b401f83e598602342a7e77403d3195ee, type: 3}
   trapperButton: {fileID: 9163082075167822481}
+  isInVotingRoom: 0
 --- !u!114 &9108326663090611151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9285,7 +9289,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3464390445804641302}
-  m_LocalRotation: {x: -0.0091683455, y: 0.98424816, z: 0.1682067, w: 0.05364785}
+  m_LocalRotation: {x: -0.0085523985, y: 0.9861127, z: 0.15690629, w: 0.05374946}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5624995, y: 1.5624996, z: 1.5624996}
   m_Children:
@@ -10277,7 +10281,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4350257086163800055}
-  m_LocalRotation: {x: -0.008193586, y: 0.9871377, z: 0.15032332, w: 0.053805344}
+  m_LocalRotation: {x: -0.0075759003, y: 0.98879695, z: 0.13899097, w: 0.05389579}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5624995, y: 1.5624996, z: 1.5624996}
   m_Children:

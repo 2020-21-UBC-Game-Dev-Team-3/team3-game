@@ -5,7 +5,7 @@ using Photon.Pun;
 using TMPro;
 
 public class ChameleonAbility : RoleAbility {
-  float chamRange = 10;
+  float chamRange = 6;
 
 
   Camera cam;

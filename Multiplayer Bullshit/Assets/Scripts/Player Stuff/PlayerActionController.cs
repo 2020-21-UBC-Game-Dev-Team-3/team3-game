@@ -13,6 +13,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable
     [SerializeField] List<AudioSource> meetingAudios;
     [SerializeField] List<AudioSource> bgmAudios;
     [SerializeField] GameObject[] players;
+    [SerializeField] List<GameObject> playerUIButtons;
     MapManager mapMan;
 
     MinigameManager miniMan;
@@ -196,7 +197,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable
         else
         {
             minigameInterrupt = false;
-            if (currMinigameSceneName == "Rhythm Trap Minigame" || currMinigameSceneName == "Chance Trap Minigame" || currMinigameSceneName == "Lights minigame")
+            if (currMinigameSceneName == "Rhythm Trap Minigame" || currMinigameSceneName == "Trap Chance Minigame" || currMinigameSceneName == "Lights Minigame")
             {
                 /*        interactable.gameObject.GetComponent<Trap>().Destroy();*/
             }
@@ -568,6 +569,11 @@ public class PlayerActionController : MonoBehaviour, IDamageable
         GetComponents<PlayMakerFSM>()[0].enabled = exiting;
         GetComponent<PlayMakerFixedUpdate>().enabled = exiting;
         GetComponent<PlayMakerLateUpdate>().enabled = exiting;
+        foreach (var button in playerUIButtons)
+        {
+            button.SetActive(exiting);
+        }
     }
+
 
 }
