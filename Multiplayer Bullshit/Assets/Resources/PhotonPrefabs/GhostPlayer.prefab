@@ -1602,6 +1602,7 @@ MonoBehaviour:
   players: []
   interactable: {fileID: 0}
   pv: {fileID: 0}
+  isCurrentlyVoting: 0
   Vent1Pos: {fileID: 0}
   Vent2Pos: {fileID: 0}
   Vent3Pos: {fileID: 0}

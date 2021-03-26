@@ -5,7 +5,7 @@ using Photon.Pun;
 using TMPro;
 
 public class ChameleonAbility : RoleAbility {
-  float chamRange = 4;
+  float chamRange = 10;
 
 
   Camera cam;
@@ -42,7 +42,9 @@ public class ChameleonAbility : RoleAbility {
     if (Physics.Raycast(ray, out RaycastHit hit, chamRange)) {
       Debug.Log(hit.collider.gameObject.name);
 
-      if (hit.collider.CompareTag("Player") && !hit.collider.gameObject.GetComponent<PhotonView>().IsMine) {
+      if (hit.collider.CompareTag("Player") && !hit.collider.gameObject.GetComponent<PhotonView>().IsMine && 
+                hit.collider.gameObject.GetComponent<Role>().updatedRole == "Crewmate") {
+        Debug.Log(hit.collider.gameObject.GetComponent<Role>().updatedRole);
         Debug.Log(hit.collider.gameObject.GetComponent<PhotonView>().ViewID);
         photonView.RPC("KillTarget", RpcTarget.All, hit.collider.gameObject.GetComponent<PhotonView>().ViewID);
                 photonView.RPC("PlayKillAudio", RpcTarget.All);

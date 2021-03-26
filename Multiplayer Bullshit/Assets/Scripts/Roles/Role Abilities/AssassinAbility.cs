@@ -50,8 +50,8 @@ public class AssassinAbility : RoleAbility
         {
             Debug.Log(hit.collider.gameObject.name);
             
-            if(hit.collider.CompareTag("Player") && !hit.collider.gameObject.GetComponent<PhotonView>().IsMine) 
-                //&& hit.collider.gameObject.GetComponent<Role>().currRole == Role.Roles.Crewmate)
+            if(hit.collider.CompareTag("Player") && !hit.collider.gameObject.GetComponent<PhotonView>().IsMine
+                && hit.collider.gameObject.GetComponent<Role>().updatedRole == "Crewmate")
             {
                 photonView.RPC("ShurikenTravel", RpcTarget.All, hit.collider.gameObject.GetComponent<PhotonView>().ViewID);
                 PlayMakerFSM.BroadcastEvent("visualCooldownStart");
