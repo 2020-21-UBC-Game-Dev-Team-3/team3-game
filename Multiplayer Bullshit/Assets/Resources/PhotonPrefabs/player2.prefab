@@ -10791,15 +10791,15 @@ MonoBehaviour:
     dataVersion: 2
     usedInTemplate: {fileID: 0}
     name: FSM
-    startState: waiting for kill
+    startState: cooldown state
     states:
     - name: waiting for kill
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 50
-        y: 116
+        x: 296
+        y: 141
         width: 112
         height: 16
       isBreakpoint: 0
@@ -11051,8 +11051,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 270.10156
-        y: 104.61719
+        x: 63.101562
+        y: 127.61719
         width: 152
         height: 32
       isBreakpoint: 0
@@ -12259,15 +12259,15 @@ MonoBehaviour:
     dataVersion: 2
     usedInTemplate: {fileID: 0}
     name: FSM
-    startState: waiting for kill
+    startState: cooldown state
     states:
     - name: waiting for kill
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 50
-        y: 116
+        x: 278
+        y: 132
         width: 112
         height: 16
       isBreakpoint: 0
@@ -12519,8 +12519,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 270.10156
-        y: 104.61719
+        x: 60.101562
+        y: 120.61719
         width: 152
         height: 32
       isBreakpoint: 0
@@ -14311,15 +14311,15 @@ MonoBehaviour:
     dataVersion: 2
     usedInTemplate: {fileID: 0}
     name: FSM
-    startState: waiting for kill
+    startState: cooldown state
     states:
     - name: waiting for kill
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 50
-        y: 116
+        x: 285
+        y: 132
         width: 112
         height: 16
       isBreakpoint: 0
@@ -14571,8 +14571,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 270.10156
-        y: 104.61719
+        x: 62.273438
+        y: 120.61719
         width: 152
         height: 32
       isBreakpoint: 0
