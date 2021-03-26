@@ -5626,10 +5626,15 @@ MonoBehaviour:
   playerMesh: {fileID: 3522102324110956855}
   allPlayerSkins:
   - {fileID: 2100000, guid: 1c616aa9a6fa168499f7e2d207c489dc, type: 2}
+  - {fileID: 2100000, guid: 60b788740db381c40b7d899947f1eefd, type: 2}
   - {fileID: 2100000, guid: cfd85cd7f365b074cbb7bbf043a2228b, type: 2}
+  - {fileID: 2100000, guid: c86cb6d18fb41c043910024c5724dcdd, type: 2}
   - {fileID: 2100000, guid: 986d35722968d0f46b6025fa7a8bdabf, type: 2}
+  - {fileID: 2100000, guid: 0b13e841a1e2b624d8381eb6630204a4, type: 2}
   - {fileID: 2100000, guid: bf0e758b0adfea94e8967433e8b8370f, type: 2}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 4cc7e2ecfb6ce1d46a0a281d9fe901a1, type: 2}
+  - {fileID: 2100000, guid: 4eef5d3e20fd8b940871b3bca0d70284, type: 2}
+  - {fileID: 2100000, guid: ea021a12044d30f47a121acdb7bcd3e3, type: 2}
 --- !u!114 &3419198219912598157
 MonoBehaviour:
   m_ObjectHideFlags: 0

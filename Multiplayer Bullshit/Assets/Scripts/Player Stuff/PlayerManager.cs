@@ -14,7 +14,7 @@ public class PlayerManager : MonoBehaviour
     public List<string> playerTasksRemaining = new List<string>();
     public List<string> playerTasksCompleted = new List<string>();
 
-    public string playerSkinName = "SChef";
+    public string playerSkinName;
 
     public Role.Roles assignedRole;
 
@@ -36,6 +36,8 @@ public class PlayerManager : MonoBehaviour
         {
             CreateController();
         }
+
+        playerSkinName = "SChef";
     }
 
     Vector3 FindSpawnPoint()
@@ -92,14 +94,14 @@ public class PlayerManager : MonoBehaviour
 
     void CreateDeadBody(Vector3 position)
     {
-        GameObject deadBodyObject = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "DeadBody"), position, Quaternion.identity);
-        //  deadBodyObject.GetComponent<SkinSelect>().SetCharacterSkin();
+        string currentPlayerSkin = playerSkinName + "DeadBody";
+        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", currentPlayerSkin), position, Quaternion.identity);
     }
 
     void CreateGhostPlayer(Vector3 position)
     {
         controller = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "GhostPlayer"), position, Quaternion.identity, 0, new object[] { pv.ViewID });
-        //controller.GetComponent<SkinSelect>().SetCharacterSkin();
+        controller.GetComponent<SkinSelect>().SetCharacterSkin();
         controller.GetComponent<Role>().currRole = assignedRole;
         controller.GetComponent<PlayerActionController>().OnStartGame();
     }
