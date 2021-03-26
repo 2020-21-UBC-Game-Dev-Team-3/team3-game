@@ -377,6 +377,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Animator\GetAnimatorLeftFootBottomHeight.cs" />
     <Compile Include="Assets\PlayMaker\Actions\String\GetStringLeft.cs" />
     <Compile Include="Assets\PlayMaker\Actions\GUILayout\GUILayoutToolbar.cs" />
+    <Compile Include="Assets\Scripts\UI Stuff\UseButton.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetSendRate.cs" />
     <Compile Include="Assets\PlayMaker\Actions\VideoPlayer\VideoPlayerGetRenderMode.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Scripts\PlayMakerPhotonProxy.cs" />

@@ -67,7 +67,7 @@ public class RoleRandomizer : MonoBehaviour
 
         if (PhotonNetwork.PlayerList.Length == 1)
         {
-            pv.RPC("FillInImposters", PhotonNetwork.PlayerList[randomIntList[0]], randomIntList[0]);
+            pv.RPC("FillInCrewmates", PhotonNetwork.PlayerList[randomIntList[0]], randomIntList[0]);
             return;
         }
 

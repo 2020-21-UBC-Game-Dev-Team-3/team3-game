@@ -10,7 +10,7 @@ public class SkinSelect : MonoBehaviour
 
     PhotonView pv;
 
-    void Start() => pv = GetComponent<PhotonView>();
+    void Awake() => pv = GetComponent<PhotonView>();
 
     public void SetCharacterSkin() => pv.RPC("ApplyCharacterSkin", RpcTarget.All);
 

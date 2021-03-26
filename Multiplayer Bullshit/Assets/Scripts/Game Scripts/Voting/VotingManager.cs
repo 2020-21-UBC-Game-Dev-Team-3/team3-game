@@ -9,6 +9,7 @@ using UnityEngine.EventSystems;
 public class VotingManager : MonoBehaviour
 {
     private bool isTiedInVotes;
+    //private bool isDead;
     //private int numOfPlayersNeededToVote;
     private int numOfSkipVotes;
     private int numOfPlayersVotedSoFar;
@@ -238,6 +239,7 @@ public class VotingManager : MonoBehaviour
     [PunRPC]
     private void KillCurrPlayer()
     {
+        //isDead = true;
         transform.parent.GetComponentInParent<MapManager>().ResetMap();
         transform.parent.GetComponentInParent<MinigameManager>().ResetTaskList();
         foreach (PlayerManager playerManager in FindObjectsOfType<PlayerManager>())
@@ -264,7 +266,6 @@ public class VotingManager : MonoBehaviour
     {
         pv.RPC("ShowSkipResults", RpcTarget.All, numOfSkipVotes, false);
         pv.RPC("ShowVotingResults", RpcTarget.All, numOfPlayersVotingForYou, System.Array.IndexOf(PhotonNetwork.PlayerList, PhotonNetwork.LocalPlayer), false);
-        transform.parent.GetComponentInParent<PlayerActionController>().isCurrentlyVoting = false;
         /*    transform.parent.GetComponentsInParent<PlayMakerFSM>()[2].enabled = true;*/
         for (int i = 0; i < playerBoxes.transform.childCount; i++)
             playerBoxes.transform.GetChild(i).Find("InteractButton").gameObject.SetActive(true);
@@ -276,8 +277,16 @@ public class VotingManager : MonoBehaviour
         currNumOfHighestVotes = 0;
         numOfSkipVotes = 0;
         PlayerActionController pac = transform.parent.GetComponentInParent<PlayerActionController>();
+        pac.isCurrentlyVoting = false;
         pac.hasVotingCooldownRunning = true;
         pac.votingCooldownTimer = pac.votingCooldown;
+        //if (!isDead)
+        //{
+        //    PlayerActionController pac = transform.parent.GetComponentInParent<PlayerActionController>();
+        //    pac.isCurrentlyVoting = false;
+        //    pac.hasVotingCooldownRunning = true;
+        //    pac.votingCooldownTimer = pac.votingCooldown;
+        //}
         RestartAbilityCooldown();
     }
 

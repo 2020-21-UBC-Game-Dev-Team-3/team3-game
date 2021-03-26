@@ -36,8 +36,8 @@ public class PlayerManager : MonoBehaviour
         {
             CreateController();
         }
-
         playerSkinName = "SChef";
+        Debug.Log(playerSkinName);
     }
 
     Vector3 FindSpawnPoint()
@@ -57,6 +57,7 @@ public class PlayerManager : MonoBehaviour
 
     public void GiveCharacterSkinToController(string skinName)
     {
+        if (!pv.IsMine) return;
         pv.RPC("GiveCharacterSkinToControllerRPC", RpcTarget.All, skinName);
     }
 
