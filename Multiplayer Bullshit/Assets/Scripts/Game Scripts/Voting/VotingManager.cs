@@ -11,12 +11,11 @@ public class VotingManager : MonoBehaviour
     private bool isTiedInVotes;
     //private bool isDead;
     //private int numOfPlayersNeededToVote;
-    private int testVotingNum;
     private int numOfSkipVotes;
     private int numOfPlayersVotedSoFar;
     private int numOfPlayersVotingForYou;
     private Dictionary<GameObject, bool> playerVotingSections = new Dictionary<GameObject, bool>();
-    private Player playerWithHighestVotes;
+     Player playerWithHighestVotes;
     private int currNumOfHighestVotes;
     PhotonView pv;
     //[SerializeField] private PlayerMovementController playerMovementController;
@@ -192,7 +191,7 @@ public class VotingManager : MonoBehaviour
     private IEnumerator VotingResults()
     {
         pv.RPC("ShowSkipResults", RpcTarget.All, numOfSkipVotes, true);
-        pv.RPC("ShowVotingResults", RpcTarget.All, numOfPlayersVotingForYou, System.Array.IndexOf(PhotonNetwork.PlayerList, PhotonNetwork.LocalPlayer), true);
+        pv.RPC("StartShowingVotingResults", RpcTarget.All, true);
         yield return new WaitForSeconds(5f);
         if (!isTiedInVotes && currNumOfHighestVotes > numOfSkipVotes)
             pv.RPC("KillPlayerWithHighestVotes", RpcTarget.MasterClient, playerWithHighestVotes);
@@ -249,6 +248,12 @@ public class VotingManager : MonoBehaviour
     //    gameObject.SetActive(false);
     //}
 
+[PunRPC]
+    private void StartShowingVotingResults(bool isVotingEnabled)
+    {
+        pv.RPC("ShowVotingResults", RpcTarget.All, numOfPlayersVotingForYou, System.Array.IndexOf(PhotonNetwork.PlayerList, PhotonNetwork.LocalPlayer), isVotingEnabled);
+    }
+
     [PunRPC]
     private void ShowVotingResults(int numOfVotes, int playerIndex, bool isVotingEnabled)
     {
@@ -256,7 +261,6 @@ public class VotingManager : MonoBehaviour
         for (int i = 0; i < numOfVotes; i++)
             playerIcons.transform.GetChild(i).gameObject.SetActive(isVotingEnabled);
     }
-
     [PunRPC]
     private void ShowSkipResults(int numOfVotes, bool isVotingEnabled)
     {
@@ -299,7 +303,7 @@ public class VotingManager : MonoBehaviour
     [PunRPC]
     private void KillCurrPlayer()
     {
-        pv.RPC("TestMethod", RpcTarget.All);
+       
         Debug.Log("only one of the clients should see this");
         transform.parent.GetComponentInParent<MapManager>().ResetMap();
         transform.parent.GetComponentInParent<MinigameManager>().ResetTaskList();
@@ -314,12 +318,7 @@ public class VotingManager : MonoBehaviour
         }
     }
 
-    [PunRPC]
-    private void TestMethod()
-    {
-        testVotingNum++;
-        Debug.Log("Test Number Increase: " + testVotingNum);
-    }
+ 
 
     [PunRPC]
     void PlayTheStupidSounds()

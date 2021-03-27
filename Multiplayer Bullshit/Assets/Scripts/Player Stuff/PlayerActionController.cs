@@ -88,8 +88,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable
         //reticle = GameObject.Find("Assassin Reticle");
         sun = GameObject.Find("sun");
         currMinigameSceneName = "none";
-        minigameInterrupt = false;
-
+        minigameInterrupt = false;  
     }
 
     public void OnStartGame()
