@@ -1601,6 +1601,7 @@ MonoBehaviour:
   meetingAudios: []
   bgmAudios: []
   players: []
+  playerUIButtons: []
   interactable: {fileID: 0}
   pv: {fileID: 0}
   hasVotingCooldownRunning: 0

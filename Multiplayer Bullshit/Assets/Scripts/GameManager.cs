@@ -232,7 +232,10 @@ public class GameManager : MonoBehaviourPunCallbacks
     [PunRPC]
     public void DecrementCrewmates()
     {
-        crewmates--;
+        if (PhotonNetwork.IsMasterClient)
+        {
+            crewmates--;
+        }
         if (crewmates == 0 || crewmates == imposters)
         {
             Debug.Log("IMPOSTER WIN");
@@ -242,8 +245,10 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     [PunRPC]
     public void DecrementImposters()
-    {
-        imposters--;
+    {if (PhotonNetwork.IsMasterClient)
+        {
+            imposters--;
+        }
         if (imposters == 0)
         {
             Debug.Log("CREWMATE WIN");

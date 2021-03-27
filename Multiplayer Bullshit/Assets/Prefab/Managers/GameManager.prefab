@@ -47,8 +47,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imposterPercentScaler: 10
   numberOfPlayersAddedSoFar: 0
-  maxNumberOfPlayers: 0
-  playerList: []
 --- !u!114 &4015103885044123137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,7 +63,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   observableSearch: 2
-  Synchronization: 3
+  Synchronization: 1
   OwnershipTransfer: 0
   ObservedComponents: []
   viewIdField: 0
@@ -83,4 +81,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35c18615e7c47364dbdc98e8f2eafceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isConnectedToMaster: 0
+  invisWall1: {fileID: 0}
+  invisWall2: {fileID: 0}
+  roleTextCanvas: {fileID: 0}
+  taskbarCanvas: {fileID: 0}
+  minimapCanvas: {fileID: 0}
+  taskListCanvas: {fileID: 0}
+  readyCanvas: {fileID: 0}
+  crewmateWinScreen: {fileID: 0}
+  imposterWinScreen: {fileID: 0}
+  fadeImage: {fileID: 0}
+  fadeCanvas: {fileID: 0}
+  isFade: 0
+  isBlack: 0
+  isCrewmateWin: 0
+  color: {r: 0, g: 0, b: 0, a: 0}
+  characterSelectCanvas: {fileID: 0}
+  characterSelectInteractable: {fileID: 0}
+  characterSelectTable: {fileID: 0}
+  characterSkinNames: []
+  teleportLocations:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  spawnLocations: []
+  crewmates: 0
+  imposters: 0

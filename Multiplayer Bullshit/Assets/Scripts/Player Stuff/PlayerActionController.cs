@@ -482,7 +482,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable
                 audio.Stop();
             }
         }
-        Debug.Log("Hello my name jay");
+
     }
 
     public void TakeHit() => pv.RPC("RPC_TakeHit", RpcTarget.All);

@@ -5,9 +5,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using Hashtable = ExitGames.Client.Photon.Hashtable;
 
 public class VotingManager : MonoBehaviour
 {
+    public ExitGames.Client.Photon.Hashtable PlayerVoteProperty = new ExitGames.Client.Photon.Hashtable();
     private bool isTiedInVotes;
     //private bool isDead;
     //private int numOfPlayersNeededToVote;
@@ -30,6 +32,8 @@ public class VotingManager : MonoBehaviour
     private GameManager gameManager;
     public AudioClip[] randomSounds;
     public AudioSource thisSource;
+    public List<VotingManager> votingManagers;
+    public bool gotVotingManagers = false;
     private void Awake()
     {
         // playersAllowedToVote = new List<Player>(PhotonNetwork.PlayerList);
@@ -54,13 +58,31 @@ public class VotingManager : MonoBehaviour
 
     public void SetupVoting()
     {
+        PlayerVoteProperty.Add("VotesR", 0);
+        PhotonNetwork.LocalPlayer.SetCustomProperties(PlayerVoteProperty);
+        Debug.Log(pv.Owner.NickName + "This is the nickname of pv owner");
+        Debug.Log(pv.Owner.ActorNumber + "This is the actornumber of pv owner");
+
         pv.RPC("PlayTheStupidSounds", RpcTarget.All);
+        GameObject[] gameobjects = GameObject.FindGameObjectsWithTag("Player");
+        if (gotVotingManagers == false)
+        {
+            gotVotingManagers = true;
+            foreach (GameObject go in gameobjects)
+            {
+                if (go.transform.Find("VoteCanvas/VotingManager").GetComponent<VotingManager>() != null)
+                {
+                    votingManagers.Add(go.transform.Find("VoteCanvas/VotingManager").GetComponent<VotingManager>());
+                }
+            }
+        }
         for (int i = 0; i < playerBoxes.transform.childCount; i++)
         {
             playerVotingSections.Add(playerBoxes.transform.GetChild(i).gameObject, false);
         }
         foreach (Player player in PhotonNetwork.PlayerList)
         {
+
             bool isPlayerAllowedToVote = gameManager.playersAllowedToVote.Contains(player);
             Debug.Log(player.NickName + " is allowed to vote: " + isPlayerAllowedToVote);
             foreach (KeyValuePair<GameObject, bool> section in playerVotingSections)
@@ -128,41 +150,64 @@ public class VotingManager : MonoBehaviour
     [PunRPC]
     private void SetIconsForVoting()
     {
-        numOfPlayersVotingForYou++;
-
+        int votesRecieved = (int)PhotonNetwork.LocalPlayer.CustomProperties["VotesR"];
+        votesRecieved++;
+        PlayerVoteProperty.Remove("VotesR");
+        PlayerVoteProperty.Add("VotesR", votesRecieved);
+        PhotonNetwork.LocalPlayer.SetCustomProperties(PlayerVoteProperty);
+        Debug.Log((int)PhotonNetwork.LocalPlayer.CustomProperties["VotesR"] + " name : " + PhotonNetwork.LocalPlayer.NickName);
     }
 
     [PunRPC]
     private void SkipVoteSelected()
     {
-        numOfSkipVotes++;
+       // numOfSkipVotes++;
 
     }
 
     [PunRPC]
     private void CompareVotes()
     {
-        for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
+        currNumOfHighestVotes = 0;
+        playerWithHighestVotes = null;
+        foreach (VotingManager vm in votingManagers)
         {
-            pv.RPC("CompareTwoPlayers", PhotonNetwork.PlayerList[i], i);
+            foreach (VotingManager dm in votingManagers)
+            {
+
+                if (vm != null && dm != null) {
+                    PhotonView vmpv = vm.GetComponentInParent<PhotonView>();
+                    PhotonView dmpv = dm.GetComponentInParent<PhotonView>();
+                    Debug.Log(vmpv.Owner.NickName + " and " + dmpv.Owner.NickName);
+                    if ((int)vmpv.Owner.CustomProperties["VotesR"] > (int)dmpv.Owner.CustomProperties["VotesR"] && dmpv.Owner.ActorNumber != vmpv.Owner.ActorNumber)
+                    {
+                        Debug.Log((int)vmpv.Owner.CustomProperties["VotesR"]+ " and " + (int)vmpv.Owner.CustomProperties["VotesR"]);
+                        isTiedInVotes = false;
+                        playerWithHighestVotes = vmpv.Owner;
+                        currNumOfHighestVotes = (int)vmpv.Owner.CustomProperties["VotesR"];
+                        Debug.Log(currNumOfHighestVotes + " is the amount of highest votes so far, his name is" + playerWithHighestVotes.NickName);
+                    }
+                    else if ((int)vmpv.Owner.CustomProperties["VotesR"] == (int)dmpv.Owner.CustomProperties["VotesR"] && dmpv.Owner.ActorNumber != vmpv.Owner.ActorNumber)
+                    {
+                        
+                        Debug.Log("There is a tie");
+                        isTiedInVotes = true;
+                    }
+                }
+            }
         }
+        pv.RPC("UpdatePlayerWithHighestVotes", RpcTarget.Others, currNumOfHighestVotes, playerWithHighestVotes, isTiedInVotes);
     }
-
     [PunRPC]
-    private void CompareTwoPlayers(int playerIndex)
+    void UpdatePlayerWithHighestVotes(int num, Player player, bool tied)
     {
-        if (numOfPlayersVotingForYou > currNumOfHighestVotes)
-            pv.RPC("SetToLargestList", RpcTarget.All, numOfPlayersVotingForYou, playerIndex, false);
-        else if (numOfPlayersVotingForYou == currNumOfHighestVotes)
-            pv.RPC("SetToLargestList", RpcTarget.All, currNumOfHighestVotes, playerIndex, true);
-    }
-
-    [PunRPC]
-    private void SetToLargestList(int highestVoteSoFar, int playerIndex, bool isTied)
-    {
-        currNumOfHighestVotes = highestVoteSoFar;
-        isTiedInVotes = isTied;
-        if (!isTiedInVotes) playerWithHighestVotes = PhotonNetwork.PlayerList[playerIndex];
+        foreach (VotingManager vm in votingManagers)
+        {
+            vm.currNumOfHighestVotes = num;
+            vm.playerWithHighestVotes = player;
+            vm.isTiedInVotes = tied;
+        }
+        pv.RPC("EndVoting", RpcTarget.All);
     }
 
     [PunRPC]
@@ -171,11 +216,7 @@ public class VotingManager : MonoBehaviour
         numOfPlayersVotedSoFar++;
         if (numOfPlayersVotedSoFar >= gameManager.playersAllowedToVote.Count)
         {
-            Debug.Log("Compare votes");
             pv.RPC("CompareVotes", RpcTarget.MasterClient);
-            Debug.Log("Compare votes has finished");
-            pv.RPC("EndVoting", RpcTarget.All);
-            Debug.Log("Ending voting has finished");
         }
     }
 
@@ -208,8 +249,10 @@ public class VotingManager : MonoBehaviour
                 audio.Play();
             }
         }
-        if (!isTiedInVotes && currNumOfHighestVotes > numOfSkipVotes)
+        if (!isTiedInVotes && currNumOfHighestVotes > numOfSkipVotes && PhotonNetwork.IsMasterClient)
+        {
             pv.RPC("KillPlayerWithHighestVotes", RpcTarget.All, playerWithHighestVotes);
+        }
         gameObject.SetActive(false);
     }
 
@@ -283,10 +326,7 @@ public class VotingManager : MonoBehaviour
         numOfPlayersVotingForYou = 0;
         currNumOfHighestVotes = 0;
         numOfSkipVotes = 0;
-        PlayerActionController pac = transform.parent.GetComponentInParent<PlayerActionController>();
-        pac.isCurrentlyVoting = false;
-        pac.hasVotingCooldownRunning = true;
-        pac.votingCooldownTimer = pac.votingCooldown;
+        PhotonNetwork.LocalPlayer.CustomProperties.Remove("VotesR");
         //if (!isDead)
         //{
         //    PlayerActionController pac = transform.parent.GetComponentInParent<PlayerActionController>();
@@ -294,6 +334,14 @@ public class VotingManager : MonoBehaviour
         //    pac.hasVotingCooldownRunning = true;
         //    pac.votingCooldownTimer = pac.votingCooldown;
         //}
+
+        PlayerActionController pac = transform.parent.GetComponentInParent<PlayerActionController>();
+        if (pac != null)
+        {
+            pac.isCurrentlyVoting = false;
+            pac.hasVotingCooldownRunning = true;
+            pac.votingCooldownTimer = pac.votingCooldown;
+        }
         RestartAbilityCooldown();
     }
 
@@ -301,19 +349,22 @@ public class VotingManager : MonoBehaviour
     {
         Role.Roles playerSubRole = transform.parent.GetComponentInParent<Role>().subRole;
         Debug.Log("before cooldown is restarted");
-        switch (playerSubRole)
+        if (playerSubRole != null)
         {
-            case Role.Roles.Assassin:
-                transform.parent.GetComponentInParent<AssassinAbility>().RestartCooldown();
-                break;
+            switch (playerSubRole)
+            {
+                case Role.Roles.Assassin:
+                    transform.parent.GetComponentInParent<AssassinAbility>().RestartCooldown();
+                    break;
 
-            case Role.Roles.Chameleon:
-                transform.parent.GetComponentInParent<ChameleonAbility>().RestartCooldown();
-                break;
+                case Role.Roles.Chameleon:
+                    transform.parent.GetComponentInParent<ChameleonAbility>().RestartCooldown();
+                    break;
 
-            case Role.Roles.Trapper:
-                transform.parent.GetComponentInParent<TrapAbility>().RestartCooldown();
-                break;
+                case Role.Roles.Trapper:
+                    transform.parent.GetComponentInParent<TrapAbility>().RestartCooldown();
+                    break;
+            }
         }
     }
 }
