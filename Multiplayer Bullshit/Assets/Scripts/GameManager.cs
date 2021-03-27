@@ -220,8 +220,11 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     public void RemovePlayer(GameObject player)
     {
-        /*    if (!pv.IsMine) return;*/
-        if (player.GetComponent<Role>().currRole == Role.Roles.Crewmate)
+        //if (!pv.IsMine) return;
+        Debug.Log("Updated Role of: " + player.GetComponent<PhotonView>().Owner.NickName + " is: " + player.GetComponent<Role>().updatedRole);
+        Debug.Log("Current Role of: " + player.GetComponent<PhotonView>().Owner.NickName + " is: " + player.GetComponent<Role>().currRole);
+
+        if (player.GetComponent<Role>().updatedRole == "Crewmate" || player.GetComponent<Role>().currRole == Role.Roles.Crewmate)
         {
             pv.RPC("DecrementCrewmates", RpcTarget.All);
         }
@@ -233,6 +236,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     public void DecrementCrewmates()
     {
         crewmates--;
+        Debug.Log("crewmate numbers have been decremented");
         if (crewmates == 0 || crewmates == imposters)
         {
             Debug.Log("IMPOSTER WIN");
@@ -244,6 +248,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     public void DecrementImposters()
     {
         imposters--;
+        Debug.Log("imposter numbers have been decremented");
         if (imposters == 0)
         {
             Debug.Log("CREWMATE WIN");

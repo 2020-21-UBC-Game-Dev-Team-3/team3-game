@@ -162,7 +162,9 @@ public class VotingManager : MonoBehaviour
     {
         currNumOfHighestVotes = highestVoteSoFar;
         isTiedInVotes = isTied;
-        if (!isTiedInVotes) playerWithHighestVotes = PhotonNetwork.PlayerList[playerIndex];
+        //if (!isTiedInVotes) playerWithHighestVotes = PhotonNetwork.PlayerList[playerIndex];
+        playerWithHighestVotes = PhotonNetwork.PlayerList[playerIndex];
+        //Debug.Log("player with highest votes is: " + PhotonNetwork.PlayerList[playerIndex].NickName);
     }
 
     [PunRPC]
@@ -208,6 +210,7 @@ public class VotingManager : MonoBehaviour
                 audio.Play();
             }
         }
+        Debug.Log("Player With Highest Votes: " + playerWithHighestVotes);
         if (!isTiedInVotes && currNumOfHighestVotes > numOfSkipVotes)
             pv.RPC("KillPlayerWithHighestVotes", RpcTarget.All, playerWithHighestVotes);
         gameObject.SetActive(false);
@@ -232,7 +235,11 @@ public class VotingManager : MonoBehaviour
     private void KillPlayerWithHighestVotes(Player playerToKill)
     {
         //Use the kill mechanic here to kill player while the scene plays out
-        if (PhotonNetwork.LocalPlayer == playerToKill) pv.RPC("KillCurrPlayer", PhotonNetwork.LocalPlayer);
+        if (PhotonNetwork.LocalPlayer == playerToKill)
+        {
+            Debug.Log("Player With Highest Votes: " + PhotonNetwork.LocalPlayer.NickName);
+            pv.RPC("KillCurrPlayer", PhotonNetwork.LocalPlayer);
+        }
 
     }
 

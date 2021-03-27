@@ -191,7 +191,6 @@ public class MinigameManager : MonoBehaviour
 
     public void ResetTaskList()
     {
-        //if (gameObject.GetComponent<Role>().currRole == Role.Roles.Imposter) return;
-        taskList.SetActive(true);
+        if (taskList != null) taskList.SetActive(true);
     }
 }
