@@ -59,7 +59,7 @@ public class NameTextScript : MonoBehaviour
             SetName();
             SetClientPlayer(this.gameObject);
         }
-        if (!pv.IsMine)
+        if (!pv.IsMine && !gameObject.CompareTag("Ghost"))
         {
 
                 distanceToClient = Vector3.Distance(this.transform.position, clientPlayer.transform.position);

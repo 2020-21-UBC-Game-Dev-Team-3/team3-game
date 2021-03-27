@@ -16,6 +16,6 @@ public class TextAlign : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(mainCamera.transform);
+        if (mainCamera != null) transform.LookAt(mainCamera.transform);
     }
 }
