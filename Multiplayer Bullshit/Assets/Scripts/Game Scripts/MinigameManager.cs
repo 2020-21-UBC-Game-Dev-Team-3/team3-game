@@ -38,8 +38,8 @@ public class MinigameManager : MonoBehaviour
         {
             RetrieveTasks();
             assignedMinigames.AddRange(completedMinigames);
-            SetUpMinigameAssignment();
-            foreach (string minigame in completedMinigames) UpdateTaskComplete(minigame);
+            //SetUpMinigameAssignment();
+            //foreach (string minigame in completedMinigames) UpdateTaskComplete(minigame);
         }
         else RandomizeMinigames();
     }

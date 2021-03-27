@@ -89,7 +89,7 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
     }
     public void InputName()
     {
-        if (string.IsNullOrEmpty(playerNameInputField.text)) return;
+        if (string.IsNullOrEmpty(playerNameInputField.text) || playerNameInputField.text.Length >= 15) return;
         PhotonNetwork.NickName = playerNameInputField.text;
         MenuManager.Instance.OpenMenu("title");
     }
