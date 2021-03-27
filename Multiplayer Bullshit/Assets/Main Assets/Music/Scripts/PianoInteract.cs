@@ -22,7 +22,7 @@ public class PianoInteract : MonoBehaviour
         if (frames % 300 == 0)
         {
             PlaySound();
-            if(frames > 3000)
+            if (frames > 3000)
             {
                 frames = 0;
             }
