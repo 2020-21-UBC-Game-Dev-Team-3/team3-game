@@ -97,12 +97,14 @@ public class GameManager : MonoBehaviourPunCallbacks
             if (isCrewmateWin == true)
             {
                 //crewmateWinScreen.SetActive(true);
-                SceneManager.LoadScene("Crewmate Victory Screen", LoadSceneMode.Single);
+                //SceneManager.LoadScene("Crewmate Victory Screen", LoadSceneMode.Single);
+                Debug.Log("game over; crewmates won");
             }
             else
             {
                 //imposterWinScreen.SetActive(true);
-                SceneManager.LoadScene("Imposter Victory Screen", LoadSceneMode.Single);
+                //SceneManager.LoadScene("Imposter Victory Screen", LoadSceneMode.Single);
+                Debug.Log("game over; imposters won");
             }
         }
     }

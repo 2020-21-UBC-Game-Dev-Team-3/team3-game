@@ -11,6 +11,7 @@ public class VotingManager : MonoBehaviour
     private bool isTiedInVotes;
     //private bool isDead;
     //private int numOfPlayersNeededToVote;
+    private int testVotingNum;
     private int numOfSkipVotes;
     private int numOfPlayersVotedSoFar;
     private int numOfPlayersVotingForYou;
@@ -176,7 +177,7 @@ public class VotingManager : MonoBehaviour
             Debug.Log("Compare votes");
             pv.RPC("CompareVotes", RpcTarget.MasterClient);
             Debug.Log("Compare votes has finished");
-            pv.RPC("EndVoting", RpcTarget.All);
+            pv.RPC("EndVoting", RpcTarget.MasterClient); 
             Debug.Log("Ending voting has finished");
         }
     }
@@ -192,10 +193,16 @@ public class VotingManager : MonoBehaviour
     {
         pv.RPC("ShowSkipResults", RpcTarget.All, numOfSkipVotes, true);
         pv.RPC("ShowVotingResults", RpcTarget.All, numOfPlayersVotingForYou, System.Array.IndexOf(PhotonNetwork.PlayerList, PhotonNetwork.LocalPlayer), true);
+        yield return new WaitForSeconds(5f);
+        if (!isTiedInVotes && currNumOfHighestVotes > numOfSkipVotes)
+            pv.RPC("KillPlayerWithHighestVotes", RpcTarget.MasterClient, playerWithHighestVotes);
+        pv.RPC("ResetVotingForPlayers", RpcTarget.All);
+    }
 
-        yield return new WaitForSeconds(4f);
+    [PunRPC]
+    private void ResetVotingForPlayers()
+    {
         PlayMakerFSM.BroadcastEvent("GlobalTurnMovementOn");
-        yield return new WaitForSeconds(1f);
         foreach (AudioSource audio in meetingAudios)
         {
             if (audio != null)
@@ -210,11 +217,37 @@ public class VotingManager : MonoBehaviour
                 audio.Play();
             }
         }
-        Debug.Log("Player With Highest Votes: " + playerWithHighestVotes);
-        if (!isTiedInVotes && currNumOfHighestVotes > numOfSkipVotes)
-            pv.RPC("KillPlayerWithHighestVotes", RpcTarget.All, playerWithHighestVotes);
         gameObject.SetActive(false);
     }
+
+    //private IEnumerator VotingResults()
+    //{
+    //    pv.RPC("ShowSkipResults", RpcTarget.All, numOfSkipVotes, true);
+    //    pv.RPC("ShowVotingResults", RpcTarget.All, numOfPlayersVotingForYou, System.Array.IndexOf(PhotonNetwork.PlayerList, PhotonNetwork.LocalPlayer), true);
+
+    //    yield return new WaitForSeconds(4f);
+    //    PlayMakerFSM.BroadcastEvent("GlobalTurnMovementOn");
+    //    yield return new WaitForSeconds(1f);
+    //    foreach (AudioSource audio in meetingAudios)
+    //    {
+    //        if (audio != null)
+    //        {
+    //            audio.Stop();
+    //        }
+    //    }
+    //    foreach (AudioSource audio in bgmAudios)
+    //    {
+    //        if (audio != null)
+    //        {
+    //            audio.Play();
+    //        }
+    //    }
+    //    Debug.Log("Player With Highest Votes: " + playerWithHighestVotes);
+    //    if (!isTiedInVotes && currNumOfHighestVotes > numOfSkipVotes)
+    //        //pv.RPC("KillPlayerWithHighestVotes", RpcTarget.All, playerWithHighestVotes);
+    //        pv.RPC("KillPlayerWithHighestVotes", RpcTarget.MasterClient, playerWithHighestVotes);
+    //    gameObject.SetActive(false);
+    //}
 
     [PunRPC]
     private void ShowVotingResults(int numOfVotes, int playerIndex, bool isVotingEnabled)
@@ -235,17 +268,38 @@ public class VotingManager : MonoBehaviour
     private void KillPlayerWithHighestVotes(Player playerToKill)
     {
         //Use the kill mechanic here to kill player while the scene plays out
-        if (PhotonNetwork.LocalPlayer == playerToKill)
+        for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
+        {
+            if (PhotonNetwork.PlayerList[i] == playerToKill)
+            {
+                pv.RPC("KillCurrPlayer", PhotonNetwork.PlayerList[i]);
+                break;
+            }
+        }
+        /*if (PhotonNetwork.LocalPlayer == playerToKill)
         {
             Debug.Log("Player With Highest Votes: " + PhotonNetwork.LocalPlayer.NickName);
             pv.RPC("KillCurrPlayer", PhotonNetwork.LocalPlayer);
-        }
+        } */
 
     }
+
+    //[PunRPC]
+    //private void KillPlayerWithHighestVotes(Player playerToKill)
+    //{
+    //    //Use the kill mechanic here to kill player while the scene plays out
+    //    if (PhotonNetwork.LocalPlayer == playerToKill)
+    //    {
+    //        //Debug.Log("Player With Highest Votes: " + PhotonNetwork.LocalPlayer.NickName);
+    //        pv.RPC("KillCurrPlayer", PhotonNetwork.LocalPlayer);
+    //    }
+
+    //}
 
     [PunRPC]
     private void KillCurrPlayer()
     {
+        pv.RPC("TestMethod", RpcTarget.All);
         Debug.Log("only one of the clients should see this");
         transform.parent.GetComponentInParent<MapManager>().ResetMap();
         transform.parent.GetComponentInParent<MinigameManager>().ResetTaskList();
@@ -258,6 +312,13 @@ public class VotingManager : MonoBehaviour
                 return;
             }
         }
+    }
+
+    [PunRPC]
+    private void TestMethod()
+    {
+        testVotingNum++;
+        Debug.Log("Test Number Increase: " + testVotingNum);
     }
 
     [PunRPC]
