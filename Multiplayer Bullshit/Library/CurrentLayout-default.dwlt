@@ -19,9 +19,9 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Scene
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 521}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 521}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -119,10 +119,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 579, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MinSize: {x: 577, y: 471}
+  m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
-  controlID: 101
+  controlID: 47
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,10 +144,10 @@ MonoBehaviour:
     y: 0
     width: 1307
     height: 947
-  m_MinSize: {x: 303, y: 492}
+  m_MinSize: {x: 302, y: 471}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 102
+  controlID: 48
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,10 +169,10 @@ MonoBehaviour:
     y: 0
     width: 1307
     height: 589
-  m_MinSize: {x: 303, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
+  m_MinSize: {x: 302, y: 200}
+  m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 103
+  controlID: 49
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -192,8 +192,8 @@ MonoBehaviour:
     y: 0
     width: 446
     height: 589
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: GameView
+  m_Name: SceneView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -220,12 +220,12 @@ MonoBehaviour:
     height: 589
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
   - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,10 +249,10 @@ MonoBehaviour:
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 18}
   m_Panes:
-  - {fileID: 18}
   - {fileID: 19}
   - {fileID: 15}
-  m_Selected: 0
+  - {fileID: 18}
+  m_Selected: 2
   m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
@@ -273,8 +273,8 @@ MonoBehaviour:
     y: 0
     width: 613
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -341,7 +341,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -444,20 +444,20 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 561
-    width: 1366
-    height: 438
+    y: 662
+    width: 1306
+    height: 337
   m_ViewDataDictionary: {fileID: 0}
   Initialized: 1
   fsmEditor:
-    Initialized: 0
+    Initialized: 1
     fsmSelection:
       fsmComponentID: 186962
       fsmTemplate: {fileID: 0}
       stateName: cooldown state
       stateNames: []
       transitionIndex: 0
-      scrollPosition: {x: -39.898438, y: -54.382812}
+      scrollPosition: {x: -137, y: -137}
       zoom: 1
     selectionHistory:
       backList: []
@@ -484,10 +484,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 350.4
-    y: 73.6
-    width: 725.19995
-    height: 434.2
+    x: 446
+    y: 73
+    width: 859
+    height: 568
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: 739ebbb7364375f42bf1fe334c9b35c9
@@ -500,9 +500,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 36.439163, y: 7.324622, z: 17.4464}
+    m_Target: {x: -0.0026111603, y: 9.875559, z: -12.574659}
     speed: 2
-    m_Value: {x: 36.439163, y: 7.324622, z: 17.4464}
+    m_Value: {x: -0.0026111603, y: 9.875559, z: -12.574659}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -549,13 +549,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.032973703, y: -0.15086743, z: 0.004717531, w: 0.9881649}
+    m_Target: {x: 0.003984224, y: 0.8802491, z: 0.007728033, w: -0.47483277}
     speed: 2
-    m_Value: {x: 0.032968096, y: -0.15084177, z: 0.004716729, w: 0.9879968}
+    m_Value: {x: 0.0038787983, y: 0.88641036, z: 0.0077796346, w: -0.4628185}
   m_Size:
-    m_Target: 10
+    m_Target: 19.109175
     speed: 2
-    m_Value: 10
+    m_Value: 19.109175
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -573,7 +573,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.24675, y: 0.35664734, z: -0.0983136, w: -0.8958152}
+  m_LastSceneViewRotation: {x: 0.005690886, y: -0.0084044365, z: -0.000018949833, w: -0.9999939}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -607,10 +607,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: b270f5ff
-      m_LastClickedID: -692046
-      m_ExpandedIDs: de3cf8ff02fefaff9a00fbff5834fbfff260fdff7c14feffe85cfeff8660feffdc61feffc86cfeff7674feff0e77feff3cbffeffbe37ffff9ae5ffff
+      scrollPos: {x: 0, y: 240}
+      m_SelectedIDs: 76210200
+      m_LastClickedID: 139638
+      m_ExpandedIDs: f869fbff18acfbff02aefbff18b0fbff26b2fbff2cb4fbff24b7fbff6aebfbff2681feff32fbffffc4f501000a0f020064170200
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -672,21 +672,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/PhotonPrefabs
+    - Assets/Scenes
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/PhotonPrefabs
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\cdben\Documents\GitHub\team3-game\Multiplayer Bullshit
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 1427}
-    m_SelectedIDs: 2a6e0000
-    m_LastClickedID: 28202
-    m_ExpandedIDs: 00000000fa6c0000fc6c0000fe6c0000006d0000026d0000046d0000066d0000086d00000a6d00000c6d00000e6d0000106d0000126d0000146d0000166d0000186d00001a6d00001c6d00001e6d0000206d0000226d0000246d0000266d0000286d00002a6d00002c6d00002e6d0000306d0000326d0000346d0000366d0000386d00003a6d00003c6d00003e6d0000406d0000426d0000446d0000466d0000486d00004a6d00004c6d00004e6d0000506d0000526d0000546d0000566d000000ca9a3b
+    m_SelectedIDs: ae5c0000
+    m_LastClickedID: 23726
+    m_ExpandedIDs: 000000008c5b00008e5b0000905b0000925b0000945b0000965b0000985b00009a5b00009c5b00009e5b0000a05b0000a25b0000a45b0000a65b0000a85b0000aa5b0000ac5b0000ae5b0000b05b0000b25b0000b45b0000b65b0000b85b0000ba5b0000bc5b0000be5b0000c05b0000c25b0000c45b0000c65b0000c85b0000ca5b0000cc5b0000ce5b0000d05b0000d25b0000d45b0000d65b0000d85b0000da5b0000dc5b0000de5b0000e05b0000e25b0000e45b0000e65b0000e85b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -714,7 +714,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fa6c0000fc6c0000fe6c0000006d0000026d0000046d0000066d0000086d00000a6d00000c6d00000e6d0000106d0000126d0000146d0000166d0000186d00001a6d00001c6d00001e6d0000206d0000226d0000246d0000266d0000286d00002a6d00002c6d00002e6d0000306d0000326d0000346d0000366d0000386d00003a6d00003c6d00003e6d0000406d0000426d0000446d0000466d0000486d00004a6d00004c6d00004e6d0000506d0000526d0000546d0000566d0000
+    m_ExpandedIDs: 000000008c5b00008e5b0000905b0000925b0000945b0000965b0000985b00009a5b00009c5b00009e5b0000a05b0000a25b0000a45b0000a65b0000a85b0000aa5b0000ac5b0000ae5b0000b05b0000b25b0000b45b0000b65b0000b85b0000ba5b0000bc5b0000be5b0000c05b0000c25b0000c45b0000c65b0000c85b0000ca5b0000cc5b0000ce5b0000d05b0000d25b0000d45b0000d65b0000d85b0000da5b0000dc5b0000de5b0000e05b0000e25b0000e45b0000e65b0000e85b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

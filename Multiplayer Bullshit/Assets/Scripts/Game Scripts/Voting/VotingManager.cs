@@ -193,8 +193,9 @@ public class VotingManager : MonoBehaviour
         pv.RPC("ShowSkipResults", RpcTarget.All, numOfSkipVotes, true);
         pv.RPC("StartShowingVotingResults", RpcTarget.All, true);
         yield return new WaitForSeconds(5f);
+        Debug.Log("player with highest votes:" + playerWithHighestVotes.NickName);
         if (!isTiedInVotes && currNumOfHighestVotes > numOfSkipVotes)
-            pv.RPC("KillPlayerWithHighestVotes", RpcTarget.MasterClient, playerWithHighestVotes);
+            pv.RPC("KillCurrPlayer", playerWithHighestVotes);
         pv.RPC("ResetVotingForPlayers", RpcTarget.All);
     }
 
