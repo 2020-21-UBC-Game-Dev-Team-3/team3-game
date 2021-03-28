@@ -28,36 +28,35 @@ public class TaskBar : MonoBehaviour {
   }
 
   private void Update() {
-    
-    // PROPOSED
-    if (!playerFound) {
-      Debug.Log("finding player...");
-      playerPac = GameObject.Find("player2(Clone)").GetComponent<PlayerActionController>();
-      playerFound = true;
-    }
 
-    if (!ghostFound && playerPac == null) {
-      if (GameObject.Find("GhostPlayer(Clone)").GetComponent<PhotonView>().IsMine) {
-        Debug.Log("finding ghost...");
-        ghostPac = GameObject.Find("GhostPlayer(Clone)").GetComponent<PlayerActionController>();
-        ghostFound = true;
-      }
-    }
+    /*    // OLD
+        if (GameObject.Find("GhostPlayer(Clone)") != null) {
+          ghostPac = GameObject.Find("GhostPlayer(Clone)").GetComponent<PlayerActionController>();
+        } else {
+          playerPac = GameObject.Find("player2(Clone)").GetComponent<PlayerActionController>();
+        }
+    */
+    /*    if (!playerFound) {
+          Debug.Log("finding player...");
+          playerPac = GameObject.Find("player2(Clone)").GetComponent<PlayerActionController>();
+          playerFound = true;
+        }
 
-    // OLD
-/*    if (GameObject.Find("GhostPlayer(Clone)") != null) {
-      ghostPac = GameObject.Find("GhostPlayer(Clone)").GetComponent<PlayerActionController>();
-    } else {
-      playerPac = GameObject.Find("player2(Clone)").GetComponent<PlayerActionController>();
-    }*/
+        if (!ghostFound && playerPac == null) {
+          if (GameObject.Find("GhostPlayer(Clone)").GetComponent<PhotonView>().IsMine) {
+            Debug.Log("finding ghost...");
+            ghostPac = GameObject.Find("GhostPlayer(Clone)").GetComponent<PlayerActionController>();
+            ghostFound = true;
+          }
+        }*/
 
     slider.maxValue = totalNumOfTasks;
   }
 
   public void IncrementTaskBar() {
     StartCoroutine(UpdateText());
-    playerPac.tbIHolder = false;
-    if (ghostPac != null) ghostPac.tbIHolder = false;
+/*    playerPac.tbIHolder = false;
+    if (ghostPac != null) ghostPac.tbIHolder = false;*/
   }
 
   IEnumerator UpdateText() {

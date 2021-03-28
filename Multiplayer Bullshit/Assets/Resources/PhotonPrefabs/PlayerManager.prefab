@@ -72,3 +72,4 @@ MonoBehaviour:
   playerTasksCompleted: []
   playerSkinName: 
   assignedRole: 0
+  tbIHolder: 0

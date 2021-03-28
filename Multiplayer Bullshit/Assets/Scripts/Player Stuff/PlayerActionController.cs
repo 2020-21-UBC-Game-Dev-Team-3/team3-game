@@ -96,7 +96,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable
         //minimap = GameObject.Find("Minimap System");
         //minimap.SetActive(true);
 
-        tb = GameObject.Find("Main Camera/Taskbar Canvas/Taskbar").GetComponent<TaskBar>();
+/*        tb = GameObject.Find("Main Camera/Taskbar Canvas/Taskbar").GetComponent<TaskBar>();*/
 
         dts = GameObject.Find("DeathTrack").GetComponent<DeathTrackScript>();
         hasVotingCooldownRunning = true;
@@ -164,12 +164,17 @@ public class PlayerActionController : MonoBehaviour, IDamageable
     { 
         if (!pv.IsMine) return;
 
-        if (tbIHolder)
+    if (playerMan.tbIHolder) {
+      //tb = GameObject.Find("Main Camera/TaskbarCanvas/Taskbar").GetComponent<TaskBar>();
+      playerMan.TaskbarHelper();
+    }
+
+/*    if (tbIHolder)
         {
             //@Adrienne had to move this from start to update
             //tb = GameObject.Find("Main Camera/TaskbarCanvas/Taskbar").GetComponent<TaskBar>();
             tb.IncrementTaskBar();
-        }
+        }*/
 
         if (hasVotingCooldownRunning)
         {
@@ -202,7 +207,7 @@ public class PlayerActionController : MonoBehaviour, IDamageable
             }
             else if (currMinigameSceneName != "none")
             {
-                tbIHolder = true;
+                playerMan.tbIHolder = true;
             }
             //@Adrienne this is the line I had to comment out in order for players to select character skin
             exitMinigame(true);

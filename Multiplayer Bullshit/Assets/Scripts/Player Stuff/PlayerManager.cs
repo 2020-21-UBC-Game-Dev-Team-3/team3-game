@@ -18,6 +18,8 @@ public class PlayerManager : MonoBehaviour
 
     public Role.Roles assignedRole;
 
+    public bool tbIHolder = false;
+
     //singleton instance of player manager
     public static PlayerManager instanceLocalPM;
 
@@ -74,7 +76,12 @@ public class PlayerManager : MonoBehaviour
         playerTasksCompleted.Add(minigame);
     }
 
-    public void Die()
+  public void TaskbarHelper() {
+    tbIHolder = false;
+    GameObject.Find("Taskbar Canvas").GetComponentInChildren<TaskBar>().IncrementTaskBar();
+  }
+
+  public void Die()
     {
         FindObjectOfType<GameManager>().RemovePlayer(controller);
         pv.RPC("RemovedDeadPlayerFromVoting", RpcTarget.All, PhotonNetwork.LocalPlayer);
