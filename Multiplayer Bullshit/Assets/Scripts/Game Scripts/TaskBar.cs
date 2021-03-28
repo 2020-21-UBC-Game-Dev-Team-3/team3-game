@@ -14,6 +14,8 @@ public class TaskBar : MonoBehaviour {
   PhotonView pv;
   PlayerActionController playerPac;
   PlayerActionController ghostPac;
+  public bool ghostFound = false;
+  public bool playerFound = false;
 
   private void Awake() {
     pv = GetComponent<PhotonView>();
@@ -26,16 +28,30 @@ public class TaskBar : MonoBehaviour {
   }
 
   private void Update() {
+    
+    // PROPOSED
+    if (!playerFound) {
+      Debug.Log("finding player...");
+      playerPac = GameObject.Find("player2(Clone)").GetComponent<PlayerActionController>();
+      playerFound = true;
+    }
 
-        if (GameObject.Find("GhostPlayer(Clone)") != null)
-        {
-            ghostPac = GameObject.Find("GhostPlayer(Clone)").GetComponent<PlayerActionController>();
-        } else
-        {
-            playerPac = GameObject.Find("player2(Clone)").GetComponent<PlayerActionController>();
-        }
+    if (!ghostFound && playerPac == null) {
+      if (GameObject.Find("GhostPlayer(Clone)").GetComponent<PhotonView>().IsMine) {
+        Debug.Log("finding ghost...");
+        ghostPac = GameObject.Find("GhostPlayer(Clone)").GetComponent<PlayerActionController>();
+        ghostFound = true;
+      }
+    }
 
-        slider.maxValue = totalNumOfTasks;
+    // OLD
+/*    if (GameObject.Find("GhostPlayer(Clone)") != null) {
+      ghostPac = GameObject.Find("GhostPlayer(Clone)").GetComponent<PlayerActionController>();
+    } else {
+      playerPac = GameObject.Find("player2(Clone)").GetComponent<PlayerActionController>();
+    }*/
+
+    slider.maxValue = totalNumOfTasks;
   }
 
   public void IncrementTaskBar() {
@@ -49,7 +65,7 @@ public class TaskBar : MonoBehaviour {
     yield return new WaitForSeconds(2);
   }
 
-  [PunRPC] 
+  [PunRPC]
   void UpdateTextBox() {
     count++;
     if (count < totalNumOfTasks) {
