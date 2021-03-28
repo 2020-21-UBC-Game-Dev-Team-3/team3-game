@@ -12,7 +12,8 @@ public class TaskBar : MonoBehaviour {
   private int count;
   public int totalNumOfTasks;
   PhotonView pv;
-  PlayerActionController pac;
+  PlayerActionController playerPac;
+  PlayerActionController ghostPac;
 
   private void Awake() {
     pv = GetComponent<PhotonView>();
@@ -28,10 +29,10 @@ public class TaskBar : MonoBehaviour {
 
         if (GameObject.Find("GhostPlayer(Clone)") != null)
         {
-            pac = GameObject.Find("GhostPlayer(Clone)").GetComponent<PlayerActionController>();
+            ghostPac = GameObject.Find("GhostPlayer(Clone)").GetComponent<PlayerActionController>();
         } else
         {
-            pac = GameObject.Find("player2(Clone)").GetComponent<PlayerActionController>();
+            playerPac = GameObject.Find("player2(Clone)").GetComponent<PlayerActionController>();
         }
 
         slider.maxValue = totalNumOfTasks;
@@ -39,7 +40,8 @@ public class TaskBar : MonoBehaviour {
 
   public void IncrementTaskBar() {
     StartCoroutine(UpdateText());
-    pac.tbIHolder = false;
+    playerPac.tbIHolder = false;
+    if (ghostPac != null) ghostPac.tbIHolder = false;
   }
 
   IEnumerator UpdateText() {
