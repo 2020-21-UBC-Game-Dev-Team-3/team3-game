@@ -594,6 +594,7 @@ MonoBehaviour:
   minimapCamera: {fileID: 6979622759835090274}
   playerIndicator: {fileID: 5364972399607504284}
   TargetCamera: {fileID: 0}
+  meetingIndicator: {fileID: 0}
   interactables: []
   moveSpeed: 6
 --- !u!114 &-1002286812453700745
@@ -859,11 +860,16 @@ MonoBehaviour:
   meetingAudios: []
   bgmAudios: []
   players: []
+  playerUIButtons: []
   interactable: {fileID: 0}
   pv: {fileID: 0}
+  hasVotingCooldownRunning: 0
+  isCurrentlyVoting: 0
   Vent1Pos: {fileID: 0}
   Vent2Pos: {fileID: 0}
   Vent3Pos: {fileID: 0}
+  votingCooldownTimer: 0
+  votingCooldown: 20
   minimap: {fileID: 0}
   cam: {fileID: 0}
   reticle: {fileID: 0}

@@ -71,12 +71,12 @@ public class RoleRandomizer : MonoBehaviour
             return;
         }
 
-        //if (PhotonNetwork.PlayerList.Length == 2)
-        //{
-        //    pv.RPC("FillInCrewmates", PhotonNetwork.PlayerList[randomIntList[0]], randomIntList[0]);
-        //    pv.RPC("FillInImposters", PhotonNetwork.PlayerList[randomIntList[1]], randomIntList[1]);
-        //    return;
-        //}
+        if (PhotonNetwork.PlayerList.Length == 2)
+        {
+            pv.RPC("FillInImposters", PhotonNetwork.PlayerList[randomIntList[0]], randomIntList[0]);
+            pv.RPC("FillInImposters", PhotonNetwork.PlayerList[randomIntList[1]], randomIntList[1]);
+            return;
+        }
 
         //if (PhotonNetwork.PlayerList.Length == 3)
         //{

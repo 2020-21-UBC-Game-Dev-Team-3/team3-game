@@ -170,7 +170,7 @@ public class GameManager : MonoBehaviourPunCallbacks
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         foreach (var player in players)
         {
-            //player.GetComponent<NameTextScript>().started = true;
+            player.GetComponent<NameTextScript>().started = true;
             if (player.GetComponent<PhotonView>().IsMine)
             {
                 player.GetComponent<MinigameManager>().SetUpMinigameAssignment();

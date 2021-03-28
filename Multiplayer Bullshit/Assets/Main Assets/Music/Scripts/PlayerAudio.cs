@@ -12,8 +12,10 @@ public class PlayerAudio : MonoBehaviour
     private PhotonView pv;
     private float threshold;
     private bool inBar;
+    private bool moving;
     private void Awake()
     {
+        moving = false;
         pv = GetComponent<PhotonView>();
         if (!pv.IsMine)
         {
@@ -69,14 +71,19 @@ public class PlayerAudio : MonoBehaviour
         if (!pv.IsMine) return;
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-        if(horizontal != 0 || vertical != 0)
+        if((horizontal != 0 || vertical != 0) && !moving)
         {
+            pv.RPC("Moving", RpcTarget.All, true);
             pv.RPC("MuteFoot", RpcTarget.All, false);
         }
         else
         {
-            pv.RPC("MuteFoot", RpcTarget.All, true);
-        }
+            if (moving && (horizontal == 0 && vertical == 0))
+            {
+                pv.RPC("Moving", RpcTarget.All, false);
+                pv.RPC("MuteFoot", RpcTarget.All, true);
+            }
+            }
         threshold++;
         if(threshold > 20)
         {
@@ -86,6 +93,11 @@ public class PlayerAudio : MonoBehaviour
         {
             BarMusic.mute = true;
         }
+    }
+    [PunRPC]
+    void Moving(bool b)
+    {
+        moving = b;
     }
     [PunRPC]
     private void MuteFoot(bool boolean)

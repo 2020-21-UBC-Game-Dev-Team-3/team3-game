@@ -18,6 +18,7 @@ public class ElevatorScript : MonoBehaviourPunCallbacks
     public Text elevatorText;
     private bool buttonPressed;
     private bool openingDoor, closingDoor, isDoorClosed, overridder, moving, cooldown;
+
     private int currentFloor;
     private int destination;
     private float scale = 0.0f;
@@ -28,7 +29,7 @@ public class ElevatorScript : MonoBehaviourPunCallbacks
     void Start()
     {
 
-
+        moving = true;
         Vector3 rot = transform.rotation.eulerAngles;
         rot = new Vector3(rot.x, rot.y + 180, rot.z);
         transform.rotation = Quaternion.Euler(rot);
@@ -93,7 +94,7 @@ public class ElevatorScript : MonoBehaviourPunCallbacks
             currentFloor = 3;
         }*/
         // stops elevator at destination
-        if (destination == currentFloor && !overridder)
+        if (destination == currentFloor && !overridder && moving)
         {
             pv.RPC("MovingFalse", RpcTarget.All);
             pv.RPC("OpeningDoor", RpcTarget.All);
@@ -101,12 +102,12 @@ public class ElevatorScript : MonoBehaviourPunCallbacks
             pv.RPC("OpenBigDoor", RpcTarget.All, currentFloor);
         }
         //door Logic
-        if (door.transform.localScale.y >= 1f)
+        if (door.transform.localScale.y >= 1f && doorClosed == false)
         {
             closingDoor = false;
             pv.RPC("DoorClosedTrue", RpcTarget.All);
         }
-        else if (door.transform.localScale.y <= 0)
+        else if (door.transform.localScale.y <= 0 && doorClosed == true)
         {
             openingDoor = false;
             pv.RPC("DoorClosedFalse", RpcTarget.All);
@@ -130,12 +131,12 @@ public class ElevatorScript : MonoBehaviourPunCallbacks
         //door movement
         if (closingDoor)
         {
-            scale += 0.05f;
+            scale += 0.5f * Time.deltaTime;
             door.transform.localScale = new Vector3(1f, scale, 1f);
         }
         if (openingDoor)
         {
-            scale -= 0.05f;
+            scale -= 0.5f * Time.deltaTime;
             door.transform.localScale = new Vector3(1f, scale, 1f);
         }
         if (!bigDoorNumClose)
@@ -143,15 +144,15 @@ public class ElevatorScript : MonoBehaviourPunCallbacks
             switch (bigDoorNumOpen)
             {
                 case 1:
-                    if (bigDoorScale > 0) { bigDoorScale -= 0.05f; }
+                    if (bigDoorScale > 0) { bigDoorScale -= 0.5f * Time.deltaTime; }
                     bigDoor1.transform.localScale = new Vector3(1f, bigDoorScale, 1.2f);
                     break;
                 case 2:
-                    if (bigDoorScale > 0) { bigDoorScale -= 0.05f; }
+                    if (bigDoorScale > 0) { bigDoorScale -= 0.5f * Time.deltaTime; }
                     bigDoor2.transform.localScale = new Vector3(1f, bigDoorScale, 1.2f);
                     break;
                 case 3:
-                    if (bigDoorScale > 0) { bigDoorScale -= 0.05f; }
+                    if (bigDoorScale > 0) { bigDoorScale -= 0.5f * Time.deltaTime; }
                     bigDoor3.transform.localScale = new Vector3(1f, bigDoorScale, 1.2f);
                     break;
                 default:
@@ -160,7 +161,7 @@ public class ElevatorScript : MonoBehaviourPunCallbacks
         }
         if (bigDoorNumClose)
         {
-            if (bigDoorScale <= 1.2f) { bigDoorScale += 0.05f; }
+            if (bigDoorScale <= 1.2f) { bigDoorScale += 0.5f * Time.deltaTime; }
             if (bigDoor3.transform.localScale.y <= 1.2f) { bigDoor3.transform.localScale = new Vector3(1f, bigDoorScale, 1.2f); };
             if (bigDoor2.transform.localScale.y <= 1.2f) { bigDoor2.transform.localScale = new Vector3(1f, bigDoorScale, 1.2f); };
             if (bigDoor1.transform.localScale.y <= 1.2f) { bigDoor1.transform.localScale = new Vector3(1f, bigDoorScale, 1.2f); };
