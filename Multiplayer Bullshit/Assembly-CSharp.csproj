@@ -1332,6 +1332,10 @@
     <Compile Include="Assets\Main Assets\Assets\Lights Minigame Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Transform\SmoothFollowAction.cs" />
     <Compile Include="Assets\PlayMaker PUN 2\Actions\PunSetPlayerCustomProperty.cs" />
+    <Compile Include="Assets\FreeFlyCamera\Scripts\FreeFlyCamera.cs" />
+    <Compile Include="Assets\FreeFlyCamera\Demo\Scripts\ToggleGameObjectEnable.cs" />
+    <Compile Include="Assets\Scripts\CameraManager.cs" />
+    <Compile Include="Assets\Scripts\UI Stuff\PlayerUIToggle.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\GestureRecognizer\UPDATE GUIDE.txt" />
@@ -1352,6 +1356,7 @@
      <None Include="Assets\PlayMaker\Actions\MathExpression\Mathos\MathosLicense.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\FreeFlyCamera\readme.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
      <None Include="Assets\ParrelSync\VERSION.txt" />

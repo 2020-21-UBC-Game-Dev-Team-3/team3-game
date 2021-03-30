@@ -195,7 +195,7 @@ public class GameManager : MonoBehaviourPunCallbacks
         }
     }
 
-    void ToggleUI(bool change)
+    public void ToggleUI(bool change)
     {
         roleTextCanvas.SetActive(change);
         taskbarCanvas.SetActive(change);

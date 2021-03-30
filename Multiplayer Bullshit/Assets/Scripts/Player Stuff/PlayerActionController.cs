@@ -45,10 +45,12 @@ public class PlayerActionController : MonoBehaviour, IDamageable
     public bool minigameInterrupt;
     private int emergencyMeetingCount = 0;
 
-    TaskBar tb;
+    //TaskBar tb;
     public bool tbIHolder = false;
 
     public DeathTrackScript dts;
+
+    public static PlayerActionController localPACInstance;
 
     void Awake()
     {
@@ -58,6 +60,8 @@ public class PlayerActionController : MonoBehaviour, IDamageable
         playerMan = PhotonView.Find((int)pv.InstantiationData[0]).GetComponent<PlayerManager>();
         votingCooldownTimer = votingCooldown;
         //if (gameObject.CompareTag("Ghost")) OnStartGame();
+
+        if (pv.IsMine) localPACInstance = this;
     }
 
 
