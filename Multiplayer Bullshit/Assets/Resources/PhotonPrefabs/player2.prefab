@@ -9174,7 +9174,7 @@ MonoBehaviour:
   cooldownTimer: 20
   abilityText: {fileID: 0}
   pv: {fileID: 0}
-  assassinRange: 20
+  assassinRange: 25
   shurikenPrefab: {fileID: 1245360488091752, guid: 05222e7ebee9c2741b376b8859ce6d39, type: 3}
   shurikenTransform: {fileID: 2189087810573607889}
   assassinButton: {fileID: 2766491332184131938}

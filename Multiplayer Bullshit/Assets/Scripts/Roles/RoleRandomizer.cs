@@ -27,8 +27,8 @@ public class RoleRandomizer : MonoBehaviour {
   void Start() {
     roomManager = FindObjectOfType<RoomManager>().GetComponent<RoomManager>();
     pv = GetComponent<PhotonView>();
-    availableImposterRoles.AddRange(new string[] { "Assassin", "Chameleon", "Trapper" });
-    //availableImposterRoles.AddRange(new string[] { "Assassin", "Chameleon" });
+    //availableImposterRoles.AddRange(new string[] { "Assassin", "Chameleon", "Trapper" });
+    availableImposterRoles.AddRange(new string[] { "Assassin" });
     availableCrewmateRoles.AddRange(new string[] { "Disarmer" });
     /*    maxImposterNum = (int)Mathf.Round(roomManager.maxNumberOfPlayers / testingNum);
         maxCrewmateNum = roomManager.maxNumberOfPlayers - maxImposterNum;*/

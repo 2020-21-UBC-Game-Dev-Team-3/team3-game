@@ -66,8 +66,8 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     private void Update()
     {
-        if (!isFade) return;
-        Fade();
+        //if (!isFade) return;
+        //Fade();
         /*    Debug.Log(fadeCanvas.GetComponentInChildren<Image>().color);*/
     }
 
